@@ -1,0 +1,228 @@
+.main__cover {
+
+  &--item {
+    @include backimg;
+    height: 80rem;
+    width: 100%;
+    position: relative;
+    outline: none;
+
+    &-container {
+      max-width: $main-content-width;
+      margin: 19.5rem auto 0;
+
+      h1 {
+        font-size: 4.2rem;
+        color: $main-btn-color;
+        font-weight: $fw-semiBold;
+      }
+      h2 {
+        font-size: 4.2rem;
+        color: $color-white;
+        font-weight: $fw-semiBold;
+      }
+      p {
+        font-size: 2.5rem;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.news__background {
+  background-color: $section-back-color;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+
+  .news__content {
+    max-width: $main-content-width;
+
+    &--header {
+      font-size: $fz-big;
+    }
+    &--slider {
+      .news__content--items {
+        display: flex;
+        outline: none;
+        padding-bottom: 7rem;
+
+        .news__info {
+          width: 49%;
+          span {
+            font-size: 2rem;
+            text-transform: capitalize;
+            color: #666666;
+            padding-bottom: 3rem;
+            display: inline-block;
+            position: relative;
+            padding-left: 3rem;
+
+            &:before {
+              content: "";
+              @include backimg(url('../img/calendar-icons.png'));
+              width: 2rem;
+              height: 2rem;
+              display: inline-block;
+              position: absolute;
+              left: 0;
+              top: 2px;
+            }
+          }
+
+          h1 {
+            font-size: 2.7rem;
+            font-weight: $fw-lighter;
+            color: $main-color;
+            line-height: 1.6;
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+          }
+
+          p {
+            color: $main-color;
+            font-size: $main-fz;
+            padding-bottom: 4rem;
+          }
+        }
+
+        .news__image {
+          width: 49%;
+          order: 2;
+
+          &--background {
+
+            @include backimg;
+
+            width: 78.6%;
+            height: 33.5rem;
+            text-align: right;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.info__platform {
+  padding: 5em 0;
+  &--cont {
+    max-width: $main-content-width;
+
+    &--header {
+
+      h1 {
+        text-transform: uppercase;
+        font-size: $fz-big;
+        font-weight: $fw-lighter;
+        color: $main-color;
+        padding-bottom: 1rem;
+      }
+    }
+
+    &--slider {
+
+      &--items {
+        border: 3px solid #E6E6E6;
+        width: 300px;
+        display: inline-block;
+        outline: none;
+        cursor: pointer;
+        transition: .5s;
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+          padding: 3rem;
+        }
+
+        &:hover {
+          border-color: $main-btn-color;
+
+          .animated__button--yellow-small {
+
+            background-color: $main-btn-color;
+            color: $color-black;
+            transition: all .5s;
+          }
+        }
+        h1 {
+          font-size: 2.1rem;
+          color: $main-color;
+          font-weight: $fw-semiBold;
+          padding: 3rem 0 2rem;
+        }
+        p {
+          font-size: $main-fz;
+          color: $main-color;
+          padding-bottom: 3rem;
+        }
+      }
+    }
+
+  }
+}
+
+.videos__background {
+  background-color: $section-back-color;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+
+  &--content {
+    max-width: $main-content-width;
+    h1 {
+      font-size: $fz-big;
+      color: $main-color;
+      font-weight: $fw-lighter;
+    }
+
+    &--slider {
+
+      .video__items {
+        outline: none;
+        display: flex;
+
+        &--text {
+          width: 44%;
+
+          span {
+            font-size: 2rem;
+            text-transform: capitalize;
+            color: #666666;
+            padding-bottom: 3rem;
+            display: inline-block;
+            position: relative;
+            padding-left: 3rem;
+
+            &:before {
+              content: "";
+              @include backimg(url('../img/calendar-icons.png'));
+              width: 2rem;
+              height: 2rem;
+              display: inline-block;
+              position: absolute;
+              left: 0;
+              top: 2px;
+            }
+          }
+
+          h1 {
+            font-size: 2.7rem;
+            font-weight: $fw-lighter;
+            color: $main-color;
+            line-height: 1.6;
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+          }
+        }
+
+        &--video {
+          width: 54%;
+          order: 2;
+          .video {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}

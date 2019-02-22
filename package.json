@@ -1,0 +1,25 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "Landing page for scss",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harut7777/learning-scss.git"
+  },
+  "author": "Harut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harut7777/learning-scss/issues"
+  },
+  "homepage": "https://github.com/harut7777/learning-scss#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

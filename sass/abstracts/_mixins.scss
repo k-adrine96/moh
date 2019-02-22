@@ -1,0 +1,20 @@
+//BACKGROUND
+@mixin backimg($imgUrl: "") {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: $imgUrl;
+}
+
+//BORDER
+
+@mixin border($border-color) {
+  border: 1px solid $border-color;
+}
+
+//MAIN WIDTH
+
+@mixin mainWidth($marginAuto: auto) {
+  max-width: $main-content-width;
+  margin: $marginAuto;
+}
