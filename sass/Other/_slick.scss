@@ -16,3 +16,71 @@
 .slick-dotted.slick-slider {
   margin-bottom: 0;
 }
+
+.news-cont-prev {
+  @include backimg(url("../img/arrow-light-right.png"));
+  @include arrows;
+  right: -7rem;
+  bottom: 50%;
+
+  &:hover {
+    background-image: url("../img/arrow-bold-right.png");
+  }
+}
+.news-cont-next {
+  @include backimg(url("../img/arrow-light-left.png"));
+  @include arrows;
+  left: -9rem;
+  bottom: 50%;
+
+  &:hover {
+    background-image: url("../img/arrow-bold-left.png");
+  }
+}
+
+
+
+.info__platform-prev {
+  @include backimg(url("../img/arrow-light-right.png"));
+  @include arrows;
+  right: -7rem;
+  bottom: 30%;
+
+  &:hover {
+    background-image: url("../img/arrow-bold-right.png");
+  }
+}
+.info__platform-next {
+  @include backimg(url("../img/arrow-light-left.png"));
+  @include arrows;
+
+  left: -9rem;
+  bottom: 30%;
+
+  &:hover {
+    background-image: url("../img/arrow-bold-left.png");
+  }
+}
+
+
+
+.videos__background-prev {
+  @include backimg(url("../img/arrow-light-right.png"));
+  @include arrows;
+  right: -7rem;
+  bottom: 30%;
+
+  &:hover {
+    background-image: url("../img/arrow-bold-right.png");
+  }
+}
+.videos__background-next {
+  @include backimg(url("../img/arrow-light-left.png"));
+  @include arrows;
+  left: -9rem;
+  bottom: 30%;
+
+  &:hover {
+    background-image: url("../img/arrow-bold-left.png");
+  }
+}

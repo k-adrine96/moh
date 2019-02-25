@@ -10,33 +10,36 @@
       arrows: false
     });
     $('.news__content--slider').slick({
-
+      prevArrow: ('.news-cont-prev'),
+      nextArrow: ('.news-cont-next'),
       dots: false,
       infinite: true,
       speed: 2000,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false
+      arrows: true
     });
 
     $('.info__platform--cont--slider').slick({
-
+      prevArrow: ('.info__platform-prev'),
+      nextArrow: ('.info__platform-next'),
       dots: false,
       infinite: true,
-      speed: 2000,
+      speed: 1000,
       slidesToShow: 4,
       slidesToScroll: 1,
-      arrows: false
+      arrows: true
     });
 
     $('.videos__background--content--slider').slick({
-
+      prevArrow: ('.videos__background-prev'),
+      nextArrow: ('.videos__background-next'),
       dots: false,
       infinite: true,
       speed: 2000,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false
+      arrows: true
     });
 
   }

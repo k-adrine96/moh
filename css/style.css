@@ -362,6 +362,96 @@
 .slick-dotted.slick-slider {
   margin-bottom: 0; }
 
+.news-cont-prev {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/arrow-light-right.png");
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 5rem;
+  width: 1.7rem;
+  right: -7rem;
+  bottom: 50%; }
+  .news-cont-prev:hover {
+    background-image: url("../img/arrow-bold-right.png"); }
+
+.news-cont-next {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/arrow-light-left.png");
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 5rem;
+  width: 1.7rem;
+  left: -9rem;
+  bottom: 50%; }
+  .news-cont-next:hover {
+    background-image: url("../img/arrow-bold-left.png"); }
+
+.info__platform-prev {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/arrow-light-right.png");
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 5rem;
+  width: 1.7rem;
+  right: -7rem;
+  bottom: 30%; }
+  .info__platform-prev:hover {
+    background-image: url("../img/arrow-bold-right.png"); }
+
+.info__platform-next {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/arrow-light-left.png");
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 5rem;
+  width: 1.7rem;
+  left: -9rem;
+  bottom: 30%; }
+  .info__platform-next:hover {
+    background-image: url("../img/arrow-bold-left.png"); }
+
+.videos__background-prev {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/arrow-light-right.png");
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 5rem;
+  width: 1.7rem;
+  right: -7rem;
+  bottom: 30%; }
+  .videos__background-prev:hover {
+    background-image: url("../img/arrow-bold-right.png"); }
+
+.videos__background-next {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/arrow-light-left.png");
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 5rem;
+  width: 1.7rem;
+  left: -9rem;
+  bottom: 30%; }
+  .videos__background-next:hover {
+    background-image: url("../img/arrow-bold-left.png"); }
+
 .main__cover--item {
   background-size: cover;
   background-position: center;
@@ -391,7 +481,8 @@
   padding-top: 5rem;
   padding-bottom: 2rem; }
   .news__background .news__content {
-    max-width: 1300px; }
+    max-width: 1300px;
+    position: relative; }
     .news__background .news__content--header {
       font-size: 5rem; }
     .news__background .news__content--slider .news__content--items {
@@ -447,7 +538,8 @@
 .info__platform {
   padding: 5em 0; }
   .info__platform--cont {
-    max-width: 1300px; }
+    max-width: 1300px;
+    position: relative; }
     .info__platform--cont--header h1 {
       text-transform: uppercase;
       font-size: 5rem;
@@ -485,7 +577,8 @@
   padding-top: 5rem;
   padding-bottom: 10rem; }
   .videos__background--content {
-    max-width: 1300px; }
+    max-width: 1300px;
+    position: relative; }
     .videos__background--content h1 {
       font-size: 5rem;
       color: #4D4D4D;

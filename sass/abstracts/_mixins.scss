@@ -18,3 +18,13 @@
   max-width: $main-content-width;
   margin: $marginAuto;
 }
+
+//ARROWS
+
+@mixin arrows {
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 5rem;
+  width: 1.7rem;
+}
