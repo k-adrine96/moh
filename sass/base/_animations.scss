@@ -1,24 +1,33 @@
 .burger__menu {
   position: absolute;
   right: 6rem;
-  top: 2.2rem;
+  top: 2rem;
   cursor: pointer;
+
+  &--second {
+    position: absolute;
+    top: 6rem;
+    right: 4rem;
+
+    .burger__menu--lines {
+      background-color: $color-white;
+    }
+  }
   &--lines {
-      background: $main-color;
-      width: 20px;
-      height: 2px;
-      margin: 5px 0;
-      display: block;
-      transition: 0.2s;
-      //border: 1px solid #305288;
-      border-radius: 10px;
+    background: $main-color;
+    width: 20px;
+    height: 2px;
+    margin: 5px 0;
+    display: block;
+    transition: 0.2s;
+    border-radius: 10px;
   }
   .rotate-1 {
-      transform: rotate(45deg);
-      margin-top: 44%;
-      transition: 0.3s;
+    transform: rotate(45deg);
+    margin-top: 1rem;
+    transition: 0.3s;
   }
-  .rotate-3 {
+  .rotate-2 {
     transform: rotate(-45deg);
     margin-top: -7px;
     transition: 0.3s;

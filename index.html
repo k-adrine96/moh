@@ -23,16 +23,18 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!--JQUERY-->
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/libs/jquery-3.3.1.min.js"></script>
     <!--BOOTSTRAP-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
     <!--SELECT 2-->
-    <script src="js/select2.min.js"></script>
+    <script src="js/libs/select2.min.js"></script>
     <script src="js/select2.js"></script>
     <!--SLICK-->
     <script src="js/slick-slider.js"></script>
     <script src="slick/slick/slick.min.js"></script>
     <!--MAIN JS-->
+    <script src="js/menu.js"></script>
+    <script src="js/utils.js"></script>
     <script src="js/index.js"></script>
 
 </head>
@@ -59,8 +61,8 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12 p-0">
-                                <div class="header__language text-right">
-                                    <select class="header__language--bar" name="state">
+                                <div class="language text-right">
+                                    <select class="language--bar" name="state">
                                         <option value="arm">Հայերեն</option>
                                         <option value="rus">Русский</option>
                                         <option value="eng">English</option>
@@ -81,7 +83,7 @@
                                 </ul>
                                 <div class="burger__menu">
                                     <div class="burger__menu--lines burger__menu--line-1"></div>
-                                    <div class="burger__menu--lines burger__menu--line-3"></div>
+                                    <div class="burger__menu--lines burger__menu--line-2"></div>
                                 </div>
                             </div>
                         </div>
@@ -342,9 +344,9 @@
                     </div>
                     <div class="video__items">
                         <div class="video__items--video">
-                            <video class="video" width="90%" loop controls>
-                                <source src="videos/maruv.webm" type="video/mp4">
-                            </video>
+                            <iframe class="video" width="90%" height="320px"
+                                    src="https://www.youtube.com/embed/wOXZM9Bzhdw">
+                            </iframe>
                         </div>
                         <div class="video__items--text">
                             <span>31 ՀՈՒՆՎԱՐ 2019 ՀԻՆԳՇԱԲԹԻ</span>
@@ -356,9 +358,9 @@
                     </div>
                     <div class="video__items">
                         <div class="video__items--video">
-                            <video class="video" width="90%" loop controls>
-                                <source src="videos/maruv.webm" type="video/mp4">
-                            </video>
+                            <iframe class="video" width="90%" height="320px"
+                                    src="https://www.youtube.com/embed/wOXZM9Bzhdw">
+                            </iframe>
                         </div>
                         <div class="video__items--text">
                             <span>31 ՀՈՒՆՎԱՐ 2019 ՀԻՆԳՇԱԲԹԻ</span>
@@ -370,9 +372,9 @@
                     </div>
                     <div class="video__items">
                         <div class="video__items--video">
-                            <video class="video" width="90%" loop controls>
-                                <source src="videos/maruv.webm" type="video/mp4">
-                            </video>
+                            <iframe class="video" width="90%" height="320px"
+                                    src="https://www.youtube.com/embed/wOXZM9Bzhdw">
+                            </iframe>
                         </div>
                         <div class="video__items--text">
                             <span>31 ՀՈՒՆՎԱՐ 2019 ՀԻՆԳՇԱԲԹԻ</span>
@@ -384,9 +386,9 @@
                     </div>
                     <div class="video__items">
                         <div class="video__items--video">
-                            <video class="video" width="90%" loop controls>
-                                <source src="videos/maruv.webm" type="video/mp4">
-                            </video>
+                            <iframe class="video" width="90%" height="320px"
+                                    src="https://www.youtube.com/embed/wOXZM9Bzhdw">
+                            </iframe>
                         </div>
                         <div class="video__items--text">
                             <span>31 ՀՈՒՆՎԱՐ 2019 ՀԻՆԳՇԱԲԹԻ</span>
@@ -398,9 +400,9 @@
                     </div>
                     <div class="video__items">
                         <div class="video__items--video">
-                            <video class="video" width="90%" loop controls>
-                                <source src="videos/maruv.webm" type="video/mp4">
-                            </video>
+                            <iframe class="video" width="90%" height="320px"
+                                    src="https://www.youtube.com/embed/wOXZM9Bzhdw">
+                            </iframe>
                         </div>
                         <div class="video__items--text">
                             <span>31 ՀՈՒՆՎԱՐ 2019 ՀԻՆԳՇԱԲԹԻ</span>
@@ -412,9 +414,9 @@
                     </div>
                     <div class="video__items">
                         <div class="video__items--video">
-                            <video class="video" width="90%" loop controls>
-                                <source src="videos/maruv.webm" type="video/mp4">
-                            </video>
+                            <iframe class="video" width="90%" height="320px"
+                                    src="https://www.youtube.com/embed/wOXZM9Bzhdw">
+                            </iframe>
                         </div>
                         <div class="video__items--text">
                             <span>31 ՀՈՒՆՎԱՐ 2019 ՀԻՆԳՇԱԲԹԻ</span>
@@ -426,9 +428,9 @@
                     </div>
                     <div class="video__items">
                         <div class="video__items--video">
-                            <video class="video" width="90%" loop controls>
-                                <source src="videos/maruv.webm" type="video/mp4">
-                            </video>
+                            <iframe class="video" width="90%" height="320px"
+                                    src="https://www.youtube.com/embed/wOXZM9Bzhdw">
+                            </iframe>
                         </div>
                         <div class="video__items--text">
                             <span>31 ՀՈՒՆՎԱՐ 2019 ՀԻՆԳՇԱԲԹԻ</span>
@@ -537,9 +539,169 @@
     </footer>
 </div>
 <div class="menu">
-
+    <div class="language menu__language text-right">
+        <select class="language--bar" name="state">
+            <option value="arm">Հայերեն</option>
+            <option value="rus">Русский</option>
+            <option value="eng">English</option>
+        </select>
+    </div>
+    <form class="menu--form" action="">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"
+                   aria-describedby="search">
+            <div class="input-group-append">
+                <span class="input-group-text" id="search"><img src="img/search-logo.png" alt=""></span>
+            </div>
+        </div>
+    </form>
+    <div class="burger__menu burger__menu--second">
+        <div class="burger__menu--lines burger__menu--line-1"></div>
+        <div class="burger__menu--lines burger__menu--line-2"></div>
+    </div>
+    <ul class="menu--content">
+        <li>
+            <a href="javascript:;"><span>ԱՆ ԵՆԹԱԿԱՅՈՒԹՅԱՆ ԿԱՌՈՒՅՑՆԵՐ</span></a>
+            <ul class="hided--content">
+                <li><a href="javascript:;">Առողջապահության ազգաին
+                    ինստիսուտ</a></li>
+                <li><a href="javascript:;">եղերի և բժշկական տեխնոլոգիաների
+                    փորձագիտական կենտրոն</a></li>
+                <li><a href="javascript:;">Հանրապետական
+                    գիտաբժշկական գրադարան</a></li>
+                <li><a href="javascript:;">Ստացիոնար բուժօգնություն
+                    իրականացնող կազմակերպություններ</a></li>
+                <li><a href="javascript:;">Այլ կազմակերպություններ</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">ՏԵՂԵԿԱՏՈՒ ՀԱՐԹԱԿ</a>
+            <ul class="hided--content">
+                <li><a href="javascript:;">Առողջապահության ազգաին
+                    ինստիսուտ</a></li>
+                <li><a href="javascript:;">Եղերի և բժշկական տեխնոլոգիաների
+                    փորձագիտական կենտրոն</a></li>
+                <li><a href="javascript:;">Հանրապետական
+                    գիտաբժշկական գրադարան</a></li>
+                <li><a href="javascript:;">Ստացիոնար բուժօգնություն
+                    իրականացնող կազմակերպություններ</a></li>
+                <li><a href="javascript:;">Այլ կազմակերպություններ</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">ԻՐԱՎԱԿԱՆ ԱԿՏԵՐ</a>
+            <ul class="hided--content">
+                <li><a href="javascript:;">Առողջապահության ազգաին
+                    ինստիսուտ</a></li>
+                <li><a href="javascript:;">եղերի և բժշկական տեխնոլոգիաների
+                    փորձագիտական կենտրոն</a></li>
+                <li><a href="javascript:;">Հանրապետական
+                    գիտաբժշկական գրադարան</a></li>
+                <li><a href="javascript:;">Ստացիոնար բուժօգնություն
+                    իրականացնող կազմակերպություններ</a></li>
+                <li><a href="javascript:;">Այլ կազմակերպություններ</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">ԾՐԱԳՐԵՐ</a>
+            <ul class="hided--content">
+                <li><a href="javascript:;">Առողջապահության ազգաին
+                    ինստիսուտ</a></li>
+                <li><a href="javascript:;">եղերի և բժշկական տեխնոլոգիաների
+                    փորձագիտական կենտրոն</a></li>
+                <li><a href="javascript:;">Հանրապետական
+                    գիտաբժշկական գրադարան</a></li>
+                <li><a href="javascript:;">Ստացիոնար բուժօգնություն
+                    իրականացնող կազմակերպություններ</a></li>
+                <li><a href="javascript:;">Այլ կազմակերպություններ</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ</a>
+            <ul class="hided--content">
+                <li><a href="javascript:;">Առողջապահության ազգաին
+                    ինստիսուտ</a></li>
+                <li><a href="javascript:;">եղերի և բժշկական տեխնոլոգիաների
+                    փորձագիտական կենտրոն</a></li>
+                <li><a href="javascript:;">Հանրապետական
+                    գիտաբժշկական գրադարան</a></li>
+                <li><a href="javascript:;">Ստացիոնար բուժօգնություն
+                    իրականացնող կազմակերպություններ</a></li>
+                <li><a href="javascript:;">Այլ կազմակերպություններ</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">ԼԻՑԵՆԶԱՎՈՐՈՒՄ</a>
+            <ul class="hided--content">
+                <li><a href="javascript:;">Առողջապահության ազգաին
+                    ինստիսուտ</a></li>
+                <li><a href="javascript:;">եղերի և բժշկական տեխնոլոգիաների
+                    փորձագիտական կենտրոն</a></li>
+                <li><a href="javascript:;">Հանրապետական
+                    գիտաբժշկական գրադարան</a></li>
+                <li><a href="javascript:;">Ստացիոնար բուժօգնություն
+                    իրականացնող կազմակերպություններ</a></li>
+                <li><a href="javascript:;">Այլ կազմակերպություններ</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">ԿԱԴՐԱՅԻՆ ԱՊԱՀՈՎՈՒՄ</a>
+            <ul class="hided--content">
+                <li><a href="javascript:;">Առողջապահության ազգաին
+                    ինստիսուտ</a></li>
+                <li><a href="javascript:;">եղերի և բժշկական տեխնոլոգիաների
+                    փորձագիտական կենտրոն</a></li>
+                <li><a href="javascript:;">Հանրապետական
+                    գիտաբժշկական գրադարան</a></li>
+                <li><a href="javascript:;">Ստացիոնար բուժօգնություն
+                    իրականացնող կազմակերպություններ</a></li>
+                <li><a href="javascript:;">Այլ կազմակերպություններ</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">ՄԱ ԿԱՆՈՆՆԵՐ</a>
+            <ul class="hided--content">
+                <li><a href="javascript:;">Առողջապահության ազգաին
+                    ինստիսուտ</a></li>
+                <li><a href="javascript:;">եղերի և բժշկական տեխնոլոգիաների
+                    փորձագիտական կենտրոն</a></li>
+                <li><a href="javascript:;">Հանրապետական
+                    գիտաբժշկական գրադարան</a></li>
+                <li><a href="javascript:;">Ստացիոնար բուժօգնություն
+                    իրականացնող կազմակերպություններ</a></li>
+                <li><a href="javascript:;">Այլ կազմակերպություններ</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">ԸՆԴՈՒՆԵԼՈՒԹՅՈՒՆ</a>
+            <ul class="hided--content">
+                <li><a href="javascript:;">Առողջապահության ազգաին
+                    ինստիսուտ</a></li>
+                <li><a href="javascript:;">եղերի և բժշկական տեխնոլոգիաների
+                    փորձագիտական կենտրոն</a></li>
+                <li><a href="javascript:;">Հանրապետական
+                    գիտաբժշկական գրադարան</a></li>
+                <li><a href="javascript:;">Ստացիոնար բուժօգնություն
+                    իրականացնող կազմակերպություններ</a></li>
+                <li><a href="javascript:;">Այլ կազմակերպություններ</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">ՀՂՈՒՄՆԵՐ</a>
+            <ul class="hided--content">
+                <li><a href="javascript:;">Առողջապահության ազգաին
+                    ինստիսուտ</a></li>
+                <li><a href="javascript:;">եղերի և բժշկական տեխնոլոգիաների
+                    փորձագիտական կենտրոն</a></li>
+                <li><a href="javascript:;">Հանրապետական
+                    գիտաբժշկական գրադարան</a></li>
+                <li><a href="javascript:;">Ստացիոնար բուժօգնություն
+                    իրականացնող կազմակերպություններ</a></li>
+                <li><a href="javascript:;">Այլ կազմակերպություններ</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>
-
 
 </body>
 

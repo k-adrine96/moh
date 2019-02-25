@@ -1,9 +1,12 @@
-.header__language {
+.language {
 
   .select2-container {
-    width: 7.5rem!important;
+    width: 9.5rem!important;
     outline: none!important;
     font-size: 1.2rem;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    text-transform: uppercase;
   }
 
 }
@@ -12,10 +15,28 @@
   border: 1px solid transparent!important;
 }
 
-.select2-container--default .select2-selection--single {
-  background-color: #fff;
-  border: none!important;
-  outline: none!important;
+.language {
+  .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: none!important;
+    outline: none!important;
+  }
+}
+.menu__language {
+  position: absolute;
+  right: 0;
+  top: 2.1rem;
+  padding-right: 3rem;
+
+  .select2-container--default .select2-selection--single {
+    background-color: transparent;
+    border: none!important;
+    outline: none!important;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: $main-btn-color;
+    line-height: 28px;
+  }
 }
 .select2-results__option {
   font-size: 1.2rem;
