@@ -12,17 +12,21 @@
 
         li {
 
-          span {
+          a {
             color: $color-black;
             font-size: 1.2rem;
             font-weight: $fw-semiBold;
             display: inline-block;
             padding-left: 2rem;
+            text-decoration: none;
           }
           &:first-child {
-            @include backimg(url("../img/moh-logo.png"));
-            width: 5.5rem;
-            height: 5.3rem;
+
+            a {
+              @include backimg(url("../img/moh-logo.png"));
+              width: 5.5rem;
+              height: 5.3rem;
+            }
           }
         }
       }

@@ -42,6 +42,28 @@
       arrows: true
     });
 
+    $('.partners--cont--slider').slick({
+      prevArrow: ('.partners-prev'),
+      nextArrow: ('.partners-next'),
+      dots: false,
+      infinite: true,
+      speed: 2000,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 1300,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
+        }
+      ]
+    });
+
   }
 
 })(window, jQuery);

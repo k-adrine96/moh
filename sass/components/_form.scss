@@ -38,7 +38,7 @@
       height: 5rem;
       border-radius: 3rem;
       @include border($color-white);
-
+      font-size: $main-fz;
     }
 
     .input-group-append {
@@ -55,6 +55,7 @@
     }
   }
 }
+
 .form-control:focus {
   color: #495057;
   background-color: $color-white;

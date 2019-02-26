@@ -131,9 +131,9 @@
         outline: none;
         cursor: pointer;
         transition: .5s;
+        margin: 0 1rem;
 
         &:not(:last-child) {
-          margin-right: 2rem;
           padding: 3rem;
         }
 
@@ -225,6 +225,35 @@
             float: right;
           }
         }
+      }
+    }
+  }
+}
+
+.partners {
+  padding: 5rem 0;
+
+  &--cont {
+    @include mainWidth;
+
+    &--slider {
+
+      .partners--cont--item {
+        @include backimg;
+        height: 16rem;
+        width: 30rem;
+        border: 3px solid #E6E6E6;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        display: block;
+        text-decoration: none;
+        transition: .2s;
+        outline: none;
+
+        &:hover {
+          border-color: $main-btn-color;
+        }
+
       }
     }
   }
