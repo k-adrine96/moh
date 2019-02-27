@@ -6,36 +6,33 @@
 
     &--social {
       position: relative;
+      padding-top: 2rem;
 
-      .footer--logo {
-        padding-top: 2.5rem;
-
-        li {
-
-          a {
-            color: $color-black;
-            font-size: 1.2rem;
-            font-weight: $fw-semiBold;
-            display: inline-block;
-            padding-left: 2rem;
-            text-decoration: none;
-          }
-          &:first-child {
-
-            a {
-              @include backimg(url("../img/moh-logo.png"));
-              width: 5.5rem;
-              height: 5.3rem;
-            }
-          }
-        }
-      }
+      //.footer--logo {
+      //  padding-top: 2.5rem;
+      //
+      //  li {
+      //
+      //    a {
+      //      color: $color-black;
+      //      font-size: 1.2rem;
+      //      font-weight: $fw-semiBold;
+      //      display: inline-block;
+      //      padding-left: 2rem;
+      //      text-decoration: none;
+      //    }
+      //    &:first-child {
+      //
+      //      a {
+      //        @include backimg(url("../img/moh-logo.png"));
+      //        width: 5.5rem;
+      //        height: 5.3rem;
+      //      }
+      //    }
+      //  }
+      //}
 
       .footer--social {
-        position: absolute;
-        top: 3.5rem;
-        left: 50%;
-        transform: translateX(-50%);
 
         li {
           &:not(:last-child) {

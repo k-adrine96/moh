@@ -45,7 +45,8 @@
   background-color: #4E525B; }
   .subscription__content {
     max-width: 1300px;
-    margin: auto; }
+    margin: auto;
+    padding: 5rem 0 6rem; }
     .subscription__content--header h1 {
       text-transform: uppercase;
       font-size: 3rem;
@@ -62,72 +63,52 @@
     max-width: 181rem;
     margin: auto; }
     .footer__container--social {
-      position: relative; }
-      .footer__container--social .footer--logo {
-        padding-top: 2.5rem; }
-        .footer__container--social .footer--logo li a {
-          color: #000000;
-          font-size: 1.2rem;
-          font-weight: 600;
-          display: inline-block;
-          padding-left: 2rem;
-          text-decoration: none; }
-        .footer__container--social .footer--logo li:first-child a {
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-image: url("../img/moh-logo.png");
-          width: 5.5rem;
-          height: 5.3rem; }
-      .footer__container--social .footer--social {
-        position: absolute;
-        top: 3.5rem;
-        left: 50%;
-        transform: translateX(-50%); }
-        .footer__container--social .footer--social li:not(:last-child) {
-          margin-right: 3rem; }
-        .footer__container--social .footer--social li a {
-          display: inline-block;
-          background: url("../img/social-icons.png") no-repeat;
-          overflow: hidden;
-          text-indent: -9999px;
-          text-align: left; }
-        .footer__container--social .footer--social li .facebook--icon {
-          background-position: -2px -234px;
-          width: 12px;
-          height: 23px; }
-          .footer__container--social .footer--social li .facebook--icon:hover {
-            background-position: -16px -234px; }
-        .footer__container--social .footer--social li .youtube--icon {
-          background-position: -2px -134px;
-          width: 23px;
-          height: 27px; }
-          .footer__container--social .footer--social li .youtube--icon:hover {
-            background-position: -2px -163px; }
-        .footer__container--social .footer--social li .linkedin--icon {
-          background-position: -2px -192px;
-          width: 19px;
-          height: 19px; }
-          .footer__container--social .footer--social li .linkedin--icon:hover {
-            background-position: -2px -213px; }
-        .footer__container--social .footer--social li .google--icon {
-          background-position: -2px -0px;
-          width: 28px;
-          height: 19px; }
-          .footer__container--social .footer--social li .google--icon:hover {
-            background-position: -2px -21px; }
-        .footer__container--social .footer--social li .twitter--icon {
-          background-position: -2px -92px;
-          width: 23px;
-          height: 19px; }
-          .footer__container--social .footer--social li .twitter--icon:hover {
-            background-position: -2px -113px; }
-        .footer__container--social .footer--social li .instagram--icon {
-          background-position: -2px -42px;
-          width: 23px;
-          height: 23px; }
-          .footer__container--social .footer--social li .instagram--icon:hover {
-            background-position: -2px -67px; }
+      position: relative;
+      padding-top: 2rem; }
+      .footer__container--social .footer--social li:not(:last-child) {
+        margin-right: 3rem; }
+      .footer__container--social .footer--social li a {
+        display: inline-block;
+        background: url("../img/social-icons.png") no-repeat;
+        overflow: hidden;
+        text-indent: -9999px;
+        text-align: left; }
+      .footer__container--social .footer--social li .facebook--icon {
+        background-position: -2px -234px;
+        width: 12px;
+        height: 23px; }
+        .footer__container--social .footer--social li .facebook--icon:hover {
+          background-position: -16px -234px; }
+      .footer__container--social .footer--social li .youtube--icon {
+        background-position: -2px -134px;
+        width: 23px;
+        height: 27px; }
+        .footer__container--social .footer--social li .youtube--icon:hover {
+          background-position: -2px -163px; }
+      .footer__container--social .footer--social li .linkedin--icon {
+        background-position: -2px -192px;
+        width: 19px;
+        height: 19px; }
+        .footer__container--social .footer--social li .linkedin--icon:hover {
+          background-position: -2px -213px; }
+      .footer__container--social .footer--social li .google--icon {
+        background-position: -2px -0px;
+        width: 28px;
+        height: 19px; }
+        .footer__container--social .footer--social li .google--icon:hover {
+          background-position: -2px -21px; }
+      .footer__container--social .footer--social li .twitter--icon {
+        background-position: -2px -92px;
+        width: 23px;
+        height: 19px; }
+        .footer__container--social .footer--social li .twitter--icon:hover {
+          background-position: -2px -113px; }
+      .footer__container--social .footer--social li .instagram--icon {
+        background-position: -2px -42px;
+        width: 23px;
+        height: 23px; }
+        .footer__container--social .footer--social li .instagram--icon:hover {
+          background-position: -2px -67px; }
     .footer__container .footer__container--info {
       padding-top: 2rem; }
       .footer__container .footer__container--info--contact li {
@@ -256,11 +237,7 @@
 .animated__button--blue {
   background-color: #F6F6F6;
   color: #0071BC;
-  border: 2px solid #0071BC;
-  margin-left: 4rem; }
-  .animated__button--blue::after {
-    background-color: #0071BC;
-    color: #FFFFFF; }
+  border: 2px solid #0071BC; }
   .animated__button--blue:hover {
     background-color: #0071BC;
     color: #FFFFFF; }
@@ -281,7 +258,8 @@
     height: 4.8rem;
     justify-content: center;
     border: 1px solid #FFFFFF;
-    background-color: #FFFFFF; }
+    background-color: #FFFFFF;
+    border-radius: 0; }
     .subscription__content--form .input-group .input-group-prepend span img {
       width: 90%; }
   .subscription__content--form .input-group input {

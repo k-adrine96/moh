@@ -63,12 +63,12 @@
     background-color: $section-back-color;
     color: #0071BC;
     border: 2px solid #0071BC;
-    margin-left: 4rem;
+    //margin-left: 4rem;
 
-    &::after {
-      background-color: #0071BC;
-      color: $color-white;
-    }
+    //&::after {
+    //  background-color: #0071BC;
+    //  color: $color-white;
+    //}
     &:hover {
       background-color: #0071BC;
       color: $color-white;
