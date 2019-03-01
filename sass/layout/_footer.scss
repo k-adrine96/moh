@@ -1,12 +1,12 @@
 .footer {
   background-color: $section-back-color;
   &__container {
-    max-width: 181rem;
+    max-width: calculateRem-16(1810px);
     margin: auto;
 
     &--social {
       position: relative;
-      padding-top: 2rem;
+      padding-top: calculateRem-16(20px);
 
       //.footer--logo {
       //  padding-top: 2.5rem;
@@ -36,7 +36,7 @@
 
         li {
           &:not(:last-child) {
-            margin-right: 3rem;
+            margin-right: calculateRem-16(30px);
           }
           a {
             display: inline-block;
@@ -106,7 +106,7 @@
     }
 
     .footer__container--info {
-      padding-top: 2rem;
+      padding-top: calculateRem-16(20px);
 
       &--contact {
 
@@ -114,26 +114,26 @@
           line-height: 1.7;
 
           &:not(:last-child) {
-            margin-right: 2rem;
+            margin-right: calculateRem-16(20px);
             border-right: 1px solid rgba($color-black, 0.1);
-            padding-right: 2rem;
+            padding-right: calculateRem-16(20px);
           }
 
           h1 {
-            font-size: 1.2rem;
+            font-size: calculateRem-16(12px);
             color: $main-color;
             font-weight: $fw-semiBold;
           }
 
           p {
-            font-size: 1.2rem;
+            font-size: calculateRem-16(12px);
 
           }
 
           a {
             text-decoration: none;
             color: $main-color;
-            font-size: 1.2rem;
+            font-size: calculateRem-16(12px);
           }
         }
       }
@@ -142,18 +142,18 @@
     .footer__container--copyright {
       position: relative;
       text-align: center;
-      padding: 2rem 0 1.5rem;
+      padding: calculateRem-16(20px) 0 calculateRem-16(15px);
 
       p {
         color: $main-color;
-        font-size: 1.2rem;
+        font-size: calculateRem-16(12px);
       }
 
       h1 {
         position: absolute;
         right: 0;
-        bottom: 2rem;
-        font-size: 1.3rem;
+        bottom: calculateRem-16(20px);
+        font-size: calculateRem-16(13px);
         color: $main-color;
 
         a {

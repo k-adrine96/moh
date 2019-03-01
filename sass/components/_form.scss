@@ -6,8 +6,8 @@
     .input-group-prepend {
 
       span {
-        width: 4rem;
-        height: 4.8rem;
+        width: calculateRem-16(40px);
+        height: calculateRem-16(48px);
         justify-content: center;
         @include border($color-white);
         background-color: $color-white;
@@ -20,8 +20,8 @@
     }
 
     input {
-      height: 4.8rem;
-      margin-right: 4rem;
+      height: calculateRem-16(48px);
+      margin-right: calculateRem-16(40px);
       @include border($color-white);
       font-size: $main-fz;
     }
@@ -29,28 +29,29 @@
 }
 .menu--form {
 
-  margin: 100px auto 0;
+  margin: calculateRem-16(100px) auto 0;
 
   .input-group {
-    margin-left: 4rem;
-    width: 32rem;
+    margin-left: calculateRem-16(40px);
+    width: calculateRem-16(320px);
 
     input {
-      height: 5rem;
-      border-radius: 3rem;
+      height: calculateRem-16(50px);
+      border-radius: 30px;
       @include border($color-white);
       font-size: $main-fz;
+      padding-left: calculateRem-16(20px);
     }
 
     .input-group-append {
 
       .input-group-text {
 
-        border-top-right-radius: 3rem;
-        border-bottom-right-radius: 3rem;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
         @include border($color-white);
         background-color: $color-white;
-        width: 4rem;
+        width: calculateRem-16(40px);
         padding: 0;
       }
     }

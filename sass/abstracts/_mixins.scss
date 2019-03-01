@@ -25,6 +25,6 @@
   position: absolute;
   transform: translateY(-50%);
   cursor: pointer;
-  height: 5rem;
-  width: 1.7rem;
+  height: calculateRem-16(50px);
+  width: calculateRem-16(17px);
 }

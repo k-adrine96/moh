@@ -2,37 +2,48 @@
 
   &--item {
     @include backimg;
-    height: 80rem;
+    height: calculateRem-16(800px);
     width: 100%;
     position: relative;
     outline: none;
 
     &-container {
       max-width: $main-content-width;
-      margin: 19.5rem auto 0;
+      margin: calculateRem-16(235px) auto 0;
 
-      h1 {
-        font-size: 4.2rem;
-        color: $main-btn-color;
-        font-weight: $fw-semiBold;
+      &-cont {
+        max-width: calculateRem-16(600px);
+
+        h2 {
+          font-size: calculateRem-16(42px);
+          color: $color-white;
+          font-weight: $fw-semiBold;
+
+          span {
+            color: $main-btn-color;
+          }
+        }
+        p {
+          font-size: calculateRem-16(25px);
+          color: #FFFFFF;
+          display: -webkit-box;
+          margin: calculateRem-16(23px) auto;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 4;
+          height: calculateRem-16(139px);
+        }
       }
-      h2 {
-        font-size: 4.2rem;
-        color: $color-white;
-        font-weight: $fw-semiBold;
-      }
-      p {
-        font-size: 2.5rem;
-        color: $color-white;
-      }
+
     }
   }
 }
 
 .news__background {
   background-color: $section-back-color;
-  padding-top: 5rem;
-  padding-bottom: 2rem;
+  padding-top: calculateRem-16(50px);
+  padding-bottom: calculateRem-16(20px);
 
   .news__content {
     max-width: $main-content-width;
@@ -45,24 +56,24 @@
       .news__content--items {
         display: flex;
         outline: none;
-        padding-bottom: 7rem;
+        padding-bottom: calculateRem-16(70px);
 
         .news__info {
           width: 49%;
           span {
-            font-size: 2rem;
+            font-size: calculateRem-16(20px);
             text-transform: capitalize;
             color: #666666;
             padding-bottom: 3rem;
             display: inline-block;
             position: relative;
-            padding-left: 3rem;
+            padding-left: calculateRem-16(30px);
 
             &:before {
               content: "";
               @include backimg(url('../img/calendar-icons.png'));
-              width: 2rem;
-              height: 2rem;
+              width: calculateRem-16(20px);
+              height: calculateRem-16(20px);
               display: inline-block;
               position: absolute;
               left: 0;
@@ -71,18 +82,18 @@
           }
 
           h1 {
-            font-size: 2.7rem;
+            font-size: calculateRem-16(27px);
             font-weight: $fw-lighter;
             color: $main-color;
             line-height: 1.6;
-            padding-bottom: 1rem;
+            padding-bottom: calculateRem-16(10px);
             text-transform: uppercase;
           }
 
           p {
             color: $main-color;
             font-size: $main-fz;
-            padding-bottom: 4rem;
+            padding-bottom: calculateRem-16(40px);
           }
         }
 
@@ -95,7 +106,7 @@
             @include backimg;
 
             width: 78.6%;
-            height: 33.5rem;
+            height: calculateRem-16(335px);
             text-align: right;
             float: right;
           }
@@ -106,7 +117,7 @@
 }
 
 .info__platform {
-  padding: 5em 0;
+  padding: calculateRem-16(50px) 0;
   &--cont {
     max-width: $main-content-width;
     position: relative;
@@ -118,7 +129,7 @@
         font-size: $fz-big;
         font-weight: $fw-lighter;
         color: $main-color;
-        padding-bottom: 1rem;
+        padding-bottom: calculateRem-16(10px);
       }
     }
 
@@ -131,10 +142,10 @@
         outline: none;
         cursor: pointer;
         transition: .5s;
-        margin: 0 1rem;
+        margin: 0 calculateRem-16(10px);
 
         &:not(:last-child) {
-          padding: 3rem;
+          padding: calculateRem-16(30px);
         }
 
         &:hover {
@@ -148,15 +159,15 @@
           }
         }
         h1 {
-          font-size: 2.1rem;
+          font-size: calculateRem-16(21px);
           color: $main-color;
           font-weight: $fw-semiBold;
-          padding: 3rem 0 2rem;
+          padding: calculateRem-16(30px) 0 calculateRem-16(20px);
         }
         p {
           font-size: $main-fz;
           color: $main-color;
-          padding-bottom: 3rem;
+          padding-bottom: calculateRem-16(30px);
         }
       }
     }
@@ -166,8 +177,8 @@
 
 .videos__background {
   background-color: $section-back-color;
-  padding-top: 5rem;
-  padding-bottom: 10rem;
+  padding-top: calculateRem-16(50px);
+  padding-bottom: calculateRem-16(100px);
 
   &--content {
     max-width: $main-content-width;
@@ -188,19 +199,19 @@
           width: 44%;
 
           span {
-            font-size: 2rem;
+            font-size: calculateRem-16(20px);
             text-transform: capitalize;
             color: #666666;
-            padding-bottom: 3rem;
+            padding-bottom: calculateRem-16(30px);
             display: inline-block;
             position: relative;
-            padding-left: 3rem;
+            padding-left: calculateRem-16(30px);
 
             &:before {
               content: "";
               @include backimg(url('../img/calendar-icons.png'));
-              width: 2rem;
-              height: 2rem;
+              width: calculateRem-16(20px);
+              height: calculateRem-16(20px);
               display: inline-block;
               position: absolute;
               left: 0;
@@ -209,11 +220,11 @@
           }
 
           h1 {
-            font-size: 2.7rem;
+            font-size: calculateRem-16(27px);
             font-weight: $fw-lighter;
             color: $main-color;
             line-height: 1.6;
-            padding-bottom: 1rem;
+            padding-bottom: calculateRem-16(10px);
             text-transform: uppercase;
           }
         }
@@ -231,7 +242,7 @@
 }
 
 .partners {
-  padding: 5rem 0;
+  padding: calculateRem-16(50px) 0;
 
   &--cont {
     @include mainWidth;
@@ -240,11 +251,11 @@
 
       .partners--cont--item {
         @include backimg;
-        height: 16rem;
-        width: 30rem;
+        height: calculateRem-16(160px);
+        width: calculateRem-16(300px);
         border: 3px solid #E6E6E6;
-        margin-right: 1rem;
-        margin-left: 1rem;
+        margin-right: calculateRem-16(10px);
+        margin-left: calculateRem-16(10px);
         display: block;
         text-decoration: none;
         transition: .2s;

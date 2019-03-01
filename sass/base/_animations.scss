@@ -1,13 +1,11 @@
 .burger__menu {
-  position: absolute;
-  right: 6rem;
-  top: 2rem;
   cursor: pointer;
-
+  padding-right: 56px;
   &--second {
     position: absolute;
-    top: 6rem;
-    right: 4rem;
+    top: 60px;
+    right: 40px;
+    padding-right: 0;
 
     .burger__menu--lines {
       background-color: $color-white;
@@ -15,16 +13,16 @@
   }
   &--lines {
     background: $main-color;
-    width: 20px;
+    width: calculateRem-16(20px);
     height: 2px;
-    margin: 5px 0;
+    margin: calculateRem-16(5px) 0;
     display: block;
     transition: 0.2s;
     border-radius: 10px;
   }
   .rotate-1 {
     transform: rotate(45deg);
-    margin-top: 1rem;
+    margin-top: calculateRem-16(10px);
     transition: 0.3s;
   }
   .rotate-2 {
