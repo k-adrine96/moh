@@ -1,0 +1,29 @@
+.ask__minister {
+  max-width: calculateRem-16(944px);
+  margin: calculateRem-16(100px) auto;
+  background-color: $color-white;
+  box-shadow: 2px 2px 28px #e9e9e9;
+
+  &--content {
+    max-width: calculateRem-16(600px);
+    margin: auto;
+    padding: calculateRem-16(51px) 0 calculateRem-16(75px);
+
+    h1 {
+      font-size: calculateRem-16(48px);
+      color: $main-color;
+      text-align: center;
+      max-width: calculateRem-16(500px);
+      margin: auto;
+      padding-bottom: calculateRem-16(41px);
+    }
+    .ask__minister--btns {
+      margin-top: calculateRem-16(45px);
+
+      a:not(:last-child) {
+        margin-right: calculateRem-16(10px);
+      }
+    }
+  }
+
+}

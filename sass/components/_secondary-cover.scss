@@ -1,0 +1,16 @@
+.secondary__cover {
+  @include backimg();
+  height: calculateRem-16(420px);
+
+  .secondary__cover--content {
+    max-width: $main-content-width;
+    margin: auto;
+    h1 {
+      font-size: calculateRem-16(80px);
+      color: $color-black;
+      text-transform: uppercase;
+      width: calculateRem-16(600px);
+    }
+  }
+
+}

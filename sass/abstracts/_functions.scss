@@ -1,5 +1,4 @@
 //  CONVERT PIXEL TO REM
-
 @function calculateRem-16($size) {
   $remSize: $size / $fz-16;
   @return #{$remSize}rem;
