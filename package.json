@@ -5,7 +5,7 @@
   "main": "/index.js",
   "scripts": {
     "compile:sass": "node-sass src/sass/main.scss src/css/style.css -w",
-    "live-server": "live-server"
+    "live-server": "live-server --port=2020 --open=src"
   },
   "author": "Harut",
   "license": "ISC",
