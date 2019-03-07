@@ -144,7 +144,7 @@
         line-height: 1.7; }
         .footer-main-content .footer__container .footer__container--info--contact li:not(:last-child) {
           margin-right: 1.25rem;
-          border-right: 1px solid rgba(0, 0, 0, 0.1);
+          border-right: 2px solid white;
           padding-right: 1.25rem; }
         .footer-main-content .footer__container .footer__container--info--contact li h1 {
           font-size: 0.875rem;
