@@ -1,192 +1,198 @@
 .footer {
-  background-color: $section-back-color;
-  &__container {
-    max-width: calculateRem-16(1810px);
-    margin: auto;
+  &__container--social {
+    position: relative;
+    padding-top: calculateRem-16(30px);
+    padding-bottom: calculateRem-16(30px);
 
-    &--social {
-      position: relative;
-      padding-top: calculateRem-16(20px);
+    //.footer--logo {
+    //  padding-top: 2.5rem;
+    //
+    //  li {
+    //
+    //    a {
+    //      color: $color-black;
+    //      font-size: 1.2rem;
+    //      font-weight: $fw-semiBold;
+    //      display: inline-block;
+    //      padding-left: 2rem;
+    //      text-decoration: none;
+    //    }
+    //    &:first-child {
+    //
+    //      a {
+    //        @include backimg(url("../img/moh-logo.png"));
+    //        width: 5.5rem;
+    //        height: 5.3rem;
+    //      }
+    //    }
+    //  }
+    //}
 
-      //.footer--logo {
-      //  padding-top: 2.5rem;
-      //
-      //  li {
-      //
-      //    a {
-      //      color: $color-black;
-      //      font-size: 1.2rem;
-      //      font-weight: $fw-semiBold;
-      //      display: inline-block;
-      //      padding-left: 2rem;
-      //      text-decoration: none;
-      //    }
-      //    &:first-child {
-      //
-      //      a {
-      //        @include backimg(url("../img/moh-logo.png"));
-      //        width: 5.5rem;
-      //        height: 5.3rem;
-      //      }
-      //    }
-      //  }
-      //}
+    .footer--social {
 
-      .footer--social {
+      li {
+        position: relative;
+        border: 2px solid #065BAA;
+        width: 44px;
+        height: 44px;
 
-        li {
-          position: relative;
-          border: 2px solid #065BAA;
-          width: 44px;
-          height: 44px;
+        &:not(:last-child) {
+          margin-right: calculateRem-16(30px);
+        }
 
-          &:not(:last-child) {
-            margin-right: calculateRem-16(30px);
-          }
+        &:hover {
+          border-color: $main-btn-color;
+        }
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
 
           &:hover {
-           border-color: $main-btn-color;
-          }
-          a {
-            display: block;
-            width: 100%;
-            height: 100%;
-
-            &:hover {
-
-              .facebook--icon {
-                background-position: -17px -213px;
-              }
-              .youtube--icon {
-                background-position: -2px -153px;
-              }
-              .linkedin--icon {
-                background-position: -2px -192px;
-              }
-              .google--icon {
-                background-position: -2px -21px;
-              }
-              .twitter--icon {
-                background-position: -2px -115px;
-              }
-              .instagram--icon {
-                background-position: -2px -42px;
-              }
-            }
-
-            i {
-              display: inline-block;
-              background: url('../img/social-icons.png') no-repeat;
-              overflow: hidden;
-              text-indent: -9999px;
-              text-align: left;
-              position: absolute;
-            }
             .facebook--icon {
-              background-position: -2px -213px;
-              width: 13px;
-              height: 23px;
-              left: 35%;
-              top: 23%;
+              background-position: -17px -213px;
+            }
+            .youtube--icon {
+              background-position: -2px -153px;
+            }
+            .linkedin--icon {
+              background-position: -2px -192px;
+            }
+            .google--icon {
+              background-position: -2px -21px;
+            }
+            .twitter--icon {
+              background-position: -2px -115px;
+            }
+            .instagram--icon {
+              background-position: -2px -42px;
             }
           }
 
-          .youtube--icon {
-            background-position: -2px -135px;
-            width: 21px;
-            height: 16px;
-            left: 26%;
-            top: 31%;
+          i {
+            display: inline-block;
+            background: url('../img/social-icons.png') no-repeat;
+            overflow: hidden;
+            text-indent: -9999px;
+            text-align: left;
+            position: absolute;
           }
-          .linkedin--icon {
-            background-position: -2px -171px;
-            width: 19px;
-            height: 19px;
-            left: 28.5%;
-            top: 22%;
-          }
-          .google--icon {
-            background-position: -2px -0px;
-            width: 30px;
-            height: 19px;
-            left: 16%;
-            top: 26%;
-          }
-          .twitter--icon {
-            background-position: -2px -95px;
-            width: 22px;
-            height: 18px;
-            left: 26%;
-            top: 28%;
-          }
-          .instagram--icon {
-            background-position: -2px -68px;
-            width: 25px;
-            height: 25px;
-            left: 21%;
-            top: 19%;
+          .facebook--icon {
+            background-position: -2px -213px;
+            width: 13px;
+            height: 23px;
+            left: 35%;
+            top: 23%;
           }
         }
 
+        .youtube--icon {
+          background-position: -2px -135px;
+          width: 21px;
+          height: 16px;
+          left: 26%;
+          top: 31%;
+        }
+        .linkedin--icon {
+          background-position: -2px -171px;
+          width: 19px;
+          height: 19px;
+          left: 28.5%;
+          top: 22%;
+        }
+        .google--icon {
+          background-position: -2px -0px;
+          width: 30px;
+          height: 19px;
+          left: 16%;
+          top: 26%;
+        }
+        .twitter--icon {
+          background-position: -2px -95px;
+          width: 22px;
+          height: 18px;
+          left: 26%;
+          top: 28%;
+        }
+        .instagram--icon {
+          background-position: -2px -68px;
+          width: 25px;
+          height: 25px;
+          left: 21%;
+          top: 19%;
+        }
       }
+
     }
+  }
 
-    .footer__container--info {
-      padding-top: calculateRem-16(20px);
+  &-main-content {
+    background-color: $section-back-color;
 
-      &--contact {
+    .footer__container {
+      max-width: calculateRem-16(1810px);
+      margin: auto;
 
-        li {
-          line-height: 1.7;
+      .footer__container--info {
+        padding-top: calculateRem-16(20px);
 
-          &:not(:last-child) {
-            margin-right: calculateRem-16(20px);
-            border-right: 1px solid rgba($color-black, 0.1);
-            padding-right: calculateRem-16(20px);
+        &--contact {
+
+          li {
+            line-height: 1.7;
+
+            &:not(:last-child) {
+              margin-right: calculateRem-16(20px);
+              border-right: 1px solid rgba($color-black, 0.1);
+              padding-right: calculateRem-16(20px);
+            }
+
+            h1 {
+              font-size: calculateRem-16(14px);
+              color: #065BAA;
+              font-weight: $fw-lighter;
+              text-transform: uppercase;
+            }
+
+            p {
+              font-size: calculateRem-16(12px);
+              padding-top: 10px;
+
+            }
+
+            a {
+              text-decoration: none;
+              color: $main-color;
+              font-size: calculateRem-16(12px);
+            }
           }
+        }
+      }
 
-          h1 {
-            font-size: calculateRem-16(12px);
-            color: $main-color;
-            font-weight: $fw-semiBold;
-          }
+      .footer__container--copyright {
+        position: relative;
+        text-align: center;
+        padding: calculateRem-16(20px) 0 calculateRem-16(15px);
 
-          p {
-            font-size: calculateRem-16(12px);
+        p {
+          color: #065BAA;
+          font-size: calculateRem-16(12px);
+        }
 
-          }
+        h1 {
+          position: absolute;
+          right: 0;
+          bottom: calculateRem-16(20px);
+          font-size: calculateRem-16(13px);
+          color: #065BAA;
 
           a {
-            text-decoration: none;
-            color: $main-color;
-            font-size: calculateRem-16(12px);
+            font-weight: $fw-bold;
+            color: #065BAA;
           }
-        }
-      }
-    }
-
-    .footer__container--copyright {
-      position: relative;
-      text-align: center;
-      padding: calculateRem-16(20px) 0 calculateRem-16(15px);
-
-      p {
-        color: $main-color;
-        font-size: calculateRem-16(12px);
-      }
-
-      h1 {
-        position: absolute;
-        right: 0;
-        bottom: calculateRem-16(20px);
-        font-size: calculateRem-16(13px);
-        color: $main-color;
-
-        a {
-          font-weight: $fw-bold;
-          color: $main-color;
         }
       }
     }
   }
+
 }
