@@ -1,0 +1,70 @@
+.biography__container {
+
+  ul {
+
+    li {
+      .biography__all--info {
+        max-width: $main-content-width;
+        margin: auto;
+        padding: calculateRem-16(20px) 0;
+
+        .biography__header {
+          border-bottom: 1px solid $main-btn-color;
+          padding: calculateRem-16(20px) 0;
+          h1 {
+            font-size: calculateRem-16(48px);
+            color: $main-color;
+            text-transform: uppercase;
+          }
+        }
+        .biography__content {
+          padding: calculateRem-16(16px) 0;
+
+          &--year {
+            width: 34%;
+            span {
+              font-size: calculateRem-16(48px);
+              color: $main-color;
+            }
+          }
+
+          &--info {
+            width: 92%;
+            li {
+              border-bottom: 1px solid $color-gray;
+              padding: calculateRem-16(10px) 0;
+
+              a {
+                text-decoration: none;
+                display: inline-block;
+                font-size: calculateRem-16(18px);
+                color: $main-color;
+              }
+            }
+          }
+
+          &--image {
+            @include backimg();
+            height: calculateRem-16(207px);
+            width: calculateRem-16(365px);
+          }
+
+          &--text {
+            width: 92%;
+            font-size: calculateRem-16(18px);
+            color: $main-color;
+            padding: 0 50px;
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: $section-back-color;
+
+        .biography__header {
+          border-bottom: 1px solid #0071BC;
+        }
+      }
+    }
+  }
+}

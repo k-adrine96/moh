@@ -1,23 +1,25 @@
+//ABSTRACTS
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/functions";
-
+//LAYOUTS
 @import "layout/header";
 @import "layout/subscription";
 @import "layout/footer";
 @import "layout/menu";
-
+//COMPONENTS
 @import "components/button";
 @import "components/form";
 @import "components/secondary-cover";
-
+//OTHER
 @import "Other/select2";
 @import "Other/slick";
 @import "Other/empty-div";
-
+//PAGES
 @import "pages/home";
+@import "pages/biography-minister";
 @import "pages/ask-minister";
-
+//BASE
 @import "base/utilities";
 @import "base/animations";
 @import "base/typography";
