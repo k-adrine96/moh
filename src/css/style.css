@@ -506,20 +506,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../img/arrow-light-right.png");
-  position: absolute;
-  transform: translateY(-50%);
-  cursor: pointer;
-  height: 5rem;
-  width: 1.7rem;
-  right: -5rem; }
-  .prev-arrow:hover {
-    background-image: url("../img/arrow-bold-right.png"); }
-
-.next-arrow {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-image: url("../img/arrow-light-left.png");
   position: absolute;
   transform: translateY(-50%);
@@ -527,8 +513,22 @@
   height: 5rem;
   width: 1.7rem;
   left: -7rem; }
-  .next-arrow:hover {
+  .prev-arrow:hover {
     background-image: url("../img/arrow-bold-left.png"); }
+
+.next-arrow {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/arrow-light-right.png");
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 5rem;
+  width: 1.7rem;
+  right: -5rem; }
+  .next-arrow:hover {
+    background-image: url("../img/arrow-bold-right.png"); }
 
 .news-cont-prev,
 .news-cont-next {

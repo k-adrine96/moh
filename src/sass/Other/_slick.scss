@@ -18,21 +18,21 @@
 }
 
 .prev-arrow {
-  @include backimg(url("../img/arrow-light-right.png"));
-  @include arrows;
-  right: -5rem;
-
-  &:hover {
-    background-image: url("../img/arrow-bold-right.png");
-  }
-}
-.next-arrow {
   @include backimg(url("../img/arrow-light-left.png"));
   @include arrows;
   left: -7rem;
 
   &:hover {
     background-image: url("../img/arrow-bold-left.png");
+  }
+}
+.next-arrow {
+  @include backimg(url("../img/arrow-light-right.png"));
+  @include arrows;
+  right: -5rem;
+
+  &:hover {
+    background-image: url("../img/arrow-bold-right.png");
   }
 }
 
