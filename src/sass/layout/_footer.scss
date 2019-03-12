@@ -1,8 +1,8 @@
 .footer {
+
   &__container--social {
     position: relative;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 3rem 0;
 
     .footer--social {
 
@@ -23,7 +23,6 @@
           display: block;
           width: 100%;
           height: 100%;
-
 
           &:hover {
             .facebook--icon {
@@ -54,15 +53,14 @@
             text-align: left;
             position: absolute;
           }
-          .facebook--icon {
-            background-position: -2px -213px;
-            width: 13px;
-            height: 23px;
-            left: 35%;
-            top: 23%;
-          }
         }
-
+        .facebook--icon {
+          background-position: -2px -213px;
+          width: 13px;
+          height: 23px;
+          left: 35%;
+          top: 23%;
+        }
         .youtube--icon {
           background-position: -2px -135px;
           width: 21px;
