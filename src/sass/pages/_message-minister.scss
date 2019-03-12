@@ -1,0 +1,31 @@
+.message__container {
+  max-width: $main-content-width;
+  margin: auto;
+  padding: 6rem 0;
+  &--info {
+    padding: 1rem 0;
+    &--header {
+
+      h1 {
+        font-size: 2.6rem;
+        color: $main-color;
+        text-transform: uppercase;
+        padding-bottom: 2rem;
+      }
+    }
+    &--text {
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &--author {
+
+    p {
+      font-size: 1.8rem;
+      color: #0071BC;
+    }
+  }
+}

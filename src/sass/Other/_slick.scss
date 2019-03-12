@@ -6,12 +6,12 @@
   color: $main-btn-color;
 }
 .slick-dots li button:before {
-  font-size: calculateRem-16(27px);
+  font-size: 2.7rem;
   opacity: 1;
   color: $color-white;
 }
 .slick-dots li {
-  margin: 0 calculateRem-16(11px);
+  margin: 0 1.1rem;
 }
 .slick-dotted.slick-slider {
   margin-bottom: 0;
@@ -20,7 +20,7 @@
 .news-cont-prev {
   @include backimg(url("../img/arrow-light-right.png"));
   @include arrows;
-  right: calculateRem-16(-50px);
+  right: -5rem;
   bottom: 50%;
 
   &:hover {
@@ -30,7 +30,7 @@
 .news-cont-next {
   @include backimg(url("../img/arrow-light-left.png"));
   @include arrows;
-  left: calculateRem-16(-70px);
+  left: -7rem;
   bottom: 50%;
 
   &:hover {
@@ -42,7 +42,7 @@
 .info__platform-prev {
   @include backimg(url("../img/arrow-light-right.png"));
   @include arrows;
-  right: calculateRem-16(-50px);
+  right: -5rem;
   bottom: 30%;
 
   &:hover {
@@ -53,7 +53,7 @@
   @include backimg(url("../img/arrow-light-left.png"));
   @include arrows;
 
-  left: calculateRem-16(-70px);
+  left: -7rem;
   bottom: 30%;
 
   &:hover {
@@ -65,7 +65,7 @@
 .videos__background-prev {
   @include backimg(url("../img/arrow-light-right.png"));
   @include arrows;
-  right: calculateRem-16(-50px);
+  right: -5rem;
   bottom: 30%;
 
   &:hover {
@@ -75,7 +75,7 @@
 .videos__background-next {
   @include backimg(url("../img/arrow-light-left.png"));
   @include arrows;
-  left: calculateRem-16(-70px);
+  left: -7rem;
   bottom: 30%;
 
   &:hover {

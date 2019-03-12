@@ -1,6 +1,6 @@
 .header {
-  height: calculateRem-16(100px);
-  padding-top: calculateRem-16(18px);
+  height: 10rem;
+  padding-top: 1.8rem;
   box-shadow: 0 1px 20px rgba($color-black, .4);
   width: 100%;
   background-color: $color-white;
@@ -11,7 +11,7 @@
 .header__logo {
 
   ul {
-    padding-left: calculateRem-16(55px);
+    padding-left: 5.5rem;
     li {
 
       &:last-child {
@@ -24,15 +24,15 @@
         font-size: $main-fz;
         font-weight: $fw-semiBold;
         display: inline-block;
-        padding-left: calculateRem-16(20px);
+        padding-left: 2rem;
         text-decoration: none;
       }
       &:first-child {
 
         a {
           @include backimg(url("../img/moh-logo.png"));
-          width: calculateRem-16(68px);
-          height: calculateRem-16(65px);
+          width: 6.8rem;
+          height: 6.5rem;
         }
       }
     }
@@ -45,25 +45,18 @@
 }
 
 .header__navigation {
-  margin-right: calculateRem-16(70px);
+  margin-right: 7rem;
 
   li {
-    padding: calculateRem-16(18px);
+    padding: 1.8rem;
 
     a {
       text-decoration: $td-none;
       color: $color-hex-gray;
-      font-size: calculateRem-16(14px);
+      font-size: 1.4rem;
       font-weight: $fw-semiBold;
       text-transform: uppercase;
       transition: 0.2s;
-
-      //@media only screen and (max-width: 1400px) {
-      //  font-size: 11px;
-      //}
-      //@media only screen and (max-width: 1200px) {
-      //  font-size: 14px;
-      //}
 
       &:hover {
         color: $main-btn-color;

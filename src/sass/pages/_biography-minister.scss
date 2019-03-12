@@ -6,24 +6,24 @@
       .biography__all--info {
         max-width: $main-content-width;
         margin: auto;
-        padding: calculateRem-16(20px) 0;
+        padding: 2rem 0;
 
         .biography__header {
           border-bottom: 1px solid $main-btn-color;
-          padding: calculateRem-16(20px) 0;
+          padding: 2rem 0;
           h1 {
-            font-size: calculateRem-16(48px);
+            font-size: 4.8rem;
             color: $main-color;
             text-transform: uppercase;
           }
         }
         .biography__content {
-          padding: calculateRem-16(16px) 0;
+          padding: 1.6rem 0;
 
           &--year {
             width: 34%;
             span {
-              font-size: calculateRem-16(48px);
+              font-size: 4.8rem;
               color: $main-color;
             }
           }
@@ -32,12 +32,12 @@
             width: 92%;
             li {
               border-bottom: 1px solid $color-gray;
-              padding: calculateRem-16(10px) 0;
+              padding: 1rem 0;
 
               a {
                 text-decoration: none;
                 display: inline-block;
-                font-size: calculateRem-16(18px);
+                font-size: 1.8rem;
                 color: $main-color;
               }
             }
@@ -45,13 +45,13 @@
 
           &--image {
             @include backimg();
-            height: calculateRem-16(207px);
-            width: calculateRem-16(365px);
+            height: 20.7rem;
+            width: 36.5rem;
           }
 
           &--text {
             width: 92%;
-            font-size: calculateRem-16(18px);
+            font-size: 1.8rem;
             color: $main-color;
             padding: 0 50px;
           }

@@ -5,16 +5,16 @@
   &__content {
     max-width: $main-content-width;
     margin: auto;
-    padding: calculateRem-16(50px) 0 calculateRem-16(60px);
+    padding: 5rem 0 6rem;
 
     &--header {
 
       h1 {
         text-transform: uppercase;
-        font-size: calculateRem-16(30px);
+        font-size: 3rem;
         font-weight: $fw-lighter;
         color: $color-white;
-        padding-bottom: calculateRem-16(10px);
+        padding-bottom: 1rem;
       }
     }
 
@@ -22,7 +22,7 @@
 
       a {
         color: $color-white;
-        font-size: calculateRem-16(15px);
+        font-size: 1.5rem;
       }
     }
   }

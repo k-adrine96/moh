@@ -6,8 +6,8 @@
     .input-group-prepend {
 
       span {
-        width: calculateRem-16(40px);
-        height: calculateRem-16(48px);
+        width: 4rem;
+        height: 4.8rem;
         justify-content: center;
         @include border($color-white);
         background-color: $color-white;
@@ -28,8 +28,8 @@
     }
 
     input {
-      height: calculateRem-16(48px);
-      margin-right: calculateRem-16(40px);
+      height: 4.8rem;
+      margin-right: 4rem;
       @include border($color-white);
       font-size: $main-fz;
     }
@@ -37,18 +37,18 @@
 }
 .menu--form {
 
-  margin: calculateRem-16(100px) auto 0;
+  margin: 10rem auto 0;
 
   .input-group {
-    margin-left: calculateRem-16(40px);
-    width: calculateRem-16(320px);
+    margin-left: 4rem;
+    width: 32rem;
 
     input {
-      height: calculateRem-16(50px);
+      height: 5rem;
       border-radius: 30px;
       @include border($color-white);
       font-size: $main-fz;
-      padding-left: calculateRem-16(20px);
+      padding-left: 2rem;
     }
 
     .input-group-append {
@@ -59,7 +59,7 @@
         border-bottom-right-radius: 30px;
         @include border($color-white);
         background-color: $color-white;
-        width: calculateRem-16(40px);
+        width: 4rem;
         padding: 0;
       }
     }
@@ -84,7 +84,7 @@
     }
     input {
       @include border($color-gray);
-      height: calculateRem-16(53px);
+      height: 5.3rem;
       border-left: none;
 
       &:focus {
@@ -97,7 +97,7 @@
 
   textarea {
     resize: none;
-    height: calculateRem-16(284px);
+    height: 28.4rem;
     &:focus {
       border-color: $color-gray;
       outline: 0;

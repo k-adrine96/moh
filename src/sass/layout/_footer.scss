@@ -1,32 +1,8 @@
 .footer {
   &__container--social {
     position: relative;
-    padding-top: calculateRem-16(30px);
-    padding-bottom: calculateRem-16(30px);
-
-    //.footer--logo {
-    //  padding-top: 2.5rem;
-    //
-    //  li {
-    //
-    //    a {
-    //      color: $color-black;
-    //      font-size: 1.2rem;
-    //      font-weight: $fw-semiBold;
-    //      display: inline-block;
-    //      padding-left: 2rem;
-    //      text-decoration: none;
-    //    }
-    //    &:first-child {
-    //
-    //      a {
-    //        @include backimg(url("../img/moh-logo.png"));
-    //        width: 5.5rem;
-    //        height: 5.3rem;
-    //      }
-    //    }
-    //  }
-    //}
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
     .footer--social {
 
@@ -37,7 +13,7 @@
         height: 44px;
 
         &:not(:last-child) {
-          margin-right: calculateRem-16(30px);
+          margin-right: 3rem;
         }
 
         &:hover {
@@ -131,11 +107,11 @@
     background-color: $section-back-color;
 
     .footer__container {
-      max-width: calculateRem-16(1810px);
+      max-width: 181rem;
       margin: auto;
 
       .footer__container--info {
-        padding-top: calculateRem-16(20px);
+        padding-top: 2rem;
 
         &--contact {
 
@@ -143,20 +119,20 @@
             line-height: 1.7;
 
             &:not(:last-child) {
-              margin-right: calculateRem-16(20px);
+              margin-right: 2rem;
               border-right: 2px solid white;
-              padding-right: calculateRem-16(20px);
+              padding-right: 2rem;
             }
 
             h1 {
-              font-size: calculateRem-16(14px);
+              font-size: 1.4rem;
               color: #065BAA;
               font-weight: $fw-lighter;
               text-transform: uppercase;
             }
 
             p {
-              font-size: calculateRem-16(12px);
+              font-size: 1.2rem;
               padding-top: 10px;
 
             }
@@ -164,7 +140,7 @@
             a {
               text-decoration: none;
               color: $main-color;
-              font-size: calculateRem-16(12px);
+              font-size: 1.2rem;
             }
           }
         }
@@ -173,18 +149,18 @@
       .footer__container--copyright {
         position: relative;
         text-align: center;
-        padding: calculateRem-16(20px) 0 calculateRem-16(15px);
+        padding: 2rem 0 1.5rem;
 
         p {
           color: #065BAA;
-          font-size: calculateRem-16(12px);
+          font-size: 1.2rem;
         }
 
         h1 {
           position: absolute;
           right: 0;
-          bottom: calculateRem-16(20px);
-          font-size: calculateRem-16(13px);
+          bottom: 2rem;
+          font-size: 1.3rem;
           color: #065BAA;
 
           a {

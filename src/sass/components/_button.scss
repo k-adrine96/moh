@@ -13,14 +13,14 @@
     position: relative;
     font-size: $main-fz;
     outline: none;
-    height: calculateRem-16(48px);
-    width: calculateRem-16(200px);
+    height: 4.8rem;
+    width: 20rem;
     font-weight: $fw-semiBold;
   }
 
   &:hover {
     transform: translateY(-.3rem);
-    box-shadow: 0 calculateRem-16(10px) calculateRem-16(20px) rgba($color-black, .2);
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
     color: $color-black;
 
     &::after {
@@ -31,7 +31,7 @@
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px calculateRem-16(10px) rgba($color-black, .2);
+    box-shadow: 0 5px 1rem rgba($color-black, .2);
   }
 
 
@@ -94,7 +94,7 @@
 
   &--yellow-small {
 
-    height: calculateRem-16(40px)!important;
+    height: 4rem!important;
     margin: auto;
     background-color: #CCCCCC;
     color: white;
