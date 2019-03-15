@@ -935,7 +935,9 @@
     font-size: 1.8rem; }
 
 .minister__staff .workers__container-1,
-.minister__staff .workers__container-2 {
+.minister__staff .workers__container-2,
+.minister__staff .workers__container-3,
+.minister__staff .workers__container-4 {
   display: none; }
 
 .burger__menu {
