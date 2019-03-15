@@ -9,7 +9,7 @@
       font-size: 8rem;
       color: $color-black;
       text-transform: uppercase;
-      width: 96rem;
+      max-width: 96rem;
     }
   }
 
@@ -22,6 +22,16 @@
       color: $color-black;
       text-transform: uppercase;
       width: 30rem;
+    }
+  }
+
+}
+
+.aks__minister--cover {
+
+  .secondary__cover--content {
+    h1 {
+      max-width: 61rem;
     }
   }
 

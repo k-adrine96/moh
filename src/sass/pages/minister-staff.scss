@@ -102,6 +102,8 @@
     -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid $main-btn-color;
 
     &--header {
       padding: 5rem 0;
@@ -111,6 +113,7 @@
         color: #0071bc;
       }
     }
+
     &--info {
       list-style: none;
       counter-reset: my-awesome-counter;
@@ -135,6 +138,15 @@
         }
       }
     }
+
+    &--name {
+
+      h1 {
+        text-align: right;
+        font-size: 1.8rem;
+      }
+    }
+
   }
 
   .workers__container-1,
