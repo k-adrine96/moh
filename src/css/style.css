@@ -848,9 +848,9 @@
       background-repeat: no-repeat;
       background-image: "";
       height: 40rem;
-      -webkit-flex: 43%;
-      -ms-flex: 43%;
-      flex: 43%; }
+      -webkit-flex: 45%;
+      -ms-flex: 45%;
+      flex: 45%; }
     .minister__staff--container--width .workers__info--content {
       display: flex;
       justify-content: space-between;
