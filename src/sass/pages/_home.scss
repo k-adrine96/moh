@@ -16,7 +16,7 @@
 
         h2 {
           font-size: 4.2rem;
-          color: $color-white;
+          color: $main-color;
           font-weight: $fw-semiBold;
 
           span {
@@ -25,7 +25,7 @@
         }
         p {
           font-size: 2.5rem;
-          color: #FFFFFF;
+          color: $main-color;
           display: -webkit-box;
           margin: 2.3rem auto;
           -webkit-box-orient: vertical;

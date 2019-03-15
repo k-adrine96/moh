@@ -3,6 +3,7 @@ $(document).ready(function () {
   SlickSlider();
   Menu();
 
+
   $(document).on('click', function () {
     Menu.close();
 

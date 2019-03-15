@@ -47,7 +47,7 @@
 .subscription {
   background-color: #4E525B; }
   .subscription__content {
-    max-width: 130rem;
+    max-width: 140rem;
     margin: auto;
     padding: 5rem 0 6rem; }
     .subscription__content--header h1 {
@@ -210,6 +210,7 @@
         .menu .menu--content li .hided--content li a {
           color: #FFFFFF;
           font-size: 1.8rem;
+          font-weight: 100;
           text-decoration: none;
           display: block;
           text-transform: none; }
@@ -437,7 +438,7 @@
   background-image: "";
   height: 42rem; }
   .secondary__cover--content {
-    max-width: 130rem;
+    max-width: 140rem;
     margin: auto; }
     .secondary__cover--content h1 {
       font-size: 8rem;
@@ -445,7 +446,7 @@
       text-transform: uppercase;
       width: 96rem; }
   .secondary__cover--info {
-    max-width: 130rem;
+    max-width: 140rem;
     margin: 50px auto 0; }
     .secondary__cover--info h1 {
       font-size: 2.5rem;
@@ -553,19 +554,19 @@
   position: relative;
   outline: none; }
   .main__cover--item-container {
-    max-width: 130rem;
+    max-width: 140rem;
     margin: 17.4rem auto 0; }
     .main__cover--item-container-cont {
       max-width: 60rem; }
       .main__cover--item-container-cont h2 {
         font-size: 4.2rem;
-        color: #FFFFFF;
+        color: #4D4D4D;
         font-weight: 600; }
         .main__cover--item-container-cont h2 span {
           color: #FFBC35; }
       .main__cover--item-container-cont p {
         font-size: 2.5rem;
-        color: #FFFFFF;
+        color: #4D4D4D;
         display: -webkit-box;
         margin: 2.3rem auto;
         -webkit-box-orient: vertical;
@@ -579,7 +580,7 @@
   padding-top: 5rem;
   padding-bottom: 2rem; }
   .news__background .news__content {
-    max-width: 130rem;
+    max-width: 140rem;
     position: relative; }
     .news__background .news__content--header {
       font-size: 5rem; }
@@ -636,7 +637,7 @@
 .info__platform {
   padding: 5rem 0; }
   .info__platform--cont {
-    max-width: 130rem;
+    max-width: 140rem;
     position: relative; }
     .info__platform--cont--header h1 {
       text-transform: uppercase;
@@ -675,7 +676,7 @@
   padding-top: 5rem;
   padding-bottom: 10rem; }
   .videos__background--content {
-    max-width: 130rem;
+    max-width: 140rem;
     position: relative; }
     .videos__background--content h1 {
       font-size: 5rem;
@@ -722,7 +723,7 @@
 .partners {
   padding: 5rem 0; }
   .partners--cont {
-    max-width: 130rem;
+    max-width: 140rem;
     margin: auto; }
     .partners--cont--slider .partners--cont--item {
       background-size: cover;
@@ -742,7 +743,7 @@
         border-color: #FFBC35; }
 
 .message__container {
-  max-width: 130rem;
+  max-width: 140rem;
   margin: auto;
   padding: 6rem 0; }
   .message__container--info {
@@ -759,7 +760,7 @@
     color: #0071BC; }
 
 .biography__container ul li .biography__all--info {
-  max-width: 130rem;
+  max-width: 140rem;
   margin: auto;
   padding: 2rem 0; }
   .biography__container ul li .biography__all--info .biography__header {
@@ -825,6 +826,110 @@
       .ask__minister--content .ask__minister--btns a:not(:last-child) {
         margin-right: 1rem; }
 
+.minister__staff--container--width {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 140rem;
+  margin: auto;
+  padding: 6rem 0; }
+  .minister__staff--container--width .workers__info {
+    -webkit-flex: 50%;
+    -ms-flex: 50%;
+    flex: 50%;
+    display: flex; }
+    .minister__staff--container--width .workers__info--image {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: "";
+      height: 40rem;
+      -webkit-flex: 43%;
+      -ms-flex: 43%;
+      flex: 43%; }
+    .minister__staff--container--width .workers__info--content {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      -webkit-flex: 57%;
+      -ms-flex: 57%;
+      flex: 57%;
+      padding: 7px 1.8rem; }
+      .minister__staff--container--width .workers__info--content--names h1 {
+        font-size: 2.6rem;
+        color: #4D4D4D;
+        text-transform: uppercase; }
+      .minister__staff--container--width .workers__info--content--names a {
+        font-size: 4.8rem;
+        text-transform: uppercase;
+        color: #0071bc;
+        display: inline-block;
+        text-decoration: none; }
+      .minister__staff--container--width .workers__info--content .worker__number__email li {
+        display: flex;
+        align-items: center; }
+        .minister__staff--container--width .workers__info--content .worker__number__email li i {
+          width: 35px;
+          height: 35px;
+          display: inline-block;
+          margin-right: 1rem; }
+        .minister__staff--container--width .workers__info--content .worker__number__email li .call-icon {
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url("../img/call-icon-yellow.png"); }
+        .minister__staff--container--width .workers__info--content .worker__number__email li .message-icon {
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url("../img/message-icon-blue.png"); }
+        .minister__staff--container--width .workers__info--content .worker__number__email li span {
+          font-size: 2.6rem;
+          color: #4D4D4D; }
+        .minister__staff--container--width .workers__info--content .worker__number__email li:not(:last-child) {
+          padding-bottom: 1rem; }
+  .minister__staff--container--width--width > div:not(:last-child) {
+    margin-bottom: 1rem; }
+
+.minister__staff--container:nth-child(even) {
+  background-color: #F6F6F6; }
+
+.minister__staff .workers__container {
+  max-width: 140rem;
+  margin: auto;
+  -webkit-flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%; }
+  .minister__staff .workers__container--header {
+    padding: 5rem 0; }
+    .minister__staff .workers__container--header h1 {
+      font-size: 4.8rem;
+      color: #0071bc; }
+  .minister__staff .workers__container--info {
+    list-style: none;
+    counter-reset: my-awesome-counter; }
+    .minister__staff .workers__container--info li {
+      counter-increment: my-awesome-counter;
+      font-size: 1.8rem;
+      position: relative;
+      padding-left: 4rem;
+      margin-bottom: 2rem; }
+      .minister__staff .workers__container--info li:before {
+        content: counter(my-awesome-counter);
+        font-size: 5rem;
+        font-weight: lighter;
+        margin-right: 0.5rem;
+        color: #FFBC35;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%); }
+
+.minister__staff .workers__container-1,
+.minister__staff .workers__container-2 {
+  display: none; }
+
 .burger__menu {
   cursor: pointer;
   padding-right: 5.6rem; }
@@ -853,8 +958,8 @@
     transition: 0.3s; }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: 'Segoe UI';
+  font-weight: 100;
   line-height: 1.4;
   color: #4D4D4D;
   box-sizing: border-box; }
