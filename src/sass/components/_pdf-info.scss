@@ -1,0 +1,102 @@
+.pdf__container {
+
+  li {
+    .pdf__info {
+      max-width: $main-content-width;
+      margin: auto;
+      padding: 2rem 0;
+
+      &--header {
+        border-bottom: 1px solid $main-btn-color;
+        padding: 2rem 0;
+        h1 {
+          font-size: 4.8rem;
+          color: $main-color;
+          text-transform: uppercase;
+        }
+      }
+
+      &--row {
+        padding: 1.6rem 0;
+        display: flex;
+        align-items: center;
+
+        .pdf__year--large {
+          width: 25%;
+          span {
+            font-size: 4.8rem;
+            color: $main-color;
+          }
+        }
+
+        .pdf__year--small {
+          width: 15%;
+          span {
+            font-size: 4.8rem;
+            color: $main-color;
+          }
+        }
+
+      }
+    }
+  }
+
+  & > li:nth-child(even) {
+    background-color: $section-back-color;
+
+    .pdf__info--header {
+      border-bottom: 1px solid #0071BC;
+    }
+  }
+}
+
+.pdf__text {
+  width: 100%;
+  ul {
+
+    li.border-btm {
+      border-bottom: 1px solid $color-gray;
+      padding: 1rem 0;
+    }
+
+    li {
+      .pdf__icon {
+        display:inline-block;
+        @include backimg;
+        width: 29px;
+        height: 33px;
+      }
+
+      a.border-btm {
+        border-bottom: 1px solid $color-gray;
+      }
+      a {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.8rem;
+        color: $main-color;
+        padding: 1rem 0;
+        width: 100%;
+        margin-left: 30px;
+      }
+    }
+  }
+
+}
+
+.pdf__info--img--text {
+  display: flex;
+  align-items: start!important;
+
+  .biography__content--image {
+    @include backimg();
+    height: 20.7rem;
+    width: 36.5rem;
+  }
+  .biography__text {
+    width: 100%;
+    font-size: 1.8rem;
+    color: $main-color;
+    padding: 0 50px;
+  }
+}

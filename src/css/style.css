@@ -431,6 +431,77 @@
     outline: 0;
     box-shadow: none; }
 
+.pdf__container li .pdf__info {
+  max-width: 140rem;
+  margin: auto;
+  padding: 2rem 0; }
+  .pdf__container li .pdf__info--header {
+    border-bottom: 1px solid #FFBC35;
+    padding: 2rem 0; }
+    .pdf__container li .pdf__info--header h1 {
+      font-size: 4.8rem;
+      color: #4D4D4D;
+      text-transform: uppercase; }
+  .pdf__container li .pdf__info--row {
+    padding: 1.6rem 0;
+    display: flex;
+    align-items: center; }
+    .pdf__container li .pdf__info--row .pdf__year--large {
+      width: 25%; }
+      .pdf__container li .pdf__info--row .pdf__year--large span {
+        font-size: 4.8rem;
+        color: #4D4D4D; }
+    .pdf__container li .pdf__info--row .pdf__year--small {
+      width: 15%; }
+      .pdf__container li .pdf__info--row .pdf__year--small span {
+        font-size: 4.8rem;
+        color: #4D4D4D; }
+
+.pdf__container > li:nth-child(even) {
+  background-color: #F6F6F6; }
+  .pdf__container > li:nth-child(even) .pdf__info--header {
+    border-bottom: 1px solid #0071BC; }
+
+.pdf__text {
+  width: 100%; }
+  .pdf__text ul li.border-btm {
+    border-bottom: 1px solid #CCCCCC;
+    padding: 1rem 0; }
+  .pdf__text ul li .pdf__icon {
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: "";
+    width: 29px;
+    height: 33px; }
+  .pdf__text ul li a.border-btm {
+    border-bottom: 1px solid #CCCCCC; }
+  .pdf__text ul li a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.8rem;
+    color: #4D4D4D;
+    padding: 1rem 0;
+    width: 100%;
+    margin-left: 30px; }
+
+.pdf__info--img--text {
+  display: flex;
+  align-items: start !important; }
+  .pdf__info--img--text .biography__content--image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: "";
+    height: 20.7rem;
+    width: 36.5rem; }
+  .pdf__info--img--text .biography__text {
+    width: 100%;
+    font-size: 1.8rem;
+    color: #4D4D4D;
+    padding: 0 50px; }
+
 .secondary__cover {
   background-size: cover;
   background-position: center;
@@ -761,52 +832,6 @@
   .message__container--author p {
     font-size: 1.8rem;
     color: #0071BC; }
-
-.biography__container ul li .biography__all--info {
-  max-width: 140rem;
-  margin: auto;
-  padding: 2rem 0; }
-  .biography__container ul li .biography__all--info .biography__header {
-    border-bottom: 1px solid #FFBC35;
-    padding: 2rem 0; }
-    .biography__container ul li .biography__all--info .biography__header h1 {
-      font-size: 4.8rem;
-      color: #4D4D4D;
-      text-transform: uppercase; }
-  .biography__container ul li .biography__all--info .biography__content {
-    padding: 1.6rem 0; }
-    .biography__container ul li .biography__all--info .biography__content--year {
-      width: 25%; }
-      .biography__container ul li .biography__all--info .biography__content--year span {
-        font-size: 4.8rem;
-        color: #4D4D4D; }
-    .biography__container ul li .biography__all--info .biography__content--info {
-      width: 92%; }
-      .biography__container ul li .biography__all--info .biography__content--info li {
-        border-bottom: 1px solid #CCCCCC;
-        padding: 1rem 0; }
-        .biography__container ul li .biography__all--info .biography__content--info li a {
-          text-decoration: none;
-          display: inline-block;
-          font-size: 1.8rem;
-          color: #4D4D4D; }
-    .biography__container ul li .biography__all--info .biography__content--image {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: "";
-      height: 20.7rem;
-      width: 36.5rem; }
-    .biography__container ul li .biography__all--info .biography__content--text {
-      width: 92%;
-      font-size: 1.8rem;
-      color: #4D4D4D;
-      padding: 0 50px; }
-
-.biography__container ul li:nth-child(even) {
-  background-color: #F6F6F6; }
-  .biography__container ul li:nth-child(even) .biography__header {
-    border-bottom: 1px solid #0071BC; }
 
 .ask__minister {
   max-width: 94.4rem;
