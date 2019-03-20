@@ -444,7 +444,8 @@
       font-size: 8rem;
       color: #000000;
       text-transform: uppercase;
-      max-width: 96rem; }
+      max-width: 85rem;
+      font-weight: lighter; }
   .secondary__cover--info {
     max-width: 140rem;
     margin: 50px auto 0; }
@@ -469,16 +470,16 @@
       color: #4D4D4D;
       text-transform: uppercase; }
   .pdf__container li .pdf__info--row {
-    padding: 1.6rem 0;
-    display: flex;
-    align-items: center; }
+    padding: 1.6rem 0; }
     .pdf__container li .pdf__info--row .pdf__year--large {
-      width: 25%; }
+      width: 25%;
+      line-height: 0.9; }
       .pdf__container li .pdf__info--row .pdf__year--large span {
         font-size: 4.8rem;
         color: #4D4D4D; }
     .pdf__container li .pdf__info--row .pdf__year--small {
-      width: 15%; }
+      width: 15%;
+      line-height: 0.9; }
       .pdf__container li .pdf__info--row .pdf__year--small span {
         font-size: 4.8rem;
         color: #4D4D4D; }
@@ -502,7 +503,8 @@
     width: 29px;
     height: 33px; }
   .pdf__text ul li a.border-btm {
-    border-bottom: 1px solid #CCCCCC; }
+    border-bottom: 1px solid #CCCCCC;
+    }
   .pdf__text ul li a {
     text-decoration: none;
     display: inline-block;
@@ -510,6 +512,8 @@
     color: #4D4D4D;
     padding: 1rem 0;
     width: 100%; }
+  .pdf__text ul li:last-child a {
+    border: none; }
 
 .pdf__info--img--text {
   display: flex;
