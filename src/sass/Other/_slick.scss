@@ -18,8 +18,9 @@
 }
 
 .prev-arrow {
-  @include backimg(url("../img/arrow-light-left.png"));
+  @include backimg;
   @include arrows;
+  background-image:url("../img/arrow-light-left.png") ;
   left: -7rem;
 
   &:hover {
@@ -27,8 +28,9 @@
   }
 }
 .next-arrow {
-  @include backimg(url("../img/arrow-light-right.png"));
+  @include backimg;
   @include arrows;
+  background-image: url("../img/arrow-light-right.png");
   right: -5rem;
 
   &:hover {

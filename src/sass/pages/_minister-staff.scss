@@ -46,7 +46,7 @@
             a {
               font-size: 4.8rem;
               text-transform: uppercase;
-              color: #0071bc;
+              color: $color-blue;
               display: inline-block;
               text-decoration: none;
             }
@@ -66,11 +66,13 @@
               }
 
               .call-icon {
-                @include backimg(url("../img/call-icon-yellow.png"));
+                @include backimg;
+                background-image: url("../img/call-icon-yellow.png");
               }
 
               .message-icon {
-                @include backimg(url("../img/message-icon-blue.png"));
+                @include backimg;
+                background-image: url("../img/message-icon-blue.png");
               }
 
               span {
@@ -110,7 +112,7 @@
 
       h1 {
         font-size: 4.8rem;
-        color: #0071bc;
+        color: $color-blue;
       }
     }
 

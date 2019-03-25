@@ -1,7 +1,7 @@
 //ABSTRACTS
 @import "abstracts/variables";
-@import "abstracts/mixins";
 @import "abstracts/functions";
+@import "abstracts/mixins";
 //LAYOUTS
 @import "layout/header";
 @import "layout/subscription";
@@ -17,12 +17,14 @@
 @import "Other/slick";
 @import "Other/empty-div";
 //PAGES
+@import "pages/single-news";
 @import "pages/home";
 @import "pages/message-minister";
 @import "pages/ask-minister";
 @import "pages/minister-staff";
 @import "pages/grant";
 @import "pages/biography-minister";
+
 
 //BASE
 @import "base/utilities";

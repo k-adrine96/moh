@@ -71,7 +71,8 @@
 
             &:before {
               content: "";
-              @include backimg(url('../img/calendar-icons.png'));
+              @include backimg;
+              background-image: url('../img/calendar-icons.png');
               width: 2rem;
               height: 2rem;
               display: inline-block;
@@ -208,7 +209,8 @@
 
             &:before {
               content: "";
-              @include backimg(url('../img/calendar-icons.png'));
+              @include backimg;
+              background-image: url('../img/calendar-icons.png');
               width: 2rem;
               height: 2rem;
               display: inline-block;

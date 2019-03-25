@@ -1,5 +1,5 @@
 .secondary__cover {
-  @include backimg();
+  @include backimg;
   height: 42rem;
 
   &--content {

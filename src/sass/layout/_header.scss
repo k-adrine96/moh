@@ -30,7 +30,8 @@
       &:first-child {
 
         a {
-          @include backimg(url("../img/moh-logo.png"));
+          @include backimg;
+          background-image: url("../img/moh-logo.png");
           width: 6.8rem;
           height: 6.5rem;
         }

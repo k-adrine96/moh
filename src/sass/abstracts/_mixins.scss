@@ -1,9 +1,9 @@
 //BACKGROUND
-@mixin backimg($imgUrl: "") {
+
+@mixin backimg {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: $imgUrl;
 }
 
 //BORDER
