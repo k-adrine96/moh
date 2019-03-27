@@ -47,7 +47,7 @@
 .subscription {
   background-color: #4E525B; }
   .subscription__content {
-    max-width: 140rem;
+    max-width: 73.5%;
     margin: auto;
     padding: 5rem 0 6rem; }
     .subscription__content--header h1 {
@@ -437,7 +437,7 @@
   background-repeat: no-repeat;
   height: 42rem; }
   .secondary__cover--content {
-    max-width: 140rem;
+    max-width: 73.5%;
     margin: auto; }
     .secondary__cover--content h1 {
       font-size: 8rem;
@@ -446,7 +446,7 @@
       max-width: 85rem;
       font-weight: lighter; }
   .secondary__cover--info {
-    max-width: 140rem;
+    max-width: 73.5%;
     margin: 50px auto 0; }
     .secondary__cover--info h1 {
       font-size: 2.5rem;
@@ -458,7 +458,7 @@
   max-width: 61rem; }
 
 .pdf__container li .pdf__info {
-  max-width: 140rem;
+  max-width: 73.5%;
   margin: auto;
   padding: 2rem 0; }
   .pdf__container li .pdf__info--header {
@@ -622,7 +622,7 @@
   height: 10rem; }
 
 .single__news {
-  max-width: 140rem;
+  max-width: 73.5%;
   margin: auto;
   padding-top: 8rem; }
   .single__news--image {
@@ -656,7 +656,7 @@
   position: relative;
   outline: none; }
   .main__cover--item-container {
-    max-width: 140rem;
+    max-width: 73.5%;
     margin: 17.4rem auto 0; }
     .main__cover--item-container-cont {
       max-width: 60rem; }
@@ -682,7 +682,7 @@
   padding-top: 5rem;
   padding-bottom: 2rem; }
   .news__background .news__content {
-    max-width: 140rem;
+    max-width: 73.5%;
     position: relative; }
     .news__background .news__content--header {
       font-size: 5rem; }
@@ -738,7 +738,7 @@
 .info__platform {
   padding: 5rem 0; }
   .info__platform--cont {
-    max-width: 140rem;
+    max-width: 73.5%;
     position: relative; }
     .info__platform--cont--header h1 {
       text-transform: uppercase;
@@ -777,7 +777,7 @@
   padding-top: 5rem;
   padding-bottom: 10rem; }
   .videos__background--content {
-    max-width: 140rem;
+    max-width: 73.5%;
     position: relative; }
     .videos__background--content h1 {
       font-size: 5rem;
@@ -824,7 +824,7 @@
 .partners {
   padding: 5rem 0; }
   .partners--cont {
-    max-width: 140rem;
+    max-width: 73.5%;
     margin: auto; }
     .partners--cont--slider .partners--cont--item {
       background-size: cover;
@@ -843,7 +843,7 @@
         border-color: #FFBC35; }
 
 .message__container {
-  max-width: 140rem;
+  max-width: 73.5%;
   margin: auto;
   padding: 6rem 0; }
   .message__container--info {
@@ -885,7 +885,7 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: stretch;
-  max-width: 140rem;
+  max-width: 73.5%;
   margin: auto;
   padding: 6rem 0; }
   .minister__staff--container--width .workers__info {
@@ -949,7 +949,7 @@
   background-color: #F6F6F6; }
 
 .minister__staff .workers__container {
-  max-width: 140rem;
+  max-width: 73.5%;
   margin: auto;
   -webkit-flex: 100%;
   -ms-flex: 100%;
