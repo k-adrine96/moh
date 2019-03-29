@@ -106,3 +106,39 @@
     }
   }
 }
+.contact__us--form {
+
+  .input-group {
+
+    .input-group-text {
+      background-color: $color-white;
+      @include border($color-gray);
+      border-right: none;
+    }
+    input {
+      @include border($color-gray);
+      height: 5.3rem;
+      border-left: none;font-size: 2.6rem;
+
+      &:focus {
+        border-color: $color-gray;
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+  }
+
+  textarea {
+    resize: none;
+    height: 28.4rem;
+    font-size: 2.6rem;
+    &:focus {
+      border-color: $color-gray;
+      outline: 0;
+      box-shadow: none;
+
+    }
+  }
+}
+
+
