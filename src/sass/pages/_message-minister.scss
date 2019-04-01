@@ -2,6 +2,10 @@
   max-width: $main-content-width;
   margin: auto;
   padding: 6rem 0;
+
+  @media only screen and (min-width: 1921px){
+    max-width: $main-content-width-big;
+  }
   &--info {
     padding: 1rem 0;
     &--header {

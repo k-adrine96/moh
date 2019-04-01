@@ -2,6 +2,10 @@
   max-width: $main-content-width;
   margin: auto;
   padding-top: 8rem;
+
+  @media only screen and (min-width: 1921px){
+    max-width: $main-content-width-big;
+  }
   &--image {
     @include backimg;
     width: 52%;

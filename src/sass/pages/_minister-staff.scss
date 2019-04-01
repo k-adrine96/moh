@@ -11,6 +11,10 @@
       margin: auto;
       padding: 6rem 0;
 
+      @media only screen and (min-width: 1921px){
+        max-width: $main-content-width-big;
+      }
+
       .workers__info {
         -webkit-flex: 50%;
         -ms-flex: 50%;
@@ -106,6 +110,10 @@
     flex: 100%;
     padding-bottom: 5rem;
     border-bottom: 1px solid $main-btn-color;
+
+    @media only screen and (min-width: 1921px){
+      max-width: $main-content-width-big;
+    }
 
     &--header {
       padding: 5rem 0;

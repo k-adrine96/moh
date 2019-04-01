@@ -11,6 +11,10 @@
       max-width: $main-content-width;
       margin: 17.4rem auto 0;
 
+      @media only screen and (min-width: 1921px){
+        max-width: $main-content-width-big;
+      }
+
       &-cont {
         max-width: 60rem;
 
@@ -48,6 +52,10 @@
   .news__content {
     max-width: $main-content-width;
     position: relative;
+
+    @media only screen and (min-width: 1921px){
+      max-width: $main-content-width-big;
+    }
 
     &--header {
       font-size: $fz-big;
@@ -123,6 +131,10 @@
     max-width: $main-content-width;
     position: relative;
 
+    @media only screen and (min-width: 1921px){
+      max-width: $main-content-width-big;
+    }
+
     &--header {
 
       h1 {
@@ -183,6 +195,10 @@
   &--content {
     max-width: $main-content-width;
     position: relative;
+
+    @media only screen and (min-width: 1921px){
+      max-width: $main-content-width-big;
+    }
     h1 {
       font-size: $fz-big;
       color: $main-color;
