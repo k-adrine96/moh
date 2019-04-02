@@ -1,0 +1,33 @@
+.worker__number__email {
+
+  li {
+    display: flex;
+    align-items: center;
+
+    i {
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    .call-icon {
+      @include backimg;
+      background-image: url("../img/call-icon-yellow.png");
+    }
+
+    .message-icon {
+      @include backimg;
+      background-image: url("../img/message-icon-blue.png");
+    }
+
+    span {
+      font-size: 2.6rem;
+      color: $main-color;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 1rem;
+    }
+  }
+}

@@ -491,6 +491,30 @@
 .aks__minister--cover .secondary__cover--content h1 {
   max-width: 61rem; }
 
+.worker__number__email li {
+  display: flex;
+  align-items: center; }
+  .worker__number__email li i {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    margin-right: 1rem; }
+  .worker__number__email li .call-icon {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/call-icon-yellow.png"); }
+  .worker__number__email li .message-icon {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/message-icon-blue.png"); }
+  .worker__number__email li span {
+    font-size: 2.6rem;
+    color: #4D4D4D; }
+  .worker__number__email li:not(:last-child) {
+    padding-bottom: 1rem; }
+
 .pdf__container li .pdf__info {
   max-width: 1400px;
   margin: auto;
@@ -734,7 +758,8 @@
       .news__background .news__content {
         max-width: 73.5%; } }
     .news__background .news__content--header {
-      font-size: 5rem; }
+      font-size: 5rem;
+      font-weight: 100; }
     .news__background .news__content--slider .news__content--items {
       display: flex;
       outline: none;
@@ -939,29 +964,6 @@
         color: #0071BC;
         display: inline-block;
         text-decoration: none; }
-      .minister__staff--container--width .workers__info--content .worker__number__email li {
-        display: flex;
-        align-items: center; }
-        .minister__staff--container--width .workers__info--content .worker__number__email li i {
-          width: 35px;
-          height: 35px;
-          display: inline-block;
-          margin-right: 1rem; }
-        .minister__staff--container--width .workers__info--content .worker__number__email li .call-icon {
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-image: url("../img/call-icon-yellow.png"); }
-        .minister__staff--container--width .workers__info--content .worker__number__email li .message-icon {
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-image: url("../img/message-icon-blue.png"); }
-        .minister__staff--container--width .workers__info--content .worker__number__email li span {
-          font-size: 2.6rem;
-          color: #4D4D4D; }
-        .minister__staff--container--width .workers__info--content .worker__number__email li:not(:last-child) {
-          padding-bottom: 1rem; }
   .minister__staff--container--width--width > div:not(:last-child) {
     margin-bottom: 1rem; }
 
@@ -1179,6 +1181,29 @@
         margin-top: 4.5rem; }
         .ask__minister--cont .ask__minister--content .ask__minister--btns a:not(:last-child) {
           margin-right: 1rem; }
+
+.workers__content ul li .workers__container {
+  max-width: 1400px;
+  margin: auto; }
+  @media only screen and (min-width: 1920px) {
+    .workers__content ul li .workers__container {
+      max-width: 73.5%; } }
+  .workers__content ul li .workers__container .worker__info {
+    flex: 1;
+    padding: 3rem 0; }
+    .workers__content ul li .workers__container .worker__info--header h1 {
+      font-size: 2.6rem;
+      color: #4D4D4D;
+      text-transform: uppercase; }
+    .workers__content ul li .workers__container .worker__info--name p {
+      font-size: 4.8rem;
+      text-transform: uppercase;
+      color: #0071BC;
+      display: inline-block;
+      text-decoration: none; }
+
+.workers__content > ul > li:nth-child(even) {
+  background-color: #F6F6F6; }
 
 .burger__menu {
   cursor: pointer;

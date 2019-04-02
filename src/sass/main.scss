@@ -11,7 +11,9 @@
 @import "components/button";
 @import "components/form";
 @import "components/secondary-cover";
+@import "components/workers-number-email";
 @import "components/pdf-info";
+
 //OTHER
 @import "Other/select2";
 @import "Other/slick";
@@ -22,7 +24,10 @@
 @import "pages/minister-staff";
 @import "pages/grant";
 @import "pages/about-us";
+
 @import "pages/minister-page";
+@import "pages/ministry-staff";
+
 //BASE
 @import "base/utilities";
 @import "base/animations";
