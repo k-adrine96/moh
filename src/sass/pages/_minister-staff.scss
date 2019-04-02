@@ -4,9 +4,7 @@
 
     &--width {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      align-items: stretch;
       max-width: $main-content-width;
       margin: auto;
       padding: 6rem 0;
@@ -16,27 +14,20 @@
       }
 
       .workers__info {
-        -webkit-flex: 50%;
-        -ms-flex: 50%;
-        flex: 50%;
+        width: 50%;
         display: flex;
-        //cursor: pointer;
 
         &--image {
           @include backimg();
           height: 40rem;
-          -webkit-flex: 45%;
-          -ms-flex: 45%;
-          flex: 45%;
+          width: 49%;
         }
 
         &--content {
           display: flex;
           justify-content: space-between;
           flex-direction: column;
-          -webkit-flex: 57%;
-          -ms-flex: 57%;
-          flex: 57%;
+          width: 49%;
 
           padding: 7px 1.8rem;
 

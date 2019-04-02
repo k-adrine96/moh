@@ -591,6 +591,28 @@
     color: #4D4D4D;
     padding: 0 50px; }
 
+.workers__container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 3rem 0; }
+  @media only screen and (min-width: 1920px) {
+    .workers__container {
+      max-width: 73.5%; } }
+  .workers__container .worker__info {
+    max-width: 49%; }
+    .workers__container .worker__info--header h1 {
+      font-size: 2.6rem;
+      color: #4D4D4D;
+      text-transform: uppercase; }
+    .workers__container .worker__info--name p {
+      font-size: 4.8rem;
+      text-transform: uppercase;
+      color: #0071BC;
+      display: inline-block;
+      text-decoration: none; }
+  .workers__container p {
+    font-size: 2.6rem; }
+
 .language .select2-container {
   width: 9.5rem !important;
   outline: none !important;
@@ -924,9 +946,7 @@
 
 .minister__staff--container--width {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  align-items: stretch;
   max-width: 1400px;
   margin: auto;
   padding: 6rem 0; }
@@ -934,25 +954,19 @@
     .minister__staff--container--width {
       max-width: 73.5%; } }
   .minister__staff--container--width .workers__info {
-    -webkit-flex: 50%;
-    -ms-flex: 50%;
-    flex: 50%;
+    width: 50%;
     display: flex; }
     .minister__staff--container--width .workers__info--image {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       height: 40rem;
-      -webkit-flex: 45%;
-      -ms-flex: 45%;
-      flex: 45%; }
+      width: 49%; }
     .minister__staff--container--width .workers__info--content {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      -webkit-flex: 57%;
-      -ms-flex: 57%;
-      flex: 57%;
+      width: 49%;
       padding: 7px 1.8rem; }
       .minister__staff--container--width .workers__info--content--names h1 {
         font-size: 2.6rem;
@@ -1181,26 +1195,6 @@
         margin-top: 4.5rem; }
         .ask__minister--cont .ask__minister--content .ask__minister--btns a:not(:last-child) {
           margin-right: 1rem; }
-
-.workers__content ul li .workers__container {
-  max-width: 1400px;
-  margin: auto; }
-  @media only screen and (min-width: 1920px) {
-    .workers__content ul li .workers__container {
-      max-width: 73.5%; } }
-  .workers__content ul li .workers__container .worker__info {
-    flex: 1;
-    padding: 3rem 0; }
-    .workers__content ul li .workers__container .worker__info--header h1 {
-      font-size: 2.6rem;
-      color: #4D4D4D;
-      text-transform: uppercase; }
-    .workers__content ul li .workers__container .worker__info--name p {
-      font-size: 4.8rem;
-      text-transform: uppercase;
-      color: #0071BC;
-      display: inline-block;
-      text-decoration: none; }
 
 .workers__content > ul > li:nth-child(even) {
   background-color: #F6F6F6; }
