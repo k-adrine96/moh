@@ -532,20 +532,6 @@
       font-weight: 100; }
   .pdf__container li .pdf__info--row {
     padding: 1.6rem 0; }
-    .pdf__container li .pdf__info--row .pdf__year--large {
-      width: 25%;
-      line-height: 0.9; }
-      .pdf__container li .pdf__info--row .pdf__year--large span {
-        font-size: 4.8rem;
-        color: #4D4D4D;
-        font-weight: 100; }
-    .pdf__container li .pdf__info--row .pdf__year--small {
-      width: 15%;
-      line-height: 0.9; }
-      .pdf__container li .pdf__info--row .pdf__year--small span {
-        font-size: 4.8rem;
-        color: #4D4D4D;
-        font-weight: 100; }
 
 .pdf__container > li:nth-child(even) {
   background-color: #F6F6F6; }
@@ -590,6 +576,29 @@
     font-size: 1.8rem;
     color: #4D4D4D;
     padding: 0 50px; }
+
+.numbered-list {
+  list-style: none;
+  counter-reset: my-awesome-counter; }
+  .numbered-list li {
+    counter-increment: my-awesome-counter;
+    font-size: 1.8rem;
+    position: relative;
+    padding-left: 4rem;
+    margin-bottom: 2rem; }
+    .numbered-list li:before {
+      content: counter(my-awesome-counter);
+      font-size: 5rem;
+      font-weight: lighter;
+      margin-right: 0.5rem;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+  .numbered-list li.yellow:before {
+    color: #FFBC35; }
+  .numbered-list li.blue:before {
+    color: #0071BC; }
 
 .workers__container {
   max-width: 1400px;
@@ -1000,25 +1009,6 @@
     .minister__staff .workers__container--header h1 {
       font-size: 4.8rem;
       color: #0071BC; }
-  .minister__staff .workers__container--info {
-    list-style: none;
-    counter-reset: my-awesome-counter; }
-    .minister__staff .workers__container--info li {
-      counter-increment: my-awesome-counter;
-      font-size: 1.8rem;
-      position: relative;
-      padding-left: 4rem;
-      margin-bottom: 2rem; }
-      .minister__staff .workers__container--info li:before {
-        content: counter(my-awesome-counter);
-        font-size: 5rem;
-        font-weight: lighter;
-        margin-right: 0.5rem;
-        color: #FFBC35;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%); }
   .minister__staff .workers__container--name h1 {
     text-align: right;
     font-size: 1.8rem; }
@@ -1198,6 +1188,26 @@
 
 .workers__content > ul > li:nth-child(even) {
   background-color: #F6F6F6; }
+
+.main__cont__size {
+  max-width: 1400px;
+  margin: auto; }
+
+.background__zebra > li:nth-child(even) {
+  background-color: #F6F6F6; }
+
+.pdf__year {
+  line-height: 0.9; }
+  .pdf__year span {
+    font-size: 4.8rem;
+    color: #4D4D4D;
+    font-weight: 100; }
+
+.pdf__year--large {
+  width: 25%; }
+
+.pdf__year--small {
+  width: 15%; }
 
 .burger__menu {
   cursor: pointer;

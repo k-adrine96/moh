@@ -1,0 +1,30 @@
+//Main content size 1400px
+
+.main__cont__size {
+  max-width: $main-content-width;
+  margin: auto;
+}
+//Add class in ul and li will be zebra :)
+
+.background__zebra > li:nth-child(even) {
+  background-color: $section-back-color;
+}
+
+
+.pdf__year {
+  line-height: 0.9;
+
+  span {
+    font-size: 4.8rem;
+    color: $main-color;
+    font-weight: 100;
+  }
+}
+// Large size of year container in pdf info
+.pdf__year--large {
+  width: 25%;
+}
+// Small size of year container in pdf info
+.pdf__year--small {
+  width: 15%;
+}
