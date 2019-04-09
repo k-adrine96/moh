@@ -6,7 +6,7 @@
     max-width: $main-content-width;
     margin: auto;
     h1 {
-      font-size: 8rem;
+      font-size: $primary-header;
       color: $color-black;
       text-transform: uppercase;
       max-width: 85rem;
@@ -23,7 +23,7 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: $tertiary-header;
       color: $color-black;
       text-transform: uppercase;
       width: 30rem;

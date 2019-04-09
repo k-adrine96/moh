@@ -19,7 +19,7 @@
     &--header {
 
       h1 {
-        font-size: 4.8rem;
+        font-size: $secondary-header;
         text-transform: uppercase;
         font-weight: $fw-lighter;
         padding-bottom: 1rem;
@@ -29,7 +29,7 @@
     &--date {
 
       h2 {
-        font-size: 3rem;
+        font-size: 2.2rem;
         color: $color-blue;
         font-weight: $fw-lighter;
         padding-bottom: 1rem;
@@ -39,7 +39,7 @@
     &--text {
 
       p {
-        font-size: 1.8rem;
+        font-size: $main-fz;
         padding-bottom: 1rem;
       }
     }

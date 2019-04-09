@@ -2,14 +2,14 @@
 
   &--item {
     @include backimg;
-    height: 80rem;
+    height: 60rem;
     width: 100%;
     position: relative;
     outline: none;
 
     &-container {
       max-width: $main-content-width;
-      margin: 17.4rem auto 0;
+      margin: 8.4rem auto 0;
 
       @media only screen and (min-width: 1921px){
         max-width: $main-content-width-big;
@@ -19,7 +19,7 @@
         max-width: 60rem;
 
         h2 {
-          font-size: 4.2rem;
+          font-size: $secondary-header;
           color: $main-color;
           font-weight: $fw-lighter;
 
@@ -28,7 +28,7 @@
           }
         }
         p {
-          font-size: 2.5rem;
+          font-size: $main-fz;
           color: $main-color;
           display: -webkit-box;
           margin: 2.3rem auto;
@@ -58,7 +58,7 @@
     }
 
     &--header {
-      font-size: $fz-big;
+      font-size: $secondary-header;
       font-weight: 100;
     }
     &--slider {
@@ -70,7 +70,7 @@
         .news__info {
           width: 49%;
           span {
-            font-size: 2rem;
+            font-size: $main-fz;
             text-transform: capitalize;
             color: #666666;
             padding-bottom: 3rem;
@@ -92,7 +92,7 @@
           }
 
           h1 {
-            font-size: 2.7rem;
+            font-size: $tertiary-header;
             font-weight: $fw-lighter;
             color: $main-color;
             line-height: 1.6;
@@ -140,7 +140,7 @@
 
       h1 {
         text-transform: uppercase;
-        font-size: $fz-big;
+        font-size: $secondary-header;
         font-weight: $fw-lighter;
         color: $main-color;
         padding-bottom: 1rem;
@@ -173,13 +173,13 @@
           }
         }
         h1 {
-          font-size: 2.1rem;
+          font-size: $main-fz;
           color: $main-color;
           font-weight: $fw-semiBold;
           padding: 3rem 0 2rem;
         }
         p {
-          font-size: $main-fz;
+          font-size: 1.4rem;
           color: $main-color;
           padding-bottom: 3rem;
         }
@@ -201,7 +201,7 @@
       max-width: $main-content-width-big;
     }
     h1 {
-      font-size: $fz-big;
+      font-size: $secondary-header;
       color: $main-color;
       font-weight: $fw-lighter;
     }
@@ -216,7 +216,7 @@
           width: 44%;
 
           span {
-            font-size: 2rem;
+            font-size: $main-fz;
             text-transform: capitalize;
             color: #666666;
             padding-bottom: 3rem;
@@ -238,7 +238,7 @@
           }
 
           h1 {
-            font-size: 2.7rem;
+            font-size: $main-fz;
             font-weight: $fw-lighter;
             color: $main-color;
             line-height: 1.6;

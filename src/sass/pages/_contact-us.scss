@@ -46,7 +46,7 @@
         max-width: $main-content-width-big;
       }
       h1 {
-        font-size: 4.8rem;
+        font-size: $tertiary-header;
         font-weight: $fw-semiBold;
         padding-bottom: 2rem;
       }
@@ -54,7 +54,7 @@
       ul {
 
         li {
-          font-size: 1.8rem;
+          font-size: $main-fz;
           margin-bottom: 2rem;
 
           a {
@@ -90,7 +90,7 @@
     margin: auto;
     padding: 4rem 0;
     li {
-      font-size: 1.8rem;
+      font-size: $main-fz;
       margin-bottom: 1rem;
 
       span {

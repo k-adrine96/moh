@@ -10,7 +10,7 @@
 
     &:before {
       content: counter(my-awesome-counter);
-      font-size: 5rem;
+      font-size: $secondary-header;
       font-weight: $fw-lighter;
       margin-right: 0.5rem;
       position: absolute;
