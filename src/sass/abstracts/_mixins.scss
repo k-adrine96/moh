@@ -28,3 +28,14 @@
   height: 5rem;
   width: 1.7rem;
 }
+
+//  TEXT OVERFLOW ELLIPSES
+
+  @mixin ellipses($elheight, $row) {
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    height: $elheight;
+    -webkit-line-clamp: $row;
+  }

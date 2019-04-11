@@ -61,7 +61,7 @@
       padding-bottom: 1rem; }
     .subscription__content--info a {
       color: #FFFFFF;
-      font-size: 1.5rem; }
+      font-size: 1.4rem; }
 
 .footer__container--social {
   position: relative;
@@ -448,7 +448,7 @@
   border: 1px solid #CCCCCC;
   height: 5.3rem;
   border-left: none;
-  font-size: 2.6rem; }
+  font-size: 1.8rem; }
   .contact__us--form .input-group input:focus {
     border-color: #CCCCCC;
     outline: 0;
@@ -544,22 +544,24 @@
   .pdf__text ul li.border-btm {
     border-bottom: 1px solid #CCCCCC;
     padding: 1rem 0; }
-  .pdf__text ul li .pdf__icon {
-    display: inline-block;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 29px;
-    height: 33px; }
-  .pdf__text ul li a.border-btm {
-    border-bottom: 1px solid #CCCCCC; }
-  .pdf__text ul li a {
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.8rem;
-    color: #4D4D4D;
-    padding: 1rem 0;
-    width: 100%; }
+  .pdf__text ul li {
+    padding-bottom: 1rem; }
+    .pdf__text ul li .pdf__icon {
+      display: inline-block;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 29px;
+      height: 33px; }
+    .pdf__text ul li a.border-btm {
+      border-bottom: 1px solid #CCCCCC; }
+    .pdf__text ul li a {
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.8rem;
+      color: #4D4D4D;
+      padding: 0.7rem 0;
+      width: 100%; }
   .pdf__text ul li:last-child a {
     border: none; }
 
@@ -624,7 +626,7 @@
     font-size: 1.8rem; }
 
 .language .select2-container {
-  width: 9.5rem !important;
+  width: 95px !important;
   outline: none !important;
   font-size: 1.2rem; }
 
@@ -765,19 +767,25 @@
       .main__cover--item-container-cont h2 {
         font-size: 3.8rem;
         color: #4D4D4D;
-        font-weight: lighter; }
+        font-weight: lighter;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        height: 130px;
+        -webkit-line-clamp: 3; }
         .main__cover--item-container-cont h2 span {
           color: #FFBC35; }
       .main__cover--item-container-cont p {
         font-size: 1.8rem;
         color: #4D4D4D;
-        display: -webkit-box;
         margin: 2.3rem auto;
-        -webkit-box-orient: vertical;
         overflow: hidden;
+        -webkit-box-orient: vertical;
         text-overflow: ellipsis;
-        -webkit-line-clamp: 4;
-        height: 13.9rem; }
+        display: -webkit-box;
+        height: 100px;
+        -webkit-line-clamp: 4; }
 
 .news__background {
   background-color: #F6F6F6;
@@ -791,7 +799,8 @@
         max-width: 73.5%; } }
     .news__background .news__content--header {
       font-size: 3.8rem;
-      font-weight: 100; }
+      font-weight: 100;
+      padding-bottom: 1rem; }
     .news__background .news__content--slider .news__content--items {
       display: flex;
       outline: none;
@@ -802,29 +811,22 @@
           font-size: 1.8rem;
           text-transform: capitalize;
           color: #666666;
-          padding-bottom: 3rem;
+          padding-bottom: 1rem;
           display: inline-block;
-          position: relative;
-          padding-left: 3rem; }
-          .news__background .news__content--slider .news__content--items .news__info span:before {
-            content: "";
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-image: url("../img/calendar-icons.png");
-            width: 2rem;
-            height: 2rem;
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            top: 2px; }
+          position: relative; }
         .news__background .news__content--slider .news__content--items .news__info h1 {
           font-size: 2.8rem;
           font-weight: lighter;
           color: #4D4D4D;
-          line-height: 1.6;
+          line-height: 1.3;
           padding-bottom: 1rem;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          height: 116px;
+          -webkit-line-clamp: 3; }
         .news__background .news__content--slider .news__content--items .news__info p {
           color: #4D4D4D;
           font-size: 1.8rem;
@@ -875,11 +877,23 @@
         font-size: 1.8rem;
         color: #4D4D4D;
         font-weight: 600;
-        padding: 3rem 0 2rem; }
+        margin-bottom: 2rem;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        height: 64px;
+        -webkit-line-clamp: 3; }
       .info__platform--cont--slider--items p {
         font-size: 1.4rem;
         color: #4D4D4D;
-        padding-bottom: 3rem; }
+        margin-bottom: 3rem;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        height: 117px;
+        -webkit-line-clamp: 6; }
 
 .videos__background {
   background-color: #F6F6F6;
@@ -904,7 +918,7 @@
           font-size: 1.8rem;
           text-transform: capitalize;
           color: #666666;
-          padding-bottom: 3rem;
+          padding-bottom: 1rem;
           display: inline-block;
           position: relative;
           padding-left: 3rem; }
@@ -1200,15 +1214,15 @@
 .pdf__year {
   line-height: 0.9; }
   .pdf__year span {
-    font-size: 3.8rem;
+    font-size: 2.8rem;
     color: #4D4D4D;
     font-weight: 100; }
 
 .pdf__year--large {
-  width: 20%; }
+  width: 15%; }
 
 .pdf__year--small {
-  width: 10%; }
+  width: 6%; }
 
 .burger__menu {
   cursor: pointer;

@@ -49,6 +49,8 @@
     }
 
     li {
+      padding-bottom: 1rem;
+
       .pdf__icon {
         display: inline-block;
         @include backimg;
@@ -64,7 +66,7 @@
         display: inline-block;
         font-size: $main-fz;
         color: $main-color;
-        padding: 1rem 0;
+        padding: 0.7rem 0;
         width: 100%;
       }
     }

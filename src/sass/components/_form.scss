@@ -127,7 +127,8 @@
     input {
       @include border($color-gray);
       height: 5.3rem;
-      border-left: none;font-size: 2.6rem;
+      border-left: none;
+      font-size: $main-fz;
 
       &:focus {
         border-color: $color-gray;
