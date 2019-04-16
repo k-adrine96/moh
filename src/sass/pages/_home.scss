@@ -173,17 +173,17 @@
           }
         }
         h1 {
-          font-size: $main-fz;
+          font-size: $tertiary-header;
           color: $main-color;
           font-weight: $fw-semiBold;
           margin-bottom: 2rem;
-          @include ellipses(64px,3);
+          @include ellipses(96px,3);
         }
         p {
-          font-size: $small-fz;
+          font-size: $main-fz;
           color: $main-color;
           margin-bottom: 3rem;
-          @include ellipses(117px,6);
+          @include ellipses(150px,6);
         }
       }
     }
