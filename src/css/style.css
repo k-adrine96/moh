@@ -719,35 +719,6 @@
 .empty-div {
   height: 10rem; }
 
-.single__news {
-  max-width: 1400px;
-  margin: auto;
-  padding-top: 8rem; }
-  @media only screen and (min-width: 1921px) {
-    .single__news {
-      max-width: 73.5%; } }
-  .single__news--image {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 52%;
-    padding-bottom: 34%;
-    float: right;
-    margin: 0 0 34px 34px; }
-  .single__news--info--header h1 {
-    font-size: 3.8rem;
-    text-transform: uppercase;
-    font-weight: lighter;
-    padding-bottom: 1rem; }
-  .single__news--info--date h2 {
-    font-size: 2.2rem;
-    color: #0071BC;
-    font-weight: lighter;
-    padding-bottom: 1rem; }
-  .single__news--info--text p {
-    font-size: 1.8rem;
-    padding-bottom: 1rem; }
-
 .main__cover--item {
   background-size: cover;
   background-position: center;
@@ -967,8 +938,35 @@
       outline: none; }
       .partners--cont--slider .partners--cont--item:hover {
         border-color: #FFBC35; }
-  .partners .partners-1--cont--slider {
-    margin-top: 50px; }
+
+.single__news {
+  max-width: 1400px;
+  margin: auto;
+  padding-top: 8rem; }
+  @media only screen and (min-width: 1921px) {
+    .single__news {
+      max-width: 73.5%; } }
+  .single__news--image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 52%;
+    padding-bottom: 34%;
+    float: right;
+    margin: 0 0 34px 34px; }
+  .single__news--info--header h1 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding-bottom: 1rem; }
+  .single__news--info--date h2 {
+    font-size: 2.2rem;
+    color: #0071BC;
+    font-weight: lighter;
+    padding-bottom: 1rem; }
+  .single__news--info--text p {
+    font-size: 1.8rem;
+    padding-bottom: 1rem; }
 
 .minister__staff--container--width {
   display: flex;
