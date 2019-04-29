@@ -688,7 +688,7 @@
   height: 5rem;
   width: 1.7rem;
   background-image: url("../img/arrow-light-left.png");
-  left: -7rem; }
+  left: -3rem; }
   .prev-arrow:hover {
     background-image: url("../img/arrow-bold-left.png"); }
 
@@ -702,7 +702,7 @@
   height: 5rem;
   width: 1.7rem;
   background-image: url("../img/arrow-light-right.png");
-  right: -5rem; }
+  right: -3rem; }
   .next-arrow:hover {
     background-image: url("../img/arrow-bold-right.png"); }
 
@@ -938,6 +938,23 @@
       outline: none; }
       .partners--cont--slider .partners--cont--item:hover {
         border-color: #FFBC35; }
+    .partners--cont .partners-1--cont--slider {
+      margin-top: 50px; }
+      .partners--cont .partners-1--cont--slider .partners--cont--item {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 16rem;
+        width: 30rem;
+        border: 3px solid #E6E6E6;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        display: block;
+        text-decoration: none;
+        transition: .2s;
+        outline: none; }
+        .partners--cont .partners-1--cont--slider .partners--cont--item:hover {
+          border-color: #FFBC35; }
 
 .single__news {
   max-width: 1400px;
