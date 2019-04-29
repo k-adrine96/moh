@@ -3,7 +3,7 @@
     $(el).on(event, function (e) {
       e.stopPropagation();
     });
-  }
+  };
 
   window.slideToogle = function (el, className) {
 

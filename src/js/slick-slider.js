@@ -20,9 +20,9 @@
       arrows: true
     });
 
-    $('.info__platform--cont--slider').slick({
-      prevArrow: ('.info__platform-prev'),
-      nextArrow: ('.info__platform-next'),
+    $('.announcements--cont--slider').slick({
+      prevArrow: ('.announcements-prev'),
+      nextArrow: ('.announcements-next'),
       dots: false,
       infinite: true,
       speed: 1000,
@@ -76,6 +76,42 @@
       ]
     });
 
+    $('.partners-1--cont--slider').slick({
+      prevArrow: ('.partners-prev'),
+      nextArrow: ('.partners-next'),
+      dots: false,
+      infinite: true,
+      speed: 2000,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 1300,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 980,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
   }
 
 })(window, jQuery);
+
+

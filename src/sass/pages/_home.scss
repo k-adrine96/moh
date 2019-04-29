@@ -126,7 +126,7 @@
   }
 }
 
-.info__platform {
+.announcements {
   padding: 5rem 0;
   &--cont {
     max-width: $main-content-width;
@@ -286,6 +286,11 @@
         }
 
       }
+
     }
+  }
+
+  .partners-1--cont--slider {
+    margin-top: 50px;
   }
 }

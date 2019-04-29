@@ -710,8 +710,8 @@
 .news-cont-next {
   bottom: 50%; }
 
-.info__platform-prev,
-.info__platform-next,
+.announcements-prev,
+.announcements-next,
 .videos__background-prev,
 .videos__background-next {
   bottom: 30%; }
@@ -843,21 +843,21 @@
           text-align: right;
           float: right; }
 
-.info__platform {
+.announcements {
   padding: 5rem 0; }
-  .info__platform--cont {
+  .announcements--cont {
     max-width: 1400px;
     position: relative; }
     @media only screen and (min-width: 1921px) {
-      .info__platform--cont {
+      .announcements--cont {
         max-width: 73.5%; } }
-    .info__platform--cont--header h1 {
+    .announcements--cont--header h1 {
       text-transform: uppercase;
       font-size: 3.8rem;
       font-weight: lighter;
       color: #4D4D4D;
       padding-bottom: 1rem; }
-    .info__platform--cont--slider--items {
+    .announcements--cont--slider--items {
       border: 3px solid #E6E6E6;
       width: 300px;
       display: inline-block;
@@ -865,15 +865,15 @@
       cursor: pointer;
       transition: .5s;
       margin: 0 1rem; }
-      .info__platform--cont--slider--items:not(:last-child) {
+      .announcements--cont--slider--items:not(:last-child) {
         padding: 3rem; }
-      .info__platform--cont--slider--items:hover {
+      .announcements--cont--slider--items:hover {
         border-color: #FFBC35; }
-        .info__platform--cont--slider--items:hover .animated__button--yellow-small {
+        .announcements--cont--slider--items:hover .animated__button--yellow-small {
           background-color: #FFBC35;
           color: #000000;
           transition: all .5s; }
-      .info__platform--cont--slider--items h1 {
+      .announcements--cont--slider--items h1 {
         font-size: 2.8rem;
         color: #4D4D4D;
         font-weight: 600;
@@ -884,7 +884,7 @@
         display: -webkit-box;
         height: 96px;
         -webkit-line-clamp: 3; }
-      .info__platform--cont--slider--items p {
+      .announcements--cont--slider--items p {
         font-size: 1.8rem;
         color: #4D4D4D;
         margin-bottom: 3rem;
@@ -967,6 +967,8 @@
       outline: none; }
       .partners--cont--slider .partners--cont--item:hover {
         border-color: #FFBC35; }
+  .partners .partners-1--cont--slider {
+    margin-top: 50px; }
 
 .minister__staff--container--width {
   display: flex;
