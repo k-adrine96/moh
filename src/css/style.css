@@ -196,7 +196,7 @@
       display: block;
       transition: 0.3s;
       width: 30rem; }
-      .menu .menu--content li a {
+      .menu .menu--content li .first-lvl {
         color: #FFFFFF;
         font-size: 1.8rem;
         text-decoration: none;
@@ -204,21 +204,27 @@
         line-height: 1.4;
         display: inline-block;
         transition: 0.3s; }
-        .menu .menu--content li a:hover {
+        .menu .menu--content li .first-lvl:hover {
           color: #FFBC35; }
-        .menu .menu--content li a.active {
+        .menu .menu--content li .first-lvl.active {
           color: #FFBC35; }
-      .menu .menu--content li .hided--content {
+      .menu .menu--content li ul {
         display: none; }
-        .menu .menu--content li .hided--content li a {
+        .menu .menu--content li ul li a {
           color: #FFFFFF;
           font-size: 1.6rem;
           font-weight: 100;
           text-decoration: none;
           display: block;
           text-transform: none; }
-          .menu .menu--content li .hided--content li a:hover {
+          .menu .menu--content li ul li a:hover {
             color: #FFBC35; }
+          .menu .menu--content li ul li a.active {
+            color: #FFBC35; }
+        .menu .menu--content li ul li .second--hidden--content {
+          display: none; }
+          .menu .menu--content li ul li .second--hidden--content li a {
+            font-size: 1.4rem; }
   .menu__social--icons li {
     position: relative;
     border: 2px solid white;

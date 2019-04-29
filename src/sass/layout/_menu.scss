@@ -22,7 +22,7 @@
       transition: 0.3s;
       width: 30rem;
 
-      a {
+      .first-lvl {
         color: $color-white;
         font-size: $main-fz;
         text-decoration: none;
@@ -39,7 +39,7 @@
           color: $main-btn-color;
         }
       }
-      .hided--content {
+      ul {
           display: none;
 
         li {
@@ -52,8 +52,25 @@
             display: block;
             text-transform: none;
 
+
             &:hover {
               color: $main-btn-color;
+            }
+
+            &.active {
+              color: $main-btn-color;
+            }
+          }
+
+          .second--hidden--content {
+            display: none;
+
+            li {
+
+              a {
+
+                font-size: 1.4rem;
+              }
             }
           }
         }
