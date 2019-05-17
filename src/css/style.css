@@ -1364,6 +1364,21 @@
       .faq .faq__row--hided--content .faq__second--hidden--content li {
         font-size: 1.4rem; }
 
+.videos .videos__row {
+  max-width: 1400px;
+  margin: auto;
+  padding-top: 40px; }
+  .videos .videos__row .video__content {
+    margin: 10px 0; }
+    .videos .videos__row .video__content--header {
+      margin-bottom: 10px; }
+      .videos .videos__row .video__content--header h1 {
+        font-size: 1.8rem;
+        text-transform: uppercase; }
+    .videos .videos__row .video__content--date p {
+      font-size: 1.4rem;
+      text-transform: uppercase; }
+
 .main__cont__size {
   max-width: 1400px;
   margin: auto; }
