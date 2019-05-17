@@ -10,6 +10,14 @@
   background-color: $section-back-color;
 }
 
+.background__zebra > li:nth-child(even).multicolor .faq__row > a{
+  color: $color-blue;
+}
+.background__zebra > li:nth-child(odd).multicolor .faq__row > a{
+
+  color: $main-btn-color;
+}
+
 
 .pdf__year {
   line-height: 0.9;
@@ -27,4 +35,20 @@
 // Small size of year container in pdf info
 .pdf__year--small {
   width: 6%;
+}
+
+.color-yellow {
+  color: $main-btn-color!important;
+}
+
+.yellow-border {
+  border-bottom: 1px solid $main-btn-color!important;
+}
+
+.color-blue {
+  color: $color-blue!important;
+}
+
+.blue-border {
+  border-bottom: 1px solid $color-blue!important;
 }

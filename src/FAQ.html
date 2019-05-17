@@ -10,37 +10,41 @@
     <!--FAVICON-->
     <link rel="icon" href="img/moh-logo.png">
     <!--BOOTSTRAP-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <!--RESET-->
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <!--SELECT 2-->
-    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="./css/select2.min.css">
     <!--SLICK-->
-    <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick/slick.css"/>
     <!--ALL STYLE-->
 
-    <link rel="stylesheet" href="css/style.css">
+    <!--FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
 
     <!--JQUERY-->
-    <script src="js/libs/jquery-3.3.1.min.js"></script>
+    <script src="./js/libs/jquery-3.3.1.min.js"></script>
     <!--BOOTSTRAP-->
-    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="./js/libs/bootstrap.min.js"></script>
     <!--SELECT 2-->
-    <script src="js/libs/select2.min.js"></script>
-    <script src="js/select2.js"></script>
+    <script src="./js/libs/select2.min.js"></script>
+    <script src="./js/select2.js"></script>
     <!--SLICK-->
-    <script src="js/slick-slider.js"></script>
-    <script src="slick/slick/slick.min.js"></script>
+    <script src="./js/slick-slider.js"></script>
+    <script src="./slick/slick/slick.min.js"></script>
     <!--MAIN JS-->
-    <script src="js/menu.js"></script>
-    <script src="js/utils.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/utils.js"></script>
     <script src="js/pages/minister-staff.js"></script>
-    <script src="js/index.js"></script>
+    <script src="./js/index.js"></script>
 
 </head>
 
 <body>
+
 <div class="all-content">
     <header class="header">
         <div class="container-fluid">
@@ -94,64 +98,157 @@
             </div>
         </div>
     </header>
-    >
     <section class="empty-div"></section>
     <main>
-        <section class="secondary__cover" style="background-image: url('img/biography.png')">
+        <section class="secondary__cover" style="background-image: url('img/all-news-cover.png')">
             <div class="secondary__cover--content">
-                <h1>Հաստիքացուցակ</h1>
+                <h1>Նորություններ</h1>
             </div>
         </section>
-        <section class="grant-container">
-            <ul class="pdf__container">
-                <li>
-                    <div class="pdf__info">
-                        <div class="pdf__info--row d-flex align-items-start">
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center">
-                                        <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                        <a href="javascript:;" class="border-btm ml-5">
-                                            <span>Հայաստանի Հանրապետության առողջապահության
-                                                նախարարության աշխատակազմի կառուցվածքային և
-                                                առանձնացված ստորաբաժանումների հաստիքացուցակները
-                                                հաստատելու մասին («20» փետրվար 2018թ. N 21-Ա)
-                                                <b>(529կբ)</b>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="d-flex align-items-center">
-                                        <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                        <a href="javascript:;" class="border-btm ml-5">
-                                            <span>ՀՀ առողջապահության նախարարության կենտրոնական ապարատ
-                                                <b>(77կբ)</b>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="d-flex align-items-center">
-                                        <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                        <a href="javascript:;" class="border-btm ml-5">
-                                            <span>ՀՀ առողջապահության նախարարության աշխատակազմի
-                                                պետական առողջապահական գործակալություն
-                                                <b>(55կբ)</b>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="d-flex align-items-center">
-                                        <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                        <a href="javascript:;" class="border-btm ml-5">
-                                            <span>ՀՀ առողջապահության նախարարության աշխատակազմի լիցենզավորման գործակալություն
-                                                <b>(97կբ)</b>
-                                            </span>
-                                        </a>
+        <section class="faq">
+            <div class="faq__header">
+                <h1>հաճախ տրվող հարցեր</h1>
+            </div>
+            <ul class="background__zebra">
+                <li class="multicolor">
+                    <div class="faq__row">
+                        <a href="javascript:;" class="faq__row--first--lvl">դեղերի դուրս գրման նոր կարգի վերաբերյալ
+                            բարձրացված
+                            հարցեր </a>
+                        <ul class="faq__row--hided--content">
+                            <li>
+                                <a href="javascript:;" class="faq__second-lvl">Կարելի է՞ դեղատոմս դուրս գրել առանց
+                                    դեղատոմսի դուրս գրվող դեղերի համար կամ այն խմբի դեղերի համար, որոնք ժամանակացույցով
+                                    ներկայումս ներառված չեն պարտադիր դեղատոմսով դուրս գրվող դեղերի ցանկում:</a>
+                                <ul class="faq__second--hidden--content">
+                                    <li>2018 թվականի մարտի 1-ից դեղատոմսով բաց կթողնվեն
+                                        հակավարակային (հակաբակտերիային դեղեր, հակասնկային դեղեր, հակամիկոբակտերիային
+                                        դեղեր, հակավիրուսային դեղեր, իմունային շիճուկներ և իմունոգլոբուլիններ,
+                                        պատվաստանյութեր) դեղերը, հուլիսի 1-ից` ներարկման համար նախատեսված դեղերը,
+                                        հոկտեմբերի 1-ից` դեղատոմսով բաց թողնվող մնացած բոլոր դեղերը:
                                     </li>
                                 </ul>
-                            </div>
-                        </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="faq__second-lvl">Կարելի է՞ դեղատոմս դուրս գրել Հայաստանում
+                                    չգրանցված դեղերի համար:</a>
+                                <ul class="faq__second--hidden--content">
+                                    <li>2018 թվականի մարտի 1-ից դեղատոմսով բաց կթողնվեն
+                                        հակավարակային (հակաբակտերիային դեղեր, հակասնկային դեղեր, հակամիկոբակտերիային
+                                        դեղեր, հակավիրուսային դեղեր, իմունային շիճուկներ և իմունոգլոբուլիններ,
+                                        պատվաստանյութեր) դեղերը, հուլիսի 1-ից` ներարկման համար նախատեսված դեղերը,
+                                        հոկտեմբերի 1-ից` դեղատոմսով բաց թողնվող մնացած բոլոր դեղերը:
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="faq__second-lvl">Ինչպե՞ս պետք է բժիշկը պարզի, թե առևտրային
+                                    (բրենդ) անվամբ դեղն ինչ «համընդհանուր անուն» ունի:</a>
+                                <ul class="faq__second--hidden--content">
+                                    <li>2018 թվականի մարտի 1-ից դեղատոմսով բաց կթողնվեն
+                                        հակավարակային (հակաբակտերիային դեղեր, հակասնկային դեղեր, հակամիկոբակտերիային
+                                        դեղեր, հակավիրուսային դեղեր, իմունային շիճուկներ և իմունոգլոբուլիններ,
+                                        պատվաստանյութեր) դեղերը, հուլիսի 1-ից` ներարկման համար նախատեսված դեղերը,
+                                        հոկտեմբերի 1-ից` դեղատոմսով բաց թողնվող մնացած բոլոր դեղերը:
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="faq__second-lvl">Ո՞ր դեպքերում կարելի է դեղատոմսը գրել
+                                    «առևտրային» (բրենդ) անվամբ:</a>
+                                <ul class="faq__second--hidden--content">
+                                    <li>2018 թվականի մարտի 1-ից դեղատոմսով բաց կթողնվեն
+                                        հակավարակային (հակաբակտերիային դեղեր, հակասնկային դեղեր, հակամիկոբակտերիային
+                                        դեղեր, հակավիրուսային դեղեր, իմունային շիճուկներ և իմունոգլոբուլիններ,
+                                        պատվաստանյութեր) դեղերը, հուլիսի 1-ից` ներարկման համար նախատեսված դեղերը,
+                                        հոկտեմբերի 1-ից` դեղատոմսով բաց թողնվող մնացած բոլոր դեղերը:
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="multicolor">
+                    <div class="faq__row">
+                        <a href="javascript:;" class="faq__row--first--lvl">Էլեկտրոնային առողջապահության համակարգի
+                            գաղտնիության ապահովման մասին</a>
+                        <ul class="faq__row--hided--content">
+                            <li>
+                                <a href="javascript:;" class="faq__second-lvl">Էլեկտրոնային առողջապահության համակարգի
+                                    գաղտնիության ապահովման մասին</a>
+                                <ul class="faq__second--hidden--content">
+                                    <li>2018 թվականի մարտի 1-ից դեղատոմսով բաց կթողնվեն
+                                        հակավարակային (հակաբակտերիային դեղեր, հակասնկային դեղեր, հակամիկոբակտերիային
+                                        դեղեր, հակավիրուսային դեղեր, իմունային շիճուկներ և իմունոգլոբուլիններ,
+                                        պատվաստանյութեր) դեղերը, հուլիսի 1-ից` ներարկման համար նախատեսված դեղերը,
+                                        հոկտեմբերի 1-ից` դեղատոմսով բաց թողնվող մնացած բոլոր դեղերը:
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="multicolor">
+                    <div class="faq__row">
+                        <a href="javascript:;" class="faq__row--first--lvl">Բժշկական օգնություն եվ սպասարկում</a>
+                        <ul class="faq__row--hided--content">
+                            <li>
+                                <a href="javascript:;" class="faq__second-lvl">Ի՞նչ ժամանակացույցով է ներդրվելու
+                                    դեղատոմսի
+                                    պարտադիր պահանջը դեղերի տարբեր խմբերի համար։</a>
+                                <ul class="faq__second--hidden--content">
+                                    <li>2018 թվականի մարտի 1-ից դեղատոմսով բաց կթողնվեն
+                                        հակավարակային (հակաբակտերիային դեղեր, հակասնկային դեղեր, հակամիկոբակտերիային
+                                        դեղեր, հակավիրուսային դեղեր, իմունային շիճուկներ և իմունոգլոբուլիններ,
+                                        պատվաստանյութեր) դեղերը, հուլիսի 1-ից` ներարկման համար նախատեսված դեղերը,
+                                        հոկտեմբերի 1-ից` դեղատոմսով բաց թողնվող մնացած բոլոր դեղերը:
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="multicolor">
+                    <div class="faq__row">
+                        <a href="javascript:;" class="faq__row--first--lvl">Պոլիոմիելիտի լրացուցիչ պատվաստումներ</a>
+                        <ul class="faq__row--hided--content">
+                            <li>
+                                <a href="javascript:;" class="faq__second-lvl">Ի՞նչ ժամանակացույցով է ներդրվելու
+                                    դեղատոմսի
+                                    պարտադիր պահանջը դեղերի տարբեր խմբերի համար։</a>
+                                <ul class="faq__second--hidden--content">
+                                    <li>2018 թվականի մարտի 1-ից դեղատոմսով բաց կթողնվեն
+                                        հակավարակային (հակաբակտերիային դեղեր, հակասնկային դեղեր, հակամիկոբակտերիային
+                                        դեղեր, հակավիրուսային դեղեր, իմունային շիճուկներ և իմունոգլոբուլիններ,
+                                        պատվաստանյութեր) դեղերը, հուլիսի 1-ից` ներարկման համար նախատեսված դեղերը,
+                                        հոկտեմբերի 1-ից` դեղատոմսով բաց թողնվող մնացած բոլոր դեղերը:
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="multicolor">
+                    <div class="faq__row">
+                        <a href="javascript:;" class="faq__row--first--lvl">Կարմրուկ</a>
+                        <ul class="faq__row--hided--content">
+                            <li>
+                                <a href="javascript:;" class="faq__second-lvl">Ի՞նչ ժամանակացույցով է ներդրվելու
+                                    դեղատոմսի
+                                    պարտադիր պահանջը դեղերի տարբեր խմբերի համար։</a>
+                                <ul class="faq__second--hidden--content">
+                                    <li>2018 թվականի մարտի 1-ից դեղատոմսով բաց կթողնվեն
+                                        հակավարակային (հակաբակտերիային դեղեր, հակասնկային դեղեր, հակամիկոբակտերիային
+                                        դեղեր, հակավիրուսային դեղեր, իմունային շիճուկներ և իմունոգլոբուլիններ,
+                                        պատվաստանյութեր) դեղերը, հուլիսի 1-ից` ներարկման համար նախատեսված դեղերը,
+                                        հոկտեմբերի 1-ից` դեղատոմսով բաց թողնվող մնացած բոլոր դեղերը:
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </li>
             </ul>
-
         </section>
         <section class="partners">
             <div class="partners--cont">

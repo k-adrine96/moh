@@ -198,7 +198,7 @@
       width: 30rem; }
       .menu .menu--content li .first-lvl {
         color: #FFFFFF;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         text-decoration: none;
         text-transform: uppercase;
         line-height: 1.4;
@@ -212,7 +212,7 @@
         display: none; }
         .menu .menu--content li ul li a {
           color: #FFFFFF;
-          font-size: 1.6rem;
+          font-size: 1.8rem;
           font-weight: 100;
           text-decoration: none;
           display: block;
@@ -224,7 +224,7 @@
         .menu .menu--content li ul li .second--hidden--content {
           display: none; }
           .menu .menu--content li ul li .second--hidden--content li a {
-            font-size: 1.4rem; }
+            font-size: 1.6rem; }
   .menu__social--icons li {
     position: relative;
     border: 2px solid white;
@@ -476,7 +476,8 @@
   height: 42rem; }
   .secondary__cover--content {
     max-width: 1400px;
-    margin: auto; }
+    margin: auto;
+    padding-top: 40px; }
     .secondary__cover--content h1 {
       font-size: 4.8rem;
       color: #000000;
@@ -568,6 +569,26 @@
       color: #4D4D4D;
       padding: 0.7rem 0;
       width: 100%; }
+      .pdf__text ul li a span.border-btm {
+        border-bottom: 1px solid #CCCCCC; }
+      .pdf__text ul li a span {
+        display: block;
+        padding: 6px 0;
+        width: 100%; }
+    .pdf__text ul li p.border-btm {
+      border-bottom: 1px solid #CCCCCC; }
+    .pdf__text ul li p {
+      border-bottom: 1px solid #CCCCCC;
+      font-size: 1.8rem;
+      padding: 0.7rem 0;
+      color: #4D4D4D;
+      width: 100%; }
+    .pdf__text ul li h2 {
+      font-size: 1.8rem;
+      padding: 0.7rem 0;
+      color: #4D4D4D;
+      width: 100%;
+      font-weight: 100; }
   .pdf__text ul li:last-child a {
     border: none; }
 
@@ -608,6 +629,11 @@
     color: #FFBC35; }
   .numbered-list li.blue:before {
     color: #0071BC; }
+
+.text-container p {
+  font-size: 1.8rem;
+  color: #4D4D4D;
+  margin-bottom: 10px; }
 
 .workers__container {
   max-width: 1400px;
@@ -724,6 +750,14 @@
 
 .empty-div {
   height: 10rem; }
+
+.only__text {
+  max-width: 1400px;
+  margin: auto;
+  padding-top: 45px; }
+  .only__text p {
+    font-size: 1.8rem;
+    margin-bottom: 10px; }
 
 .main__cover--item {
   background-size: cover;
@@ -1227,12 +1261,121 @@
 .workers__content > ul > li:nth-child(even) {
   background-color: #F6F6F6; }
 
+.history-container .pdf__container > li {
+  padding-top: 30px; }
+
+.history-container .pdf__info {
+  padding: 0 !important; }
+  .history-container .pdf__info--row {
+    padding: 0 !important; }
+
+.announcement-container .announcement__content {
+  max-width: 1400px;
+  margin: auto; }
+  .announcement-container .announcement__content .pdf__text .pdf__text ul {
+    padding-top: 10px; }
+
+.charter-container .charter-content h1 {
+  font-size: 3.8rem;
+  text-transform: uppercase;
+  padding: 10px 0 15px; }
+
+.charter-container .charter-content h2 {
+  font-size: 3.8rem;
+  text-transform: uppercase; }
+
+.charter-container .charter-content h3 {
+  font-size: 1rem; }
+
+.charter-container .charter-content p {
+  font-size: 1.7rem;
+  padding: 7px 0; }
+
+.all__news .all__news--row {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 0; }
+  .all__news .all__news--row .all__news--image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 226px;
+    width: 100%; }
+  .all__news .all__news--row .all__news--date span {
+    color: #FFBC35;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    height: 76px;
+    -webkit-line-clamp: 2; }
+  .all__news .all__news--row .all__news--header {
+    padding: 15px 0 10px; }
+    .all__news .all__news--row .all__news--header h1 {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      height: 21px;
+      -webkit-line-clamp: 1; }
+  .all__news .all__news--row .all__news--short--description p {
+    font-size: 1.4rem;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    height: 97px;
+    -webkit-line-clamp: 5; }
+
+.faq__header {
+  max-width: 1400px;
+  margin: auto; }
+  .faq__header h1 {
+    text-transform: uppercase;
+    color: #0071BC;
+    font-size: 3.8rem;
+    font-weight: 100; }
+
+.faq .faq__row {
+  max-width: 1400px;
+  margin: auto; }
+  .faq .faq__row--first--lvl {
+    text-decoration: none;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 30px 0; }
+  .faq .faq__row--hided--content {
+    display: none; }
+    .faq .faq__row--hided--content .faq__second-lvl {
+      text-decoration: underline;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      color: #4D4D4D;
+      padding: 6px 0;
+      display: inline-block; }
+    .faq .faq__row--hided--content .faq__second--hidden--content {
+      display: none; }
+      .faq .faq__row--hided--content .faq__second--hidden--content li {
+        font-size: 1.4rem; }
+
 .main__cont__size {
   max-width: 1400px;
   margin: auto; }
 
 .background__zebra > li:nth-child(even) {
   background-color: #F6F6F6; }
+
+.background__zebra > li:nth-child(even).multicolor .faq__row > a {
+  color: #0071BC; }
+
+.background__zebra > li:nth-child(odd).multicolor .faq__row > a {
+  color: #FFBC35; }
 
 .pdf__year {
   line-height: 0.9; }
@@ -1246,6 +1389,18 @@
 
 .pdf__year--small {
   width: 6%; }
+
+.color-yellow {
+  color: #FFBC35 !important; }
+
+.yellow-border {
+  border-bottom: 1px solid #FFBC35 !important; }
+
+.color-blue {
+  color: #0071BC !important; }
+
+.blue-border {
+  border-bottom: 1px solid #0071BC !important; }
 
 .burger__menu {
   cursor: pointer;

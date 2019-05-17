@@ -68,6 +68,33 @@
         color: $main-color;
         padding: 0.7rem 0;
         width: 100%;
+
+        span.border-btm {
+           border-bottom: 1px solid $color-gray;
+        }
+        span{
+          display: block;
+          padding: 6px 0;
+          width: 100%;
+        }
+      }
+      p.border-btm {
+        border-bottom: 1px solid $color-gray;
+      }
+      p {
+        border-bottom: 1px solid $color-gray;
+        font-size: $main-fz;
+        padding: 0.7rem 0;
+        color: $main-color;
+        width: 100%;
+      }
+
+      h2 {
+        font-size: $main-fz;
+        padding: 0.7rem 0;
+        color: $main-color;
+        width: 100%;
+        font-weight: 100;
       }
     }
 
