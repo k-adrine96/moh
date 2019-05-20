@@ -338,9 +338,6 @@
 .animated__button--yellow {
   background-color: #FFBC35;
   color: #000000; }
-  .animated__button--yellow::after {
-    background-color: #FFBC35;
-    color: #000000; }
 
 .animated__button--blue {
   background-color: #F6F6F6;
@@ -354,9 +351,6 @@
   background-color: #0071BC;
   color: #FFFFFF;
   border: 2px solid #0071BC; }
-  .animated__button--blue-1::after {
-    background-color: #0071BC;
-    color: #FFFFFF; }
   .animated__button--blue-1:hover {
     background-color: #0071BC;
     color: #FFFFFF; }
@@ -366,9 +360,6 @@
   margin: auto;
   background-color: #CCCCCC;
   color: white; }
-  .animated__button--yellow-small::after {
-    background-color: #FFBC35;
-    color: #000000; }
 
 .subscription__content--form .input-group {
   width: 90%; }
