@@ -10,10 +10,10 @@
   background-color: $section-back-color;
 }
 
-.background__zebra > li:nth-child(even).multicolor .faq__row > a{
+.background__zebra > li:nth-child(even).multicolor .multicolor-container > a{
   color: $color-blue;
 }
-.background__zebra > li:nth-child(odd).multicolor .faq__row > a{
+.background__zebra > li:nth-child(odd).multicolor .multicolor-container > a{
 
   color: $main-btn-color;
 }

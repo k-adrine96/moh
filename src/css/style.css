@@ -493,11 +493,26 @@
 .worker__number__email li {
   display: flex;
   align-items: center; }
+  .worker__number__email li a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #4D4D4D; }
+  .worker__number__email li p {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding-bottom: 5px; }
   .worker__number__email li i {
     width: 35px;
     height: 35px;
     display: inline-block;
     margin-right: 1rem; }
+  .worker__number__email li .location-icon {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/location-icon-yellow.png");
+    height: 49px !important;
+    width: 35px !important; }
   .worker__number__email li .call-icon {
     background-size: cover;
     background-position: center;
@@ -508,6 +523,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-image: url("../img/message-icon-blue.png"); }
+  .worker__number__email li .website-icon {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/website-icon.png"); }
   .worker__number__email li span {
     font-size: 1.8rem;
     color: #4D4D4D; }
@@ -1370,6 +1390,91 @@
       font-size: 1.4rem;
       text-transform: uppercase; }
 
+.public__council--row {
+  max-width: 1400px;
+  margin: auto; }
+  .public__council--row--first--lvl {
+    text-decoration: none;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 30px 0; }
+  .public__council--row .public__council--hidden--content {
+    display: none; }
+
+.links--row {
+  max-width: 1400px;
+  margin: auto; }
+  .links--row--first--lvl {
+    text-decoration: none !important;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 30px 0; }
+  .links--row .links--hidden--content {
+    display: none; }
+    .links--row .links--hidden--content .links__partner--row {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #FFBC35; }
+      .links--row .links--hidden--content .links__partner--row .partner__logo {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left;
+        height: 75px;
+        width: 330px; }
+    .links--row .links--hidden--content .links__non--governmental--organizations .workers__container {
+      max-width: 100%; }
+      .links--row .links--hidden--content .links__non--governmental--organizations .workers__container .worker__info {
+        max-width: 88%; }
+        .links--row .links--hidden--content .links__non--governmental--organizations .workers__container .worker__info--chief {
+          padding-top: 10px; }
+          .links--row .links--hidden--content .links__non--governmental--organizations .workers__container .worker__info--chief h1 {
+            font-size: 1.8rem; }
+    .links--row .links--hidden--content .charity__row {
+      padding: 15px 0;
+      border-bottom: 1px solid #FFBC35; }
+      .links--row .links--hidden--content .charity__row--content .charity-background {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        vertical-align: top;
+        height: 150px;
+        width: 265px; }
+      .links--row .links--hidden--content .charity__row--content .link__list {
+        padding: 15px 0; }
+        .links--row .links--hidden--content .charity__row--content .link__list li h1 {
+          font-size: 1.8rem;
+          color: #FFBC35; }
+        .links--row .links--hidden--content .charity__row--content .link__list li span {
+          font-size: 1.8rem; }
+      .links--row .links--hidden--content .charity__row--content p {
+        font-size: 1.8rem;
+        padding-bottom: 10px; }
+    .links--row .links--hidden--content .links__second--lvl {
+      text-decoration: none !important;
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 30px 0; }
+  .links--row .links__websites-container .worker__number__email {
+    margin: 10px; }
+    .links--row .links__websites-container .worker__number__email li {
+      display: block !important; }
+      .links--row .links__websites-container .worker__number__email li i {
+        display: inline-block;
+        vertical-align: middle; }
+  .links--row .links__websites-container .links__second--lvl {
+    text-decoration: none !important;
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 30px 0; }
+  .links--row .links__websites-container > li:nth-child(even) > a {
+    color: #FFBC35; }
+  .links--row .links__websites-container > li:nth-child(odd) > a {
+    color: #0071BC; }
+
 .main__cont__size {
   max-width: 1400px;
   margin: auto; }
@@ -1377,10 +1482,10 @@
 .background__zebra > li:nth-child(even) {
   background-color: #F6F6F6; }
 
-.background__zebra > li:nth-child(even).multicolor .faq__row > a {
+.background__zebra > li:nth-child(even).multicolor .multicolor-container > a {
   color: #0071BC; }
 
-.background__zebra > li:nth-child(odd).multicolor .faq__row > a {
+.background__zebra > li:nth-child(odd).multicolor .multicolor-container > a {
   color: #FFBC35; }
 
 .pdf__year {

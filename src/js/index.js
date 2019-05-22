@@ -25,12 +25,21 @@ $(document).ready(function () {
 
   toggleWIthActive('.first-lvl', '.hided--content');
   toggleWIthActive('.second-lvl', '.second--hidden--content');
-
   $('.faq__row--first--lvl').on('click',function () {
     $('.faq__second--hidden--content').slideUp(500);
   });
 
+  $('.links--row--first--lvl').on('click',function () {
+    $('.links__websites--row').slideUp(500);
+  });
+  onlyToggle('.links--row--first--lvl', '.links--hidden--content');
+  onlyToggle('.links__second--lvl','.links__websites--row');
+
+
   onlyToggle('.faq__row--first--lvl', '.faq__row--hided--content');
   onlyToggle('.faq__second-lvl', '.faq__second--hidden--content');
+  onlyToggle('.public__council--row--first--lvl', '.public__council--hidden--content');
+
+
 
 });
