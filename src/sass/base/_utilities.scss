@@ -52,3 +52,22 @@
 .blue-border {
   border-bottom: 1px solid $color-blue!important;
 }
+
+
+//different backgrounds
+
+.yellow--background {
+  background-color: $main-btn-color;
+}
+
+.blue--background {
+  background-color: $color-blue;
+}
+
+.gray--background {
+  background-color: #a9a7a7;
+}
+
+.white--background {
+  background-color: white;
+}

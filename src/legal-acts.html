@@ -18,11 +18,14 @@
     <!--SLICK-->
     <link rel="stylesheet" type="text/css" href="./slick/slick/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="./slick/slick/slick.css"/>
-    <!--ALL STYLE-->
 
     <!--FONT-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
+    <!--DATE PICKER-->
+    <link rel="stylesheet" href="./css/tempusdominus-bootstrap-4.min.css">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!--ALL STYLE-->
     <link rel="stylesheet" href="./css/style.css">
 
     <!--JQUERY-->
@@ -35,6 +38,14 @@
     <!--SLICK-->
     <script src="./js/slick-slider.js"></script>
     <script src="./slick/slick/slick.min.js"></script>
+    <!--MOMENT-->
+    <script src="./js/libs/moment.js"></script>
+    <!--DATE PICKER-->
+    <script src="./js/libs/tempusdominus-bootstrap-4.min.js"></script>
+    <!--FONT AWESOME-->
+    <script src="./js/libs/all.min.js"></script>
+
+
     <!--MAIN JS-->
     <script src="./js/menu.js"></script>
     <script src="./js/utils.js"></script>
@@ -43,7 +54,7 @@
 
 </head>
 
-<body>
+<body class="individual-select">
 
 <div class="all-content">
     <header class="header">
@@ -100,72 +111,128 @@
     </header>
     <section class="empty-div"></section>
     <main>
-        <section class="secondary__cover" style="background-image: url('img/about-us-cover.png')">
+        <section class="secondary__cover" style="background-image: url('img/legal-acts-cover.png')">
             <div class="secondary__cover--content">
-                <h1>հետադարձ կապ</h1>
+                <h1>Իրավական ակտեր</h1>
             </div>
         </section>
-        <section class="contact__us">
-            <div class="contact__us--info">
-                <div class="contact__us--info--form">
-                    <form action="" class="contact__us--form">
-                        <div class="input-group mb-4">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><img src="img/username-icon.png" alt=""></span>
+        <section class="legal__acts">
+            <div class="legal__acts--container">
+                <div class="legal__acts--container--form">
+                    <form action="">
+                        <div class="form--content">
+                            <label for="legal-acts-type">տեսակ</label>
+                            <select title="" id="legal-acts-type" class="Legal__acts--type" style="width: 100%" name="state">
+                                <option></option>
+                                <option value="type1">Type1</option>
+                                <option value="type2">type2</option>
+                                <option value="type3">Type3</option>
+                            </select>
+                            <div class="form-group">
+                                <label for="date">ամսաթիվ</label>
+                                <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                                    <input placeholder="Ամսաթիվ" type="text" id="date" class="form-control datetimepicker-input"
+                                           data-target="#datetimepicker4"/>
+                                    <div class="input-group-append" data-target="#datetimepicker4"
+                                         data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
+                                </div>
                             </div>
-                            <input type="text" class="form-control" placeholder="Անուն Ազգանուն" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-4">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><img src="img/email-1-icon.png" alt=""></span>
+                            <div class="form-group">
+                                <label for="legal-acts-name">անվանում</label>
+                                <input type="text" class="form-control" id="legal-acts-name" placeholder="Անվանում">
                             </div>
-                            <input type="text" class="form-control" placeholder="Էլ․ հասցե" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-4">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><img src="img/theme-icon.png" alt=""></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Թեմա" aria-label="Username" aria-describedby="">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Հաղորդագրություն"></textarea>
-                        </div>
-                        <div class="contact__us--btns d-flex justify-content-center">
-                            <a href="javascript:;" class="animated__button animated__button--yellow">ջնջել</a>
-                            <a href="javascript:;" class="animated__button animated__button--blue-1">ուղարկել</a>
+                            <a href="javascript:;" class="animated__button animated__button--blue-1">ՈՐՈՆԵԼ</a>
+                            <script type="text/javascript">
+                              $(function () {
+                                $('#datetimepicker4').datetimepicker({
+                                  format: 'L'
+                                });
+                              });
+                            </script>
                         </div>
                     </form>
                 </div>
-                <div class="contact__us--info--map">
-                    <div id="map"></div>
-                </div>
+                <ul class="legal__acts--list">
+                    <li>
+                        <div class="pdf__info">
+                            <div class="pdf__info--row d-flex align-items-start">
+                                <div class="pdf__year pdf__year--small">
+                                    <span>2019</span>
+                                </div>
+                                <div class="pdf__text">
+                                    <ul>
+                                        <li class="d-flex align-items-center">
+                                            <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
+                                            <a href="javascript:;" class="border-btm ml-5">
+                                                <span>սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                    <!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
+                                            <a href="javascript:;" class="border-btm ml-5">
+                                                <span>սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                    <!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
+                                            <a href="javascript:;" class="border-btm ml-5">
+                                                <span>սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                    <!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
+                                            <a href="javascript:;" class="border-btm ml-5">
+                                                <span>սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                    <!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
+                                            <a href="javascript:;" class="border-btm ml-5">
+                                                <span>սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                    <!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
+                                            <a href="javascript:;" class="border-btm ml-5">
+                                                <span>սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                    <!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
+                                            <a href="javascript:;" class="border-btm ml-5">
+                                                <span>սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                    <!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
+                                            <a href="javascript:;" class="border-btm ml-5">
+                                                <span>սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                    <!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
+                                            <a href="javascript:;" class="border-btm ml-5">
+                                                <span>սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                    <!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="contact__us--cont">
-                <div class="contact__us--cont--text1">
-                    <h1>Հարգելի այցելու,</h1>
-                    <ul>
-                        <li>այս էջի միջոցով կարող եք առցանց դիմում գրել կամ
-                            տեղեկատվություն ստանալու համար պաշտոնական
-                            հարցում ուղարկել: Հարցման պարագայում խնդրում
-                            ենք օգտվել տեղեկատվության հարցման օրինակելի ձևից:
-                        </li>
-                        <li>Դիմումի ձևը` <a href="javascript:;" class="xls-file">այստեղ</a></li>
-                        <li>Տեղեկացնում ենք, որ դիմումը և հարցումը պետք է
-                            ստորագրված լինեն: Դիմումը կամ հարցումը ստանալուց
-                            հետո էլեկտրոնային փոստով Ձեզ կտրամադրվի 12
-                            նիշանոց հսկիչ համար, որը մուտքագրելով այս
-                            դաշտում, կարող եք նաև առցանց հետևել նամակի
-                            ընթացքին:</li>
-                    </ul>
-                </div>
-            </div>
-            <ul class="contact__us--text2">
-                <li>Տեղեկատվության ազատության համար պատասխանատու պաշտոնատար անձ <span>Լիլիթ Բաբախանյան</span>,</li>
-                <li>ՀՀ ԱՆ աշխատակազմի հասարակայնության հետ կապերի բաժին</li>
-                <li>Հեռ. (+374 60) 80-80-03 / 2301; 2302,</li>
-                <li>էլ. փոստ՝ <a href="javascript:;">pr@moh.am</a></li>
-            </ul>
-
         </section>
         <section class="partners">
             <div class="partners--cont">
@@ -422,8 +489,6 @@
 </div>
 
 
-<script src="js/google-map.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7nSpucMaZeeBRk9JbmLZkVWQx4L8fLgs&callback=initMap" type="text/javascript"></script>
 </body>
 
 </html>

@@ -703,6 +703,20 @@
   background-color: #FFBC35;
   color: white; }
 
+.legal__acts--container--form .select2-container .select2-selection--single {
+  height: 40px;
+  outline: none; }
+
+.legal__acts--container--form .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 40px;
+  outline: none; }
+
+.legal__acts--container--form .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 40px; }
+
+.legal__acts--container--form .select2-container--default .select2-selection--single {
+  border: 1px solid #ced4da; }
+
 .slick-dots {
   bottom: 40px; }
 
@@ -1475,6 +1489,59 @@
   .links--row .links__websites-container > li:nth-child(odd) > a {
     color: #0071BC; }
 
+.legal__acts--container--form {
+  background-color: #d6d6d6; }
+  .legal__acts--container--form form {
+    max-width: 1400px;
+    margin: auto; }
+    .legal__acts--container--form form .form--content {
+      width: 450px;
+      margin: auto;
+      padding: 25px 0; }
+      .legal__acts--container--form form .form--content input {
+        height: 40px;
+        outline: none; }
+        .legal__acts--container--form form .form--content input:focus {
+          box-shadow: none;
+          border-color: #ced4da; }
+      .legal__acts--container--form form .form--content label {
+        font-size: 1.8rem;
+        text-transform: uppercase; }
+
+.legal__acts--container .legal__acts--list {
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 40px; }
+
+.ministry__structure {
+  max-width: 800px;
+  margin: 50px auto; }
+  .ministry__structure .ministry__structure--list li {
+    border-radius: 50px;
+    margin-bottom: 10px;
+    height: 40px;
+    position: relative; }
+    .ministry__structure .ministry__structure--list li p {
+      color: white;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      position: absolute;
+      left: 3%;
+      top: 50%;
+      transform: translateY(-50%); }
+    .ministry__structure .ministry__structure--list li h1 {
+      color: white;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+  .ministry__structure .ministry__structure--list--right li {
+    height: 51px; }
+
 .main__cont__size {
   max-width: 1400px;
   margin: auto; }
@@ -1512,6 +1579,18 @@
 
 .blue-border {
   border-bottom: 1px solid #0071BC !important; }
+
+.yellow--background {
+  background-color: #FFBC35; }
+
+.blue--background {
+  background-color: #0071BC; }
+
+.gray--background {
+  background-color: #a9a7a7; }
+
+.white--background {
+  background-color: white; }
 
 .burger__menu {
   cursor: pointer;
