@@ -1,0 +1,125 @@
+.pdf__container {
+
+  li {
+    .pdf__info {
+      max-width: $main-content-width;
+      margin: auto;
+      padding: 2rem 0;
+
+      @media only screen and (min-width: 1921px){
+        max-width: $main-content-width-big;
+    }
+
+      &--header {
+        border-bottom: 1px solid $main-btn-color;
+        padding: 2rem 0;
+        h1 {
+          font-size: $tertiary-header;
+          color: $main-color;
+          text-transform: uppercase;
+          font-weight: 100;
+        }
+      }
+
+      &--row {
+        padding: 1.6rem 0;
+        //display: flex;
+        //align-items: center;
+
+      }
+    }
+  }
+
+  & > li:nth-child(even) {
+    background-color: $section-back-color;
+
+    .pdf__info--header {
+      border-bottom: 1px solid #0071BC;
+    }
+  }
+}
+
+.pdf__text {
+  width: 100%;
+  ul {
+
+    li.border-btm {
+      border-bottom: 1px solid $color-gray;
+      padding: 1rem 0;
+    }
+
+    li {
+      padding-bottom: 1rem;
+
+      .pdf__icon {
+        display: inline-block;
+        @include backimg;
+        width: 29px;
+        height: 33px;
+      }
+
+      a.border-btm {
+        border-bottom: 1px solid $color-gray;
+      }
+      a {
+        text-decoration: none;
+        display: inline-block;
+        font-size: $main-fz;
+        color: $main-color;
+        padding: 0.7rem 0;
+        width: 100%;
+
+        span.border-btm {
+           border-bottom: 1px solid $color-gray;
+        }
+        span{
+          display: block;
+          padding: 6px 0;
+          width: 100%;
+        }
+      }
+      p.border-btm {
+        border-bottom: 1px solid $color-gray;
+      }
+      p {
+        border-bottom: 1px solid $color-gray;
+        font-size: $main-fz;
+        padding: 0.7rem 0;
+        color: $main-color;
+        width: 100%;
+      }
+
+      h2 {
+        font-size: $main-fz;
+        padding: 0.7rem 0;
+        color: $main-color;
+        width: 100%;
+        font-weight: 100;
+      }
+    }
+
+    li:last-child {
+      a {
+        border: none;
+      }
+    }
+  }
+
+}
+
+.pdf__info--img--text {
+  display: flex;
+  align-items: start !important;
+
+  .biography__content--image {
+    @include backimg();
+    height: 20.7rem;
+    width: 36.5rem;
+  }
+  .biography__text {
+    width: 100%;
+    font-size: $main-fz;
+    color: $main-color;
+    padding: 0 50px;
+  }
+}

@@ -1,0 +1,51 @@
+//ABSTRACTS
+
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+//LAYOUTS
+
+@import "layout/header";
+@import "layout/subscription";
+@import "layout/footer";
+@import "layout/menu";
+//COMPONENTS
+
+@import "components/button";
+@import "components/form";
+@import "components/secondary-cover";
+@import "components/workers-number-email";
+@import "components/pdf-info";
+@import "components/numbered-list";
+@import "components/text-contaiener";
+@import "components/workser";
+
+//OTHER
+@import "Other/select2";
+@import "Other/slick";
+@import "Other/empty-div";
+//PAGES
+
+@import "pages/text";
+@import "pages/home";
+@import "pages/single-news";
+@import "pages/minister-staff";
+@import "pages/contact-us";
+@import "pages/minister-page";
+@import "pages/ministry-staff";
+@import "pages/history-container";
+@import "pages/announcement";
+@import "pages/charter";
+@import "pages/all-news";
+@import "pages/FAQ";
+@import "pages/videos";
+@import "pages/public-council";
+@import "pages/links";
+@import "pages/legal-acts";
+@import "pages/ministry-structure";
+
+//BASE
+@import "base/utilities";
+@import "base/animations";
+@import "base/typography";
+@import "base/base";

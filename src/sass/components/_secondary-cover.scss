@@ -1,0 +1,44 @@
+.secondary__cover {
+  @include backimg;
+  height: 42rem;
+
+  &--content {
+    max-width: $main-content-width;
+    margin: auto;
+    padding-top: 40px;
+    h1 {
+      font-size: $primary-header;
+      color: $color-black;
+      text-transform: uppercase;
+      max-width: 85rem;
+      font-weight: $fw-lighter;
+    }
+  }
+
+  &--info {
+    max-width: $main-content-width;
+    margin: 50px auto 0;
+
+    @media only screen and (min-width: 1921px){
+      max-width: $main-content-width-big;
+    }
+
+    h1 {
+      font-size: $tertiary-header;
+      color: $color-black;
+      text-transform: uppercase;
+      width: 30rem;
+    }
+  }
+
+}
+
+.aks__minister--cover {
+
+  .secondary__cover--content {
+    h1 {
+      max-width: 61rem;
+    }
+  }
+
+}

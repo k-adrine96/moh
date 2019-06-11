@@ -1,0 +1,42 @@
+.faq {
+
+  &__header {
+    @include mainWidth;
+    h1 {
+      text-transform: uppercase;
+      color: $color-blue;
+      font-size: $secondary-header;
+      font-weight: 100;
+    }
+  }
+  .faq__row {
+    @include mainWidth;
+    &--first--lvl{
+      text-decoration: none;
+      font-size: $tertiary-header;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 30px 0;
+    }
+    &--hided--content {
+      display: none;
+
+      .faq__second-lvl {
+        text-decoration: underline;
+        font-size: $main-fz;
+        text-transform: uppercase;
+        color: $main-color;
+        padding: 6px 0;
+        display: inline-block;
+      }
+      .faq__second--hidden--content {
+        display: none;
+
+        li {
+          font-size: $small-fz;
+        }
+      }
+
+    }
+  }
+}
