@@ -110,3 +110,8 @@
         </section>
     </main>
 @endsection
+
+@push('js')
+    <script src="js/google-map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7nSpucMaZeeBRk9JbmLZkVWQx4L8fLgs&callback=initMap" type="text/javascript"></script>
+@endpush

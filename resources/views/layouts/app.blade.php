@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
-
+    @stack('css')
     <!--JQUERY-->
     <script src="./js/libs/jquery-3.3.1.min.js"></script>
     <!--BOOTSTRAP-->
@@ -51,5 +51,6 @@
         @include('layouts.footer')
     </div>
     @include('layouts.sidebar')
+    @stack('js')
 </body>
 </html>
