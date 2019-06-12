@@ -1,0 +1,173 @@
+.footer {
+
+  &__container--social {
+    position: relative;
+    padding: 3rem 0;
+
+    .footer--social {
+
+      li {
+        position: relative;
+        border: 2px solid #065BAA;
+        width: 44px;
+        height: 44px;
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+
+        &:hover {
+          border-color: $main-btn-color;
+        }
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+
+          &:hover {
+            .facebook--icon {
+              background-position: -17px -213px;
+            }
+            .youtube--icon {
+              background-position: -2px -153px;
+            }
+            .linkedin--icon {
+              background-position: -2px -192px;
+            }
+            .google--icon {
+              background-position: -2px -21px;
+            }
+            .twitter--icon {
+              background-position: -2px -115px;
+            }
+            .instagram--icon {
+              background-position: -2px -42px;
+            }
+          }
+
+          i {
+            display: inline-block;
+            background: url('/public/img/social-icons.png') no-repeat;
+            overflow: hidden;
+            text-indent: -9999px;
+            text-align: left;
+            position: absolute;
+          }
+        }
+        .facebook--icon {
+          background-position: -2px -213px;
+          width: 13px;
+          height: 23px;
+          left: 35%;
+          top: 23%;
+        }
+        .youtube--icon {
+          background-position: -2px -135px;
+          width: 21px;
+          height: 16px;
+          left: 26%;
+          top: 31%;
+        }
+        .linkedin--icon {
+          background-position: -2px -171px;
+          width: 19px;
+          height: 19px;
+          left: 28.5%;
+          top: 22%;
+        }
+        .google--icon {
+          background-position: -2px -0px;
+          width: 30px;
+          height: 19px;
+          left: 16%;
+          top: 26%;
+        }
+        .twitter--icon {
+          background-position: -2px -95px;
+          width: 22px;
+          height: 18px;
+          left: 26%;
+          top: 28%;
+        }
+        .instagram--icon {
+          background-position: -2px -68px;
+          width: 25px;
+          height: 25px;
+          left: 21%;
+          top: 19%;
+        }
+      }
+
+    }
+  }
+
+  &-main-content {
+    background-color: $section-back-color;
+
+    .footer__container {
+      max-width: 181rem;
+      margin: auto;
+
+      .footer__container--info {
+        padding-top: 2rem;
+
+        &--contact {
+
+          li {
+            line-height: 1.7;
+
+            &:not(:last-child) {
+              margin-right: 2rem;
+              border-right: 2px solid white;
+              padding-right: 2rem;
+            }
+
+            h1 {
+              font-size: $small-fz;
+              color: #065BAA;
+              font-weight: $fw-lighter;
+              text-transform: uppercase;
+            }
+
+            p {
+              font-size: 1.2rem;
+              padding-top: 10px;
+
+            }
+
+            a {
+              text-decoration: none;
+              color: $main-color;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+
+      .footer__container--copyright {
+        position: relative;
+        text-align: center;
+        padding: 2rem 0 1.5rem;
+
+        p {
+          color: #065BAA;
+          font-size: 1.2rem;
+        }
+
+        h1 {
+          position: absolute;
+          right: 0;
+          bottom: 2rem;
+          font-size: 1.3rem;
+          color: #065BAA;
+
+          a {
+            font-weight: $fw-bold;
+            color: #065BAA;
+          }
+        }
+      }
+    }
+  }
+
+}

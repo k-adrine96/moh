@@ -1,0 +1,54 @@
+.worker__number__email {
+
+  li {
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      font-size: $main-fz;
+      color: $main-color;
+    }
+    p {
+      font-size: $main-fz;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+    }
+    i {
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      margin-right: 1rem;
+    }
+    .location-icon {
+      @include backimg;
+      background-image: url("/public/img/location-icon-yellow.png");
+      height: 49px !important;
+      width: 35px!important;
+    }
+
+    .call-icon {
+      @include backimg;
+      background-image: url("/public/img/call-icon-yellow.png");
+    }
+
+    .message-icon {
+      @include backimg;
+      background-image: url("/public/img/message-icon-blue.png");
+    }
+
+    .website-icon {
+      @include backimg;
+      background-image: url("/public/img/website-icon.png");
+    }
+
+    span {
+      font-size: $main-fz;
+      color: $main-color;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 1rem;
+    }
+  }
+}

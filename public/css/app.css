@@ -8367,7 +8367,7 @@ button.close {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/public/Moh/src/img/moh-logo.png");
+  background-image: url("/public/img/moh-logo.png");
   width: 6.8rem;
   height: 6.5rem;
 }
@@ -8479,7 +8479,7 @@ button.close {
 
 .footer__container--social .footer--social li a i {
   display: inline-block;
-  background: url("/public/Moh/src/img/social-icons.png") no-repeat;
+  background: url("/public/img/social-icons.png") no-repeat;
   overflow: hidden;
   text-indent: -9999px;
   text-align: left;
@@ -8723,7 +8723,7 @@ button.close {
 
 .menu__social--icons li a i {
   display: inline-block;
-  background: url("/public/Moh/src/img/social-icons-menu.png") no-repeat;
+  background: url("/public/img/social-icons-menu.png") no-repeat;
   overflow: hidden;
   text-indent: -9999px;
   text-align: left;
@@ -9090,7 +9090,7 @@ button.close {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/public/Moh/src/img/location-icon-yellow.png");
+  background-image: url("/public/img/location-icon-yellow.png");
   height: 49px !important;
   width: 35px !important;
 }
@@ -9099,21 +9099,21 @@ button.close {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/public/Moh/src/img/call-icon-yellow.png");
+  background-image: url("/public/img/call-icon-yellow.png");
 }
 
 .worker__number__email li .message-icon {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/public/Moh/src/img/message-icon-blue.png");
+  background-image: url("/public/img/message-icon-blue.png");
 }
 
 .worker__number__email li .website-icon {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/public/Moh/src/img/website-icon.png");
+  background-image: url("/public/img/website-icon.png");
 }
 
 .worker__number__email li span {
@@ -9424,12 +9424,12 @@ button.close {
   cursor: pointer;
   height: 5rem;
   width: 1.7rem;
-  background-image: url("/public/Moh/src/img/arrow-light-left.png");
+  background-image: url("/public/img/arrow-light-left.png");
   left: -3rem;
 }
 
 .prev-arrow:hover {
-  background-image: url("/public/Moh/src/img/arrow-bold-left.png");
+  background-image: url("/public/img/arrow-bold-left.png");
 }
 
 .next-arrow {
@@ -9442,12 +9442,12 @@ button.close {
   cursor: pointer;
   height: 5rem;
   width: 1.7rem;
-  background-image: url("/public/Moh/src/img/arrow-light-right.png");
+  background-image: url("/public/img/arrow-light-right.png");
   right: -3rem;
 }
 
 .next-arrow:hover {
-  background-image: url("/public/Moh/src/img/arrow-bold-right.png");
+  background-image: url("/public/img/arrow-bold-right.png");
 }
 
 .news-cont-prev,
@@ -9735,7 +9735,7 @@ button.close {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/public/Moh/src/img/calendar-icons.png");
+  background-image: url("/public/img/calendar-icons.png");
   width: 2rem;
   height: 2rem;
   display: inline-block;
@@ -10036,7 +10036,7 @@ button.close {
 
 .contact__us--cont--text1 ul li a.xls-file:after {
   content: '';
-  background-image: url(/public/Moh/src/img/xls-blue-icon.png);
+  background-image: url(/public/img/xls-blue-icon.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

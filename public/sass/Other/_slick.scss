@@ -1,0 +1,51 @@
+.slick-dots {
+  bottom: 40px;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: $main-btn-color;
+}
+.slick-dots li button:before {
+  font-size: 2.7rem;
+  opacity: 1;
+  color: $color-white;
+}
+.slick-dots li {
+  margin: 0 1.1rem;
+}
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.prev-arrow {
+  @include backimg;
+  @include arrows;
+  background-image:url("/public/img/arrow-light-left.png") ;
+  left: -3rem;
+
+  &:hover {
+    background-image: url("/public/img/arrow-bold-left.png");
+  }
+}
+.next-arrow {
+  @include backimg;
+  @include arrows;
+  background-image: url("/public/img/arrow-light-right.png");
+  right: -3rem;
+
+  &:hover {
+    background-image: url("/public/img/arrow-bold-right.png");
+  }
+}
+
+.news-cont-prev,
+.news-cont-next{
+  bottom: 50%;
+}
+
+.announcements-prev,
+.announcements-next,
+.videos__background-prev,
+.videos__background-next {
+  bottom: 30%;
+}
