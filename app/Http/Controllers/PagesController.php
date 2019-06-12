@@ -27,6 +27,9 @@ class PagesController extends Controller
         }else if($page === 'mission')
         {
             $pagesTexts = PagesTexts::where('page_slug', 'mission')->first();
+        }else if($page === 'contact-us')
+        {
+            $pagesTexts = PagesTexts::where('page_slug', 'contact-us')->first();
         }
 
         return view($page , compact('content' , 'partners' , 'pagesTexts'));

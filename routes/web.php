@@ -30,7 +30,7 @@ Route::view('/all-news', 'all-news')->name('all.news');
 Route::view('/announcement', 'announcement')->name('announcement');
 Route::view('/budget', 'budget')->name('budget');
 Route::view('/charter', 'charter')->name('charter');
-Route::view('/contact-us', 'contact-us')->name('contact.us');
+//Route::view('/contact-us', 'contact-us')->name('contact.us');
 Route::view('/faq', 'faq')->name('faq');
 Route::view('/history', 'history')->name('history');
 Route::view('/legal-acts', 'legal-acts')->name('legal.acts');
