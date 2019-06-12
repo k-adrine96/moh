@@ -1,0 +1,108 @@
+.contact__us {
+
+
+  &--info {
+    max-width: $main-content-width;
+    margin: 7rem auto;
+    display: flex;
+    align-items: stretch;
+
+
+    &--form {
+      width: 65.5%;
+      box-shadow: 2px 2px 28px #e9e9e9;
+      padding: 10rem 10rem;
+      margin-right: 10rem;
+
+      .contact__us--btns {
+        margin-top: 4.5rem;
+
+        a:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    &--map {
+      width: 32.5%;
+
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+
+    }
+  }
+
+  &--cont {
+    background-color: $section-back-color;
+
+    &--text1 {
+      max-width: $main-content-width;
+      margin: auto;
+      padding: 4rem 0;
+
+      @media only screen and (min-width: 1921px){
+        max-width: $main-content-width-big;
+      }
+      h1 {
+        font-size: $tertiary-header;
+        font-weight: $fw-semiBold;
+        padding-bottom: 2rem;
+      }
+
+      ul {
+
+        li {
+          font-size: $main-fz;
+          margin-bottom: 2rem;
+
+          a {
+            color: $color-blue;
+            font-weight: bold;
+            position: relative;
+            text-decoration: none;
+
+            &.xls-file:after {
+              content: '';
+              background-image: url(/public/Moh/src/img/xls-blue-icon.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              position: absolute;
+              top: 43%;
+              right: -45px;
+              transform: translateY(-50%);
+              width: 39px;
+              height: 43px;
+
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+  &--text2 {
+    max-width: $main-content-width;
+    margin: auto;
+    padding: 4rem 0;
+    li {
+      font-size: $main-fz;
+      margin-bottom: 1rem;
+
+      span {
+        color: $color-blue;
+        font-weight: bold;
+      }
+
+      a {
+        text-decoration: none;
+        color: $color-blue;
+        font-weight: bold;
+      }
+    }
+  }
+}

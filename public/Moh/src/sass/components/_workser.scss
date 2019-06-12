@@ -1,0 +1,37 @@
+.workers__container {
+  max-width: $main-content-width;
+  margin: auto;
+  padding: 3rem 0;
+
+  @media only screen and(min-width: 1920px) {
+    max-width: $main-content-width-big;
+  }
+  .worker__info {
+    max-width: 49%;
+
+    &--header {
+
+      h1 {
+        font-size: $main-fz;
+        color: #4D4D4D;
+        text-transform: uppercase;
+      }
+    }
+
+    &--name {
+
+      p {
+        font-size: $secondary-header;
+        text-transform: uppercase;
+        color: #0071BC;
+        display: inline-block;
+        text-decoration: none;
+
+      }
+    }
+  }
+
+  p {
+    font-size: $main-fz;
+  }
+}

@@ -1,0 +1,40 @@
+.all__news {
+
+  .all__news--row {
+    @include mainWidth;
+    padding: 40px 0;
+
+    .all__news--image {
+     @include backimg;
+     height: 226px;
+     width: 100%;
+    }
+
+    .all__news--date {
+
+      span{
+        color: $main-btn-color;
+        font-size: $tertiary-header;
+        text-transform: uppercase;
+        display: inline-block;
+        @include ellipses(76px, 2)
+      }
+    }
+
+    .all__news--header {
+      padding: 15px 0 10px;
+      h1 {
+        text-transform: uppercase;
+        font-size: $main-fz;
+        @include ellipses(21px, 1)
+      }
+    }
+
+    .all__news--short--description {
+      p {
+        font-size: $small-fz;
+        @include ellipses(97px, 5)
+      }
+    }
+  }
+}

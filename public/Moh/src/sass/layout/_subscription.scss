@@ -1,0 +1,33 @@
+.subscription {
+
+  background-color: #4E525B;
+
+  &__content {
+    max-width: $main-content-width;
+    margin: auto;
+    padding: 5rem 0 6rem;
+
+    @media only screen and (min-width: 1921px){
+      max-width: $main-content-width-big;
+    }
+
+    &--header {
+
+      h1 {
+        text-transform: uppercase;
+        font-size: $secondary-header;
+        font-weight: $fw-lighter;
+        color: $color-white;
+        padding-bottom: 1rem;
+      }
+    }
+
+    &--info {
+
+      a {
+        color: $color-white;
+        font-size: $small-fz;
+      }
+    }
+  }
+}

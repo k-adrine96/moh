@@ -1,0 +1,11 @@
+.workers__content {
+
+}
+
+.workers__content > ul > li {
+
+  &:nth-child(even){
+
+    background-color: $section-back-color;
+  }
+}

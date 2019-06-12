@@ -10,23 +10,26 @@ use App\HomepageSlider;
 use App\Announcements;
 use App\MinisterStaff;
 use App\MinistryStaff;
+use App\PagesTexts;
 
 class PagesController extends Controller
 {
     public function index($page)
     {
-       
-     	$partners = Partners::get();
-     	
+
+        $partners = Partners::get();
+
         if($page == 'minister-staff')
         {
             $content = MinisterStaff::get();
         }else if($page = 'ministry-staff')
         {
             $content = MinistryStaff::get();
+        }else if($page = 'mission'){
+            $pagesTexts = PagesTexts::where('slug', 'mission')->get();
         }
 
-        return view($page , compact('content' , 'partners'));
+        return view($page , compact('content' , 'partners' , 'pagesTexts'));
     }
 
     public function homepage(){

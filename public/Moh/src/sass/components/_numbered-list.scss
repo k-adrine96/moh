@@ -1,0 +1,35 @@
+.numbered-list {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  li {
+    counter-increment: my-awesome-counter;
+    font-size: 1.8rem;
+    position: relative;
+    padding-left: 4rem;
+    margin-bottom: 2rem;
+
+    &:before {
+      content: counter(my-awesome-counter);
+      font-size: $secondary-header;
+      font-weight: $fw-lighter;
+      margin-right: 0.5rem;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
+  }
+
+  li.yellow {
+    &:before {
+      color: $main-btn-color;
+    }
+  }
+
+  li.blue {
+    &:before {
+      color: $color-blue;
+    }
+  }
+}

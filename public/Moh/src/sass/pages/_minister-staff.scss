@@ -1,0 +1,126 @@
+.minister__staff {
+
+  &--container {
+
+    &--width {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: $main-content-width;
+      margin: auto;
+      padding: 6rem 0;
+
+      @media only screen and (min-width: 1921px){
+        max-width: $main-content-width-big;
+      }
+
+      .workers__info {
+        width: 50%;
+        display: flex;
+
+        &--image {
+          @include backimg();
+          height: 40rem;
+          width: 49%;
+        }
+
+        &--content {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          width: 49%;
+
+          padding: 7px 1.8rem;
+
+          &--names {
+
+            h1 {
+              font-size: $main-fz;
+              color: $main-color;
+              text-transform: uppercase;
+            }
+            a {
+              font-size: $secondary-header;
+              text-transform: uppercase;
+              color: $color-blue;
+              display: inline-block;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      &--width > div:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &:nth-child(even) {
+      background-color: $section-back-color;
+    }
+  }
+
+  .workers__container {
+    max-width: $main-content-width;
+    margin: auto;
+    -webkit-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid $main-btn-color;
+
+    @media only screen and (min-width: 1921px){
+      max-width: $main-content-width-big;
+    }
+
+    &--header {
+      padding: 5rem 0;
+
+      h1 {
+        font-size: $tertiary-header;
+        color: $color-blue;
+      }
+    }
+
+    //.workers__container--info {
+    //  list-style: none;
+    //  counter-reset: my-awesome-counter;
+    //  li {
+    //    counter-increment: my-awesome-counter;
+    //    font-size: 1.8rem;
+    //    position: relative;
+    //    padding-left: 4rem;
+    //    margin-bottom: 2rem;
+    //
+    //    &:before {
+    //      content: counter(my-awesome-counter);
+    //      font-size: 5rem;
+    //      font-weight: $fw-lighter;
+    //      margin-right: 0.5rem;
+    //      color: $main-btn-color;
+    //      position: absolute;
+    //      left: 0;
+    //      top: 50%;
+    //      transform: translateY(-50%);
+    //
+    //    }
+    //  }
+    //}
+
+    &--name {
+
+      h1 {
+        text-align: right;
+        font-size: 1.8rem;
+      }
+    }
+
+  }
+
+  .workers__container-1,
+  .workers__container-2,
+  .workers__container-3,
+  .workers__container-4{
+    display: none;
+  }
+
+}

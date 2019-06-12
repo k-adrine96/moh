@@ -1,0 +1,44 @@
+.ministry__structure {
+  max-width: 800px;
+  margin: 50px auto;
+
+  .ministry__structure--list {
+
+    li {
+      border-radius: 50px;
+      margin-bottom: 10px;
+      height: 40px;
+      position: relative;
+      p {
+        color: white;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: absolute;
+        left: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      h1 {
+        color: white;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+  }
+
+  .ministry__structure--list--right {
+
+    li {
+      height: 51px;
+    }
+
+
+  }
+}
