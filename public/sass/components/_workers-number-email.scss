@@ -22,24 +22,24 @@
     }
     .location-icon {
       @include backimg;
-      background-image: url("/public/img/location-icon-yellow.png");
+      background-image: url("/img/location-icon-yellow.png");
       height: 49px !important;
       width: 35px!important;
     }
 
     .call-icon {
       @include backimg;
-      background-image: url("/public/img/call-icon-yellow.png");
+      background-image: url("/img/call-icon-yellow.png");
     }
 
     .message-icon {
       @include backimg;
-      background-image: url("/public/img/message-icon-blue.png");
+      background-image: url("/img/message-icon-blue.png");
     }
 
     .website-icon {
       @include backimg;
-      background-image: url("/public/img/website-icon.png");
+      background-image: url("/img/website-icon.png");
     }
 
     span {

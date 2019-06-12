@@ -80,7 +80,7 @@
             //&:before {
             //  content: "";
             //  @include backimg;
-            //  background-image: url('/public/img/calendar-icons.png');
+            //  background-image: url('/img/calendar-icons.png');
             //  width: 2rem;
             //  height: 2rem;
             //  display: inline-block;
@@ -229,7 +229,7 @@
             &:before {
               content: "";
               @include backimg;
-              background-image: url('/public/img/calendar-icons.png');
+              background-image: url('/img/calendar-icons.png');
               width: 2rem;
               height: 2rem;
               display: inline-block;

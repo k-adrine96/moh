@@ -9,21 +9,12 @@
     <title>Moh</title>
     <!--FAVICON-->
     <link rel="icon" href="img/moh-logo.png">
-    <!--BOOTSTRAP-->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <!--RESET-->
-    <link rel="stylesheet" href="./css/reset.css">
-    <!--SELECT 2-->
-    <link rel="stylesheet" href="./css/select2.min.css">
-    <!--SLICK-->
-    <link rel="stylesheet" type="text/css" href="./slick/slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="./slick/slick/slick.css"/>
-    <!--ALL STYLE-->
 
     <!--FONT-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
+    {{--<link rel="stylesheet" href="./css/style.css">--}}
+    <link rel="stylesheet" href="/css/app.css">
     @stack('css')
     <!--JQUERY-->
     <script src="./js/libs/jquery-3.3.1.min.js"></script>
@@ -52,5 +43,8 @@
     </div>
     @include('layouts.sidebar')
     @stack('js')
+    @if(config('app.env') == 'local')
+        <script src="http://localhost:35729/livereload.js"></script>
+    @endif
 </body>
 </html>
