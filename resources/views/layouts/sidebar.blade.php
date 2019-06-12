@@ -25,7 +25,7 @@
             <a href="javascript:;" class="first-lvl">նախարարություն</a>
             <ul class="hided--content">
                 <li><a href="{{ route('history') }}">Պատմություն</a></li>
-                <li><a href="{{ route('text') }}">Առաքելություն</a></li>
+                <li><a href="{{ route('pages' , 'mission') }}">Առաքելություն</a></li>
                 <li><a href="{{ route('charter') }}">Կանոնադրություն</a></li>
                 <li>
                     <a href="javascript:;" class="second-lvl">Կառուցվածք</a>

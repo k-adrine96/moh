@@ -42,7 +42,7 @@ Route::view('/ministry-structure', 'ministry-structure')->name('ministry.structu
 Route::view('/public-council', 'public-council')->name('public.council');
 Route::view('/single-news', 'single-news')->name('single.news');
 Route::view('/staff-list', 'staff-list')->name('staff.list');
-Route::view('/mission', 'mission')->name('text');
+//Route::view('/mission', 'mission')->name('text');
 Route::view('/videos', 'videos')->name('videos');
 
 Route::get('/','PagesController@homepage')->name('home');

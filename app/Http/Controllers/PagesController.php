@@ -16,17 +16,17 @@ class PagesController extends Controller
 {
     public function index($page)
     {
-
         $partners = Partners::get();
 
-        if($page == 'minister-staff')
+        if($page === 'minister-staff')
         {
             $content = MinisterStaff::get();
-        }else if($page = 'ministry-staff')
+        }else if($page === 'ministry-staff')
         {
             $content = MinistryStaff::get();
-        }else if($page = 'mission'){
-            $pagesTexts = PagesTexts::where('slug', 'mission')->get();
+        }else if($page === 'mission')
+        {
+            $pagesTexts = PagesTexts::where('page_slug', 'mission')->first();
         }
 
         return view($page , compact('content' , 'partners' , 'pagesTexts'));
