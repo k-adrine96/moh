@@ -6,4 +6,4 @@
 .env
 package-lock.json
 /storage/*.key
-/public/storage
+#/public/storage
