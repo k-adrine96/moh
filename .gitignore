@@ -4,4 +4,4 @@
 /.idea
 /.vagrant
 .env
-package.json
+package-lock.json
