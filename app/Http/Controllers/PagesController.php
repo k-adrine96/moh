@@ -32,9 +32,9 @@ class PagesController extends Controller
     public function homepage(){
 
      	$slidersInfo = HomepageSlider::get();
-     	$news = News::get();
-     	$announcements = Announcements::get();
-     	$videos = Videos::get();
+     	$news = News::latest()->take(5)->get();
+     	$announcements = Announcements::latest()->take(5)->get();
+     	$videos = Videos::latest()->take(5)->get();
      	$partners = Partners::get();
 
         return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partners'));
