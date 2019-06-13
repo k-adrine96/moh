@@ -5,3 +5,4 @@
 /.vagrant
 .env
 package-lock.json
+/public/storage
