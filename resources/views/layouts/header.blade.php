@@ -33,7 +33,7 @@
                         <div class="col-12 p-0 d-flex align-items-center justify-content-end">
                             <ul class="header__navigation d-flex p-1">
                                 <li><a href="{{ route('home') }}">Գլխավոր</a></li>
-                                <li><a href="{{ route('pages' , 'mission') }}">Հետադարձ կապ</a></li>
+                                <li><a href="{{ route('pages' , 'contact-us') }}">Հետադարձ կապ</a></li>
                                 <li><a href="{{ route('minister.page') }}">Նախարար</a></li>
                                 <li><a href="{{ route('legal.acts') }}">Իրավական ակտեր</a></li>
 

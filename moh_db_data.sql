@@ -16,25 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `announcements`
---
-
-DROP TABLE IF EXISTS `announcements`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `announcements` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` date NOT NULL,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `announcements`
 --
 
@@ -43,24 +24,6 @@ LOCK TABLES `announcements` WRITE;
 INSERT INTO `announcements` VALUES (1,'էԼԵԿՏՐՈՆԱՅԻՆ ՀԱՐՑՈՒՄՆԵՐԻ ՄԻԱՍՆԱԿԱՆ ՀԱՐԹԱԿ','<p>Տվյալ կայքի միջոցով կարող եք առցանց ներկայացնել դիմում, հարցում կամ բողոք Ձեր ցանկացած պետական մարմին Տվյալ կայքի միջոցով կարող եք առցանց ներկայացնել դիմում,&nbsp; հարցում կամ բողոք Ձեր ցանկացած պետական մարմին</p>','2019-06-07','#','2019-06-07 07:11:00','2019-06-07 07:14:06'),(2,'էԼԵԿՏՐՈՆԱՅԻՆ ՀԱՐՑՈՒՄՆԵՐԻ ՄԻԱՍՆԱԿԱՆ ՀԱՐԹԱԿ 2','<p>Տվյալ կայքի միջոցով կարող եք առցանց ներկայացնել դիմում, հարցում կամ բողոք Ձեր ցանկացած պետական մարմին Տվյալ կայքի միջոցով կարող եք առցանց ներկայացնել դիմում,&nbsp; հարցում կամ բողոք Ձեր ցանկացած պետական մարմին 2</p>','2019-06-07','#','2019-06-07 07:13:00','2019-06-07 08:54:50'),(3,'էԼԵԿՏՐՈՆԱՅԻՆ ՀԱՐՑՈՒՄՆԵՐԻ ՄԻԱՍՆԱԿԱՆ ՀԱՐԹԱԿ 3','<p>Տվյալ կայքի միջոցով կարող եք առցանց ներկայացնել դիմում, հարցում կամ բողոք Ձեր ցանկացած պետական մարմին Տվյալ կայքի միջոցով կարող եք առցանց ներկայացնել դիմում,&nbsp; հարցում կամ բողոք Ձեր ցանկացած պետական մարմին 3</p>','2019-06-07','#','2019-06-07 09:24:44','2019-06-07 09:24:44'),(4,'էԼԵԿՏՐՈՆԱՅԻՆ ՀԱՐՑՈՒՄՆԵՐԻ ՄԻԱՍՆԱԿԱՆ ՀԱՐԹԱԿ 4','<p>Տվյալ կայքի միջոցով կարող եք առցանց ներկայացնել դիմում, հարցում կամ բողոք Ձեր ցանկացած պետական մարմին Տվյալ կայքի միջոցով կարող եք առցանց ներկայացնել դիմում,&nbsp; հարցում կամ բողոք Ձեր ցանկացած պետական մարմին 4</p>','2019-06-07','#','2019-06-07 09:25:19','2019-06-07 09:25:19'),(5,'էԼԵԿՏՐՈՆԱՅԻՆ ՀԱՐՑՈՒՄՆԵՐԻ ՄԻԱՍՆԱԿԱՆ ՀԱՐԹԱԿ 5','<p>Տվյալ կայքի միջոցով կարող եք առցանց ներկայացնել դիմում, հարցում կամ բողոք Ձեր ցանկացած պետական մարմին Տվյալ կայքի միջոցով կարող եք առցանց ներկայացնել դիմում,&nbsp; հարցում կամ բողոք Ձեր ցանկացած պետական մարմին 5</p>','2019-06-20','#','2019-06-07 09:25:46','2019-06-07 09:25:46');
 /*!40000 ALTER TABLE `announcements` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `cars`
---
-
-DROP TABLE IF EXISTS `cars`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cars` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `cars`
@@ -73,28 +36,6 @@ INSERT INTO `cars` VALUES (1,'BMW','Awesome Car !!!','cars/June2019/wNnnYQXJ2PTf
 UNLOCK TABLES;
 
 --
--- Table structure for table `categories`
---
-
-DROP TABLE IF EXISTS `categories`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `categories` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `parent_id` int(10) unsigned DEFAULT NULL,
-  `order` int(11) NOT NULL DEFAULT '1',
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `categories_slug_unique` (`slug`),
-  KEY `categories_parent_id_foreign` (`parent_id`),
-  CONSTRAINT `categories_parent_id_foreign` FOREIGN KEY (`parent_id`) REFERENCES `categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `categories`
 --
 
@@ -103,33 +44,6 @@ LOCK TABLES `categories` WRITE;
 INSERT INTO `categories` VALUES (1,NULL,1,'Category 1','category-1','2019-06-04 08:24:51','2019-06-04 08:24:51'),(2,NULL,1,'Category 2','category-2','2019-06-04 08:24:51','2019-06-04 08:24:51');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `data_rows`
---
-
-DROP TABLE IF EXISTS `data_rows`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `data_rows` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `data_type_id` int(10) unsigned NOT NULL,
-  `field` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `display_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `required` tinyint(1) NOT NULL DEFAULT '0',
-  `browse` tinyint(1) NOT NULL DEFAULT '1',
-  `read` tinyint(1) NOT NULL DEFAULT '1',
-  `edit` tinyint(1) NOT NULL DEFAULT '1',
-  `add` tinyint(1) NOT NULL DEFAULT '1',
-  `delete` tinyint(1) NOT NULL DEFAULT '1',
-  `details` text COLLATE utf8mb4_unicode_ci,
-  `order` int(11) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`),
-  KEY `data_rows_data_type_id_foreign` (`data_type_id`),
-  CONSTRAINT `data_rows_data_type_id_foreign` FOREIGN KEY (`data_type_id`) REFERENCES `data_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `data_rows`
@@ -142,35 +56,6 @@ INSERT INTO `data_rows` VALUES (1,1,'id','number','ID',1,0,0,0,0,0,NULL,1),(2,1,
 UNLOCK TABLES;
 
 --
--- Table structure for table `data_types`
---
-
-DROP TABLE IF EXISTS `data_types`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `data_types` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `display_name_singular` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `display_name_plural` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `icon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `model_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `policy_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `controller` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `generate_permissions` tinyint(1) NOT NULL DEFAULT '0',
-  `server_side` tinyint(4) NOT NULL DEFAULT '0',
-  `details` text COLLATE utf8mb4_unicode_ci,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `data_types_name_unique` (`name`),
-  UNIQUE KEY `data_types_slug_unique` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `data_types`
 --
 
@@ -179,25 +64,6 @@ LOCK TABLES `data_types` WRITE;
 INSERT INTO `data_types` VALUES (1,'users','users','User','Users','voyager-person','TCG\\Voyager\\Models\\User','TCG\\Voyager\\Policies\\UserPolicy','TCG\\Voyager\\Http\\Controllers\\VoyagerUserController','',1,0,NULL,'2019-06-04 08:24:50','2019-06-04 08:24:50'),(2,'menus','menus','Menu','Menus','voyager-list','TCG\\Voyager\\Models\\Menu',NULL,'','',1,0,NULL,'2019-06-04 08:24:50','2019-06-04 08:24:50'),(3,'roles','roles','Role','Roles','voyager-lock','TCG\\Voyager\\Models\\Role',NULL,'','',1,0,NULL,'2019-06-04 08:24:50','2019-06-04 08:24:50'),(4,'categories','categories','Category','Categories','voyager-categories','TCG\\Voyager\\Models\\Category',NULL,'','',1,0,NULL,'2019-06-04 08:24:51','2019-06-04 08:24:51'),(5,'posts','posts','Post','Posts','voyager-news','TCG\\Voyager\\Models\\Post','TCG\\Voyager\\Policies\\PostPolicy','','',1,0,NULL,'2019-06-04 08:24:51','2019-06-04 08:24:51'),(6,'pages','pages','Page','Pages','voyager-file-text','TCG\\Voyager\\Models\\Page',NULL,'','',1,0,NULL,'2019-06-04 08:24:51','2019-06-04 08:24:51'),(7,'cars','cars','Car','Cars',NULL,'App\\Car',NULL,NULL,NULL,1,0,'{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}','2019-06-05 10:41:25','2019-06-07 06:21:38'),(9,'homepage_sliders','homepage-sliders','Homepage Slider','Homepage Sliders',NULL,'App\\HomepageSlider',NULL,NULL,NULL,1,0,'{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}','2019-06-06 04:32:45','2019-06-06 07:26:58'),(12,'news','news','News','News',NULL,'App\\News',NULL,NULL,NULL,1,0,'{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}','2019-06-07 04:47:54','2019-06-07 04:52:04'),(20,'announcements','announcements','Announcement','Announcements',NULL,'App\\Announcements',NULL,NULL,NULL,1,0,'{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}','2019-06-07 06:49:37','2019-06-07 07:09:12'),(22,'videos','videos','Video','Videos',NULL,'App\\Videos',NULL,NULL,NULL,1,0,'{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}','2019-06-07 08:13:21','2019-06-07 08:13:21'),(25,'minister_staffs','minister-staff','Minister Staff','Minister Staffs',NULL,'App\\MinisterStaff',NULL,NULL,NULL,1,0,'{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}','2019-06-10 05:57:01','2019-06-10 05:57:01'),(26,'ministry_staffs','ministry-staff','Ministry Staff','Ministry Staffs',NULL,'App\\MinistryStaff',NULL,NULL,NULL,1,0,'{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}','2019-06-10 09:10:30','2019-06-10 09:10:30'),(28,'partners','partners','Partner','Partners',NULL,'App\\Partners',NULL,NULL,NULL,1,0,'{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}','2019-06-10 10:04:06','2019-06-10 10:04:06'),(29,'pages_texts','pages-texts','Pages Text','Pages Texts',NULL,'App\\PagesTexts',NULL,NULL,NULL,1,0,'{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}','2019-06-12 04:28:01','2019-06-12 07:50:51');
 /*!40000 ALTER TABLE `data_types` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `homepage_sliders`
---
-
-DROP TABLE IF EXISTS `homepage_sliders`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `homepage_sliders` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `text` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `homepage_sliders`
@@ -210,33 +76,6 @@ INSERT INTO `homepage_sliders` VALUES (5,'<span>ՔՆՆԱՐԿՎԵԼ ԵՆ ԾԽԱԽ
 UNLOCK TABLES;
 
 --
--- Table structure for table `menu_items`
---
-
-DROP TABLE IF EXISTS `menu_items`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `menu_items` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `menu_id` int(10) unsigned DEFAULT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `target` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '_self',
-  `icon_class` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `color` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `parent_id` int(11) DEFAULT NULL,
-  `order` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `route` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `parameters` text COLLATE utf8mb4_unicode_ci,
-  PRIMARY KEY (`id`),
-  KEY `menu_items_menu_id_foreign` (`menu_id`),
-  CONSTRAINT `menu_items_menu_id_foreign` FOREIGN KEY (`menu_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `menu_items`
 --
 
@@ -245,23 +84,6 @@ LOCK TABLES `menu_items` WRITE;
 INSERT INTO `menu_items` VALUES (1,1,'Dashboard','','_self','voyager-boat',NULL,NULL,1,'2019-06-04 08:24:50','2019-06-04 08:24:50','voyager.dashboard',NULL),(2,1,'Media','','_self','voyager-images',NULL,NULL,4,'2019-06-04 08:24:50','2019-06-06 05:20:49','voyager.media.index',NULL),(3,1,'Users','','_self','voyager-person',NULL,NULL,3,'2019-06-04 08:24:50','2019-06-04 08:24:50','voyager.users.index',NULL),(4,1,'Roles','','_self','voyager-lock',NULL,NULL,2,'2019-06-04 08:24:50','2019-06-04 08:24:50','voyager.roles.index',NULL),(5,1,'Tools','','_self','voyager-tools',NULL,NULL,8,'2019-06-04 08:24:50','2019-06-06 05:20:49',NULL,NULL),(6,1,'Menu Builder','','_self','voyager-list',NULL,5,1,'2019-06-04 08:24:50','2019-06-06 05:20:49','voyager.menus.index',NULL),(7,1,'Database','','_self','voyager-data',NULL,5,2,'2019-06-04 08:24:50','2019-06-06 05:20:49','voyager.database.index',NULL),(8,1,'Compass','','_self','voyager-compass',NULL,5,3,'2019-06-04 08:24:50','2019-06-06 05:20:49','voyager.compass.index',NULL),(9,1,'BREAD','','_self','voyager-bread',NULL,5,4,'2019-06-04 08:24:50','2019-06-06 05:20:49','voyager.bread.index',NULL),(10,1,'Settings','','_self','voyager-settings',NULL,NULL,9,'2019-06-04 08:24:50','2019-06-06 05:20:49','voyager.settings.index',NULL),(11,1,'Categories','','_self','voyager-categories',NULL,NULL,7,'2019-06-04 08:24:51','2019-06-06 05:20:49','voyager.categories.index',NULL),(12,1,'Posts','','_self','voyager-news',NULL,NULL,5,'2019-06-04 08:24:51','2019-06-06 05:20:49','voyager.posts.index',NULL),(13,1,'Pages','','_self','voyager-file-text',NULL,NULL,6,'2019-06-04 08:24:51','2019-06-06 05:20:49','voyager.pages.index',NULL),(14,1,'Hooks','','_self','voyager-hook',NULL,5,5,'2019-06-04 08:24:51','2019-06-06 05:20:49','voyager.hooks',NULL),(15,1,'Home','','_self',NULL,'#000000',NULL,10,'2019-06-05 10:41:25','2019-06-06 06:37:00','voyager.home.index','null'),(17,1,'Homepage Sliders','','_self',NULL,NULL,15,1,'2019-06-06 04:32:45','2019-06-06 05:21:30','voyager.homepage-sliders.index',NULL),(18,1,'News','','_self',NULL,'#000000',NULL,11,'2019-06-06 07:35:14','2019-06-06 07:35:14',NULL,''),(21,1,'News','','_self',NULL,NULL,18,1,'2019-06-07 04:47:54','2019-06-07 04:48:31','voyager.news.index',NULL),(22,1,'Announcements','','_self',NULL,NULL,23,1,'2019-06-07 06:49:37','2019-06-07 07:04:06','voyager.announcements.index',NULL),(24,1,'Announcements','/admin/announcements','_self',NULL,'#000000',18,2,'2019-06-07 07:05:29','2019-06-07 07:05:34',NULL,''),(25,1,'Videos','','_self',NULL,NULL,18,3,'2019-06-07 08:13:21','2019-06-07 08:13:50','voyager.videos.index',NULL),(27,1,'Ministry','','_self',NULL,'#000000',NULL,12,'2019-06-10 05:23:41','2019-06-10 05:23:50',NULL,''),(31,1,'Minister\'s Staff','','_self',NULL,'#000000',27,1,'2019-06-10 05:57:01','2019-06-10 09:10:59','voyager.minister-staff.index','null'),(32,1,'Ministry Staff','','_self',NULL,'#000000',27,2,'2019-06-10 09:10:30','2019-06-10 09:11:10','voyager.ministry-staff.index','null'),(33,1,'Partners','','_self',NULL,NULL,NULL,13,'2019-06-10 10:04:06','2019-06-10 10:04:06','voyager.partners.index',NULL),(34,1,'Pages Texts','','_self',NULL,NULL,NULL,14,'2019-06-12 04:28:01','2019-06-12 04:28:01','voyager.pages-texts.index',NULL);
 /*!40000 ALTER TABLE `menu_items` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `menus`
---
-
-DROP TABLE IF EXISTS `menus`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `menus` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `menus_name_unique` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `menus`
@@ -274,21 +96,6 @@ INSERT INTO `menus` VALUES (1,'admin','2019-06-04 08:24:50','2019-06-04 08:24:50
 UNLOCK TABLES;
 
 --
--- Table structure for table `migrations`
---
-
-DROP TABLE IF EXISTS `migrations`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `migrations` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `migrations`
 --
 
@@ -297,27 +104,6 @@ LOCK TABLES `migrations` WRITE;
 INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_resets_table',1),(3,'2016_01_01_000000_add_voyager_user_fields',1),(4,'2016_01_01_000000_create_data_types_table',1),(5,'2016_05_19_173453_create_menu_table',1),(6,'2016_10_21_190000_create_roles_table',1),(7,'2016_10_21_190000_create_settings_table',1),(8,'2016_11_30_135954_create_permission_table',1),(9,'2016_11_30_141208_create_permission_role_table',1),(10,'2016_12_26_201236_data_types__add__server_side',1),(11,'2017_01_13_000000_add_route_to_menu_items_table',1),(12,'2017_01_14_005015_create_translations_table',1),(13,'2017_01_15_000000_make_table_name_nullable_in_permissions_table',1),(14,'2017_03_06_000000_add_controller_to_data_types_table',1),(15,'2017_04_21_000000_add_order_to_data_rows_table',1),(16,'2017_07_05_210000_add_policyname_to_data_types_table',1),(17,'2017_08_05_000000_add_group_to_settings_table',1),(18,'2017_11_26_013050_add_user_role_relationship',1),(19,'2017_11_26_015000_create_user_roles_table',1),(20,'2018_03_11_000000_add_user_settings',1),(21,'2018_03_14_000000_add_details_to_data_types_table',1),(22,'2018_03_16_000000_make_settings_value_nullable',1),(23,'2016_01_01_000000_create_pages_table',2),(24,'2016_01_01_000000_create_posts_table',2),(25,'2016_02_15_204651_create_categories_table',2),(26,'2017_04_11_000000_alter_post_nullable_fields_table',2),(27,'2019_06_05_143810_create_cars_table',3),(28,'2019_06_06_070755_create_homepage_sliders_table',4),(29,'2019_06_06_082150_create_homepage_sliders_table',5),(30,'2019_06_06_112011_create_news_table',6),(31,'2019_06_06_123446_create_news_table',7),(32,'2019_06_07_071925_add_url_to_news_table',8),(33,'2019_06_07_075831_add_url_to_news_table',9),(35,'2019_06_07_100905_create_announcements_table',11),(36,'2019_06_07_101708_create_announcements_table',12),(38,'2019_06_07_084259_create_news_table',13),(39,'2019_06_07_102546_create_announcements_table',13),(40,'2019_06_07_120635_create_videos_table',14),(41,'2019_06_10_091031_create_minister_staffs_table',15),(42,'2019_06_10_093522_create_minister_staff_table',16),(43,'2019_06_10_093708_create_minister_staff_table',17),(44,'2019_06_10_095146_create_minister_staffs_table',18),(45,'2019_06_10_095525_create_minister_staffs_table',19),(46,'2019_06_10_130540_create_ministry_staffs_table',20),(47,'2019_06_10_140028_create_partners_table',21),(48,'2019_06_12_080821_create_pages_texts_table',22);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `minister_staffs`
---
-
-DROP TABLE IF EXISTS `minister_staffs`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `minister_staffs` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `position` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone_number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `text` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `minister_staffs`
@@ -330,25 +116,6 @@ INSERT INTO `minister_staffs` VALUES (1,'հհ առողջապահության ն�
 UNLOCK TABLES;
 
 --
--- Table structure for table `ministry_staffs`
---
-
-DROP TABLE IF EXISTS `ministry_staffs`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ministry_staffs` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `position` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone_number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `ministry_staffs`
 --
 
@@ -357,27 +124,6 @@ LOCK TABLES `ministry_staffs` WRITE;
 INSERT INTO `ministry_staffs` VALUES (1,'ՀՀ առողջապահության նախարարության գլխավոր քարտուղարի պաշտոնակատար','Վահե Հակոբյան','(+74 60)80 80-03/1123','minister@moh.am','2019-06-10 09:12:17','2019-06-10 09:12:17'),(2,'ՀՀ առողջապահության նախարարության գլխավոր քարտուղարի պաշտոնակատար 2','Վահե Հակոբյան 2','(+74 60)80 80-03/1123','minister@moh.am','2019-06-10 09:12:41','2019-06-10 09:12:41'),(3,'ՀՀ առողջապահության նախարարության գլխավոր քարտուղարի պաշտոնակատար 3','Վահե Հակոբյան 3','(+74 60)80 80-03/1123','minister@moh.am','2019-06-10 09:13:00','2019-06-10 09:13:00'),(4,'ՀՀ առողջապահության նախարարության գլխավոր քարտուղարի պաշտոնակատար 4','Վահե Հակոբյան 4','(+74 60)80 80-03/1123','minister@moh.am','2019-06-10 09:13:15','2019-06-10 09:13:15'),(5,'ՀՀ առողջապահության նախարարության գլխավոր քարտուղարի պաշտոնակատար 5','Վահե Հակոբյան 5','(+74 60)80 80-03/1123','minister@moh.am','2019-06-10 09:13:35','2019-06-10 09:13:35'),(6,'ՀՀ առողջապահության նախարարության գլխավոր քարտուղարի պաշտոնակատար 6','Վահե Հակոբյան 6','(+74 60)80 80-03/1123','minister@moh.am','2019-06-10 09:13:56','2019-06-10 09:13:56');
 /*!40000 ALTER TABLE `ministry_staffs` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `news`
---
-
-DROP TABLE IF EXISTS `news`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `news` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `images` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `video` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` date NOT NULL,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `news`
@@ -390,31 +136,6 @@ INSERT INTO `news` VALUES (1,'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍ�
 UNLOCK TABLES;
 
 --
--- Table structure for table `pages`
---
-
-DROP TABLE IF EXISTS `pages`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pages` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `author_id` int(11) NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `excerpt` text COLLATE utf8mb4_unicode_ci,
-  `body` text COLLATE utf8mb4_unicode_ci,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `meta_description` text COLLATE utf8mb4_unicode_ci,
-  `meta_keywords` text COLLATE utf8mb4_unicode_ci,
-  `status` enum('ACTIVE','INACTIVE') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'INACTIVE',
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `pages_slug_unique` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `pages`
 --
 
@@ -423,26 +144,6 @@ LOCK TABLES `pages` WRITE;
 INSERT INTO `pages` VALUES (1,0,'Hello World','Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.','<p>Hello World. Scallywag grog swab Cat o\'nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>','pages/page1.jpg','hello-world','Yar Meta Description','Keyword1, Keyword2','ACTIVE','2019-06-04 08:24:51','2019-06-04 08:24:51'),(2,1,'Test','test','<p>test</p>','pages/June2019/fvx3ADOOJu6XKOLTRPXw.png','test','test','test','ACTIVE','2019-06-05 10:07:07','2019-06-05 10:07:07');
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `pages_texts`
---
-
-DROP TABLE IF EXISTS `pages_texts`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pages_texts` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `page_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `page_slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `page_text1` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `page_text2` longtext COLLATE utf8mb4_unicode_ci,
-  `page_text3` longtext COLLATE utf8mb4_unicode_ci,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `pages_texts`
@@ -455,23 +156,6 @@ INSERT INTO `pages_texts` VALUES (1,'ԱՌԱՔԵԼՈՒԹՅՈՒՆ','mission','<p>�
 UNLOCK TABLES;
 
 --
--- Table structure for table `partners`
---
-
-DROP TABLE IF EXISTS `partners`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `partners` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `partners`
 --
 
@@ -482,21 +166,6 @@ INSERT INTO `partners` VALUES (1,'partners/June2019/AUNCfibL6TxEmB6KkNIz.png','#
 UNLOCK TABLES;
 
 --
--- Table structure for table `password_resets`
---
-
-DROP TABLE IF EXISTS `password_resets`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  KEY `password_resets_email_index` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `password_resets`
 --
 
@@ -504,24 +173,6 @@ LOCK TABLES `password_resets` WRITE;
 /*!40000 ALTER TABLE `password_resets` DISABLE KEYS */;
 /*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `permission_role`
---
-
-DROP TABLE IF EXISTS `permission_role`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `permission_role` (
-  `permission_id` bigint(20) unsigned NOT NULL,
-  `role_id` bigint(20) unsigned NOT NULL,
-  PRIMARY KEY (`permission_id`,`role_id`),
-  KEY `permission_role_permission_id_index` (`permission_id`),
-  KEY `permission_role_role_id_index` (`role_id`),
-  CONSTRAINT `permission_role_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
-  CONSTRAINT `permission_role_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `permission_role`
@@ -534,24 +185,6 @@ INSERT INTO `permission_role` VALUES (1,1),(1,2),(2,1),(3,1),(4,1),(5,1),(6,1),(
 UNLOCK TABLES;
 
 --
--- Table structure for table `permissions`
---
-
-DROP TABLE IF EXISTS `permissions`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `permissions` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `table_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `permissions_key_index` (`key`)
-) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `permissions`
 --
 
@@ -560,34 +193,6 @@ LOCK TABLES `permissions` WRITE;
 INSERT INTO `permissions` VALUES (1,'browse_admin',NULL,'2019-06-04 08:24:50','2019-06-04 08:24:50'),(2,'browse_bread',NULL,'2019-06-04 08:24:50','2019-06-04 08:24:50'),(3,'browse_database',NULL,'2019-06-04 08:24:50','2019-06-04 08:24:50'),(4,'browse_media',NULL,'2019-06-04 08:24:50','2019-06-04 08:24:50'),(5,'browse_compass',NULL,'2019-06-04 08:24:50','2019-06-04 08:24:50'),(6,'browse_menus','menus','2019-06-04 08:24:50','2019-06-04 08:24:50'),(7,'read_menus','menus','2019-06-04 08:24:50','2019-06-04 08:24:50'),(8,'edit_menus','menus','2019-06-04 08:24:50','2019-06-04 08:24:50'),(9,'add_menus','menus','2019-06-04 08:24:50','2019-06-04 08:24:50'),(10,'delete_menus','menus','2019-06-04 08:24:50','2019-06-04 08:24:50'),(11,'browse_roles','roles','2019-06-04 08:24:50','2019-06-04 08:24:50'),(12,'read_roles','roles','2019-06-04 08:24:50','2019-06-04 08:24:50'),(13,'edit_roles','roles','2019-06-04 08:24:50','2019-06-04 08:24:50'),(14,'add_roles','roles','2019-06-04 08:24:50','2019-06-04 08:24:50'),(15,'delete_roles','roles','2019-06-04 08:24:50','2019-06-04 08:24:50'),(16,'browse_users','users','2019-06-04 08:24:50','2019-06-04 08:24:50'),(17,'read_users','users','2019-06-04 08:24:50','2019-06-04 08:24:50'),(18,'edit_users','users','2019-06-04 08:24:50','2019-06-04 08:24:50'),(19,'add_users','users','2019-06-04 08:24:50','2019-06-04 08:24:50'),(20,'delete_users','users','2019-06-04 08:24:50','2019-06-04 08:24:50'),(21,'browse_settings','settings','2019-06-04 08:24:50','2019-06-04 08:24:50'),(22,'read_settings','settings','2019-06-04 08:24:50','2019-06-04 08:24:50'),(23,'edit_settings','settings','2019-06-04 08:24:50','2019-06-04 08:24:50'),(24,'add_settings','settings','2019-06-04 08:24:50','2019-06-04 08:24:50'),(25,'delete_settings','settings','2019-06-04 08:24:50','2019-06-04 08:24:50'),(26,'browse_categories','categories','2019-06-04 08:24:51','2019-06-04 08:24:51'),(27,'read_categories','categories','2019-06-04 08:24:51','2019-06-04 08:24:51'),(28,'edit_categories','categories','2019-06-04 08:24:51','2019-06-04 08:24:51'),(29,'add_categories','categories','2019-06-04 08:24:51','2019-06-04 08:24:51'),(30,'delete_categories','categories','2019-06-04 08:24:51','2019-06-04 08:24:51'),(31,'browse_posts','posts','2019-06-04 08:24:51','2019-06-04 08:24:51'),(32,'read_posts','posts','2019-06-04 08:24:51','2019-06-04 08:24:51'),(33,'edit_posts','posts','2019-06-04 08:24:51','2019-06-04 08:24:51'),(34,'add_posts','posts','2019-06-04 08:24:51','2019-06-04 08:24:51'),(35,'delete_posts','posts','2019-06-04 08:24:51','2019-06-04 08:24:51'),(36,'browse_pages','pages','2019-06-04 08:24:51','2019-06-04 08:24:51'),(37,'read_pages','pages','2019-06-04 08:24:51','2019-06-04 08:24:51'),(38,'edit_pages','pages','2019-06-04 08:24:51','2019-06-04 08:24:51'),(39,'add_pages','pages','2019-06-04 08:24:51','2019-06-04 08:24:51'),(40,'delete_pages','pages','2019-06-04 08:24:51','2019-06-04 08:24:51'),(41,'browse_hooks',NULL,'2019-06-04 08:24:51','2019-06-04 08:24:51'),(42,'browse_cars','cars','2019-06-05 10:41:25','2019-06-05 10:41:25'),(43,'read_cars','cars','2019-06-05 10:41:25','2019-06-05 10:41:25'),(44,'edit_cars','cars','2019-06-05 10:41:25','2019-06-05 10:41:25'),(45,'add_cars','cars','2019-06-05 10:41:25','2019-06-05 10:41:25'),(46,'delete_cars','cars','2019-06-05 10:41:25','2019-06-05 10:41:25'),(52,'browse_homepage_sliders','homepage_sliders','2019-06-06 04:32:45','2019-06-06 04:32:45'),(53,'read_homepage_sliders','homepage_sliders','2019-06-06 04:32:45','2019-06-06 04:32:45'),(54,'edit_homepage_sliders','homepage_sliders','2019-06-06 04:32:45','2019-06-06 04:32:45'),(55,'add_homepage_sliders','homepage_sliders','2019-06-06 04:32:45','2019-06-06 04:32:45'),(56,'delete_homepage_sliders','homepage_sliders','2019-06-06 04:32:45','2019-06-06 04:32:45'),(67,'browse_news','news','2019-06-07 04:47:54','2019-06-07 04:47:54'),(68,'read_news','news','2019-06-07 04:47:54','2019-06-07 04:47:54'),(69,'edit_news','news','2019-06-07 04:47:54','2019-06-07 04:47:54'),(70,'add_news','news','2019-06-07 04:47:54','2019-06-07 04:47:54'),(71,'delete_news','news','2019-06-07 04:47:54','2019-06-07 04:47:54'),(72,'browse_announcements','announcements','2019-06-07 06:49:37','2019-06-07 06:49:37'),(73,'read_announcements','announcements','2019-06-07 06:49:37','2019-06-07 06:49:37'),(74,'edit_announcements','announcements','2019-06-07 06:49:37','2019-06-07 06:49:37'),(75,'add_announcements','announcements','2019-06-07 06:49:37','2019-06-07 06:49:37'),(76,'delete_announcements','announcements','2019-06-07 06:49:37','2019-06-07 06:49:37'),(77,'browse_videos','videos','2019-06-07 08:13:21','2019-06-07 08:13:21'),(78,'read_videos','videos','2019-06-07 08:13:21','2019-06-07 08:13:21'),(79,'edit_videos','videos','2019-06-07 08:13:21','2019-06-07 08:13:21'),(80,'add_videos','videos','2019-06-07 08:13:21','2019-06-07 08:13:21'),(81,'delete_videos','videos','2019-06-07 08:13:21','2019-06-07 08:13:21'),(92,'browse_minister_staffs','minister_staffs','2019-06-10 05:57:01','2019-06-10 05:57:01'),(93,'read_minister_staffs','minister_staffs','2019-06-10 05:57:01','2019-06-10 05:57:01'),(94,'edit_minister_staffs','minister_staffs','2019-06-10 05:57:01','2019-06-10 05:57:01'),(95,'add_minister_staffs','minister_staffs','2019-06-10 05:57:01','2019-06-10 05:57:01'),(96,'delete_minister_staffs','minister_staffs','2019-06-10 05:57:01','2019-06-10 05:57:01'),(97,'browse_ministry_staffs','ministry_staffs','2019-06-10 09:10:30','2019-06-10 09:10:30'),(98,'read_ministry_staffs','ministry_staffs','2019-06-10 09:10:30','2019-06-10 09:10:30'),(99,'edit_ministry_staffs','ministry_staffs','2019-06-10 09:10:30','2019-06-10 09:10:30'),(100,'add_ministry_staffs','ministry_staffs','2019-06-10 09:10:30','2019-06-10 09:10:30'),(101,'delete_ministry_staffs','ministry_staffs','2019-06-10 09:10:30','2019-06-10 09:10:30'),(102,'browse_partners','partners','2019-06-10 10:04:06','2019-06-10 10:04:06'),(103,'read_partners','partners','2019-06-10 10:04:06','2019-06-10 10:04:06'),(104,'edit_partners','partners','2019-06-10 10:04:06','2019-06-10 10:04:06'),(105,'add_partners','partners','2019-06-10 10:04:06','2019-06-10 10:04:06'),(106,'delete_partners','partners','2019-06-10 10:04:06','2019-06-10 10:04:06'),(107,'browse_pages_texts','pages_texts','2019-06-12 04:28:01','2019-06-12 04:28:01'),(108,'read_pages_texts','pages_texts','2019-06-12 04:28:01','2019-06-12 04:28:01'),(109,'edit_pages_texts','pages_texts','2019-06-12 04:28:01','2019-06-12 04:28:01'),(110,'add_pages_texts','pages_texts','2019-06-12 04:28:01','2019-06-12 04:28:01'),(111,'delete_pages_texts','pages_texts','2019-06-12 04:28:01','2019-06-12 04:28:01');
 /*!40000 ALTER TABLE `permissions` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `posts`
---
-
-DROP TABLE IF EXISTS `posts`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `posts` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `author_id` int(11) NOT NULL,
-  `category_id` int(11) DEFAULT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `seo_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `excerpt` text COLLATE utf8mb4_unicode_ci,
-  `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `meta_description` text COLLATE utf8mb4_unicode_ci,
-  `meta_keywords` text COLLATE utf8mb4_unicode_ci,
-  `status` enum('PUBLISHED','DRAFT','PENDING') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'DRAFT',
-  `featured` tinyint(1) NOT NULL DEFAULT '0',
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `posts_slug_unique` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `posts`
@@ -600,24 +205,6 @@ INSERT INTO `posts` VALUES (1,0,NULL,'Lorem Ipsum Post',NULL,'This is the excerp
 UNLOCK TABLES;
 
 --
--- Table structure for table `roles`
---
-
-DROP TABLE IF EXISTS `roles`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `roles` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `display_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `roles_name_unique` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `roles`
 --
 
@@ -626,27 +213,6 @@ LOCK TABLES `roles` WRITE;
 INSERT INTO `roles` VALUES (1,'admin','Administrator','2019-06-04 08:24:50','2019-06-04 08:24:50'),(2,'user','Normal User','2019-06-04 08:24:50','2019-06-04 08:24:50');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `settings`
---
-
-DROP TABLE IF EXISTS `settings`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `settings` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `display_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` text COLLATE utf8mb4_unicode_ci,
-  `details` text COLLATE utf8mb4_unicode_ci,
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `order` int(11) NOT NULL DEFAULT '1',
-  `group` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `settings_key_unique` (`key`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `settings`
@@ -659,27 +225,6 @@ INSERT INTO `settings` VALUES (1,'site.title','Site Title','Site Title','','text
 UNLOCK TABLES;
 
 --
--- Table structure for table `translations`
---
-
-DROP TABLE IF EXISTS `translations`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `translations` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `table_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `column_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `foreign_key` int(10) unsigned NOT NULL,
-  `locale` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `translations_table_name_column_name_foreign_key_locale_unique` (`table_name`,`column_name`,`foreign_key`,`locale`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `translations`
 --
 
@@ -688,24 +233,6 @@ LOCK TABLES `translations` WRITE;
 INSERT INTO `translations` VALUES (1,'data_types','display_name_singular',5,'pt','Post','2019-06-04 08:24:51','2019-06-04 08:24:51'),(2,'data_types','display_name_singular',6,'pt','Página','2019-06-04 08:24:51','2019-06-04 08:24:51'),(3,'data_types','display_name_singular',1,'pt','Utilizador','2019-06-04 08:24:51','2019-06-04 08:24:51'),(4,'data_types','display_name_singular',4,'pt','Categoria','2019-06-04 08:24:51','2019-06-04 08:24:51'),(5,'data_types','display_name_singular',2,'pt','Menu','2019-06-04 08:24:51','2019-06-04 08:24:51'),(6,'data_types','display_name_singular',3,'pt','Função','2019-06-04 08:24:51','2019-06-04 08:24:51'),(7,'data_types','display_name_plural',5,'pt','Posts','2019-06-04 08:24:51','2019-06-04 08:24:51'),(8,'data_types','display_name_plural',6,'pt','Páginas','2019-06-04 08:24:51','2019-06-04 08:24:51'),(9,'data_types','display_name_plural',1,'pt','Utilizadores','2019-06-04 08:24:51','2019-06-04 08:24:51'),(10,'data_types','display_name_plural',4,'pt','Categorias','2019-06-04 08:24:51','2019-06-04 08:24:51'),(11,'data_types','display_name_plural',2,'pt','Menus','2019-06-04 08:24:51','2019-06-04 08:24:51'),(12,'data_types','display_name_plural',3,'pt','Funções','2019-06-04 08:24:51','2019-06-04 08:24:51'),(13,'categories','slug',1,'pt','categoria-1','2019-06-04 08:24:51','2019-06-04 08:24:51'),(14,'categories','name',1,'pt','Categoria 1','2019-06-04 08:24:51','2019-06-04 08:24:51'),(15,'categories','slug',2,'pt','categoria-2','2019-06-04 08:24:51','2019-06-04 08:24:51'),(16,'categories','name',2,'pt','Categoria 2','2019-06-04 08:24:51','2019-06-04 08:24:51'),(17,'pages','title',1,'pt','Olá Mundo','2019-06-04 08:24:51','2019-06-04 08:24:51'),(18,'pages','slug',1,'pt','ola-mundo','2019-06-04 08:24:51','2019-06-04 08:24:51'),(19,'pages','body',1,'pt','<p>Olá Mundo. Scallywag grog swab Cat o\'nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\r\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>','2019-06-04 08:24:51','2019-06-04 08:24:51'),(20,'menu_items','title',1,'pt','Painel de Controle','2019-06-04 08:24:51','2019-06-04 08:24:51'),(21,'menu_items','title',2,'pt','Media','2019-06-04 08:24:51','2019-06-04 08:24:51'),(22,'menu_items','title',12,'pt','Publicações','2019-06-04 08:24:51','2019-06-04 08:24:51'),(23,'menu_items','title',3,'pt','Utilizadores','2019-06-04 08:24:51','2019-06-04 08:24:51'),(24,'menu_items','title',11,'pt','Categorias','2019-06-04 08:24:51','2019-06-04 08:24:51'),(25,'menu_items','title',13,'pt','Páginas','2019-06-04 08:24:51','2019-06-04 08:24:51'),(26,'menu_items','title',4,'pt','Funções','2019-06-04 08:24:51','2019-06-04 08:24:51'),(27,'menu_items','title',5,'pt','Ferramentas','2019-06-04 08:24:51','2019-06-04 08:24:51'),(28,'menu_items','title',6,'pt','Menus','2019-06-04 08:24:51','2019-06-04 08:24:51'),(29,'menu_items','title',7,'pt','Base de dados','2019-06-04 08:24:51','2019-06-04 08:24:51'),(30,'menu_items','title',10,'pt','Configurações','2019-06-04 08:24:51','2019-06-04 08:24:51');
 /*!40000 ALTER TABLE `translations` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `user_roles`
---
-
-DROP TABLE IF EXISTS `user_roles`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user_roles` (
-  `user_id` int(10) unsigned NOT NULL,
-  `role_id` bigint(20) unsigned NOT NULL,
-  PRIMARY KEY (`user_id`,`role_id`),
-  KEY `user_roles_user_id_index` (`user_id`),
-  KEY `user_roles_role_id_index` (`role_id`),
-  CONSTRAINT `user_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE,
-  CONSTRAINT `user_roles_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `user_roles`
@@ -718,31 +245,6 @@ INSERT INTO `user_roles` VALUES (2,2);
 UNLOCK TABLES;
 
 --
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `users` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `role_id` bigint(20) unsigned DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'users/default.png',
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `settings` text COLLATE utf8mb4_unicode_ci,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `users_email_unique` (`email`),
-  KEY `users_role_id_foreign` (`role_id`),
-  CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `users`
 --
 
@@ -751,25 +253,6 @@ LOCK TABLES `users` WRITE;
 INSERT INTO `users` VALUES (1,1,'Admin','admin@admin.com','users/default.png','$2y$10$1FUAdyDy0Z//7bBae1erNepySXNN6XWbeOVgaQb6/W/Z.4SnVFm.u','alfSNMTBZZOWDIMNardgYtKZo9woCs5Qc4avLrB98MgMcJmFREzcxGCz4nyG',NULL,'2019-06-04 08:24:51','2019-06-04 08:24:51'),(2,2,'User','user@mail.com','users/default.png','$2y$10$NtgTwDgkt5DJBwizshRHVe1pBmtLQSdl9qeWw4JEBiwxUie/3HUgO','YX6Zrnmn00kzaOkcGHw8Pin4a8nHfDGO7TXO88hDTKAtXZEoTEyRc88r66wq','{\"locale\":\"en\"}','2019-06-06 05:09:50','2019-06-06 05:09:50');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `videos`
---
-
-DROP TABLE IF EXISTS `videos`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `videos` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` date NOT NULL,
-  `video_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `video_individual_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `videos`
@@ -790,4 +273,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-12 18:01:08
+-- Dump completed on 2019-06-12 18:28:14
