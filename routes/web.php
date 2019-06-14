@@ -29,13 +29,13 @@ Route::group(['prefix' => 'admin'], function () {
 Route::view('/all-news', 'all-news')->name('all.news');
 Route::view('/announcement', 'announcement')->name('announcement');
 Route::view('/budget', 'budget')->name('budget');
-Route::view('/charter', 'charter')->name('charter');
+//Route::view('/charter', 'charter')->name('charter');
 //Route::view('/contact-us', 'contact-us')->name('contact.us');
 Route::view('/faq', 'faq')->name('faq');
 Route::view('/history', 'history')->name('history');
 Route::view('/legal-acts', 'legal-acts')->name('legal.acts');
 Route::view('/links', 'links')->name('links');
-Route::view('/minister-page', 'minister-page')->name('minister.page');
+//Route::view('/minister-page', 'minister-page')->name('minister.page');
 // Route::view('/minister-staff', 'minister-staff')->name('minister.staff');
 // Route::view('/ministry-staff', 'ministry-staff')->name('ministry.staff');
 Route::view('/ministry-structure', 'ministry-structure')->name('ministry.structure');

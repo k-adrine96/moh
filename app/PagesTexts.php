@@ -16,4 +16,8 @@ class PagesTexts extends Model
         'page_text2',
         'page_text3'
     ];
+
+    protected $translatable = [
+        'page_text1'
+    ];
 }
