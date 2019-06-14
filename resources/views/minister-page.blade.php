@@ -10,12 +10,11 @@
                 <h1>Ուղերձ</h1>
                 <div class="message__content--info d-flex">
                     <div class="message__content--info--image"
-                         style="background-image: url('storage/{{$content->minister_pic}}')">
+                         style="background-image: url('{{Storage::url($content->minister_pic)}}')">
                     </div>
                     <div class="message__content--info--text">
                         {!! $pagesTexts->page_text1 !!}
                     </div>
-
                 </div>
             </div>
             <div class="message__content--1">
