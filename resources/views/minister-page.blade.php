@@ -9,18 +9,20 @@
             <div class="message__content">
                 <h1>Ուղերձ</h1>
                 <div class="message__content--info d-flex">
-                    <div class="message__content--info--text">
-                        {!! !is_null($pagesTexts) ?? $pagesTexts->page_text1 !!}
-                    </div>
                     <div class="message__content--info--image"
-                         style="background-image: url('storage/{{ !is_null($content) ?? $content->minister_pic }}')">
+                         style="background-image: url('storage/{{$content->minister_pic}}')">
+                    </div>
+                    <div class="message__content--info--text">
+                        {!! $pagesTexts->page_text1 !!}
                     </div>
 
                 </div>
             </div>
             <div class="message__content--1">
                 <div class="message__content--1--info">
-                    {!! !is_null($pagesTexts) ?? $pagesTexts->page_text2 !!}
+                    @if($pagesTexts->page_text2)
+                        {!! $pagesTexts->page_text2 !!}
+                    @endif
                 </div>
             </div>
         </section>
@@ -114,10 +116,10 @@
                         </div>
                         <div class="pdf__info--row pdf__info--img--text d-flex align-items-center">
                             <div class="biography__content--image"
-                                 style="background-image: url('storage/{{!is_null($content) ?? $content->minister_personal_info_pic }}')">
+                                 style="background-image: url('{{Storage::url($content->minister_personal_info_pic)}}')">
                             </div>
                             <div class="biography__text">
-                                <p>{{!is_null($content) ?? $content->minister_personal_info_pic_title}}</p>
+                                <p>{{$content->minister_personal_info_pic_title}}</p>
                             </div>
                         </div>
                     </div>
