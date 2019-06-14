@@ -4,7 +4,7 @@
     <main>
         <section class="main__cover">
             @foreach($slidersInfo as $sliderInfo)
-                <div class="main__cover--item" style="background-image: url('storage/{{$sliderInfo->image}}')">
+                <div class="main__cover--item" style="background-image: url('{{Storage::url($sliderInfo->image)}}')">
                     <div class="main__cover--item-container">
                         <div class="main__cover--item-container-cont">
                             <h2>{!! $sliderInfo->title !!}</h2>
@@ -29,19 +29,19 @@
                             $featuredImage = $images[0];
                         ?>
                         <div class="news__content--items">
-                                <div class="mobile-card">
-                                    <div class="news__image clearfix">
-                                        <div class="news__image--background" style="background-image: url(storage/{{$featuredImage}})"></div>
-                                    </div>
-                                    <div class="news__info">
-                                        <span><?php echo date('d F Y l' , strtotime($singleNews->date)); ?></span>
-                                        <h1>{{$singleNews->title}}</h1>
-                                        <p>{{ strip_tags($singleNews->description) }}</p>
-                                        @if($singleNews->url)
-                                            <a href="{{$singleNews->url}}" class="margin-auto animated__button animated__button--blue">Ավելին</a>
-                                        @endif
-                                    </div>
+                            <div class="mobile-card">
+                                <div class="news__image clearfix">
+                                    <div class="news__image--background" style="background-image: url({{Storage::url($featuredImage)}})"></div>
                                 </div>
+                                <div class="news__info">
+                                    <span><?php echo date('d F Y l' , strtotime($singleNews->date)); ?></span>
+                                    <h1>{{$singleNews->title}}</h1>
+                                    <p>{{ strip_tags($singleNews->description) }}</p>
+                                    @if($singleNews->url)
+                                        <a href="{{$singleNews->url}}" class="animated__button animated__button--blue">Ավելին</a>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
                     @endforeach
                 </div>
@@ -111,7 +111,7 @@
                     <div class="partners--cont--slider">
                         @foreach($chunk as $partner)
                             <a href="{{$partner->url}}" class="partners--cont--item"
-                               style="background-image: url('storage/{{$partner->image}}')"></a>
+                               style="background-image: url('{{Storage::url($partner->image)}}')"></a>
                         @endforeach
                     </div>
                 </div>

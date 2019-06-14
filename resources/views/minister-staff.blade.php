@@ -13,7 +13,7 @@
                     <div class="minister__staff--container--width">
                         @foreach($chunk as $staffMember)
                             <div class="workers__info">
-                                <div class="workers__info--image" style="background-image: url('storage/{{$staffMember->image}}')"></div>
+                                <div class="workers__info--image" style="background-image: url('{{Storage::url($staffMember->image)}}')"></div>
                                 <div class="workers__info--content">
                                     <div class="workers__info--content--names">
                                         <h1>{{$staffMember->position}}</h1>
@@ -44,7 +44,7 @@
                 <div class="partners--cont--slider">
                     @foreach($partners as $partner)
                         <a href="{{$partner->url}}" class="partners--cont--item"
-                           style="background-image: url('storage/{{$partner->image}}')"></a>
+                           style="background-image: url('{{Storage::url($partner->image)}}')"></a>
                     @endforeach
                 </div>
             </div>
