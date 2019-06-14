@@ -10,32 +10,18 @@
                 <h1>Ուղերձ</h1>
                 <div class="message__content--info d-flex">
                     <div class="message__content--info--text">
-                        <h2>Հարգելի քաղաքացի</h2>
-                        <p>Ողջունում եմ Ձեզ առողջապահության նախարարության անունից ու մեծապես կարևորում Ձեզանից
-                            յուրաքանչյուրի առողջության պահպանման իրավունքը:</p>
-                        <p>Առողջապահությունը գերակա ոլորտ է, ու մենք պատասխանատու ենք Ձեր առողջության համար՝ ամեն մեկի
-                            համար առանձին ու բոլորի համար՝ ընդհանուր: Սա մեծագույն պատիվ ու պարտավորություն է մեզ
-                            համար:</p>
-                        <p>Ձեզանից յուրաքանչյուրի առողջությունը թանկ է, ուստի կոչ եմ անում չանտեսել առողջական խնդիրները:
-                            Մենք մեր հերթին ամեն ինչ կանենք՝ շահելու Ձեր վստահությունը, ապահովելու բուժօգնության
-                            մատչելիությունն ու արդյունավետությունը:</p>
-                        <p>Միաժամանակ, մեր պարտքն է բժիշկների արժանապատիվ կենսամակարդակի ապահովումը, քանի որ մեր
-                            համակարգի հաջողությունը պայմանավորված է հենց նրանց աշխատանքով:</p>
+                        {!! $pagesTexts->page_text1 !!}
                     </div>
                     <div class="message__content--info--image"
-                         style="background-image: url('img/minister-photo.png')"></div>
+                         style="background-image: url('storage/{{$content->minister_pic}}')">
+                    </div>
                 </div>
             </div>
             <div class="message__content--1">
                 <div class="message__content--1--info">
-                    <h1>Հարգելիներս</h1>
-                    <p>իմ նպատակը առողջապահության նախարարության թափանցիկ, արդյունավետ և անխափան աշխատանքի ապահովումն է
-                        ու պատասխանատվության ճիշտ բաշխումը:</p>
-                    <p>Խոստանում ենք ջանք չխնայել և ուժերի ներածի չափով Ձեր կողքին լինել ու պատրաստ ենք արձագանքել Ձեր
-                        խնդիրներին, դժգոհություններին, մեր համակարգում Ձեր առջև ծառացած ամենատարբեր հարցերին: «Թեժ
-                        գծով»` 8003, պատրաստ ենք լսել Ձեզ: Հարցերի լուծումն անձնապես իմ ուշադրության կենտրոնում է
-                        լինելու:</p>
-                    <h4>Սիրով՝ Արսեն Թորոսյան</h4>
+                    @if($pagesTexts->page_text2)
+                        {!! $pagesTexts->page_text2 !!}
+                    @endif
                 </div>
             </div>
         </section>
@@ -49,57 +35,25 @@
                         <div class="pdf__info--header">
                             <h1>կրթություն</h1>
                         </div>
-                        <div class="pdf__info--row d-flex d-flex align-items-center">
-                            <div class="pdf__year pdf__year--large">
-                                <span>1988-2004</span>
+                        @foreach($educationInfos as $educationInfo)
+                            <div class="pdf__info--row d-flex d-flex align-items-center">
+                                <div class="pdf__year pdf__year--large">
+                                    @if($educationInfo->name)
+                                        <span>{{$educationInfo->name}}</span>
+                                    @endif
+                                </div>
+                                <div class="pdf__text">
+                                    <ul>
+                                        <li class="d-flex align-items-center border-btm">
+                                            <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
+                                            <a href="{{$educationInfo->url}}" class="">
+                                                <span>{{$educationInfo->description}}<!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center border-btm">
-                                        <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                        <a href="javascript:;" class="">
-                                            <span>սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
-                                                <!--<b>265կբ</b>--></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pdf__info--row d-flex d-flex align-items-center">
-                            <div class="pdf__year pdf__year--large">
-                                <span>2004-2006</span>
-                            </div>
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center border-btm">
-                                        <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                        <a href="javascript:;" class="">
-                                            <span>սովորել է ՀՀ ԱՆ ակադեմիկոս Ս.Ավդալբեկյանի
-                                                անվան առողջապահության ազգային ինստիտուտում՝
-                                                սոցիալական հիգիենա և առողջապահության
-                                                կազմակերպում մասնագիտությամբ<!--<b>265կբ</b>--></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pdf__info--row d-flex d-flex align-items-center">
-                            <div class="pdf__year pdf__year--large">
-                                <span>1988-2004</span>
-                            </div>
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center border-btm">
-                                        <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                        <a href="javascript:;" class="">
-                                            <span>սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<!--<b>265կբ</b>--></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </li>
                 <li>
@@ -107,103 +61,25 @@
                         <div class="pdf__info--header">
                             <h1>Աշխատանքային գործունեություն</h1>
                         </div>
-                        <div class="pdf__info--row d-flex align-items-center">
-                            <div class="pdf__year pdf__year--large">
-                                <span>2004-2005</span>
+                        @foreach($workInfos as $workInfo)
+                            <div class="pdf__info--row d-flex align-items-center">
+                                <div class="pdf__year pdf__year--large">
+                                    @if($workInfo->name)
+                                        <span>{{$workInfo->name}}</span>
+                                    @endif
+                                </div>
+                                <div class="pdf__text">
+                                    <ul>
+                                        <li class="d-flex align-items-center border-btm">
+                                            <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
+                                            <a href="{{$workInfo->url}}" class="">
+                                                <span>{{$workInfo->description}} <!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center border-btm">
-                                        <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                        <a href="javascript:;" class="">
-                                            <span>«Իրական աշխարհ, իրական մարդիկ» ՀԿ,
-                                                Սոցիալական աշխատողների խմբի ղեկավար<!--<b>265կբ</b>--></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pdf__info--row d-flex align-items-center">
-                            <div class="pdf__year pdf__year--large">
-                                <span>2005-2010</span>
-                            </div>
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center border-btm">
-                                        <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                        <a href="javascript:;" class="">
-                                            <span>Առողջության առաջնային պահպանման բարեփոխումների ծրագիր,
-                                                Ընտանեկան բժշկության և բուժօգնության որակի համակարգող
-                                                <!--<b>265կբ</b>--></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pdf__info--row d-flex align-items-center">
-                            <div class="pdf__year pdf__year--large">
-                                <span>2010-2011</span>
-                            </div>
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center border-btm">
-                                        <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                        <a href="javascript:;" class="">
-                                            <span>ՀՀ ԱՆ տուբերկուլոզի դեմ պայքարի ազգային կենտրոն,
-                                                Մոնիտորինգի և գնահատման բաժնի վարիչ,
-                                                Տնօրենի ժամանակավոր պաշտոնակատար<!--<b>265կբ</b>--></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pdf__info--row d-flex align-items-center">
-                            <div class="pdf__year pdf__year--large">
-                                <span>2011-2015 2016-2018</span>
-                            </div>
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center border-btm">
-                                        <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                        <a href="javascript:;" class="">
-                                            <span>«ՄԻԲՍ» բժշկա-ախտորոշիչ կենտրոն, տնօրեն<!--<b>265կբ</b>--></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pdf__info--row d-flex align-items-center">
-                            <div class="pdf__year pdf__year--large">
-                                <span>12.05.2018</span>
-                            </div>
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center border-btm">
-                                        <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                        <a href="javascript:;" class="">
-                                            <span>Հայաստանի Հանրապետության
-                                                առողջապահության նախարարն է<!--<b>265կբ</b>--></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pdf__info--row d-flex align-items-center">
-                            <div class="pdf__year pdf__year--large">
-                                <span>18.01.2019</span>
-                            </div>
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center border-btm">
-                                        <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                        <a href="javascript:;" class="">
-                                            <span>հանրապետության նախագահի հրամանագրով
-                                                վերանշանակվել է առողջապահության նախարար<!--<b>265կբ</b>--></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </li>
                 <li>
@@ -211,40 +87,25 @@
                         <div class="pdf__info--header">
                             <h1>այլ տվյալներ</h1>
                         </div>
-                        <div class="pdf__info--row d-flex align-items-center">
-                            <div class="pdf__year pdf__year--large">
-                                <span>2015-2016</span>
+                        @foreach($otherInfos as $otherInfo)
+                            <div class="pdf__info--row d-flex align-items-center">
+                                <div class="pdf__year pdf__year--large">
+                                    @if($otherInfo->name)
+                                        <span>{{$otherInfo->name}}</span>
+                                    @endif
+                                </div>
+                                <div class="pdf__text">
+                                    <ul>
+                                        <li class="d-flex align-items-center border-btm">
+                                            <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
+                                            <a href="{{$otherInfo->url}}" class="">
+                                                <span>{{$otherInfo->description}}<!--<b>265կբ</b>--></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center border-btm">
-                                        <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                        <a href="javascript:;" class="">
-                                            <span>Ծառայել է ՀՀ զինված ուժերում:
-                                                Ունի բ/ծ լեյտենանտի կոչում։<!--<b>265կբ</b>--></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pdf__info--row d-flex align-items-center">
-                            <div class="pdf__year--large">
-                                <span></span>
-                            </div>
-                            <div class="pdf__text">
-                                <ul>
-                                    <li class="d-flex align-items-center border-btm">
-                                        <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                        <a href="javascript:;" class="">
-                                            <span>Մասնակցել է բազմաթիվ գիտաժողովներիև դասընթացների:
-                                                Հեղինակ է հայաստանյան և միջազգային
-                                                գիտական ամսագրերում տպագրված մի շարք հոդվածների:
-                                                <!--<b>265կբ</b>--></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </li>
                 <li>
@@ -254,10 +115,10 @@
                         </div>
                         <div class="pdf__info--row pdf__info--img--text d-flex align-items-center">
                             <div class="biography__content--image"
-                                 style="background-image: url('img/min-family-picture.png')">
+                                 style="background-image: url('storage/{{$content->minister_personal_info_pic}}')">
                             </div>
                             <div class="biography__text">
-                                <p>Ամուսնացած է ունի երկու զավակ։</p>
+                                <p>{{$content->minister_personal_info_pic_title}}</p>
                             </div>
                         </div>
                     </div>

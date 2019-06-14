@@ -34,7 +34,7 @@
                             <ul class="header__navigation d-flex p-1">
                                 <li><a href="{{ route('home') }}">Գլխավոր</a></li>
                                 <li><a href="{{ route('pages' , 'contact-us') }}">Հետադարձ կապ</a></li>
-                                <li><a href="{{ route('minister.page') }}">Նախարար</a></li>
+                                <li><a href="{{ route('pages' , 'minister-page') }}">Նախարար</a></li>
                                 <li><a href="{{ route('legal.acts') }}">Իրավական ակտեր</a></li>
 
                             </ul>
