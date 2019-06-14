@@ -9,6 +9,8 @@
             <div class="message__content">
                 <h1>Ուղերձ</h1>
                 <div class="message__content--info d-flex">
+                    <div class="message__content--info--image"
+                         style="background-image: url('img/minister-photo.png')"></div>
                     <div class="message__content--info--text">
                         <h2>Հարգելի քաղաքացի</h2>
                         <p>Ողջունում եմ Ձեզ առողջապահության նախարարության անունից ու մեծապես կարևորում Ձեզանից
@@ -22,8 +24,7 @@
                         <p>Միաժամանակ, մեր պարտքն է բժիշկների արժանապատիվ կենսամակարդակի ապահովումը, քանի որ մեր
                             համակարգի հաջողությունը պայմանավորված է հենց նրանց աշխատանքով:</p>
                     </div>
-                    <div class="message__content--info--image"
-                         style="background-image: url('img/minister-photo.png')"></div>
+
                 </div>
             </div>
             <div class="message__content--1">

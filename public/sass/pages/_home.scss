@@ -11,8 +11,11 @@
       max-width: $main-content-width;
       margin: 8.4rem auto 0;
 
-      @media only screen and (min-width: 1921px){
+      @media only screen and (min-width: 1921px) {
         max-width: $main-content-width-big;
+      }
+      @media only screen and (max-width: 1500px) {
+        max-width: 88%;
       }
 
       &-cont {
@@ -22,8 +25,11 @@
           font-size: $secondary-header;
           color: $main-color;
           font-weight: $fw-lighter;
-          @include ellipses(130px,3);
+          @include ellipses(130px, 3);
 
+          @media only screen and (max-width: 767px) {
+            font-size: 2.4rem;
+          }
 
           span {
             color: $main-btn-color;
@@ -33,7 +39,7 @@
           font-size: $main-fz;
           color: $main-color;
           margin: 2.3rem auto;
-          @include ellipses(100px,4);
+          @include ellipses(100px, 4);
 
         }
       }
@@ -51,74 +57,129 @@
     max-width: $main-content-width;
     position: relative;
 
-    @media only screen and (min-width: 1921px){
+    @media only screen and (min-width: 1921px) {
       max-width: $main-content-width-big;
+    }
+    @media only screen and (max-width: 1500px) {
+      max-width: 90%;
     }
 
     &--header {
       font-size: $secondary-header;
       font-weight: 100;
       padding-bottom: 1rem;
+
+      @media only screen and (max-width: 991px) {
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 991px) {
+        font-size: 2.4rem;
+      }
+
     }
     &--slider {
       .news__content--items {
-        display: flex;
         outline: none;
-        padding-bottom: 7rem;
+        .mobile-card {
+          display: flex;
+          outline: none;
+          padding-bottom: 7rem;
 
-        .news__info {
-          width: 49%;
-          span {
-            font-size: $main-fz;
-            text-transform: capitalize;
-            color: #666666;
-            padding-bottom: 1rem;
-            display: inline-block;
-            position: relative;
-            //padding-left: 3rem;
+          @media only screen and (max-width: 991px) {
+            display: block;
+            padding-bottom: 0;
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+          }
+          .news__info {
+            width: 49%;
 
-            //&:before {
-            //  content: "";
-            //  @include backimg;
-            //  background-image: url('/img/calendar-icons.png');
-            //  width: 2rem;
-            //  height: 2rem;
-            //  display: inline-block;
-            //  position: absolute;
-            //  left: 0;
-            //  top: 2px;
-            //}
+            @media only screen and (max-width: 991px) {
+              width: 100%;
+              padding: 40px;
+            }
+
+            span {
+              font-size: $main-fz;
+              text-transform: capitalize;
+              color: #666666;
+              padding-bottom: 1rem;
+              display: inline-block;
+              position: relative;
+              //padding-left: 3rem;
+
+              //&:before {
+              //  content: "";
+              //  @include backimg;
+              //  background-image: url('/img/calendar-icons.png');
+              //  width: 2rem;
+              //  height: 2rem;
+              //  display: inline-block;
+              //  position: absolute;
+              //  left: 0;
+              //  top: 2px;
+              //}
+            }
+
+            h1 {
+              font-size: $tertiary-header;
+              font-weight: $fw-lighter;
+              color: $main-color;
+              line-height: 1.3;
+              padding-bottom: 1rem;
+              text-transform: uppercase;
+              @include ellipses(116px, 3);
+
+              @media only screen and (max-width: 1024px) {
+                height: 103px;
+              }
+              @media only screen and (max-width: 991px) {
+                height: 115px;
+                padding-bottom: 1rem;
+              }
+            }
+
+            p {
+              color: $main-color;
+              font-size: $main-fz;
+              margin-bottom: 4rem;
+              height: 245px;
+              overflow: hidden;
+
+              @media only screen and (max-width: 1024px) {
+                height: 99px;
+                overflow: hidden;
+                margin-bottom: 3rem;
+              }
+            }
           }
 
-          h1 {
-            font-size: $tertiary-header;
-            font-weight: $fw-lighter;
-            color: $main-color;
-            line-height: 1.3;
-            padding-bottom: 1rem;
-            text-transform: uppercase;
-            @include ellipses(116px,3);
-          }
+          .news__image {
+            width: 49%;
+            order: 2;
+            @media only screen and (max-width: 1024px) {
+              width: 71%;
+            }
+            @media only screen and (max-width: 991px) {
+              width: 100%;
+              order: unset;
+            }
 
-          p {
-            color: $main-color;
-            font-size: $main-fz;
-            padding-bottom: 4rem;
-          }
-        }
+            &--background {
 
-        .news__image {
-          width: 49%;
-          order: 2;
+              @include backimg;
 
-          &--background {
+              width: 78.6%;
+              height: 33.5rem;
+              text-align: right;
+              float: right;
 
-            @include backimg;
-
-            width: 78.6%;
-            height: 33.5rem;
-            text-align: right;
-            float: right;
+              @media only screen and (max-width: 991px) {
+                width: 100%;
+              }
+            }
           }
         }
       }
@@ -132,11 +193,18 @@
     max-width: $main-content-width;
     position: relative;
 
-    @media only screen and (min-width: 1921px){
+    @media only screen and (min-width: 1921px) {
       max-width: $main-content-width-big;
+    }
+    @media only screen and (max-width: 1500px) {
+      max-width: 90%;
     }
 
     &--header {
+
+      @media only screen and (max-width: 991px) {
+        text-align: center;
+      }
 
       h1 {
         text-transform: uppercase;
@@ -144,6 +212,10 @@
         font-weight: $fw-lighter;
         color: $main-color;
         padding-bottom: 1rem;
+
+        @media only screen and (max-width: 767px) {
+          font-size: 2.4rem;
+        }
       }
     }
 
@@ -177,13 +249,18 @@
           color: $main-color;
           font-weight: $fw-semiBold;
           margin-bottom: 2rem;
-          @include ellipses(96px,3);
+          @include ellipses(96px, 3);
+
         }
         p {
           font-size: $main-fz;
           color: $main-color;
           margin-bottom: 3rem;
-          @include ellipses(150px,6);
+          @include ellipses(150px, 6);
+
+          @media only screen and (max-width: 1024px) {
+            @include ellipses(151px, 7);
+          }
         }
       }
     }
@@ -199,63 +276,97 @@
     max-width: $main-content-width;
     position: relative;
 
-    @media only screen and (min-width: 1921px){
+    @media only screen and (min-width: 1921px) {
       max-width: $main-content-width-big;
+    }
+    @media only screen and (max-width: 1500px) {
+      max-width: 90%;
     }
     h1 {
       font-size: $secondary-header;
       color: $main-color;
       font-weight: $fw-lighter;
+      padding-bottom: 2rem;
+
+      @media only screen and (max-width: 991px) {
+        text-align: center;
+      }
+      @media only screen and (max-width: 767px) {
+        font-size: 2.4rem;
+      }
+
     }
 
     &--slider {
 
       .video__items {
         outline: none;
-        display: flex;
 
-        &--text {
-          width: 44%;
-
-          span {
-            font-size: $main-fz;
-            text-transform: capitalize;
-            color: #666666;
-            padding-bottom: 1rem;
-            display: inline-block;
-            position: relative;
-            padding-left: 3rem;
-
-            &:before {
-              content: "";
-              @include backimg;
-              background-image: url('/img/calendar-icons.png');
-              width: 2rem;
-              height: 2rem;
+        .mobile-video-card {
+          display: flex;
+          @media only screen and (max-width: 991px) {
+            display: block;
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+          }
+          .video__items--text {
+            width: 44%;
+            @media only screen and (max-width: 991px) {
+              width: 100%;
+              padding: 16px;
+            }
+            span {
+              font-size: $main-fz;
+              text-transform: capitalize;
+              color: #666666;
+              padding-bottom: 1rem;
               display: inline-block;
-              position: absolute;
-              left: 0;
-              top: 2px;
+              position: relative;
+              padding-left: 3rem;
+
+              &:before {
+                content: "";
+                @include backimg;
+                background-image: url('/img/calendar-icons.png');
+                width: 2rem;
+                height: 2rem;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 2px;
+              }
+            }
+
+            h1 {
+              font-size: $main-fz;
+              font-weight: $fw-lighter;
+              color: $main-color;
+              line-height: 1.6;
+              padding-bottom: 1rem;
+              text-transform: uppercase;
             }
           }
 
-          h1 {
-            font-size: $main-fz;
-            font-weight: $fw-lighter;
-            color: $main-color;
-            line-height: 1.6;
-            padding-bottom: 1rem;
-            text-transform: uppercase;
+          .video__items--video {
+            width: 54%;
+            order: 2;
+
+            @media only screen and (max-width: 991px) {
+              order: unset;
+              width: 100%;
+            }
+            .video {
+              float: right;
+              width: 100%;
+
+              @media only screen and (max-width: 991px) {
+                float: unset;
+              }
+            }
           }
         }
 
-        &--video {
-          width: 54%;
-          order: 2;
-          .video {
-            float: right;
-          }
-        }
       }
     }
   }
@@ -310,6 +421,5 @@
       }
     }
   }
-
 
 }

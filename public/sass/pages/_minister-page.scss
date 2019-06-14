@@ -10,6 +10,10 @@
       max-width: $main-content-width-big;
     }
 
+    @media only screen and (max-width: 1500px) {
+      max-width: 98%;
+    }
+
     h1 {
       font-size: $primary-header;
       font-weight: 100;
@@ -19,17 +23,26 @@
     }
 
     &--info {
-
-
+      @media only screen and (max-width: 991px){
+        display: block!important;
+      }
       &--text {
         flex: 1.56;
         padding: 1rem 15rem 0 0;
+
+        @media only screen and (max-width: 991px){
+          padding: 1rem 0;
+        }
 
         h2 {
           font-size: $tertiary-header;
           text-transform: uppercase;
           padding-bottom: 4rem;
           font-weight: 100;
+
+          @media only screen and (max-width: 1024px) {
+            padding-bottom: 2rem;
+          }
         }
 
         p {
@@ -43,6 +56,13 @@
         @include backimg;
         width: 376px;
         height: 486px;
+        order: 2;
+        @media only screen and (max-width: 991px){
+          order: unset;
+          margin: auto;
+          width: 280px;
+          height: 370px;
+        }
       }
     }
   }
@@ -54,8 +74,12 @@
       margin: auto;
       padding: 2rem 0;
 
-      @media only screen and (min-width: 1921px){
+      @media only screen and (min-width: 1921px) {
         max-width: $main-content-width-big;
+      }
+
+      @media only screen and (max-width: 1500px) {
+        max-width: 98%;
       }
 
       h1 {
@@ -63,6 +87,10 @@
         font-weight: 100;
         text-transform: uppercase;
         padding-bottom: 2rem;
+
+        @media only screen and (max-width: 991px){
+          text-align: center;
+        }
       }
 
       p {
@@ -82,7 +110,6 @@
 
 .biography__container {
 
-
   &--header {
     max-width: $main-content-width;
     margin: auto;
@@ -94,6 +121,11 @@
       font-size: $secondary-header;
       font-weight: 100;
       text-transform: uppercase;
+
+      @media only screen and (max-width: 991px) {
+        text-align: center;
+        font-size: $tertiary-header;
+      }
     }
   }
 }
@@ -112,6 +144,11 @@
       font-size: $primary-header;
       font-weight: 100;
       text-transform: uppercase;
+
+      @media only screen and (max-width: 991px) {
+        font-size: $tertiary-header;
+        text-align: center;
+      }
     }
   }
 
@@ -133,6 +170,11 @@
         max-width: 50rem;
         margin: auto;
         padding-bottom: 4.1rem;
+
+        @media only screen and (max-width: 991px){
+          font-size: $tertiary-header;
+          text-align: center;
+        }
       }
       .ask__minister--btns {
         margin-top: 4.5rem;

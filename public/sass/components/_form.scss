@@ -78,7 +78,10 @@
   }
 }
 .ask__minister--form {
-
+ @media only screen and (max-width: 320px){
+   width: 290px;
+   margin: auto;
+ }
   .input-group {
 
     .input-group-text {

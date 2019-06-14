@@ -455,11 +455,11 @@
                                 <div class="charity__row--content">
                                     <div class="container-fluid m-0 p-0">
                                         <div class="row no-gutters">
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-4 col-xl-3">
                                                 <div class="charity-background"
                                                      style="background-image: url('img/childrens-charity-companies/Give Life.png')"></div>
                                             </div>
-                                            <div class="col-lg-9">
+                                            <div class="col-lg-8 col-xl-9">
                                                 <p>«Նվիրիր Կյանք» արյան քաղցկեղով և ծանր հիվանդություններով երեխաներին
                                                     օգնության Բարեգործական Հիմնադրամը գործում է 2009 թվականից
                                                     (հիմնադրամի գործադիր մարմնի ղեկավարը` Վերժինե Ոսկանյան): Հիմնադրամի

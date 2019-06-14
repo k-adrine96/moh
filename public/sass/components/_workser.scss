@@ -6,6 +6,10 @@
   @media only screen and(min-width: 1920px) {
     max-width: $main-content-width-big;
   }
+
+  @media only screen and (max-width: 1500px){
+    max-width: 98%;
+  }
   .worker__info {
     max-width: 49%;
 

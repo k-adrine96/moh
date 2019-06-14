@@ -11,6 +11,10 @@
   }
   .faq__row {
     @include mainWidth;
+
+    @media only screen and (max-width: 1500px){
+      max-width: 98%;
+    }
     &--first--lvl{
       text-decoration: none;
       font-size: $tertiary-header;

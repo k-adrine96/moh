@@ -4,6 +4,10 @@
     max-width: $main-content-width;
     margin: auto;
 
+    @media only screen and (max-width: 1500px){
+      max-width: 98%;
+    }
+
     .pdf__text {
 
       .pdf__text {

@@ -29,17 +29,19 @@
                             $featuredImage = $images[0];
                         ?>
                         <div class="news__content--items">
-                            <div class="news__image clearfix">
-                                <div class="news__image--background" style="background-image: url(storage/{{$featuredImage}})"></div>
-                            </div>
-                            <div class="news__info">
-                                <span><?php echo date('d F Y l' , strtotime($singleNews->date)); ?></span>
-                                <h1>{{$singleNews->title}}</h1>
-                                <p>{{ strip_tags($singleNews->description) }}</p>
-                                @if($singleNews->url)
-                                    <a href="{{$singleNews->url}}" class="animated__button animated__button--blue">Ավելին</a>
-                                @endif
-                            </div>
+                                <div class="mobile-card">
+                                    <div class="news__image clearfix">
+                                        <div class="news__image--background" style="background-image: url(storage/{{$featuredImage}})"></div>
+                                    </div>
+                                    <div class="news__info">
+                                        <span><?php echo date('d F Y l' , strtotime($singleNews->date)); ?></span>
+                                        <h1>{{$singleNews->title}}</h1>
+                                        <p>{{ strip_tags($singleNews->description) }}</p>
+                                        @if($singleNews->url)
+                                            <a href="{{$singleNews->url}}" class="margin-auto animated__button animated__button--blue">Ավելին</a>
+                                        @endif
+                                    </div>
+                                </div>
                         </div>
                     @endforeach
                 </div>
@@ -77,18 +79,20 @@
                 <div class="videos__background--content--slider">
                     @foreach($videos as $video)
                         <div class="video__items">
-                            <div class="video__items--video">
-                                <?php $videoKey = explode('/', $video->video_url)[3]; ?>
-                                <iframe class="video" width="90%" height="320px"
-                                        src="https://www.youtube.com/embed/{{$videoKey}}">
-                                </iframe>
-                            </div>
-                            <div class="video__items--text">
-                                <span><?php echo date('d F Y l' , strtotime($video->date)); ?></span>
-                                <h1>{{$video->title}}</h1>
-                                @if($video->video_individual_url)
-                                    <a href="{{$video->video_individual_url}}" class="animated__button animated__button--blue">ավելին</a>
-                                @endif
+                            <div class="mobile-video-card">
+                                <div class="video__items--video">
+                                    <?php $videoKey = explode('/', $video->video_url)[3]; ?>
+                                    <iframe class="video" width="90%" height="320px"
+                                            src="https://www.youtube.com/embed/{{$videoKey}}">
+                                    </iframe>
+                                </div>
+                                <div class="video__items--text">
+                                    <span><?php echo date('d F Y l' , strtotime($video->date)); ?></span>
+                                    <h1>{{$video->title}}</h1>
+                                    @if($video->video_individual_url)
+                                        <a href="{{$video->video_individual_url}}" class="margin-auto animated__button animated__button--blue">ավելին</a>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     @endforeach

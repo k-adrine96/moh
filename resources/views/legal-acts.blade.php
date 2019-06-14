@@ -34,7 +34,7 @@
                                 <label for="legal-acts-name">անվանում</label>
                                 <input type="text" class="form-control" id="legal-acts-name" placeholder="Անվանում">
                             </div>
-                            <a href="javascript:;" class="animated__button animated__button--blue-1">ՈՐՈՆԵԼ</a>
+                            <a href="javascript:;" class="margin-auto animated__button animated__button--blue-1">ՈՐՈՆԵԼ</a>
                             <script type="text/javascript">
                               $(function () {
                                 $('#datetimepicker4').datetimepicker({

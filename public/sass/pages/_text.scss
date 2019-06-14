@@ -2,6 +2,10 @@
   @include mainWidth;
   padding-top: 45px;
 
+  @media only screen and (max-width: 1500px) {
+    max-width: 98%;
+  }
+
 
   p {
     font-size: $main-fz;
