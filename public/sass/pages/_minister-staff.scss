@@ -13,6 +13,10 @@
         max-width: $main-content-width-big;
       }
 
+      @media only screen and (max-width: 1500px){
+        max-width: 98%;
+      }
+
       .workers__info {
         width: 50%;
         display: flex;
@@ -21,6 +25,10 @@
           @include backimg();
           height: 40rem;
           width: 49%;
+
+          @media only screen and (max-width: 1024px) {
+            height: 31rem;
+          }
         }
 
         &--content {
@@ -37,6 +45,10 @@
               font-size: $main-fz;
               color: $main-color;
               text-transform: uppercase;
+
+              @media only screen and (max-width: 1024px) {
+                font-size: $small-fz;
+              }
             }
             a {
               font-size: $secondary-header;
@@ -44,6 +56,10 @@
               color: $color-blue;
               display: inline-block;
               text-decoration: none;
+
+              @media only screen and (max-width: 1024px) {
+                font-size: $tertiary-header;
+              }
             }
           }
         }

@@ -26,6 +26,10 @@
   &:hover {
     background-image: url("/img/arrow-bold-left.png");
   }
+
+  @media only screen and (max-width: 776px){
+    display: none!important;
+  }
 }
 .next-arrow {
   @include backimg;
@@ -36,16 +40,48 @@
   &:hover {
     background-image: url("/img/arrow-bold-right.png");
   }
+
+  @media only screen and (max-width: 776px){
+    display: none!important;
+  }
 }
 
 .news-cont-prev,
 .news-cont-next{
   bottom: 50%;
+  @media only screen and (max-width: 991px) {
+    bottom: 40%;
+  }
 }
+.news-cont-prev {
+  @media only screen and (max-width: 991px) {
+    left: 6rem;
+  }
+}
+.news-cont-next{
+  @media only screen and (max-width: 991px) {
+    right: 6rem;
+  }
+}
+
 
 .announcements-prev,
 .announcements-next,
 .videos__background-prev,
 .videos__background-next {
   bottom: 30%;
+}
+
+.videos__background-prev {
+
+  @media only screen and (max-width: 991px){
+    left: 5rem;
+  }
+}
+
+.videos__background-next {
+
+  @media only screen and (max-width: 991px){
+    right: 5rem;
+  }
 }

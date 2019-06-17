@@ -41,6 +41,7 @@ return [
     |
     */
 
+
     'disks' => [
 
         'local' => [
@@ -62,6 +63,11 @@ return [
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
         ],
+
+        'moh_local' => [
+            'driver' => 'moh_local',
+            'root' => 'http://192.168.0.83/'
+        ]
 
     ],
 

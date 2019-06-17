@@ -1,0 +1,27 @@
+.single__announcement {
+  @include mainWidth;
+  &--header {
+    h1 {
+      font-size: $secondary-header;
+      font-weight: 100;
+      padding: 15px 0;
+    }
+  }
+  &--date{
+
+    p {
+      font-size: $tertiary-header;
+      color: $color-blue;
+    }
+
+  }
+  &--body{
+
+    p {
+      font-size: $main-fz;
+      text-align: justify;
+      padding-top: 8px;
+    }
+
+  }
+}

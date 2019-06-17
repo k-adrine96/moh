@@ -8,29 +8,29 @@
 
     <title>Moh</title>
     <!--FAVICON-->
-    <link rel="icon" href="img/moh-logo.png">
+    <link rel="icon" href="/img/moh-logo.png">
 
     <!--FONT-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    {{--<link rel="stylesheet" href="./css/style.css">--}}
+    {{--<link rel="stylesheet" href="/css/style.css">--}}
     <link rel="stylesheet" href="/css/app.css">
     @stack('css')
     <!--JQUERY-->
-    <script src="./js/libs/jquery-3.3.1.min.js"></script>
+    <script src="/js/libs/jquery-3.3.1.min.js"></script>
     <!--BOOTSTRAP-->
-    <script src="./js/libs/bootstrap.min.js"></script>
+    <script src="/js/libs/bootstrap.min.js"></script>
     <!--SELECT 2-->
-    <script src="./js/libs/select2.min.js"></script>
-    <script src="./js/select2.js"></script>
+    <script src="/js/libs/select2.min.js"></script>
+    <script src="/js/select2.js"></script>
     <!--SLICK-->
-    <script src="./js/slick-slider.js"></script>
-    <script src="./slick/slick/slick.min.js"></script>
+    <script src="/js/slick-slider.js"></script>
+    <script src="/slick/slick/slick.min.js"></script>
     <!--MAIN JS-->
-    <script src="./js/menu.js"></script>
-    <script src="./js/utils.js"></script>
-    <script src="js/pages/minister-staff.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/pages/minister-staff.js"></script>
+    <script src="/js/index.js"></script>
 
 </head>
 
@@ -39,6 +39,7 @@
         @include('layouts.header')
         <section class="empty-div"></section>
         @yield('content')
+        @include('layouts.subscribtion')
         @include('layouts.footer')
     </div>
     @include('layouts.sidebar')

@@ -19,7 +19,6 @@
       slidesToScroll: 1,
       arrows: true
     });
-
     $('.announcements--cont--slider').slick({
       prevArrow: ('.announcements-prev'),
       nextArrow: ('.announcements-next'),
@@ -28,9 +27,32 @@
       speed: 1000,
       slidesToShow: 4,
       slidesToScroll: 1,
-      arrows: true
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 1250,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
-
     $('.videos__background--content--slider').slick({
       prevArrow: ('.videos__background-prev'),
       nextArrow: ('.videos__background-next'),
@@ -41,7 +63,6 @@
       slidesToScroll: 1,
       arrows: true
     });
-
     $('.partners--cont--slider').slick({
       // prevArrow: ('.partners-prev'),
       // nextArrow: ('.partners-next'),
@@ -75,7 +96,6 @@
         }
       ]
     });
-
     $('.partners-1--cont--slider').slick({
       // prevArrow: ('.partners-prev'),
       // nextArrow: ('.partners-next'),
@@ -109,6 +129,14 @@
         }
       ]
     });
+    $('.news-slider').slick({
+      dots: false,
+      infinite: true,
+      speed: 2000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+    })
 
   }
 

@@ -1,16 +1,32 @@
-.announcement-container {
+.all__announcement-container {
 
-  .announcement__content {
-    max-width: $main-content-width;
-    margin: auto;
+  .all__announcement--row {
+    @include mainWidth;
+    .all__announcement {
+      padding: 10px;
+      &--header {
+        a {
+          text-decoration: none;
+          font-size: $secondary-header;
+          font-weight: 100;
+          color: $main-btn-color;
+          height: 86px;
+          overflow: hidden;
 
-    .pdf__text {
+        }
+      }
+      &--date {
 
-      .pdf__text {
-
-        ul {
-          padding-top: 10px;
-
+        p {
+          font-size: $tertiary-header;
+          color: $color-blue;
+        }
+      }
+      &--body {
+        p {
+          font-size: $main-fz;
+          height: 124px;
+          overflow: hidden;
         }
       }
     }

@@ -1,0 +1,17 @@
+.single__video {
+  @include mainWidth;
+  &--header {
+    h1 {
+      font-size: $secondary-header;
+      font-weight: 100;
+    }
+  }
+  &--date {
+    p {
+      font-size: $tertiary-header;
+    }
+  }
+  &--video {
+
+  }
+}

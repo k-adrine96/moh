@@ -11,7 +11,7 @@
             <input type="text" class="form-control" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"
                    aria-describedby="search">
             <div class="input-group-append">
-                <span class="input-group-text" id="search"><img src="img/search-logo.png" alt=""></span>
+                <span class="input-group-text" id="search"><img src="/img/search-logo.png" alt=""></span>
             </div>
         </div>
     </form>
@@ -26,7 +26,7 @@
             <ul class="hided--content">
                 <li><a href="{{ route('history') }}">Պատմություն</a></li>
                 <li><a href="{{ route('pages' , 'mission') }}">Առաքելություն</a></li>
-                <li><a href="{{ route('charter') }}">Կանոնադրություն</a></li>
+                <li><a href="{{ route('pages' , 'charter') }}">Կանոնադրություն</a></li>
                 <li>
                     <a href="javascript:;" class="second-lvl">Կառուցվածք</a>
                     <ul class="second--hidden--content">
@@ -55,9 +55,9 @@
         <li>
             <a href="javascript:;" class="first-lvl">Տեղեկատու</a>
             <ul class="hided--content">
-                <li><a href="{{ route('all.news') }}">Նորություններ</a></li>
-                <li><a href="{{ route('announcement') }}">Հայտարարություններ</a></li>
-                <li><a href="{{ route('videos') }}">Տեսադարան</a></li>
+                <li><a href="{{ route('pages' , 'all-news') }}">Նորություններ</a></li>
+                <li><a href="{{ route('pages' , 'announcement') }}">Հայտարարություններ</a></li>
+                <li><a href="{{ route('pages' , 'videos') }}">Տեսադարան</a></li>
                 <li><a href="javascript:;">Ելույթներ և հարցազրույցներ</a></li>
                 <li><a href="javascript:;">Հաշվետվություններ</a></li>
                 <li><a href="javascript:;">Մամուլի հաղորդագրություն</a></li>

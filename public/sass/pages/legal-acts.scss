@@ -9,10 +9,16 @@
       form {
         @include mainWidth;
 
+        }
+
         .form--content {
           width: 450px;
           margin: auto;
           padding: 25px 0;
+
+          @media only screen and (max-width: 500px) {
+            width: 96%;
+          }
 
           input {
             height: 40px;
@@ -35,6 +41,10 @@
     .legal__acts--list {
       @include mainWidth;
       margin-top: 40px;
+
+      @media only screen and (max-width: 1500px){
+        max-width: 98%;
+
     }
   }
 }
