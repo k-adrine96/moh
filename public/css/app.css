@@ -503,12 +503,30 @@ svg {
   }
 }
 
+@media only screen and (max-width: 991px) {
+  .subscription__content {
+    padding: 2rem 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .subscription__content--header {
+    text-align: center;
+  }
+}
+
 .subscription__content--header h1 {
   text-transform: uppercase;
   font-size: 3.8rem;
   font-weight: lighter;
   color: #FFFFFF;
   padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .subscription__content--header h1 {
+    font-size: 2.8rem;
+  }
 }
 
 .subscription__content--info a {
@@ -530,6 +548,12 @@ svg {
 
 .footer__container--social .footer--social li:not(:last-child) {
   margin-right: 3rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .footer__container--social .footer--social li:not(:last-child) {
+    margin-right: .4rem;
+  }
 }
 
 .footer__container--social .footer--social li:hover {
@@ -636,6 +660,14 @@ svg {
   padding-top: 2rem;
 }
 
+@media only screen and (max-width: 991px) {
+  .footer-main-content .footer__container .footer__container--info--contact {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
 .footer-main-content .footer__container .footer__container--info--contact li {
   line-height: 1.7;
 }
@@ -644,6 +676,15 @@ svg {
   margin-right: 2rem;
   border-right: 2px solid white;
   padding-right: 2rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .footer-main-content .footer__container .footer__container--info--contact li:not(:last-child) {
+    width: 100%;
+    margin-right: 0;
+    padding-right: 0 0 1rem;
+    border: none;
+  }
 }
 
 .footer-main-content .footer__container .footer__container--info--contact li h1 {
@@ -963,8 +1004,35 @@ svg {
   color: white;
 }
 
+.subscription__content--form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+}
+
+@media only screen and (max-width: 991px) {
+  .subscription__content--form {
+    display: block;
+    width: 100%;
+  }
+}
+
 .subscription__content--form .input-group {
-  width: 90%;
+  width: 406px;
+}
+
+@media only screen and (max-width: 991px) {
+  .subscription__content--form .input-group {
+    width: 500px;
+    margin: 0 auto 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .subscription__content--form .input-group {
+    width: 290px;
+  }
 }
 
 .subscription__content--form .input-group .input-group-prepend span {
@@ -1000,6 +1068,12 @@ svg {
   margin-right: 4rem;
   border: 1px solid #FFFFFF;
   font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .subscription__content--form .input-group input {
+    margin-right: 0;
+  }
 }
 
 .menu--form {
@@ -1939,6 +2013,12 @@ svg {
   padding: 3rem;
 }
 
+@media only screen and (max-width: 320px) {
+  .announcements--cont--slider--items:not(:last-child) {
+    padding: 1rem;
+  }
+}
+
 .announcements--cont--slider--items:hover {
   border-color: #FFBC35;
 }
@@ -1961,6 +2041,12 @@ svg {
   display: -webkit-box;
   height: 96px;
   -webkit-line-clamp: 3;
+}
+
+@media only screen and (max-width: 320px) {
+  .announcements--cont--slider--items h1 {
+    font-size: 2.5rem;
+  }
 }
 
 .announcements--cont--slider--items p {
@@ -3223,6 +3309,12 @@ svg {
 @media only screen and (max-width: 991px) {
   .pdf__year--small {
     width: 11%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .pdf__year--small {
+    width: 19%;
   }
 }
 

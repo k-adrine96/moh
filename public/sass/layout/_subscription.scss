@@ -13,15 +13,25 @@
     @media only screen and (max-width: 1500px){
       max-width: 98%;
     }
+    @media only screen and (max-width: 991px){
+      padding: 2rem 0 3rem;
+    }
 
     &--header {
 
+      @media only screen and (max-width: 991px){
+        text-align: center;
+      }
       h1 {
         text-transform: uppercase;
         font-size: $secondary-header;
         font-weight: $fw-lighter;
         color: $color-white;
         padding-bottom: 1rem;
+
+        @media only screen and (max-width: 500px){
+          font-size: $tertiary-header;
+        }
       }
     }
 

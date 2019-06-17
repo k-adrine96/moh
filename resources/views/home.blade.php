@@ -10,7 +10,8 @@
                             <h2>{!! $sliderInfo->title !!}</h2>
                             <p>{{ strip_tags($sliderInfo->text) }}</p>
                             @if($sliderInfo->url)
-                                <a href="{{$sliderInfo->url}}" class="animated__button animated__button--blue-1">Ավելին</a>
+                                <a href="{{$sliderInfo->url}}"
+                                   class="animated__button animated__button--blue-1">Ավելին</a>
                             @endif
                         </div>
                     </div>
@@ -24,17 +25,18 @@
                 </h1>
                 <div class="news__content--slider">
                     @foreach($news as $singleNews)
-                        <?php 
-                            $images = json_decode($singleNews->images);
-                            $featuredImage = $images[0];
+                        <?php
+                        $images = json_decode($singleNews->images);
+                        $featuredImage = $images[0];
                         ?>
                         <div class="news__content--items">
                             <div class="mobile-card">
                                 <div class="news__image clearfix">
-                                    <div class="news__image--background" style="background-image: url({{Storage::url($featuredImage)}})"></div>
+                                    <div class="news__image--background"
+                                         style="background-image: url({{Storage::url($featuredImage)}})"></div>
                                 </div>
                                 <div class="news__info">
-                                    <span><?php echo date('d F Y l' , strtotime($singleNews->date)); ?></span>
+                                    <span><?php echo date('d F Y l', strtotime($singleNews->date)); ?></span>
                                     <h1>{{$singleNews->title}}</h1>
                                     <p>{{ strip_tags($singleNews->description) }}</p>
                                     @if($singleNews->url)
@@ -62,7 +64,8 @@
                             <h1>{{$announcement->title}}</h1>
                             <p>{{ strip_tags($announcement->description) }}</p>
                             @if($announcement->url)
-                                <a href="{{$announcement->url}}" class="animated__button animated__button--yellow-small">Ավելին</a>
+                                <a href="{{$announcement->url}}"
+                                   class="animated__button animated__button--yellow-small">Ավելին</a>
                             @endif
                         </div>
                     @endforeach
@@ -87,10 +90,11 @@
                                     </iframe>
                                 </div>
                                 <div class="video__items--text">
-                                    <span><?php echo date('d F Y l' , strtotime($video->date)); ?></span>
+                                    <span><?php echo date('d F Y l', strtotime($video->date)); ?></span>
                                     <h1>{{$video->title}}</h1>
                                     @if($video->video_individual_url)
-                                        <a href="{{$video->video_individual_url}}" class="margin-auto animated__button animated__button--blue">ավելին</a>
+                                        <a href="{{$video->video_individual_url}}"
+                                           class="margin-auto animated__button animated__button--blue">ավելին</a>
                                     @endif
                                 </div>
                             </div>
@@ -129,13 +133,15 @@
                         </div>
                         <input type="text" class="form-control subs__input" placeholder="Անուն" aria-label="Username"
                                aria-describedby="name">
+                    </div>
+                    <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="email"><img src="img/email-icon.png" alt=""></span>
                         </div>
                         <input type="email" class="form-control subs__input" placeholder="Էլ․ հասցե"
                                aria-label="Username" aria-describedby="email">
-                        <a href="javascript:;" class="animated__button animated__button--yellow">բաժանորդագրվել</a>
                     </div>
+                    <a href="javascript:;" class="margin-auto animated__button animated__button--yellow">բաժանորդագրվել</a>
                 </div>
                 <div class="subscription__content--info pt-4">
                     <a href="javascript:;">Կարդացեք մեր գաղտնիությունը այստեղ</a>

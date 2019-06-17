@@ -14,6 +14,10 @@
 
         &:not(:last-child) {
           margin-right: 3rem;
+
+          @media only screen and (max-width: 500px){
+            margin-right: .4rem;
+          }
         }
 
         &:hover {
@@ -112,7 +116,10 @@
         padding-top: 2rem;
 
         &--contact {
-
+          @media only screen and (max-width: 991px) {
+            flex-wrap: wrap;
+            text-align: center;
+          }
           li {
             line-height: 1.7;
 
@@ -120,6 +127,13 @@
               margin-right: 2rem;
               border-right: 2px solid white;
               padding-right: 2rem;
+
+              @media only screen and (max-width: 991px) {
+                width: 100%;
+                margin-right: 0;
+                padding-right:0 0 1rem;
+                border: none;
+              }
             }
 
             h1 {
