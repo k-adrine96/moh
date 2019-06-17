@@ -16,4 +16,6 @@ class Videos extends Model
         'video_url',
         'video_individual_url'
     ];
+
+    protected $translatable = ['title'];
 }

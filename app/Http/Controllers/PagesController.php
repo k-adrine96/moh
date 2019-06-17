@@ -43,6 +43,9 @@ class PagesController extends Controller
         }else if($page === 'charter')
         {
             $pagesTexts = PagesTexts::where('page_slug', 'charter')->first();
+        }else if($page === 'all-news')
+        {
+            $content = News::get();
         }
 
         return view($page , compact('content' , 'partners' , 'pagesTexts' , 'educationInfos' , 'workInfos' , 'otherInfos'));
@@ -58,5 +61,20 @@ class PagesController extends Controller
 
         return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partners'));
 
+    }
+
+    public function showNewsIndividual($id){
+        $newsIndividual = News::where('id', $id)->first();
+        return view('single-news' , compact('newsIndividual'));
+    }
+
+    public function showAnnouncementIndividual($id){
+        $announcementIndividual = Announcements::where('id', $id)->first();
+        return view('single-announcement' , compact('announcementIndividual'));
+    }
+
+    public function showVideoIndividual($id){
+        $videoIndividual = Videos::where('id', $id)->first();
+        return view('single-video' , compact('videoIndividual'));
     }
 }

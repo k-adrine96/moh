@@ -55,7 +55,7 @@
         <li>
             <a href="javascript:;" class="first-lvl">Տեղեկատու</a>
             <ul class="hided--content">
-                <li><a href="{{ route('all.news') }}">Նորություններ</a></li>
+                <li><a href="{{ route('pages' , 'all-news') }}">Նորություններ</a></li>
                 <li><a href="{{ route('announcement') }}">Հայտարարություններ</a></li>
                 <li><a href="{{ route('videos') }}">Տեսադարան</a></li>
                 <li><a href="javascript:;">Ելույթներ և հարցազրույցներ</a></li>

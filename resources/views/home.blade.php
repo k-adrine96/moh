@@ -37,9 +37,7 @@
                                     <span><?php echo date('d F Y l' , strtotime($singleNews->date)); ?></span>
                                     <h1>{{$singleNews->title}}</h1>
                                     <p>{{ strip_tags($singleNews->description) }}</p>
-                                    @if($singleNews->url)
-                                        <a href="{{$singleNews->url}}" class="animated__button animated__button--blue">Ավելին</a>
-                                    @endif
+                                    <a href="{{route('show.news.individual' , $singleNews->id)}}" class="animated__button animated__button--blue">Ավելին</a>
                                 </div>
                             </div>
                         </div>
@@ -61,9 +59,7 @@
                         <div class="announcements--cont--slider--items">
                             <h1>{{$announcement->title}}</h1>
                             <p>{{ strip_tags($announcement->description) }}</p>
-                            @if($announcement->url)
-                                <a href="{{$announcement->url}}" class="animated__button animated__button--yellow-small">Ավելին</a>
-                            @endif
+                            <a href="{{route('show.announcement.individual' , $announcement->id)}}" class="animated__button animated__button--yellow-small">Ավելին</a>
                         </div>
                     @endforeach
                 </div>
@@ -89,9 +85,7 @@
                                 <div class="video__items--text">
                                     <span><?php echo date('d F Y l' , strtotime($video->date)); ?></span>
                                     <h1>{{$video->title}}</h1>
-                                    @if($video->video_individual_url)
-                                        <a href="{{$video->video_individual_url}}" class="margin-auto animated__button animated__button--blue">ավելին</a>
-                                    @endif
+                                    <a href="{{route('show.video.individual' , $video->id)}}" class="margin-auto animated__button animated__button--blue">ավելին</a>
                                 </div>
                             </div>
                         </div>
