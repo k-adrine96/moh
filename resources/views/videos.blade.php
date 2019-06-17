@@ -17,7 +17,7 @@
                                     <div class="video__content">
                                         <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         <div class="video__content--header">
-                                            <h1>այսօր իրականում․ Արսեն Թորոսյան</h1>
+                                            <a href="javascript:;">այսօր իրականում․ Արսեն Թորոսյան</a>
                                         </div>
                                         <div class="video__content--date">
                                             <p>16 հունվարի 2019 թվական</p>
@@ -28,97 +28,7 @@
                                     <div class="video__content">
                                         <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         <div class="video__content--header">
-                                            <h1>այսօր իրականում․ Արսեն Թորոսյան</h1>
-                                        </div>
-                                        <div class="video__content--date">
-                                            <p>16 հունվարի 2019 թվական</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="videos__row">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="video__content">
-                                        <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <div class="video__content--header">
-                                            <h1>այսօր իրականում․ Արսեն Թորոսյան</h1>
-                                        </div>
-                                        <div class="video__content--date">
-                                            <p>16 հունվարի 2019 թվական</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="video__content">
-                                        <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <div class="video__content--header">
-                                            <h1>այսօր իրականում․ Արսեն Թորոսյան</h1>
-                                        </div>
-                                        <div class="video__content--date">
-                                            <p>16 հունվարի 2019 թվական</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="videos__row">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="video__content">
-                                        <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <div class="video__content--header">
-                                            <h1>այսօր իրականում․ Արսեն Թորոսյան</h1>
-                                        </div>
-                                        <div class="video__content--date">
-                                            <p>16 հունվարի 2019 թվական</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="video__content">
-                                        <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <div class="video__content--header">
-                                            <h1>այսօր իրականում․ Արսեն Թորոսյան</h1>
-                                        </div>
-                                        <div class="video__content--date">
-                                            <p>16 հունվարի 2019 թվական</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="videos__row">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="video__content">
-                                        <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <div class="video__content--header">
-                                            <h1>այսօր իրականում․ Արսեն Թորոսյան</h1>
-                                        </div>
-                                        <div class="video__content--date">
-                                            <p>16 հունվարի 2019 թվական</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="video__content">
-                                        <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <div class="video__content--header">
-                                            <h1>այսօր իրականում․ Արսեն Թորոսյան</h1>
+                                            <a href="javascript:;">այսօր իրականում․ Արսեն Թորոսյան</a>
                                         </div>
                                         <div class="video__content--date">
                                             <p>16 հունվարի 2019 թվական</p>

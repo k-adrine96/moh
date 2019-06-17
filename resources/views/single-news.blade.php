@@ -12,9 +12,6 @@
                 $images = json_decode($newsIndividual->images);
                 $featuredImage = $images[0];
             @endphp
-            @foreach($images as $img)
-                {{--<div class="single__news--image" style="background-image: url('{{Storage::url($img)}}')"></div>--}}
-            @endforeach
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6 col-xl-7"><div class="single__news--info">
@@ -25,7 +22,7 @@
                                 <h2><?php echo date('d F Y l' , strtotime($newsIndividual->date)); ?></h2>
                             </div>
                             <div class="single__news--info--text">
-                                {{ strip_tags($newsIndividual->description) }}
+                                <p>{{ strip_tags($newsIndividual->description) }}</p>
                             </div>
                         </div></div>
                     <div class="col-lg-6 col-xl-5">

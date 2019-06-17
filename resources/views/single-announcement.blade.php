@@ -2,14 +2,19 @@
 
 @section('content')
     <main>
-        <section class="secondary__cover" style="background-image: url('img/single-news-cover.png')">
+        <section class="secondary__cover" style="background-image: url('/img/single-news-cover.png')">
             <div class="secondary__cover--content">
                 <h1>հայտարարություններ</h1>
             </div>
         </section>
-        <section>
-            <div class="announcements--cont--slider--items">
+        <section class="single__announcement">
+            <div class="single__announcement--header">
                 <h1>{{$announcementIndividual->title}}</h1>
+            </div>
+            <div class="single__announcement--date">
+                <p><?php echo date('d F Y l' , strtotime($announcementIndividual->date)); ?></p>
+            </div>
+            <div class="single__announcement--body">
                 <p>{{ strip_tags($announcementIndividual->description) }}</p>
             </div>
         </section>
