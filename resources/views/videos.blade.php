@@ -9,36 +9,30 @@
         </section>
         <section class="videos">
             <ul class="background__zebra">
-                <li>
-                    <div class="videos__row">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="video__content">
-                                        <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <div class="video__content--header">
-                                            <a href="javascript:;">այսօր իրականում․ Արսեն Թորոսյան</a>
+                @foreach($content->chunk(2) as $chunk)
+                    <li>
+                        <div class="videos__row">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    @foreach($chunk as $video)
+                                        <div class="col-sm-6">
+                                            <div class="video__content">
+                                                <?php $videoKey = explode('/', $video->video_url)[3]; ?>
+                                                <iframe width="80%" height="315" src="https://www.youtube.com/embed/{{$videoKey}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                <div class="video__content--header">
+                                                    <a href="{{route('show.video.individual' , $video->id)}}">{{$video->title}}</a>
+                                                </div>
+                                                <div class="video__content--date">
+                                                    <p><?php echo date('d F Y l', strtotime($video->date)); ?></p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="video__content--date">
-                                            <p>16 հունվարի 2019 թվական</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="video__content">
-                                        <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <div class="video__content--header">
-                                            <a href="javascript:;">այսօր իրականում․ Արսեն Թորոսյան</a>
-                                        </div>
-                                        <div class="video__content--date">
-                                            <p>16 հունվարի 2019 թվական</p>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
+                @endforeach
             </ul>
         </section>
         <section class="partners">

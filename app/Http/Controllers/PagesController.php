@@ -46,6 +46,12 @@ class PagesController extends Controller
         }else if($page === 'all-news')
         {
             $content = News::get();
+        }else if($page === 'videos')
+        {
+            $content = Videos::get();
+        }else if($page === 'announcement')
+        {
+            $content = Announcements::get();
         }
 
         return view($page , compact('content' , 'partners' , 'pagesTexts' , 'educationInfos' , 'workInfos' , 'otherInfos'));

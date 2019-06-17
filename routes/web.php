@@ -27,7 +27,7 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 //Route::view('/all-news', 'all-news')->name('all.news');
-Route::view('/announcement', 'announcement')->name('announcement');
+//Route::view('/announcement', 'announcement')->name('announcement');
 Route::view('/budget', 'budget')->name('budget');
 //Route::view('/charter', 'charter')->name('charter');
 //Route::view('/contact-us', 'contact-us')->name('contact.us');
@@ -43,7 +43,7 @@ Route::view('/public-council', 'public-council')->name('public.council');
 //Route::view('/single-news', 'single-news')->name('single.news');
 Route::view('/staff-list', 'staff-list')->name('staff.list');
 //Route::view('/mission', 'mission')->name('text');
-Route::view('/videos', 'videos')->name('videos');
+//Route::view('/videos', 'videos')->name('videos');
 
 Route::get('/','PagesController@homepage')->name('home');
 Route::get('/{page}','PagesController@index')->name('pages');

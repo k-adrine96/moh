@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 14, 2019 at 02:50 PM
+-- Generation Time: Jun 17, 2019 at 04:45 PM
 -- Server version: 5.7.26-0ubuntu0.16.04.1
 -- PHP Version: 7.0.33-0ubuntu0.16.04.5
 
@@ -92,6 +92,21 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`id`, `parent_id`, `order`, `name`, `slug`, `created_at`, `updated_at`) VALUES
 (1, NULL, 1, 'Category 1', 'category-1', '2019-06-04 08:24:51', '2019-06-04 08:24:51'),
 (2, NULL, 1, 'Category 2', 'category-2', '2019-06-04 08:24:51', '2019-06-04 08:24:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cover_photos`
+--
+
+CREATE TABLE `cover_photos` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `page_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `page_slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `page_cover_photo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -192,9 +207,9 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (94, 12, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
 (95, 12, 'description', 'rich_text_box', 'Description', 1, 1, 1, 1, 1, 1, '{}', 3),
 (96, 12, 'images', 'multiple_images', 'Images', 1, 1, 1, 1, 1, 1, '{}', 4),
-(97, 12, 'video', 'text', 'Video', 1, 1, 1, 1, 1, 1, '{}', 5),
+(97, 12, 'video', 'text', 'Video', 0, 1, 1, 1, 1, 1, '{"validation":{"rule":"nullable"}}', 5),
 (98, 12, 'date', 'date', 'Date', 1, 1, 1, 1, 1, 1, '{}', 6),
-(99, 12, 'url', 'text', 'Url', 0, 1, 1, 1, 1, 1, '{"validation":{"rule":"nullable"}}', 7),
+(99, 12, 'url', 'text', 'Url', 1, 1, 1, 1, 1, 1, '{"validation":{"rule":"nullable"}}', 7),
 (100, 12, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
 (101, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
 (102, 20, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
@@ -258,7 +273,13 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (187, 35, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
 (188, 35, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
 (189, 35, 'minister_info_belongsto_minister_info_category_relationship', 'relationship', 'minister_info_categories', 0, 1, 1, 1, 1, 1, '{"model":"App\\\\MinisterInfoCategory","table":"minister_info_categories","type":"belongsTo","column":"category_id","key":"id","label":"name","pivot_table":"announcements","pivot":"0","taggable":"0"}', 7),
-(190, 35, 'url', 'text', 'Url', 1, 1, 1, 1, 1, 1, '{"validation":{"rule":"nullable"}}', 5);
+(190, 35, 'url', 'text', 'Url', 1, 1, 1, 1, 1, 1, '{"validation":{"rule":"nullable"}}', 5),
+(191, 37, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(192, 37, 'page_name', 'text', 'Page Name', 1, 1, 1, 1, 1, 1, '{}', 2),
+(193, 37, 'page_slug', 'text', 'Page Slug', 1, 1, 1, 1, 1, 1, '{}', 3),
+(194, 37, 'page_cover_photo', 'image', 'Page Cover Photo', 1, 1, 1, 1, 1, 1, '{}', 4),
+(195, 37, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
+(196, 37, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6);
 
 -- --------------------------------------------------------
 
@@ -297,7 +318,7 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"desc","default_search_key":null,"scope":null}', '2019-06-04 08:24:51', '2019-06-14 04:15:22'),
 (7, 'cars', 'cars', 'Car', 'Cars', NULL, 'App\\Car', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-05 10:41:25', '2019-06-13 08:59:41'),
 (9, 'homepage_sliders', 'homepage-sliders', 'Homepage Slider', 'Homepage Sliders', NULL, 'App\\HomepageSlider', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-06 04:32:45', '2019-06-06 07:26:58'),
-(12, 'news', 'news', 'News', 'News', NULL, 'App\\News', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-07 04:47:54', '2019-06-07 04:52:04'),
+(12, 'news', 'news', 'News', 'News', NULL, 'App\\News', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-07 04:47:54', '2019-06-14 09:18:51'),
 (20, 'announcements', 'announcements', 'Announcement', 'Announcements', NULL, 'App\\Announcements', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-07 06:49:37', '2019-06-07 07:09:12'),
 (22, 'videos', 'videos', 'Video', 'Videos', NULL, 'App\\Videos', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}', '2019-06-07 08:13:21', '2019-06-07 08:13:21'),
 (25, 'minister_staffs', 'minister-staff', 'Minister Staff', 'Minister Staffs', NULL, 'App\\MinisterStaff', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-10 05:57:01', '2019-06-13 04:12:50'),
@@ -306,7 +327,8 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (29, 'pages_texts', 'pages-texts', 'Pages Text', 'Pages Texts', NULL, 'App\\PagesTexts', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-12 04:28:01', '2019-06-13 08:39:33'),
 (33, 'minister_pages', 'minister-page', 'Minister Page', 'Minister Page', NULL, 'App\\MinisterPage', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-13 08:37:53', '2019-06-13 08:42:13'),
 (34, 'minister_info_categories', 'minister-info-categories', 'Minister Info Category', 'Minister Info Categories', NULL, 'App\\MinisterInfoCategory', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}', '2019-06-13 09:18:22', '2019-06-13 09:18:22'),
-(35, 'minister_infos', 'minister-infos', 'Minister Info', 'Minister Infos', NULL, 'App\\MinisterInfo', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-13 09:32:53', '2019-06-13 10:28:25');
+(35, 'minister_infos', 'minister-infos', 'Minister Info', 'Minister Infos', NULL, 'App\\MinisterInfo', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-13 09:32:53', '2019-06-13 10:28:25'),
+(37, 'cover_photos', 'cover-photos', 'Cover Photo', 'Cover Photos', NULL, 'App\\CoverPhotos', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}', '2019-06-17 08:09:10', '2019-06-17 08:09:10');
 
 -- --------------------------------------------------------
 
@@ -408,7 +430,8 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (34, 1, 'Pages Texts', '', '_self', NULL, NULL, NULL, 14, '2019-06-12 04:28:01', '2019-06-13 08:32:39', 'voyager.pages-texts.index', NULL),
 (39, 1, 'Minister Page', '', '_self', NULL, NULL, 27, 1, '2019-06-13 08:37:53', '2019-06-13 08:38:20', 'voyager.minister-page.index', NULL),
 (40, 1, 'Minister Info Categories', '', '_self', NULL, NULL, 27, 2, '2019-06-13 09:18:22', '2019-06-13 09:48:22', 'voyager.minister-info-categories.index', NULL),
-(41, 1, 'Minister Infos', '', '_self', NULL, NULL, 27, 3, '2019-06-13 09:32:54', '2019-06-13 09:48:26', 'voyager.minister-infos.index', NULL);
+(41, 1, 'Minister Infos', '', '_self', NULL, NULL, 27, 3, '2019-06-13 09:32:54', '2019-06-13 09:48:26', 'voyager.minister-infos.index', NULL),
+(42, 1, 'Cover Photos', '', '_self', NULL, NULL, NULL, 15, '2019-06-17 08:09:10', '2019-06-17 08:09:10', 'voyager.cover-photos.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -477,7 +500,23 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (50, '2019_06_13_120030_create_minister_pages_table', 24),
 (54, '2019_06_13_130325_create_minister_info_categories_table', 25),
 (55, '2019_06_13_132757_create_minister_infos_table', 26),
-(56, '2019_06_13_142439_add_url_to_minister_infos_table', 27);
+(56, '2019_06_13_142439_add_url_to_minister_infos_table', 27),
+(57, '2019_06_14_095043_create_minister_history_categories_table', 28),
+(58, '2019_06_14_135727_drop_url_from_news_table', 28),
+(59, '2019_06_17_065247_drop_video_individual_url_from_videos_table', 29),
+(60, '2019_06_17_113519_create_cover_photos_table', 30);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `minister_history_categories`
+--
+
+CREATE TABLE `minister_history_categories` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -623,9 +662,8 @@ CREATE TABLE `news` (
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `images` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `video` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `video` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `date` date NOT NULL,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -634,10 +672,10 @@ CREATE TABLE `news` (
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`id`, `title`, `description`, `images`, `video`, `date`, `url`, `created_at`, `updated_at`) VALUES
-(1, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ»  ԾՐԱԳՐԻ ՆԱԽԱՊԱՏՐԱՍՏԱԿԱՆ ԱՇԽԱՏԱՆՔՆԵՐԸ', '<p><span style="color: #222222; font-family: \'dejavu sans mono\', monospace; font-size: 11px; white-space: pre-wrap;">2019 թվականի բյուջետային հատկացումների շրջանակներում առողջապահության նախարարությունը նախատեսում է աջակցություն ցուցաբերել բնակչության առանձին խմբերի անպտղությամբ պայմանավորված: Պետության կողմից երաշխավորված անվճար և արտոնյալ պայմաններով բժշկական օգնության և սպասարկման շրջանակներում կիրականացվեն անպտղության պատճառագիտության հետազոտություններ և անպտղության բուժում, այդ թվում`վերարտադրողական օժանդակ</span></p>', '["news\\/June2019\\/uCE6MXjF1srFAA8XyBzE.png","news\\/June2019\\/OZvbpD3nddDWSLq0U3M8.png","news\\/June2019\\/VMr51567mvub0tzN53uK.png"]', 'https://youtu.be/h56M8Ti6Ejw', '2019-06-12', '#', '2019-06-07 07:56:35', '2019-06-07 07:56:35'),
-(2, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ»  ԾՐԱԳՐԻ ՆԱԽԱՊԱՏՐԱՍՏԱԿԱՆ ԱՇԽԱՏԱՆՔՆԵՐԸ 2', '<p><span style="color: #222222; font-family: \'dejavu sans mono\', monospace; font-size: 11px; white-space: pre-wrap;">2019 թվականի բյուջետային հատկացումների շրջանակներում առողջապահության նախարարությունը նախատեսում է աջակցություն ցուցաբերել բնակչության առանձին խմբերի անպտղությամբ պայմանավորված: Պետության կողմից երաշխավորված անվճար և արտոնյալ պայմաններով բժշկական օգնության և սպասարկման շրջանակներում կիրականացվեն անպտղության պատճառագիտության հետազոտություններ և անպտղության բուժում, այդ թվում`վերարտադրողական օժանդակ 2</span></p>', '["news\\/June2019\\/65OSEyWqVlwdfDmAL5GH.png","news\\/June2019\\/kw8fxHPaTIzrNCqdm5n1.png","news\\/June2019\\/2bdjyn2d44YpyyrxLUSK.png"]', 'https://youtu.be/h56M8Ti6Ejw', '2019-06-27', '#', '2019-06-07 07:57:36', '2019-06-07 07:57:36'),
-(3, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ»  ԾՐԱԳՐԻ ՆԱԽԱՊԱՏՐԱՍՏԱԿԱՆ ԱՇԽԱՏԱՆՔՆԵՐԸ 3', '<p><span style="color: #222222; font-family: \'dejavu sans mono\', monospace; font-size: 11px; white-space: pre-wrap;">2019 թվականի բյուջետային հատկացումների շրջանակներում առողջապահության նախարարությունը նախատեսում է աջակցություն ցուցաբերել բնակչության առանձին խմբերի անպտղությամբ պայմանավորված: Պետության կողմից երաշխավորված անվճար և արտոնյալ պայմաններով բժշկական օգնության և սպասարկման շրջանակներում կիրականացվեն անպտղության պատճառագիտության հետազոտություններ և անպտղության բուժում, այդ թվում`վերարտադրողական օժանդակ 3</span></p>', '["news\\/June2019\\/lL13LrPgz4vaNAdop7Qm.png","news\\/June2019\\/MbVKOXwlaHcLob0VeNnK.png","news\\/June2019\\/L3NBHJf1Ngq49G9hmsyR.png"]', 'https://youtu.be/h56M8Ti6Ejw', '2019-06-04', '#', '2019-06-07 07:58:18', '2019-06-07 07:58:18');
+INSERT INTO `news` (`id`, `title`, `description`, `images`, `video`, `date`, `created_at`, `updated_at`) VALUES
+(1, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ»  ԾՐԱԳՐԻ ՆԱԽԱՊԱՏՐԱՍՏԱԿԱՆ ԱՇԽԱՏԱՆՔՆԵՐԸ', '<p><span style="color: #222222; font-family: \'dejavu sans mono\', monospace; font-size: 11px; white-space: pre-wrap;">2019 թվականի բյուջետային հատկացումների շրջանակներում առողջապահության նախարարությունը նախատեսում է աջակցություն ցուցաբերել բնակչության առանձին խմբերի անպտղությամբ պայմանավորված: Պետության կողմից երաշխավորված անվճար և արտոնյալ պայմաններով բժշկական օգնության և սպասարկման շրջանակներում կիրականացվեն անպտղության պատճառագիտության հետազոտություններ և անպտղության բուժում, այդ թվում`վերարտադրողական օժանդակ</span></p>', '["news\\/June2019\\/uCE6MXjF1srFAA8XyBzE.png","news\\/June2019\\/OZvbpD3nddDWSLq0U3M8.png","news\\/June2019\\/VMr51567mvub0tzN53uK.png"]', 'https://youtu.be/h56M8Ti6Ejw', '2019-06-12', '2019-06-07 07:56:35', '2019-06-07 07:56:35'),
+(2, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ»  ԾՐԱԳՐԻ ՆԱԽԱՊԱՏՐԱՍՏԱԿԱՆ ԱՇԽԱՏԱՆՔՆԵՐԸ 2', '<p><span style="color: #222222; font-family: \'dejavu sans mono\', monospace; font-size: 11px; white-space: pre-wrap;">2019 թվականի բյուջետային հատկացումների շրջանակներում առողջապահության նախարարությունը նախատեսում է աջակցություն ցուցաբերել բնակչության առանձին խմբերի անպտղությամբ պայմանավորված: Պետության կողմից երաշխավորված անվճար և արտոնյալ պայմաններով բժշկական օգնության և սպասարկման շրջանակներում կիրականացվեն անպտղության պատճառագիտության հետազոտություններ և անպտղության բուժում, այդ թվում`վերարտադրողական օժանդակ 2</span></p>', '["news\\/June2019\\/65OSEyWqVlwdfDmAL5GH.png","news\\/June2019\\/kw8fxHPaTIzrNCqdm5n1.png","news\\/June2019\\/2bdjyn2d44YpyyrxLUSK.png"]', 'https://youtu.be/h56M8Ti6Ejw', '2019-06-27', '2019-06-07 07:57:36', '2019-06-07 07:57:36'),
+(3, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ»  ԾՐԱԳՐԻ ՆԱԽԱՊԱՏՐԱՍՏԱԿԱՆ ԱՇԽԱՏԱՆՔՆԵՐԸ 3', '<p><span style="color: #222222; font-family: \'dejavu sans mono\', monospace; font-size: 11px; white-space: pre-wrap;">2019 թվականի բյուջետային հատկացումների շրջանակներում առողջապահության նախարարությունը նախատեսում է աջակցություն ցուցաբերել բնակչության առանձին խմբերի անպտղությամբ պայմանավորված: Պետության կողմից երաշխավորված անվճար և արտոնյալ պայմաններով բժշկական օգնության և սպասարկման շրջանակներում կիրականացվեն անպտղության պատճառագիտության հետազոտություններ և անպտղության բուժում, այդ թվում`վերարտադրողական օժանդակ 3</span></p>', '["news\\/June2019\\/lL13LrPgz4vaNAdop7Qm.png","news\\/June2019\\/MbVKOXwlaHcLob0VeNnK.png","news\\/June2019\\/L3NBHJf1Ngq49G9hmsyR.png"]', 'https://youtu.be/h56M8Ti6Ejw', '2019-06-04', '2019-06-07 07:58:18', '2019-06-07 07:58:18');
 
 -- --------------------------------------------------------
 
@@ -854,7 +892,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (138, 'read_minister_infos', 'minister_infos', '2019-06-13 09:32:54', '2019-06-13 09:32:54'),
 (139, 'edit_minister_infos', 'minister_infos', '2019-06-13 09:32:54', '2019-06-13 09:32:54'),
 (140, 'add_minister_infos', 'minister_infos', '2019-06-13 09:32:54', '2019-06-13 09:32:54'),
-(141, 'delete_minister_infos', 'minister_infos', '2019-06-13 09:32:54', '2019-06-13 09:32:54');
+(141, 'delete_minister_infos', 'minister_infos', '2019-06-13 09:32:54', '2019-06-13 09:32:54'),
+(142, 'browse_cover_photos', 'cover_photos', '2019-06-17 08:09:10', '2019-06-17 08:09:10'),
+(143, 'read_cover_photos', 'cover_photos', '2019-06-17 08:09:10', '2019-06-17 08:09:10'),
+(144, 'edit_cover_photos', 'cover_photos', '2019-06-17 08:09:10', '2019-06-17 08:09:10'),
+(145, 'add_cover_photos', 'cover_photos', '2019-06-17 08:09:10', '2019-06-17 08:09:10'),
+(146, 'delete_cover_photos', 'cover_photos', '2019-06-17 08:09:10', '2019-06-17 08:09:10');
 
 -- --------------------------------------------------------
 
@@ -1016,7 +1059,12 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (140, 1),
 (140, 2),
 (141, 1),
-(141, 2);
+(141, 2),
+(142, 1),
+(143, 1),
+(144, 1),
+(145, 1),
+(146, 1);
 
 -- --------------------------------------------------------
 
@@ -1190,7 +1238,11 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (77, 'pages', 'slug', 2, 'hy', 'test', '2019-06-14 04:17:47', '2019-06-14 04:17:47'),
 (78, 'pages', 'slug', 2, 'ru', 'test', '2019-06-14 04:17:47', '2019-06-14 04:17:47'),
 (79, 'pages', 'body', 2, 'hy', '<p>test</p>', '2019-06-14 04:17:47', '2019-06-14 04:17:47'),
-(80, 'pages', 'body', 2, 'ru', '<p>test</p>', '2019-06-14 04:17:47', '2019-06-14 04:17:47');
+(80, 'pages', 'body', 2, 'ru', '<p>test</p>', '2019-06-14 04:17:47', '2019-06-14 04:17:47'),
+(81, 'data_types', 'display_name_singular', 12, 'hy', 'News', '2019-06-14 09:18:51', '2019-06-14 09:18:51'),
+(82, 'data_types', 'display_name_singular', 12, 'ru', 'News', '2019-06-14 09:18:51', '2019-06-14 09:18:51'),
+(83, 'data_types', 'display_name_plural', 12, 'hy', 'News', '2019-06-14 09:18:51', '2019-06-14 09:18:51'),
+(84, 'data_types', 'display_name_plural', 12, 'ru', 'News', '2019-06-14 09:18:51', '2019-06-14 09:18:51');
 
 -- --------------------------------------------------------
 
@@ -1248,7 +1300,6 @@ CREATE TABLE `videos` (
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `date` date NOT NULL,
   `video_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `video_individual_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1257,10 +1308,10 @@ CREATE TABLE `videos` (
 -- Dumping data for table `videos`
 --
 
-INSERT INTO `videos` (`id`, `title`, `date`, `video_url`, `video_individual_url`, `created_at`, `updated_at`) VALUES
-(1, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ»', '2019-06-04', 'https://youtu.be/A_xWDAbnBSU', '#', '2019-06-07 08:15:00', '2019-06-07 08:29:50'),
-(2, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ» 2', '2019-06-09', 'https://youtu.be/wOXZM9Bzhdw', '#', '2019-06-07 08:16:00', '2019-06-07 08:24:21'),
-(3, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ» 3', '2019-06-07', 'https://youtu.be/wOXZM9Bzhdw', '#', '2019-06-07 08:16:00', '2019-06-07 08:24:17');
+INSERT INTO `videos` (`id`, `title`, `date`, `video_url`, `created_at`, `updated_at`) VALUES
+(1, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ»', '2019-06-04', 'https://youtu.be/A_xWDAbnBSU', '2019-06-07 08:15:00', '2019-06-07 08:29:50'),
+(2, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ» 2', '2019-06-09', 'https://youtu.be/wOXZM9Bzhdw', '2019-06-07 08:16:00', '2019-06-07 08:24:21'),
+(3, 'ԸՆԹԱՆՈՒՄ ԵՆ «ԱՆԶԱՎԱԿ ԱՄՈՒՍՆԱԿԱՆ ԶՈՒԻԳԵՐԻՆ ԱՋԱԿՑՈՒԹՅՈՒՆ» 3', '2019-06-07', 'https://youtu.be/wOXZM9Bzhdw', '2019-06-07 08:16:00', '2019-06-07 08:24:17');
 
 --
 -- Indexes for dumped tables
@@ -1285,6 +1336,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `categories_slug_unique` (`slug`),
   ADD KEY `categories_parent_id_foreign` (`parent_id`);
+
+--
+-- Indexes for table `cover_photos`
+--
+ALTER TABLE `cover_photos`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `data_rows`
@@ -1325,6 +1382,12 @@ ALTER TABLE `menu_items`
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `minister_history_categories`
+--
+ALTER TABLE `minister_history_categories`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1474,15 +1537,20 @@ ALTER TABLE `cars`
 ALTER TABLE `categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
+-- AUTO_INCREMENT for table `cover_photos`
+--
+ALTER TABLE `cover_photos`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=191;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=197;
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT for table `homepage_sliders`
 --
@@ -1497,12 +1565,17 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+--
+-- AUTO_INCREMENT for table `minister_history_categories`
+--
+ALTER TABLE `minister_history_categories`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `minister_infos`
 --
@@ -1552,7 +1625,7 @@ ALTER TABLE `partners`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 --
 -- AUTO_INCREMENT for table `posts`
 --
@@ -1572,7 +1645,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 --
 -- AUTO_INCREMENT for table `users`
 --
