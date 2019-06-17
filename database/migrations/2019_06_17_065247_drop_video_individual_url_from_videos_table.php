@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMinisterHistoryCategoriesTable extends Migration
+class DropVideoIndividualUrlFromVideosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateMinisterHistoryCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('minister_history_categories', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::table('videos', function (Blueprint $table) {
+            $table->dropColumn('video_individual_url');
         });
     }
 
@@ -26,6 +25,8 @@ class CreateMinisterHistoryCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('minister_history_categories');
+        Schema::table('videos', function (Blueprint $table) {
+            //
+        });
     }
 }

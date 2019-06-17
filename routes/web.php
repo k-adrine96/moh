@@ -26,7 +26,7 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::view('/all-news', 'all-news')->name('all.news');
+//Route::view('/all-news', 'all-news')->name('all.news');
 Route::view('/announcement', 'announcement')->name('announcement');
 Route::view('/budget', 'budget')->name('budget');
 //Route::view('/charter', 'charter')->name('charter');
@@ -40,10 +40,13 @@ Route::view('/links', 'links')->name('links');
 // Route::view('/ministry-staff', 'ministry-staff')->name('ministry.staff');
 Route::view('/ministry-structure', 'ministry-structure')->name('ministry.structure');
 Route::view('/public-council', 'public-council')->name('public.council');
-Route::view('/single-news', 'single-news')->name('single.news');
+//Route::view('/single-news', 'single-news')->name('single.news');
 Route::view('/staff-list', 'staff-list')->name('staff.list');
 //Route::view('/mission', 'mission')->name('text');
 Route::view('/videos', 'videos')->name('videos');
 
 Route::get('/','PagesController@homepage')->name('home');
 Route::get('/{page}','PagesController@index')->name('pages');
+Route::get('/single-news/{id}','PagesController@showNewsIndividual')->name('show.news.individual');
+Route::get('/single-announcement/{id}','PagesController@showAnnouncementIndividual')->name('show.announcement.individual');
+Route::get('/single-video/{id}','PagesController@showVideoIndividual')->name('show.video.individual');
