@@ -14,8 +14,10 @@
             <div class="single__video--date">
                 <p><?php echo date('d F Y l' , strtotime($videoIndividual->date)); ?></p>
             </div>
-            <div class="single__video--video">
-
+            <div class="single__video--video text-center m-auto">
+                {{--<iframe class="video" width="100%" height="auto"--}}
+                        {{--src="https://www.youtube.com/embed/{{$videoKey}}">--}}
+                {{--</iframe>--}}
             </div>
         </section>
         <section class="partners">
