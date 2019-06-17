@@ -39,6 +39,7 @@
         @include('layouts.header')
         <section class="empty-div"></section>
         @yield('content')
+        @include('layouts.subscribtion')
         @include('layouts.footer')
     </div>
     @include('layouts.sidebar')
