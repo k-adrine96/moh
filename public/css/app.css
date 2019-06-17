@@ -1907,7 +1907,7 @@ svg {
   color: #4D4D4D;
   font-size: 1.8rem;
   margin-bottom: 4rem;
-  height: 245px;
+  height: 249px;
   overflow: hidden;
 }
 
@@ -2269,14 +2269,17 @@ svg {
   }
 }
 
-.single__news--image {
+.single__news .news-slider .single__news--image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 52%;
-  padding-bottom: 34%;
-  float: right;
-  margin: 0 0 34px 34px;
+  height: 312px;
+}
+
+.single__news--info {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
 }
 
 .single__news--info--header h1 {
@@ -2296,6 +2299,7 @@ svg {
 .single__news--info--text p {
   font-size: 1.8rem;
   padding-bottom: 1rem;
+  text-align: justify;
 }
 
 .minister__staff--container--width {
@@ -2838,19 +2842,32 @@ svg {
   padding: 0 !important;
 }
 
-.announcement-container .announcement__content {
+.all__announcement-container .all__announcement--row {
   max-width: 1400px;
   margin: auto;
 }
 
-@media only screen and (max-width: 1500px) {
-  .announcement-container .announcement__content {
-    max-width: 98%;
-  }
+.all__announcement-container .all__announcement--row .all__announcement {
+  padding: 10px;
 }
 
-.announcement-container .announcement__content .pdf__text .pdf__text ul {
-  padding-top: 10px;
+.all__announcement-container .all__announcement--row .all__announcement--header h1 {
+  font-size: 3.8rem;
+  font-weight: 100;
+  color: #FFBC35;
+  height: 86px;
+  overflow: hidden;
+}
+
+.all__announcement-container .all__announcement--row .all__announcement--date p {
+  font-size: 2.8rem;
+  color: #0071BC;
+}
+
+.all__announcement-container .all__announcement--row .all__announcement--body p {
+  font-size: 1.8rem;
+  height: 124px;
+  overflow: hidden;
 }
 
 .charter-container .charter-content h1 {
@@ -3233,6 +3250,42 @@ svg {
 
 .ministry__structure .ministry__structure--list--right li {
   height: 51px;
+}
+
+.single__announcement {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.single__announcement--header h1 {
+  font-size: 3.8rem;
+  font-weight: 100;
+  padding: 15px 0;
+}
+
+.single__announcement--date p {
+  font-size: 2.8rem;
+  color: #0071BC;
+}
+
+.single__announcement--body p {
+  font-size: 1.8rem;
+  text-align: justify;
+  padding-top: 8px;
+}
+
+.single__video {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.single__video--header h1 {
+  font-size: 3.8rem;
+  font-weight: 100;
+}
+
+.single__video--date p {
+  font-size: 2.8rem;
 }
 
 .main__cont__size {

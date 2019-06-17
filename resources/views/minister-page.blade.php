@@ -135,14 +135,14 @@
                     <form action="" class="ask__minister--form">
                         <div class="input-group mb-4">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><img src="img/username-icon.png" alt=""></span>
+                                <span class="input-group-text"><img src="/img/username-icon.png" alt=""></span>
                             </div>
                             <input type="text" class="form-control" placeholder="Անուն Ազգանուն" aria-label="Username"
                                    aria-describedby="basic-addon1">
                         </div>
                         <div class="input-group mb-4">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><img src="img/email-1-icon.png" alt=""></span>
+                                <span class="input-group-text"><img src="/img/email-1-icon.png" alt=""></span>
                             </div>
                             <input type="text" class="form-control" placeholder="Էլ․ հասցե" aria-label="Username"
                                    aria-describedby="basic-addon1">

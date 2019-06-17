@@ -1,20 +1,30 @@
-.announcement-container {
+.all__announcement-container {
 
-  .announcement__content {
-    max-width: $main-content-width;
-    margin: auto;
+  .all__announcement--row {
+    @include mainWidth;
+    .all__announcement {
+      padding: 10px;
+      &--header {
+        h1 {
+          font-size: $secondary-header;
+          font-weight: 100;
+          color: $main-btn-color;
+          height: 86px;
+          overflow: hidden;
+        }
+      }
+      &--date {
 
-    @media only screen and (max-width: 1500px){
-      max-width: 98%;
-    }
-
-    .pdf__text {
-
-      .pdf__text {
-
-        ul {
-          padding-top: 10px;
-
+        p {
+          font-size: $tertiary-header;
+          color: $color-blue;
+        }
+      }
+      &--body {
+        p {
+          font-size: $main-fz;
+          height: 124px;
+          overflow: hidden;
         }
       }
     }

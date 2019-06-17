@@ -11,7 +11,7 @@
             <input type="text" class="form-control" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"
                    aria-describedby="search">
             <div class="input-group-append">
-                <span class="input-group-text" id="search"><img src="img/search-logo.png" alt=""></span>
+                <span class="input-group-text" id="search"><img src="/img/search-logo.png" alt=""></span>
             </div>
         </div>
     </form>
