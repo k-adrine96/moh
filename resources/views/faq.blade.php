@@ -174,12 +174,12 @@
                 <div class="subscription__content--form">
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="name"><img src="img/name-icon.png" alt=""></span>
+                            <span class="input-group-text" id="name"><img src="/img/name-icon.png" alt=""></span>
                         </div>
                         <input type="text" class="form-control subs__input" placeholder="Անուն" aria-label="Username"
                                aria-describedby="name">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="email"><img src="img/email-icon.png" alt=""></span>
+                            <span class="input-group-text" id="email"><img src="/img/email-icon.png" alt=""></span>
                         </div>
                         <input type="email" class="form-control subs__input" placeholder="Էլ․ հասցե"
                                aria-label="Username" aria-describedby="email">

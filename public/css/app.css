@@ -2269,14 +2269,17 @@ svg {
   }
 }
 
-.single__news--image {
+.single__news .news-slider .single__news--image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 52%;
-  padding-bottom: 34%;
-  float: right;
-  margin: 0 0 34px 34px;
+  height: 312px;
+}
+
+.single__news--info {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
 }
 
 .single__news--info--header h1 {
