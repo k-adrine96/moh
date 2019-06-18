@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 17, 2019 at 04:45 PM
+-- Generation Time: Jun 18, 2019 at 11:51 AM
 -- Server version: 5.7.26-0ubuntu0.16.04.1
 -- PHP Version: 7.0.33-0ubuntu0.16.04.5
 
@@ -107,6 +107,31 @@ CREATE TABLE `cover_photos` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cover_photos`
+--
+
+INSERT INTO `cover_photos` (`id`, `page_name`, `page_slug`, `page_cover_photo`, `created_at`, `updated_at`) VALUES
+(1, 'ՀԵՏԱԴԱՐՁ ԿԱՊ', 'contact-us', 'cover-photos/June2019/MUteE6WVivYuChXVz2Ge.png', '2019-06-17 10:19:59', '2019-06-17 10:19:59'),
+(2, 'ՆԱԽԱՐԱՐ', 'minister-page', 'cover-photos/June2019/emPrkoNnfZzQQaRVgpgX.png', '2019-06-17 10:20:00', '2019-06-17 10:42:01'),
+(3, 'ՆԱԽԱՐԱՐԻ ԱՇԽԱՏԱԿԱԶՄ', 'minister-staff', 'cover-photos/June2019/7SGtJ1qoDdzGcDT4KcpA.png', '2019-06-17 10:31:42', '2019-06-17 10:31:42'),
+(4, 'ՆՈՐՈՒԹՅՈՒՆՆԵՐ', 'all-news', 'cover-photos/June2019/eqb10s4WtArTkCc6nCrL.png', '2019-06-17 10:39:39', '2019-06-17 10:39:39'),
+(5, 'ՀԱՅՏԱՐԱՐՈՒԹՅՈՒՆՆԵՐ', 'announcement', 'cover-photos/June2019/mwmJ9VuHNwjZ7kqwOhCe.png', '2019-06-17 10:41:47', '2019-06-17 10:41:47'),
+(6, 'ԲՅՈՒՋԵ', 'budget', 'cover-photos/June2019/UPOaN8T8MbpKvmMbME9U.png', '2019-06-17 10:49:15', '2019-06-17 10:49:15'),
+(7, 'ԿԱՆՈՆԱԴՐՈՒԹՅՈՒՆ', 'charter', 'cover-photos/June2019/2njGsRFoJ8LCNUaU5Ava.png', '2019-06-17 10:52:36', '2019-06-17 10:52:36'),
+(8, 'FAQ', 'faq', 'cover-photos/June2019/w6mXaZCMAu070dzDFuqe.png', '2019-06-17 10:55:01', '2019-06-17 10:55:01'),
+(9, 'ՊԱՏՄՈՒԹՅՈՒՆ', 'history', 'cover-photos/June2019/FHwoHER5XIjiQpVw5EWn.png', '2019-06-17 10:57:09', '2019-06-17 10:57:09'),
+(10, 'ԻՐԱՎԱԿԱՆ ԱԿՏԵՐ', 'legal-acts', 'cover-photos/June2019/EWEMrGzVT2rxWuqCE94P.png', '2019-06-17 10:59:42', '2019-06-17 10:59:42'),
+(11, 'ՀՂՈՒՄՆԵՐ', 'links', 'cover-photos/June2019/1XhTXoCFv1qTp6RqJO6F.png', '2019-06-17 11:01:36', '2019-06-17 11:01:36'),
+(12, 'ՆԱԽԱՐԱՐՈՒԹՅԱՆ ԱՇԽԱՏԱԿԱԶՄ', 'ministry-staff', 'cover-photos/June2019/IAxm1y1VuQj7oXXbgpng.png', '2019-06-17 11:04:50', '2019-06-17 11:04:50'),
+(13, 'ԿԱՌՈՒՑՎԱԾՔԻ ԳԾԱՊԱՏԿԵՐ', 'ministry-structure', 'cover-photos/June2019/7jt0DO7z26o9g0a9s4zF.png', '2019-06-17 11:07:06', '2019-06-17 11:07:06'),
+(14, 'ԱՌԱՔԵԼՈՒԹՅՈՒՆ', 'mission', 'cover-photos/June2019/yeUxcZGgpf8VwGnuljza.png', '2019-06-17 11:08:49', '2019-06-17 11:08:49'),
+(15, 'ՆԱԽԱՐԱՐԻՆ ԿԻՑ ՀԱՍԱՐԱԿԱԿԱՆ ԽՈՐՀՈՒՐԴ', 'public-council', 'cover-photos/June2019/wTg82iPpHLRtLiCce9j0.png', '2019-06-17 11:11:11', '2019-06-17 11:11:11'),
+(16, 'ՀԱՅՏԱՐԱՐՈՒԹՅՈՒՆ', 'single-announcement', 'cover-photos/June2019/uQxRPCAii6s4wdlKk2rE.png', '2019-06-17 11:16:16', '2019-06-17 11:16:16'),
+(17, 'ՆՈՐՈՒԹՅՈՒՆ', 'single-news', 'cover-photos/June2019/m5J9SH5pz79eTF2QnE0l.png', '2019-06-17 11:18:59', '2019-06-17 11:18:59'),
+(18, 'Վիդեո-Ինդիվիդուալ', 'single-video', 'cover-photos/June2019/nhDRcj5ITQFSaBxx2Yu7.png', '2019-06-17 11:21:00', '2019-06-17 11:22:02'),
+(19, 'ՀԱՍՏԻՔԱՑՈՒՑԱԿ', 'staff-list', 'cover-photos/June2019/i9emFwU7dtFHGfOlEwto.png', '2019-06-17 11:24:01', '2019-06-17 11:24:01');
 
 -- --------------------------------------------------------
 
@@ -248,8 +273,8 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (144, 28, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
 (145, 28, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
 (146, 29, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(147, 29, 'page_name', 'text', 'Page Name', 1, 1, 1, 0, 1, 1, '{}', 2),
-(148, 29, 'page_slug', 'text', 'Page Slug', 1, 1, 1, 0, 1, 1, '{}', 3),
+(147, 29, 'page_name', 'text', 'Page Name', 1, 1, 1, 0, 0, 0, '{}', 2),
+(148, 29, 'page_slug', 'text', 'Page Slug', 1, 1, 1, 0, 0, 0, '{}', 3),
 (149, 29, 'page_text1', 'rich_text_box', 'Page Text1', 1, 1, 1, 1, 1, 1, '{}', 4),
 (150, 29, 'page_text2', 'rich_text_box', 'Page Text2', 0, 1, 1, 1, 1, 1, '{"validation":{"rule":"nullable"}}', 5),
 (151, 29, 'page_text3', 'rich_text_box', 'Page Text3', 0, 1, 1, 1, 1, 1, '{"validation":{"rule":"nullable"}}', 6),
@@ -275,8 +300,8 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (189, 35, 'minister_info_belongsto_minister_info_category_relationship', 'relationship', 'minister_info_categories', 0, 1, 1, 1, 1, 1, '{"model":"App\\\\MinisterInfoCategory","table":"minister_info_categories","type":"belongsTo","column":"category_id","key":"id","label":"name","pivot_table":"announcements","pivot":"0","taggable":"0"}', 7),
 (190, 35, 'url', 'text', 'Url', 1, 1, 1, 1, 1, 1, '{"validation":{"rule":"nullable"}}', 5),
 (191, 37, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(192, 37, 'page_name', 'text', 'Page Name', 1, 1, 1, 1, 1, 1, '{}', 2),
-(193, 37, 'page_slug', 'text', 'Page Slug', 1, 1, 1, 1, 1, 1, '{}', 3),
+(192, 37, 'page_name', 'text', 'Page Name', 1, 1, 1, 0, 0, 0, '{}', 2),
+(193, 37, 'page_slug', 'text', 'Page Slug', 1, 1, 1, 0, 0, 0, '{}', 3),
 (194, 37, 'page_cover_photo', 'image', 'Page Cover Photo', 1, 1, 1, 1, 1, 1, '{}', 4),
 (195, 37, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
 (196, 37, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6);
@@ -324,11 +349,11 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (25, 'minister_staffs', 'minister-staff', 'Minister Staff', 'Minister Staffs', NULL, 'App\\MinisterStaff', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-10 05:57:01', '2019-06-13 04:12:50'),
 (26, 'ministry_staffs', 'ministry-staff', 'Ministry Staff', 'Ministry Staffs', NULL, 'App\\MinistryStaff', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}', '2019-06-10 09:10:30', '2019-06-10 09:10:30'),
 (28, 'partners', 'partners', 'Partner', 'Partners', NULL, 'App\\Partners', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}', '2019-06-10 10:04:06', '2019-06-10 10:04:06'),
-(29, 'pages_texts', 'pages-texts', 'Pages Text', 'Pages Texts', NULL, 'App\\PagesTexts', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-12 04:28:01', '2019-06-13 08:39:33'),
+(29, 'pages_texts', 'pages-texts', 'Pages Text', 'Pages Texts', NULL, 'App\\PagesTexts', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-12 04:28:01', '2019-06-17 11:28:58'),
 (33, 'minister_pages', 'minister-page', 'Minister Page', 'Minister Page', NULL, 'App\\MinisterPage', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-13 08:37:53', '2019-06-13 08:42:13'),
 (34, 'minister_info_categories', 'minister-info-categories', 'Minister Info Category', 'Minister Info Categories', NULL, 'App\\MinisterInfoCategory', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}', '2019-06-13 09:18:22', '2019-06-13 09:18:22'),
 (35, 'minister_infos', 'minister-infos', 'Minister Info', 'Minister Infos', NULL, 'App\\MinisterInfo', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-13 09:32:53', '2019-06-13 10:28:25'),
-(37, 'cover_photos', 'cover-photos', 'Cover Photo', 'Cover Photos', NULL, 'App\\CoverPhotos', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}', '2019-06-17 08:09:10', '2019-06-17 08:09:10');
+(37, 'cover_photos', 'cover-photos', 'Cover Photo', 'Cover Photos', NULL, 'App\\CoverPhotos', NULL, NULL, NULL, 1, 0, '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}', '2019-06-17 08:09:10', '2019-06-17 11:29:09');
 
 -- --------------------------------------------------------
 
@@ -416,22 +441,22 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (12, 1, 'Posts', '', '_self', 'voyager-news', NULL, NULL, 5, '2019-06-04 08:24:51', '2019-06-06 05:20:49', 'voyager.posts.index', NULL),
 (13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 6, '2019-06-04 08:24:51', '2019-06-06 05:20:49', 'voyager.pages.index', NULL),
 (14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 5, '2019-06-04 08:24:51', '2019-06-06 05:20:49', 'voyager.hooks', NULL),
-(15, 1, 'Home', '', '_self', NULL, '#000000', NULL, 10, '2019-06-05 10:41:25', '2019-06-06 06:37:00', 'voyager.home.index', 'null'),
+(15, 1, 'Home', '', '_self', NULL, '#000000', NULL, 12, '2019-06-05 10:41:25', '2019-06-17 10:17:30', 'voyager.home.index', 'null'),
 (17, 1, 'Homepage Sliders', '', '_self', NULL, NULL, 15, 1, '2019-06-06 04:32:45', '2019-06-06 05:21:30', 'voyager.homepage-sliders.index', NULL),
-(18, 1, 'News', '', '_self', NULL, '#000000', NULL, 11, '2019-06-06 07:35:14', '2019-06-06 07:35:14', NULL, ''),
+(18, 1, 'News', '', '_self', NULL, '#000000', NULL, 13, '2019-06-06 07:35:14', '2019-06-17 10:17:30', NULL, ''),
 (21, 1, 'News', '', '_self', NULL, NULL, 18, 1, '2019-06-07 04:47:54', '2019-06-07 04:48:31', 'voyager.news.index', NULL),
 (22, 1, 'Announcements', '', '_self', NULL, NULL, 23, 1, '2019-06-07 06:49:37', '2019-06-07 07:04:06', 'voyager.announcements.index', NULL),
 (24, 1, 'Announcements', '/admin/announcements', '_self', NULL, '#000000', 18, 2, '2019-06-07 07:05:29', '2019-06-07 07:05:34', NULL, ''),
 (25, 1, 'Videos', '', '_self', NULL, NULL, 18, 3, '2019-06-07 08:13:21', '2019-06-07 08:13:50', 'voyager.videos.index', NULL),
-(27, 1, 'Ministry', '', '_self', NULL, '#000000', NULL, 12, '2019-06-10 05:23:41', '2019-06-13 08:32:39', NULL, ''),
+(27, 1, 'Ministry', '', '_self', NULL, '#000000', NULL, 14, '2019-06-10 05:23:41', '2019-06-17 10:17:30', NULL, ''),
 (31, 1, 'Minister\'s Staff', '', '_self', NULL, '#000000', 27, 4, '2019-06-10 05:57:01', '2019-06-13 09:48:26', 'voyager.minister-staff.index', 'null'),
 (32, 1, 'Ministry Staff', '', '_self', NULL, '#000000', 27, 5, '2019-06-10 09:10:30', '2019-06-13 09:48:26', 'voyager.ministry-staff.index', 'null'),
-(33, 1, 'Partners', '', '_self', NULL, NULL, NULL, 13, '2019-06-10 10:04:06', '2019-06-13 08:32:39', 'voyager.partners.index', NULL),
-(34, 1, 'Pages Texts', '', '_self', NULL, NULL, NULL, 14, '2019-06-12 04:28:01', '2019-06-13 08:32:39', 'voyager.pages-texts.index', NULL),
+(33, 1, 'Partners', '', '_self', NULL, NULL, NULL, 15, '2019-06-10 10:04:06', '2019-06-17 10:17:30', 'voyager.partners.index', NULL),
+(34, 1, 'Pages Texts', '', '_self', NULL, NULL, NULL, 10, '2019-06-12 04:28:01', '2019-06-17 10:17:25', 'voyager.pages-texts.index', NULL),
 (39, 1, 'Minister Page', '', '_self', NULL, NULL, 27, 1, '2019-06-13 08:37:53', '2019-06-13 08:38:20', 'voyager.minister-page.index', NULL),
 (40, 1, 'Minister Info Categories', '', '_self', NULL, NULL, 27, 2, '2019-06-13 09:18:22', '2019-06-13 09:48:22', 'voyager.minister-info-categories.index', NULL),
 (41, 1, 'Minister Infos', '', '_self', NULL, NULL, 27, 3, '2019-06-13 09:32:54', '2019-06-13 09:48:26', 'voyager.minister-infos.index', NULL),
-(42, 1, 'Cover Photos', '', '_self', NULL, NULL, NULL, 15, '2019-06-17 08:09:10', '2019-06-17 08:09:10', 'voyager.cover-photos.index', NULL);
+(42, 1, 'Cover Photos', '', '_self', NULL, NULL, NULL, 11, '2019-06-17 08:09:10', '2019-06-17 10:17:30', 'voyager.cover-photos.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -1061,8 +1086,11 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (141, 1),
 (141, 2),
 (142, 1),
+(142, 2),
 (143, 1),
+(143, 2),
 (144, 1),
+(144, 2),
 (145, 1),
 (146, 1);
 
@@ -1242,7 +1270,11 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (81, 'data_types', 'display_name_singular', 12, 'hy', 'News', '2019-06-14 09:18:51', '2019-06-14 09:18:51'),
 (82, 'data_types', 'display_name_singular', 12, 'ru', 'News', '2019-06-14 09:18:51', '2019-06-14 09:18:51'),
 (83, 'data_types', 'display_name_plural', 12, 'hy', 'News', '2019-06-14 09:18:51', '2019-06-14 09:18:51'),
-(84, 'data_types', 'display_name_plural', 12, 'ru', 'News', '2019-06-14 09:18:51', '2019-06-14 09:18:51');
+(84, 'data_types', 'display_name_plural', 12, 'ru', 'News', '2019-06-14 09:18:51', '2019-06-14 09:18:51'),
+(85, 'data_types', 'display_name_singular', 37, 'hy', 'Cover Photo', '2019-06-17 11:29:09', '2019-06-17 11:29:09'),
+(86, 'data_types', 'display_name_singular', 37, 'ru', 'Cover Photo', '2019-06-17 11:29:09', '2019-06-17 11:29:09'),
+(87, 'data_types', 'display_name_plural', 37, 'hy', 'Cover Photos', '2019-06-17 11:29:09', '2019-06-17 11:29:09'),
+(88, 'data_types', 'display_name_plural', 37, 'ru', 'Cover Photos', '2019-06-17 11:29:09', '2019-06-17 11:29:09');
 
 -- --------------------------------------------------------
 
@@ -1540,7 +1572,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `cover_photos`
 --
 ALTER TABLE `cover_photos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `data_rows`
 --
@@ -1645,7 +1677,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 --
 -- AUTO_INCREMENT for table `users`
 --
