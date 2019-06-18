@@ -24,7 +24,7 @@
                                                     <p><?php echo date('d F Y l', strtotime($announcement->date)); ?></p>
                                                 </div>
                                                 <div class="all__announcement--body">
-                                                    <p>{{ strip_tags($announcement->description) }}</p>
+                                                    {!! $announcement->description !!}
                                                 </div>
                                             </div>
                                         </div>

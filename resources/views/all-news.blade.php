@@ -34,7 +34,7 @@
                                                         <h1>{{$news->title}}</h1>
                                                     </div>
                                                     <div class="all__news--short--description">
-                                                        <p>{{ strip_tags($news->description) }}</p>
+                                                        {!! $news->description !!}
                                                     </div>
                                                 </div>
                                             </div>
