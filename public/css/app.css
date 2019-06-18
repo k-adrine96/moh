@@ -1212,6 +1212,18 @@ svg {
   font-weight: lighter;
 }
 
+@media only screen and (max-width: 480px) {
+  .secondary__cover--content h1 {
+    font-size: 3.8rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .secondary__cover--content h1 {
+    font-size: 2.5rem;
+  }
+}
+
 .secondary__cover--info {
   max-width: 1400px;
   margin: 50px auto 0;
@@ -1378,6 +1390,13 @@ svg {
   height: 33px;
 }
 
+@media only screen and (max-width: 320px) {
+  .pdf__text ul li .pdf__icon {
+    width: 34px;
+    height: 33px;
+  }
+}
+
 .pdf__text ul li a.border-btm {
   border-bottom: 1px solid #CCCCCC;
 }
@@ -1389,6 +1408,12 @@ svg {
   color: #4D4D4D;
   padding: 0 0;
   width: 100%;
+}
+
+@media only screen and (max-width: 320px) {
+  .pdf__text ul li a {
+    font-size: 1.6rem;
+  }
 }
 
 .pdf__text ul li a span.border-btm {
@@ -1411,6 +1436,7 @@ svg {
   padding: 0.7rem 0;
   color: #4D4D4D;
   width: 100%;
+  margin-left: 2rem;
 }
 
 .pdf__text ul li h2 {
@@ -1516,12 +1542,24 @@ svg {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 320px) {
+  .workers__container .worker__info--header h1 {
+    font-size: 1.5rem;
+  }
+}
+
 .workers__container .worker__info--name p {
   font-size: 3.8rem;
   text-transform: uppercase;
   color: #0071BC;
   display: inline-block;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 320px) {
+  .workers__container .worker__info--name p {
+    font-size: 2.8rem;
+  }
 }
 
 .workers__container p {
@@ -2826,8 +2864,21 @@ svg {
   margin-right: 1rem;
 }
 
+@media only screen and (max-width: 991px) {
+  .workers__content .min-worker {
+    max-width: 100%;
+  }
+}
+
 .workers__content > ul > li:nth-child(even) {
   background-color: #F6F6F6;
+}
+
+@media only screen and (max-width: 991px) {
+  .min-worker-cont {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .history-container .pdf__container > li {
@@ -2876,9 +2927,33 @@ svg {
   padding: 10px 0 15px;
 }
 
+@media only screen and (max-width: 991px) {
+  .charter-container .charter-content h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .charter-container .charter-content h1 {
+    font-size: 1.8rem;
+  }
+}
+
 .charter-container .charter-content h2 {
   font-size: 3.8rem;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 991px) {
+  .charter-container .charter-content h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .charter-container .charter-content h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .charter-container .charter-content h3 {
@@ -3004,12 +3079,25 @@ svg {
   margin: 10px 0;
 }
 
+@media only screen and (max-width: 1400px) {
+  .videos .videos__row .video__content iframe {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .videos .videos__row .video__content iframe {
+    height: 150px !important;
+  }
+}
+
 .videos .videos__row .video__content--header {
   margin-bottom: 10px;
 }
 
-.videos .videos__row .video__content--header h1 {
+.videos .videos__row .video__content--header a {
   font-size: 1.8rem;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -3257,10 +3345,23 @@ svg {
   margin: auto;
 }
 
+@media only screen and (max-width: 1500px) {
+  .single__announcement {
+    width: 98%;
+    margin: auto;
+  }
+}
+
 .single__announcement--header h1 {
   font-size: 3.8rem;
   font-weight: 100;
   padding: 15px 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .single__announcement--header h1 {
+    font-size: 2.8rem;
+  }
 }
 
 .single__announcement--date p {

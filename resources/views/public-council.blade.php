@@ -95,17 +95,15 @@
                                     </div>
                                     <div class="pdf__info--row d-flex d-flex align-items-center">
                                         <div class="pdf__year pdf__year--large">
-                                            <span>2004-2006</span>
+                                            <span>07․02․19</span>
                                         </div>
                                         <div class="pdf__text">
                                             <ul>
                                                 <li class="d-flex align-items-center ">
                                                     <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
                                                     <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է ՀՀ ԱՆ ակադեմիկոս Ս.Ավդալբեկյանի
-                                                անվան առողջապահության ազգային ինստիտուտում՝
-                                                սոցիալական հիգիենա և առողջապահության
-                                                կազմակերպում մասնագիտությամբ<b>265կբ</b></span>
+                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                <b>265կբ</b></span>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -242,17 +240,15 @@
                                     </div>
                                     <div class="pdf__info--row d-flex d-flex align-items-center">
                                         <div class="pdf__year pdf__year--large">
-                                            <span>2004-2006</span>
+                                            <span>07․02․19</span>
                                         </div>
                                         <div class="pdf__text">
                                             <ul>
                                                 <li class="d-flex align-items-center ">
                                                     <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
                                                     <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է ՀՀ ԱՆ ակադեմիկոս Ս.Ավդալբեկյանի
-                                                անվան առողջապահության ազգային ինստիտուտում՝
-                                                սոցիալական հիգիենա և առողջապահության
-                                                կազմակերպում մասնագիտությամբ<b>265կբ</b></span>
+                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                <b>265կբ</b></span>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -389,17 +385,15 @@
                                     </div>
                                     <div class="pdf__info--row d-flex d-flex align-items-center">
                                         <div class="pdf__year pdf__year--large">
-                                            <span>2004-2006</span>
+                                            <span>07․02․19</span>
                                         </div>
                                         <div class="pdf__text">
                                             <ul>
                                                 <li class="d-flex align-items-center ">
                                                     <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
                                                     <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է ՀՀ ԱՆ ակադեմիկոս Ս.Ավդալբեկյանի
-                                                անվան առողջապահության ազգային ինստիտուտում՝
-                                                սոցիալական հիգիենա և առողջապահության
-                                                կազմակերպում մասնագիտությամբ<b>265կբ</b></span>
+                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
+                                                <b>265կբ</b></span>
                                                     </a>
                                                 </li>
                                             </ul>

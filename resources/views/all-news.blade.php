@@ -15,7 +15,7 @@
                             <div class="container-fluid">
                                 <div class="row no-gutters">
                                     @foreach($chunk as $news)
-                                        <div class="col-sm-6">
+                                        <div class="offset-sm-2 col-sm-8 offset-lg-0 col-lg-6">
                                             <div class="row no-gutters">
                                                 <div class="col-sm-12 col-lg-6">
                                                     @php
@@ -34,7 +34,7 @@
                                                         <h1>{{$news->title}}</h1>
                                                     </div>
                                                     <div class="all__news--short--description">
-                                                        {{ strip_tags($news->description) }}
+                                                        <p>{{ strip_tags($news->description) }}</p>
                                                     </div>
                                                 </div>
                                             </div>

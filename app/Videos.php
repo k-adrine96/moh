@@ -8,13 +8,12 @@ use TCG\Voyager\Traits\Translatable;
 
 class Videos extends Model
 {
-    use Translatable;
+//    use Translatable;
 
     protected $fillable = [
         'title',
         'date',
-        'video_url',
-        'video_individual_url'
+        'video_url'
     ];
 
     protected $translatable = ['title'];

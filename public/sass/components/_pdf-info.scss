@@ -64,6 +64,11 @@
         @include backimg;
         width: 29px;
         height: 33px;
+
+        @media only screen and (max-width: 320px) {
+          width: 34px;
+          height: 33px;
+        }
       }
 
       a.border-btm {
@@ -76,6 +81,10 @@
         color: $main-color;
         padding: 0 0;
         width: 100%;
+
+        @media only screen and (max-width: 320px){
+          font-size: 1.6rem;
+        }
 
         span.border-btm {
            border-bottom: 1px solid $color-gray;
@@ -95,6 +104,7 @@
         padding: 0.7rem 0;
         color: $main-color;
         width: 100%;
+        margin-left: 2rem;
       }
 
       h2 {

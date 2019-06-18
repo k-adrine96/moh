@@ -1,11 +1,24 @@
 .workers__content {
 
+  .min-worker {
+
+    @media only screen and (max-width: 991px) {
+        max-width: 100%;
+    }
+  }
+
 }
 
 .workers__content > ul > li {
 
-  &:nth-child(even){
+  &:nth-child(even) {
 
     background-color: $section-back-color;
+  }
+}
+
+.min-worker-cont {
+  @media only screen and(max-width: 991px){
+    flex-wrap: wrap;
   }
 }

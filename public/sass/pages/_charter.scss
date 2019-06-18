@@ -6,11 +6,22 @@
       font-size: $secondary-header;
       text-transform: uppercase;
       padding: 10px 0 15px;
+      @media only screen and (max-width: 991px) {
+        font-size: $tertiary-header;
+      }
+      @media only screen and (max-width: 480px) {
+        font-size: $main-fz
+      }
     }
     h2 {
       font-size: $secondary-header;
       text-transform: uppercase;
-
+      @media only screen and (max-width: 991px) {
+        font-size: $tertiary-header;
+      }
+      @media only screen and (max-width: 480px) {
+        font-size: $main-fz
+      }
     }
     h3 {
       font-size: 1rem;

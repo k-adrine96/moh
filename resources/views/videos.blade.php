@@ -13,7 +13,7 @@
                     <div class="videos__row">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-6">
                                     <div class="video__content">
                                         <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         <div class="video__content--header">
@@ -24,7 +24,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-6">
                                     <div class="video__content">
                                         <iframe width="80%" height="315" src="https://www.youtube.com/embed/VuY-CnutMAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         <div class="video__content--header">

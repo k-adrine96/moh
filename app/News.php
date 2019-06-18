@@ -7,15 +7,14 @@ use TCG\Voyager\Traits\Translatable;
 
 class News extends Model
 {
-    use Translatable;
+//    use Translatable;
 
     protected $fillable = [
         'title',
         'description',
         'images',
         'video',
-        'date',
-        'url'
+        'date'
     ];
 
 //     public function setVideoAttribute($yVideo)
