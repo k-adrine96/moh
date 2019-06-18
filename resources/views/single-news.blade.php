@@ -2,7 +2,7 @@
 
 @section('content')
     <main>
-        <section class="secondary__cover" style="background-image: url('/img/single-news-cover.png')">
+        <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
                 <h1>Նորություն</h1>
             </div>

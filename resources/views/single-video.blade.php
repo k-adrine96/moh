@@ -2,7 +2,7 @@
 
 @section('content')
     <main>
-        <section class="secondary__cover" style="background-image: url('/img/single-news-cover.png')">
+        <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
                 <h1>Տեսադարան</h1>
             </div>
@@ -15,9 +15,10 @@
                 <p><?php echo date('d F Y l' , strtotime($videoIndividual->date)); ?></p>
             </div>
             <div class="single__video--video text-center m-auto">
-                {{--<iframe class="video" width="100%" height="auto"--}}
-                        {{--src="https://www.youtube.com/embed/{{$videoKey}}">--}}
-                {{--</iframe>--}}
+                <?php $videoKey = explode('/', $videoIndividual->video_url)[3]; ?>
+                <iframe class="video" width="100%" height="700px"
+                        src="https://www.youtube.com/embed/{{$videoKey}}">
+                </iframe>
             </div>
         </section>
         <section class="partners">

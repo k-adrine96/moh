@@ -5,12 +5,14 @@
     .all__announcement {
       padding: 10px;
       &--header {
-        h1 {
+        a {
+          text-decoration: none;
           font-size: $secondary-header;
           font-weight: 100;
           color: $main-btn-color;
           height: 86px;
           overflow: hidden;
+
         }
       }
       &--date {

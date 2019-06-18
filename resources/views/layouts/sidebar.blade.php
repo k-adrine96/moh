@@ -24,7 +24,7 @@
         <li>
             <a href="javascript:;" class="first-lvl">նախարարություն</a>
             <ul class="hided--content">
-                <li><a href="{{ route('history') }}">Պատմություն</a></li>
+                <li><a href="{{ route('pages' , 'history') }}">Պատմություն</a></li>
                 <li><a href="{{ route('pages' , 'mission') }}">Առաքելություն</a></li>
                 <li><a href="{{ route('pages' , 'charter') }}">Կանոնադրություն</a></li>
                 <li>
@@ -32,7 +32,7 @@
                     <ul class="second--hidden--content">
                         <li><a href="{{ route('pages' , 'ministry-staff') }}">Նախարարության աշխատակազմ</a></li>
                         <li><a href="{{ route('pages' , 'minister-staff') }}">նախարարի աշխատակազմ</a></li>
-                        <li><a href="{{ route('ministry.structure') }}">Կառուցվածքի գծապատկեր</a></li>
+                        <li><a href="{{ route('pages' , 'ministry-structure') }}">Կառուցվածքի գծապատկեր</a></li>
                         <li><a href="javascript:;">Լիզենզավորման գործակալություն</a></li>
                         <li><a href="javascript:;">Առողջապահական ծրագրերի իրականացման գրասենյակ</a></li>
                     </ul>
@@ -40,24 +40,24 @@
                 <li>
                     <a href="javascript:;" class="second-lvl">Կադրային ապահովում</a>
                     <ul class="second--hidden--content">
-                        <li><a href="{{ route('staff.list') }}">Հաստիքացուցակ</a></li>
+                        <li><a href="{{ route('pages' , 'staff-list') }}">Հաստիքացուցակ</a></li>
                         <li><a href="javascript:;">Թափուր հաստիքներ</a></li>
                         <li><a href="javascript:;">Մրցույթների հայտարարություններ, արդյունքներ</a></li>
                         <li><a href="javascript:;">Աշխատանքի ընդունման կարգ</a></li>
                     </ul>
                 </li>
                 <li><a href="javascript:;">Ենթակայության կառուցներ</a></li>
-                <li><a href="{{ route('budget') }}">Բյուջե</a></li>
+                <li><a href="{{ route('pages' , 'budget') }}">Բյուջե</a></li>
                 <li><a href="javascript:;">Ան խորհրդատուներ</a></li>
-                <li><a href="{{ route('public.council') }}">Նախարարին կից հասարակական խորհուրդ</a></li>
+                <li><a href="{{ route('pages' , 'public-council') }}">Նախարարին կից հասարակական խորհուրդ</a></li>
             </ul>
         </li>
         <li>
             <a href="javascript:;" class="first-lvl">Տեղեկատու</a>
             <ul class="hided--content">
                 <li><a href="{{ route('pages' , 'all-news') }}">Նորություններ</a></li>
-                <li><a href="{{ route('announcement') }}">Հայտարարություններ</a></li>
-                <li><a href="{{ route('videos') }}">Տեսադարան</a></li>
+                <li><a href="{{ route('pages' , 'announcement') }}">Հայտարարություններ</a></li>
+                <li><a href="{{ route('pages' , 'videos') }}">Տեսադարան</a></li>
                 <li><a href="javascript:;">Ելույթներ և հարցազրույցներ</a></li>
                 <li><a href="javascript:;">Հաշվետվություններ</a></li>
                 <li><a href="javascript:;">Մամուլի հաղորդագրություն</a></li>
@@ -88,10 +88,10 @@
             </ul>
         </li>
         <li>
-            <a href="{{ route('faq') }}" class="first-lvl">Հաճախ տրվեղ հարցեր</a>
+            <a href="{{ route('pages' , 'faq') }}" class="first-lvl">Հաճախ տրվեղ հարցեր</a>
         </li>
         <li>
-            <a href="{{ route('links') }}" class="first-lvl">Հղումներ</a>
+            <a href="{{ route('pages' , 'links') }}" class="first-lvl">Հղումներ</a>
             <!--<ul class="hided&#45;&#45;content">-->
             <!--<li><a href="javascript:;">Գործընկերներ</a></li>-->
             <!--<li><a href="javascript:;">Հասարակական կազմակերպություններ</a></li>-->
