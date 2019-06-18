@@ -11,7 +11,7 @@
         <section class="ministry__structure">
             <div class="container-fluid p-0">
                 <div class="row">
-                    <div class="col-sm-5">
+                    <div class="col-md-12 col-lg-5">
                         <ul class="ministry__structure--list">
                             <li class="yellow--background">
                                 <h1>նախարար</h1>
@@ -55,7 +55,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-sm-7">
+                    <div class="col-md-12 col-lg-7">
                         <ul class="ministry__structure--list ministry__structure--list--right">
                             <li class="gray--background">
                                 <p>գլխավոր քարտուղարի տեղակալ</p>

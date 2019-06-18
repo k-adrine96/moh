@@ -65,12 +65,20 @@
     margin-left: 4rem;
     width: 32rem;
 
+    @media only screen and (max-width: 480px){
+      width: 23rem;
+    }
+
     input {
       height: 5rem;
       border-radius: 30px;
       @include border($color-white);
       font-size: $main-fz;
       padding-left: 2rem;
+
+      @media only screen and (max-height: 600px){
+        height: 3rem;
+      }
     }
 
     .input-group-append {
