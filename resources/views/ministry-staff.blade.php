@@ -2,7 +2,7 @@
 
 @section('content')
 	<main>
-        <section class="secondary__cover aks__minister--cover" style="background-image: url('img/ministry staff-cover.png')">
+        <section class="secondary__cover aks__minister--cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
                 <h1>Նախարարության աշխատակազմ</h1>
             </div>

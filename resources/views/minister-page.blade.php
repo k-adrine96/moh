@@ -3,7 +3,7 @@
 @section('content')
 	<main>
         <section class="secondary__cover aks__minister--cover"
-                 style="background-image: url('img/minitser-page-cover.png')">
+                 style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
         </section>
         <section class="message__container">
             <div class="message__content">

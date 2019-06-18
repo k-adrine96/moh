@@ -2,7 +2,7 @@
 
 @section('content')
 	<main>
-        <section class="secondary__cover" style="background-image: url('img/legal-acts-cover.png')">
+        <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
                 <h1>Իրավական ակտեր</h1>
             </div>
