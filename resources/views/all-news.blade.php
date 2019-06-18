@@ -2,7 +2,7 @@
 
 @section('content')
     <main>
-        <section class="secondary__cover" style="background-image: url('img/all-news-cover.png')">
+        <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
                 <h1>Նորություններ</h1>
             </div>
@@ -34,7 +34,7 @@
                                                         <h1>{{$news->title}}</h1>
                                                     </div>
                                                     <div class="all__news--short--description">
-                                                        {{ strip_tags($news->description) }}
+                                                        <p>{{ strip_tags($news->description) }}</p>
                                                     </div>
                                                 </div>
                                             </div>

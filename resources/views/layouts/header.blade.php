@@ -35,7 +35,7 @@
                                 <li><a href="{{ route('home') }}">Գլխավոր</a></li>
                                 <li><a href="{{ route('pages' , 'contact-us') }}">Հետադարձ կապ</a></li>
                                 <li><a href="{{ route('pages' , 'minister-page') }}">Նախարար</a></li>
-                                <li><a href="{{ route('legal.acts') }}">Իրավական ակտեր</a></li>
+                                <li><a href="{{ route('pages' , 'legal-acts') }}">Իրավական ակտեր</a></li>
                             </ul>
                             <div class="burger__menu">
                                 <div class="burger__menu--lines burger__menu--line-1"></div>

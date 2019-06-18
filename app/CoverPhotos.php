@@ -7,7 +7,7 @@ use TCG\Voyager\Traits\Translatable;
 
 class CoverPhotos extends Model
 {
-    use Translatable;
+//    use Translatable;
 
     protected $fillable = [
         'page_name',
