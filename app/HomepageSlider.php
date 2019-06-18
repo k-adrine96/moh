@@ -7,7 +7,7 @@ use TCG\Voyager\Traits\Translatable;
 
 class HomepageSlider extends Model
 {
-    use Translatable;
+//    use Translatable;
 
     protected $fillable = [
         'title',

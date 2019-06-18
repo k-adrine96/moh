@@ -26,7 +26,7 @@ class DropVideoIndividualUrlFromVideosTable extends Migration
     public function down()
     {
         Schema::table('videos', function (Blueprint $table) {
-            //
+            $table->string('video_individual_url');
         });
     }
 }

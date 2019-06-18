@@ -31,7 +31,7 @@
                                             <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
                                             @if($pagesTexts->page_text3)
                                                 <a href="javascript:;">
-                                                    <span class="ml-5 border-btm">{{strip_tags($pagesTexts->page_text3)}}</span>
+                                                    <span class="ml-5 border-btm">{!! $pagesTexts->page_text3 !!}</span>
                                                 </a>
                                             @endif
                                         </li>

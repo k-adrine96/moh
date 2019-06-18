@@ -7,7 +7,7 @@ use TCG\Voyager\Traits\Translatable;
 
 class Partners extends Model
 {
-    use Translatable;
+//    use Translatable;
 
     protected $fillable = [
         'image',

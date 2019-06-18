@@ -15,7 +15,7 @@
                 <p><?php echo date('d F Y l' , strtotime($announcementIndividual->date)); ?></p>
             </div>
             <div class="single__announcement--body">
-                <p>{{ strip_tags($announcementIndividual->description) }}</p>
+                <p>{!! $announcementIndividual->description !!}</p>
             </div>
         </section>
         <section class="partners">
