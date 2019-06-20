@@ -102,4 +102,8 @@
 
 .white--background {
   background-color: white;
+
+  @media only screen and (max-width: 480px){
+    margin-left: 10px!important;
+  }
 }
