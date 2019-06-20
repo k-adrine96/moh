@@ -31,10 +31,10 @@
                                                         <span><?php echo date('d F Y l' , strtotime($news->date)); ?></span>
                                                     </div>
                                                     <div class="all__news--header">
-                                                        <h1>{{$news->title}}</h1>
+                                                        <a href="{{route('show.news.individual' , $news->id)}}">{{$news->title}}</a>
                                                     </div>
                                                     <div class="all__news--short--description">
-                                                        <p>{{ strip_tags($news->description) }}</p>
+                                                        {!! $news->description !!}
                                                     </div>
                                                 </div>
                                             </div>

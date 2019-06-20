@@ -47,7 +47,7 @@
                                         <li class="d-flex align-items-center border-btm">
                                             <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
                                             <a href="{{$educationInfo->url}}" class="">
-                                                <span>{{$educationInfo->description}}<!--<b>265կբ</b>--></span>
+                                                <span>{!! $educationInfo->description !!}<!--<b>265կբ</b>--></span>
                                             </a>
                                         </li>
                                     </ul>
@@ -73,7 +73,7 @@
                                         <li class="d-flex align-items-center border-btm">
                                             <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
                                             <a href="{{$workInfo->url}}" class="">
-                                                <span>{{$workInfo->description}} <!--<b>265կբ</b>--></span>
+                                                <span>{!! $workInfo->description !!} <!--<b>265կբ</b>--></span>
                                             </a>
                                         </li>
                                     </ul>
@@ -99,7 +99,7 @@
                                         <li class="d-flex align-items-center border-btm">
                                             <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
                                             <a href="{{$otherInfo->url}}" class="">
-                                                <span>{{$otherInfo->description}}<!--<b>265կբ</b>--></span>
+                                                <span>{!! $otherInfo->description !!}<!--<b>265կբ</b>--></span>
                                             </a>
                                         </li>
                                     </ul>

@@ -7,7 +7,7 @@ use TCG\Voyager\Traits\Translatable;
 
 class MinisterStaff extends Model
 {
-    use Translatable;
+//    use Translatable;
 
     protected $fillable = [
         'position',

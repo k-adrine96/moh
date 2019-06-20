@@ -2,6 +2,7 @@ $(document).ready(function () {
   Select2();
   SlickSlider();
   Menu();
+  slideToogle();
 
 
   $(document).on('click', function () {
@@ -39,7 +40,5 @@ $(document).ready(function () {
   onlyToggle('.faq__row--first--lvl', '.faq__row--hided--content');
   onlyToggle('.faq__second-lvl', '.faq__second--hidden--content');
   onlyToggle('.public__council--row--first--lvl', '.public__council--hidden--content');
-
-
 
 });

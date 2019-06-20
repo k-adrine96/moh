@@ -30,9 +30,7 @@
                                         <li class="d-flex align-items-center">
                                             <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
                                             @if($pagesTexts->page_text3)
-                                                <a href="javascript:;">
-                                                    <span class="ml-5 border-btm">{{strip_tags($pagesTexts->page_text3)}}</span>
-                                                </a>
+                                                {!! $pagesTexts->page_text3 !!}
                                             @endif
                                         </li>
                                     </ul>

@@ -22,7 +22,7 @@
                                 <h2><?php echo date('d F Y l' , strtotime($newsIndividual->date)); ?></h2>
                             </div>
                             <div class="single__news--info--text">
-                                <p>{{ strip_tags($newsIndividual->description) }}</p>
+                                <p>{!! $newsIndividual->description !!}</p>
                             </div>
                         </div></div>
                     <div class="col-lg-6 col-xl-5">
@@ -34,20 +34,18 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
         <section class="partners">
             <div class="partners--cont">
                 <div class="partners--cont--slider">
-{{--                    <a href="javascript:;" class="partners--cont--item"--}}
-{{--                       style="background-image: url('img/license-application-icon.png')"></a>--}}
-{{--                    <a href="javascript:;" class="partners--cont--item"--}}
-{{--                       style="background-image: url('img/citizen-icon.png')"></a>--}}
-{{--                    <a href="javascript:;" class="partners--cont--item"--}}
-{{--                       style="background-image: url('img/e-draft-icon.png')"></a>--}}
-{{--                    <a href="javascript:;" class="partners--cont--item"--}}
-{{--                       style="background-image: url('img/sun-icon.png')"></a>--}}
+                    <a href="javascript:;" class="partners--cont--item"
+                       style="background-image: url('img/license-application-icon.png')"></a>
+                    <a href="javascript:;" class="partners--cont--item"
+                       style="background-image: url('img/citizen-icon.png')"></a>
+                    <a href="javascript:;" class="partners--cont--item"
+                       style="background-image: url('img/e-draft-icon.png')"></a>
+                    <a href="javascript:;" class="partners--cont--item"
+                       style="background-image: url('img/sun-icon.png')"></a>
                 </div>
             </div>
         </section>

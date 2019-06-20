@@ -1,8 +1,10 @@
 body {
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI",Tahoma, Ubuntu, Monaco, sans, Arial, sans-serif;
   font-weight:100;
   line-height: 1.4;
   color: $main-color;
   box-sizing: border-box;
 }
-
+body main *{
+  font-family: "Segoe UI",Tahoma, Ubuntu, Monaco, sans, Arial, sans-serif!important;
+}
