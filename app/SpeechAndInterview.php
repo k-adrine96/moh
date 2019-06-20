@@ -13,4 +13,17 @@ class SpeechAndInterview extends Model
         'file_icon',
         'file_date'
     ];
+
+    protected $dates = [
+        'file_date'
+    ];
+
+    public function getFileLinkAttribute()
+    {
+        if($this->file_upload && $this->file_upload !== '[]') {
+            return \Storage::url(json_decode($this->file_upload)[0]->download_link);
+        }
+
+        return $this->attributes['file_url'];
+    }
 }

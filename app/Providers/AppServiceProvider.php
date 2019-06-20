@@ -14,8 +14,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Carbon::setLocale(app()->getLocale());
-        setlocale(LC_ALL, app()->getLocale());
+        $locales = [
+            'hy' => 'hy_AM.utf8',
+            'ru' => 'ru_RU',
+            'en' => 'en'
+        ];
+
+        setlocale(LC_TIME, $locales[app()->getLocale()]);
+        \Carbon\Carbon::setLocale($locales[app()->getLocale()]);
     }
 
     /**
