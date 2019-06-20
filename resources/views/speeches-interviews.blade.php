@@ -18,9 +18,8 @@
                                             <li class="d-flex align-items-center">
                                                 <i class="pdf__icon" style="background-image: url('{{Storage::url($fileInfo->file_icon)}}')"></i>
                                                 <a class="border-btm ml-5" href="{{$fileInfo->file_link}}">
-                                                    <span>{{$fileInfo->file_name}}</span>
+                                                    <span>{{$fileInfo->file_name}} <i>{{ $fileInfo->file_date->formatLocalized('%B %d, %Y') }} </i></span>
                                                 </a>
-                                                <span>{{ $fileInfo->file_date->formatLocalized('%B %d, %Y') }} </span>
                                             </li>
                                         @endforeach
                                     </ul>

@@ -1505,6 +1505,11 @@ svg {
   border: none;
 }
 
+.pdf__text ul i {
+  display: inline-block;
+  padding-left: 10px;
+}
+
 .pdf__info--img--text {
   display: -webkit-box;
   display: -ms-flexbox;
