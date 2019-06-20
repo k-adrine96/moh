@@ -58,9 +58,9 @@
                 <li><a href="{{ route('pages' , 'all-news') }}">Նորություններ</a></li>
                 <li><a href="{{ route('pages' , 'announcement') }}">Հայտարարություններ</a></li>
                 <li><a href="{{ route('pages' , 'videos') }}">Տեսադարան</a></li>
-                <li><a href="javascript:;">Ելույթներ և հարցազրույցներ</a></li>
-                <li><a href="javascript:;">Հաշվետվություններ</a></li>
-                <li><a href="javascript:;">Մամուլի հաղորդագրություն</a></li>
+                <li><a href="{{ route('pages' , 'speeches-interviews') }}">Ելույթներ և հարցազրույցներ</a></li>
+                <li><a href="{{ route('pages' , 'reports') }}">Հաշվետվություններ</a></li>
+                <li><a href="{{ route('pages' , 'press-release') }}">Մամուլի հաղորդագրություն</a></li>
                 <li><a href="javascript:;">Հետազոտություններ</a></li>
                 <li><a href="javascript:;">Վիճակագրություն</a></li>
                 <li><a href="javascript:;">Տեղեկատու</a></li>
