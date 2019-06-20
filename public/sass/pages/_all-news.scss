@@ -17,23 +17,41 @@
         font-size: $tertiary-header;
         text-transform: uppercase;
         display: inline-block;
-        @include ellipses(76px, 2)
+        @include ellipses(76px, 2);
+
+        @media only screen and (max-width: 991px){
+          @include ellipses(32px, 1);
+        }
+      }
+
+      @media only screen and (max-width: 991px){
+        margin-top: 8px;
       }
     }
 
     .all__news--header {
       padding: 15px 0 10px;
-      h1 {
+      a {
+        text-decoration: none;
         text-transform: uppercase;
         font-size: $main-fz;
+        color: $color-blue;
         @include ellipses(21px, 1)
       }
     }
 
     .all__news--short--description {
+      @include ellipses(97px, 5);
       p {
         font-size: $small-fz;
-        @include ellipses(97px, 5)
+
+        span {
+          font-size: $small-fz!important;
+        }
+      }
+
+      @media only screen and (max-width: 991px){
+        margin-bottom: 8px;
       }
     }
   }

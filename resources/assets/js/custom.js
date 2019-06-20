@@ -58,6 +58,9 @@ window.tinymce_init_callback = function(editor)
   editor.remove();
   editor = null;
   tinymce.init({
+    skin_url: '/skins/ui/oxide',
+    content_css: '/skins/content/default',
+    skin: "oxide",
     oninit: "sampleText",
     selector: 'textarea.richTextBox',
     // skin: 'voyager',

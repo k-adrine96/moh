@@ -38,7 +38,7 @@
                                 <div class="news__info">
                                     <span><?php echo date('d F Y l', strtotime($singleNews->date)); ?></span>
                                     <h1>{{$singleNews->title}}</h1>
-                                    {!! $singleNews->description !!}
+                                    <div class="news-description">{!! $singleNews->description !!}</div>
                                     <a href="{{route('show.news.individual' , $singleNews->id)}}" class="animated__button animated__button--blue">Ավելին</a>
                                 </div>
                             </div>
@@ -60,7 +60,9 @@
                     @foreach($announcements as $announcement)
                         <div class="announcements--cont--slider--items">
                             <h1>{{$announcement->title}}</h1>
-                            {!! $announcement->description !!}
+                            <div class="announcement-description">
+                                {!! $announcement->description !!}
+                            </div>
                             <a href="{{route('show.announcement.individual' , $announcement->id)}}" class="animated__button animated__button--yellow-small">Ավելին</a>
                         </div>
                     @endforeach

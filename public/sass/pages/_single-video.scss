@@ -1,17 +1,46 @@
 .single__video {
   @include mainWidth;
   &--header {
+    margin-top: 25px;
     h1 {
       font-size: $secondary-header;
       font-weight: 100;
+
+      @media only screen and (max-width: 768px) {
+        font-size: $tertiary-header;
+      }
     }
   }
   &--date {
+    margin-bottom: 25px;
     p {
       font-size: $tertiary-header;
+      padding-top: 7px;
+      @media only screen and (max-width: 768px) {
+        font-size: $main-fz;
+      }
     }
   }
   &--video {
 
+    iframe {
+
+      @media only screen and (max-width: 1400px) {
+        width: 90% !important;
+        margin: auto !important;
+      }
+      @media only screen and (max-width: 1024px) {
+        height: 500px !important;
+      }
+      @media only screen and (max-width: 768px) {
+        height: 400px !important;
+      }
+      @media only screen and (max-width: 480px) {
+        height: 300px !important;
+      }
+      @media only screen and (max-width: 320px) {
+        height: 200px !important;
+      }
+    }
   }
 }
