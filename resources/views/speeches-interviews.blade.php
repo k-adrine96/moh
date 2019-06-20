@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
     <main>
         <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
@@ -17,7 +18,7 @@
                                         @foreach($filesInfo as $fileInfo)
                                             <li class="d-flex align-items-center">
                                                 <i class="pdf__icon" style="background-image: url('{{Storage::url($fileInfo->file_icon)}}')"></i>
-                                                <a class="border-btm ml-5" href="{{$fileInfo->file_link}}">
+                                                <a class="border-btm ml-5" href="{{$fileInfo->file_link}}" {{ $fileInfo->download ?? 'download'}}>
                                                     <span>{{$fileInfo->file_name}} <i>{{ $fileInfo->file_date->formatLocalized('%B %d, %Y') }} </i></span>
                                                 </a>
                                             </li>

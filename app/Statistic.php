@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Report extends Model
+class Statistic extends Model
 {
     protected $fillable  = [
         'file_name',
@@ -26,6 +26,7 @@ class Report extends Model
 
         return '';
     }
+
     public function getFileLinkAttribute()
     {
         if($this->file_upload && $this->file_upload !== '[]') {

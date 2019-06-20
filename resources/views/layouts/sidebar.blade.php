@@ -62,9 +62,9 @@
                     <li><a href="{{ route('pages' , 'speeches-interviews') }}">Ելույթներ և հարցազրույցներ</a></li>
                     <li><a href="{{ route('pages' , 'reports') }}">Հաշվետվություններ</a></li>
                     <li><a href="{{ route('pages' , 'press-release') }}">Մամուլի հաղորդագրություն</a></li>
-                    <li><a href="javascript:;">Հետազոտություններ</a></li>
-                    <li><a href="javascript:;">Վիճակագրություն</a></li>
-                    <li><a href="javascript:;">Տեղեկատու</a></li>
+                    <li><a href="{{ route('pages' , 'researches') }}">Հետազոտություններ</a></li>
+                    <li><a href="{{ route('pages' , 'statistics') }}">Վիճակագրություն</a></li>
+                    <li><a href="{{ route('pages' , 'informative') }}">Տեղեկատու</a></li>
                 </ul>
             </li>
             <li>

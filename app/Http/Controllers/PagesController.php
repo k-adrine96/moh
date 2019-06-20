@@ -7,7 +7,10 @@ use App\News;
 use App\Videos;
 use App\Report;
 use App\Partners;
+use App\Research;
+use App\Statistic;
 use App\PagesTexts;
+use App\Informative;
 use App\CoverPhotos;
 use App\PressRelease;
 use App\MinisterPage;
@@ -100,6 +103,18 @@ class PagesController extends Controller
         {
             $filesInfo = PressRelease::get();
             $coverPhoto = CoverPhotos::where('page_slug', 'press-release')->first();
+        }else if($page === 'researches')
+        {
+            $filesInfo = Research::get();
+            $coverPhoto = CoverPhotos::where('page_slug', 'researches')->first();
+        }else if($page === 'statistics')
+        {
+            $filesInfo = Statistic::get();
+            $coverPhoto = CoverPhotos::where('page_slug', 'statistics')->first();
+        }else if($page === 'informative')
+        {
+            $filesInfo = Informative::get();
+            $coverPhoto = CoverPhotos::where('page_slug', 'informative')->first();
         }
 
         return view($page , compact('pagesTexts' , 'coverPhoto', 'content' , 'partners' , 'educationInfos' , 'workInfos' , 'otherInfos' , 'filesInfo'));

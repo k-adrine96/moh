@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PressRelease extends Model
 {
-    protected $fillable = [
+    protected $fillable  = [
         'file_name',
         'file_upload',
         'file_url',
@@ -17,4 +17,22 @@ class PressRelease extends Model
     protected $dates = [
         'file_date'
     ];
+
+    public function getDownloadAttribute()
+    {
+        if($this->file_upload && $this->file_upload !== '[]') {
+            return 'download';
+        }
+
+        return '';
+    }
+
+    public function getFileLinkAttribute()
+    {
+        if($this->file_upload && $this->file_upload !== '[]') {
+            return \Storage::url(json_decode($this->file_upload)[0]->download_link);
+        }
+
+        return $this->attributes['file_url'];
+    }
 }

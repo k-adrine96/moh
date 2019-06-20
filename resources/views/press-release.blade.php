@@ -16,21 +16,11 @@
                                 <div class="pdf__text">
                                     <ul>
                                         @foreach($filesInfo as $fileInfo)
-                                            {{--                                            @php--}}
-                                            {{--                                                $filename = json_decode($fileInfo->file_upload)[0]->download_link;--}}
-                                            {{--                                            @endphp--}}
                                             <li class="d-flex align-items-center">
                                                 <i class="pdf__icon" style="background-image: url('{{Storage::url($fileInfo->file_icon)}}')"></i>
-                                                @if(!is_null($fileInfo->file_url))
-                                                    <a class="border-btm ml-5" href="{{$fileInfo->file_url}}">
-                                                        <span>{{$fileInfo->file_name}}</span>
-                                                    </a>
-                                                @else
-                                                    <a class="border-btm ml-5" href="{{--{{ Storage::files($filename)}}--}}" download>
-                                                        <span>{{$fileInfo->file_name}} <!--<b>265կբ</b>--></span>
-                                                    </a>
-                                                @endif
-                                                <span><?php echo date('d F Y l' , strtotime($fileInfo->date)); ?></span>
+                                                <a class="border-btm ml-5" href="{{$fileInfo->file_link}}" {{ $fileInfo->download ?? 'download'}}>
+                                                    <span>{{$fileInfo->file_name}} <i>{{ $fileInfo->file_date->formatLocalized('%B %d, %Y') }} </i></span>
+                                                </a>
                                             </li>
                                         @endforeach
                                     </ul>
