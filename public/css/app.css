@@ -2113,16 +2113,7 @@ svg {
   -webkit-transition: .5s;
   transition: .5s;
   margin: 0 1rem;
-}
-
-.announcements--cont--slider--items:not(:last-child) {
   padding: 3rem;
-}
-
-@media only screen and (max-width: 320px) {
-  .announcements--cont--slider--items:not(:last-child) {
-    padding: 1rem;
-  }
 }
 
 .announcements--cont--slider--items:hover {
