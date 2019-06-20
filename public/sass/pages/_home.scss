@@ -145,8 +145,16 @@
               color: $main-color;
               font-size: $main-fz;
               margin-bottom: 4rem;
-              height: 249px;
+              height: 177px;
               overflow: hidden;
+
+              span {
+                color: $main-color!important;
+                font-size: $main-fz!important;
+                margin-bottom: 4rem!important;
+                height: 177px!important;
+                overflow: hidden!important;
+              }
 
               @media only screen and (max-width: 1024px) {
                 height: 99px;

@@ -18,5 +18,8 @@
         "lodash": "^4.17.4",
         "vue": "^2.5.7",
         "webpack-livereload-plugin": "^1.2.0"
+    },
+    "dependencies": {
+        "tinymce": "^5.0.8"
     }
 }
