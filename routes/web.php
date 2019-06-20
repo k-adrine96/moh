@@ -11,6 +11,7 @@
 |
 */
 
+
 // Route::get('/', function () {
 //     //dd(App\Car::get());
 //     return view('home');
@@ -20,7 +21,12 @@
 
 //Route::post('/', '@');
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
+
+$locale = 'hy';
+Carbon::setLocale($locale);
+setlocale(LC_TIME, $locale);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

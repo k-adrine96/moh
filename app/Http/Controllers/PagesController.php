@@ -5,15 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\News;
 use App\Videos;
+use App\Report;
 use App\Partners;
 use App\PagesTexts;
 use App\CoverPhotos;
+use App\PressRelease;
 use App\MinisterPage;
 use App\MinisterInfo;
 use App\Announcements;
 use App\MinisterStaff;
 use App\MinistryStaff;
 use App\HomepageSlider;
+use App\SpeechAndInterview;
 use App\MinisterInfoCategory;
 
 class PagesController extends Controller
@@ -85,9 +88,21 @@ class PagesController extends Controller
         }else if($page === 'staff-list')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'staff-list')->first();
+        }else if($page === 'speeches-interviews')
+        {
+            $filesInfo = SpeechAndInterview::get();
+            $coverPhoto = CoverPhotos::where('page_slug', 'speeches-interviews')->first();
+        }else if($page === 'reports')
+        {
+            $filesInfo = Report::get();
+            $coverPhoto = CoverPhotos::where('page_slug', 'reports')->first();
+        }else if($page === 'press-release')
+        {
+            $filesInfo = PressRelease::get();
+            $coverPhoto = CoverPhotos::where('page_slug', 'press-release')->first();
         }
 
-        return view($page , compact('pagesTexts' , 'coverPhoto', 'content' , 'partners' , 'educationInfos' , 'workInfos' , 'otherInfos'));
+        return view($page , compact('pagesTexts' , 'coverPhoto', 'content' , 'partners' , 'educationInfos' , 'workInfos' , 'otherInfos' , 'filesInfo'));
     }
 
     public function homepage(){
