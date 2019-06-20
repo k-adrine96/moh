@@ -12,7 +12,6 @@ class Announcements extends Model
     protected $fillable = [
         'title',
         'description',
-        'date',
-        'url'
+        'date'
     ];
 }

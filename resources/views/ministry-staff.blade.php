@@ -11,9 +11,9 @@
             <ul>
                 @foreach($content->chunk(2) as $chunk)
                     <li>
-                        <div class="workers__container d-flex">
+                        <div class="workers__container d-flex min-worker-cont">
                             @foreach($chunk as $staffMember)
-                                <div class="worker__info">
+                                <div class="worker__info min-worker">
                                     <div class="worker__info--header">
                                         <h1>{{$staffMember->position}}</h1>
                                     </div>

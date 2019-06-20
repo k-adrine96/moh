@@ -6,10 +6,20 @@
 
     .video__content {
       margin: 10px 0;
+
+      iframe {
+        @media only screen and (max-width: 1400px){
+          width: 100%!important;
+        }
+        @media only screen and (max-width: 320px){
+          height: 150px!important;
+        }
+      }
       &--header {
         margin-bottom: 10px;
-        h1 {
+        a {
           font-size: $main-fz;
+          text-decoration: none;
           text-transform: uppercase;
         }
       }

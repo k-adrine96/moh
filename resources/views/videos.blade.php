@@ -15,7 +15,7 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     @foreach($chunk as $video)
-                                        <div class="col-sm-6">
+                                        <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-6">
                                             <div class="video__content">
                                                 <?php $videoKey = explode('/', $video->video_url)[3]; ?>
                                                 <iframe width="80%" height="315" src="https://www.youtube.com/embed/{{$videoKey}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
