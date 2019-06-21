@@ -130,6 +130,30 @@
   }
 }
 
+.minister__public--council {
+
+  &--header {
+    max-width: $main-content-width;
+    margin:25px auto 0;
+
+    @media only screen and (min-width: 1921px) {
+      max-width: $main-content-width-big;
+    }
+    a {
+      text-decoration: none;
+      font-size: $secondary-header;
+      font-weight: 100;
+      text-transform: uppercase;
+      color: $color-blue;
+
+      @media only screen and (max-width: 991px) {
+        text-align: center;
+        font-size: $tertiary-header;
+      }
+    }
+  }
+}
+
 .ask__minister--cont {
   max-width: $main-content-width;
   margin: auto;
@@ -141,7 +165,7 @@
   &--header {
     padding-top: 6rem;
     h1 {
-      font-size: $primary-header;
+      font-size: $secondary-header;
       font-weight: 100;
       text-transform: uppercase;
 
