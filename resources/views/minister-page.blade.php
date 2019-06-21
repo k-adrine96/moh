@@ -127,7 +127,7 @@
         </section>
         <section class="minister__public--council">
             <div class="minister__public--council--header">
-                <a href="javascript:;">նախարարին կից հասարակական խորհուրդ</a>
+                <a href="{{ route('pages' , 'public-council') }}">նախարարին կից հասարակական խորհուրդ</a>
             </div>
         </section>
         <section class="ask__minister--cont">
