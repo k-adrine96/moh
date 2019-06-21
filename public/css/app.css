@@ -1605,6 +1605,12 @@ svg {
   max-width: 49%;
 }
 
+.workers__container .worker__info--header {
+  width: 90%;
+  height: 42px;
+  overflow: hidden;
+}
+
 .workers__container .worker__info--header h1 {
   font-size: 1.8rem;
   color: #4D4D4D;
