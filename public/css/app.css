@@ -1602,7 +1602,7 @@ svg {
 }
 
 .workers__container .worker__info {
-  max-width: 49%;
+  width: 49%;
 }
 
 .workers__container .worker__info--header {
