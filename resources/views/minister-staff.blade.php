@@ -69,19 +69,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="workers__container mobile-workers-container-1">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur consequatur ea eius illo
-                        illum in, iure laudantium modi nisi nostrum quasi quisquam ratione repellat suscipit tempora
-                        voluptatum. Debitis dolores eum exercitationem illo modi optio sunt. Aliquam aspernatur autem
-                        cupiditate, deserunt ducimus est eum eveniet fuga in minima nisi non possimus quo! Alias delectus
-                        eius inventore, modi officia placeat recusandae reprehenderit sit temporibus vel voluptas voluptate
-                        voluptatibus! Ab animi aspernatur assumenda blanditiis commodi consequuntur corporis culpa delectus
-                        dignissimos eaque eos, error, facilis illo inventore magnam nisi officiis omnis placeat praesentium
-                        quas quasi quibusdam repudiandae rerum similique sint tempora temporibus velit vitae voluptates
-                        voluptatibus. At dolorum ducimus maiores modi porro! Blanditiis deserunt dicta ipsum libero nam
-                        perferendis qui quisquam soluta voluptates!
+                    <div class="mobile-workers-container editor-content workers__container mobile-workers-container-1">
+                        <div class="workers__container--info">
+                            aksjhfjksahfjhsaf
+                        </div>
                         <div class="workers__container--name">
-                            <h1>Header</h1>
+                            <h1>name</h1>
                         </div>
                     </div>
                 </li>
@@ -110,19 +103,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="workers__container mobile-workers-container-2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur consequatur ea eius illo
-                        illum in, iure laudantium modi nisi nostrum quasi quisquam ratione repellat suscipit tempora
-                        voluptatum. Debitis dolores eum exercitationem illo modi optio sunt. Aliquam aspernatur autem
-                        cupiditate, deserunt ducimus est eum eveniet fuga in minima nisi non possimus quo! Alias delectus
-                        eius inventore, modi officia placeat recusandae reprehenderit sit temporibus vel voluptas voluptate
-                        voluptatibus! Ab animi aspernatur assumenda blanditiis commodi consequuntur corporis culpa delectus
-                        dignissimos eaque eos, error, facilis illo inventore magnam nisi officiis omnis placeat praesentium
-                        quas quasi quibusdam repudiandae rerum similique sint tempora temporibus velit vitae voluptates
-                        voluptatibus. At dolorum ducimus maiores modi porro! Blanditiis deserunt dicta ipsum libero nam
-                        perferendis qui quisquam soluta voluptates!
+                    <div class="mobile-workers-container editor-content workers__container mobile-workers-container-2">
+                        <div class="workers__container--info">
+                            aksjhfjksahfjhsaf
+                        </div>
                         <div class="workers__container--name">
-                            <h1>Header</h1>
+                            <h1>name</h1>
                         </div>
                     </div>
                 </li>
@@ -151,19 +137,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="workers__container mobile-workers-container-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur consequatur ea eius illo
-                        illum in, iure laudantium modi nisi nostrum quasi quisquam ratione repellat suscipit tempora
-                        voluptatum. Debitis dolores eum exercitationem illo modi optio sunt. Aliquam aspernatur autem
-                        cupiditate, deserunt ducimus est eum eveniet fuga in minima nisi non possimus quo! Alias delectus
-                        eius inventore, modi officia placeat recusandae reprehenderit sit temporibus vel voluptas voluptate
-                        voluptatibus! Ab animi aspernatur assumenda blanditiis commodi consequuntur corporis culpa delectus
-                        dignissimos eaque eos, error, facilis illo inventore magnam nisi officiis omnis placeat praesentium
-                        quas quasi quibusdam repudiandae rerum similique sint tempora temporibus velit vitae voluptates
-                        voluptatibus. At dolorum ducimus maiores modi porro! Blanditiis deserunt dicta ipsum libero nam
-                        perferendis qui quisquam soluta voluptates!
+                    <div class="mobile-workers-container editor-content workers__container mobile-workers-container-3">
+                        <div class="workers__container--info">
+                            <p>sdafsdfsdfsdf</p>
+                        </div>
                         <div class="workers__container--name">
-                            <h1>Header</h1>
+                            <h1>name</h1>
                         </div>
                     </div>
                 </li>

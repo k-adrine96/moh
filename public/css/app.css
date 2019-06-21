@@ -2587,11 +2587,19 @@ svg {
           flex: 100%;
   padding-bottom: 5rem;
   border-bottom: 1px solid #FFBC35;
+  display: none;
 }
 
 @media only screen and (min-width: 1921px) {
   .minister__staff .workers__container {
     max-width: 73.5%;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .minister__staff .workers__container {
+    max-width: 98%;
+    margin: auto;
   }
 }
 
@@ -2604,16 +2612,23 @@ svg {
   color: #0071BC;
 }
 
-.minister__staff .workers__container--name h1 {
-  text-align: right;
+.minister__staff .workers__container .workers__container--info p {
+  font-size: 2.8rem;
+  color: #0071BC;
+  padding-bottom: 10px;
+}
+
+.minister__staff .workers__container .workers__container--info li {
   font-size: 1.8rem;
 }
 
-.minister__staff .workers__container-1,
-.minister__staff .workers__container-2,
-.minister__staff .workers__container-3,
-.minister__staff .workers__container-4 {
-  display: none;
+.minister__staff .workers__container .workers__container--info li p {
+  font-size: 1.8rem;
+}
+
+.minister__staff .workers__container--name h1 {
+  text-align: right;
+  font-size: 1.8rem;
 }
 
 .contact__us--info {
@@ -3790,6 +3805,20 @@ svg {
   .white--background {
     margin-left: 10px !important;
   }
+}
+
+.editor-content ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 40px;
+  font-weight: normal !important;
+}
+
+.editor-content ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin-left: 40px;
+  font-weight: normal !important;
 }
 
 .burger__menu {
