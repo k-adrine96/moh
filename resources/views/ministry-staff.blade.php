@@ -27,7 +27,7 @@
                                         </li>
                                         <li>
                                             <i class="message-icon"></i>
-                                            <span>{{$staffMember->email}}</span>
+                                            <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">{{$staffMember->email}}</a>
                                         </li>
                                     </ul>
                                 </div>

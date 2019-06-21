@@ -42,12 +42,21 @@
       background-image: url("/img/website-icon.png");
     }
 
+    a {
+      text-decoration: none;
+      font-size: $main-fz;
+      color: $color-blue;
+
+      @media only screen and (max-width: 1024px) {
+       font-size: $small-fz;
+      }
+    }
     span {
       font-size: $main-fz;
       color: $main-color;
 
       @media only screen and (max-width: 1024px) {
-       font-size: $small-fz;
+        font-size: $small-fz;
       }
     }
 
