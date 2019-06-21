@@ -1602,7 +1602,26 @@ svg {
 }
 
 .workers__container .worker__info {
-  max-width: 49%;
+  width: 49%;
+}
+
+@media only screen and (max-width: 600px) {
+  .workers__container .worker__info {
+    width: 450px;
+    margin: auto;
+  }
+}
+
+.workers__container .worker__info--header {
+  width: 90%;
+  height: 42px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 320px) {
+  .workers__container .worker__info--header {
+    height: 52px;
+  }
 }
 
 .workers__container .worker__info--header h1 {
@@ -1623,6 +1642,12 @@ svg {
   color: #0071BC;
   display: inline-block;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .workers__container .worker__info--name p {
+    font-size: 2.8rem;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -3054,6 +3079,12 @@ svg {
 @media only screen and (max-width: 991px) {
   .workers__content .min-worker {
     max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .workers__content .min-worker {
+    margin-bottom: 15px;
   }
 }
 

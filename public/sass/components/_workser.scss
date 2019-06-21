@@ -7,19 +7,30 @@
     max-width: $main-content-width-big;
   }
 
-  @media only screen and (max-width: 1500px){
+  @media only screen and (max-width: 1500px) {
     max-width: 98%;
   }
   .worker__info {
-    max-width: 49%;
+    width: 49%;
+
+    @media only screen and (max-width: 600px) {
+      width: 450px;
+      margin: auto;
+    }
 
     &--header {
+      width: 90%;
+      height: 42px;
+      overflow: hidden;
 
+      @media only screen and (max-width: 320px){
+        height: 52px;
+      }
       h1 {
         font-size: $main-fz;
         color: #4D4D4D;
         text-transform: uppercase;
-        @media only screen and (max-width: 320px){
+        @media only screen and (max-width: 320px) {
           font-size: 1.5rem;
         }
       }
@@ -33,7 +44,11 @@
         color: #0071BC;
         display: inline-block;
         text-decoration: none;
-        @media only screen and (max-width: 320px){
+
+        @media only screen and (max-width: 1024px) {
+          font-size: $tertiary-header;
+        }
+        @media only screen and (max-width: 320px) {
           font-size: $tertiary-header;
         }
       }
