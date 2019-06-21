@@ -14,7 +14,9 @@
     max-width: 49%;
 
     &--header {
-
+      width: 90%;
+      height: 42px;
+      overflow: hidden;
       h1 {
         font-size: $main-fz;
         color: #4D4D4D;

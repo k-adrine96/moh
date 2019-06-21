@@ -117,3 +117,30 @@
         </section>
     </main>
 @endsection
+
+
+
+<section class="partners">
+    <div class="partners--cont">
+        <div class="partners--cont--slider">
+            <a href="javascript:;" class="partners--cont--item"
+               style="background-image: url('./img/license-application-icon.png')"></a>
+            <a href="javascript:;" class="partners--cont--item"
+               style="background-image: url('./img/citizen-icon.png')"></a>
+            <a href="javascript:;" class="partners--cont--item"
+               style="background-image: url('./img/e-draft-icon.png')"></a>
+            <a href="javascript:;" class="partners--cont--item"
+               style="background-image: url('./img/sun-icon.png')"></a>
+        </div>
+        <div class="partners-1--cont--slider">
+            <a href="javascript:;" class="partners--cont--item"
+               style="background-image: url('./img/license-application-icon.png')"></a>
+            <a href="javascript:;" class="partners--cont--item"
+               style="background-image: url('./img/citizen-icon.png')"></a>
+            <a href="javascript:;" class="partners--cont--item"
+               style="background-image: url('./img/e-draft-icon.png')"></a>
+            <a href="javascript:;" class="partners--cont--item"
+               style="background-image: url('./img/sun-icon.png')"></a>
+        </div>
+    </div>
+</section>
