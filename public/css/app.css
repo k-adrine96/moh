@@ -1368,6 +1368,18 @@ svg {
   background-image: url("/img/website-icon.png");
 }
 
+.worker__number__email li a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #0071BC;
+}
+
+@media only screen and (max-width: 1024px) {
+  .worker__number__email li a {
+    font-size: 1.4rem;
+  }
+}
+
 .worker__number__email li span {
   font-size: 1.8rem;
   color: #4D4D4D;
