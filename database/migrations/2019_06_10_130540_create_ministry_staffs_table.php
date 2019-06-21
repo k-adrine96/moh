@@ -15,10 +15,10 @@ class CreateMinistryStaffsTable extends Migration
     {
         Schema::create('ministry_staffs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('position');
-            $table->string('name');
-            $table->string('phone_number');
-            $table->string('email');
+            $table->string('position')->nullable();
+            $table->string('name')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('email')->nullable();
             $table->timestamps();
         });
     }

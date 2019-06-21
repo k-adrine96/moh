@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DropUrlFromNewsTable extends Migration
+class AddSliderRowTopartnersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class DropUrlFromNewsTable extends Migration
      */
     public function up()
     {
-        Schema::table('news', function (Blueprint $table) {
-            $table->dropColumn('url');
+        Schema::table('partners', function (Blueprint $table) {
+            $table->string('slider_row')->after('url');
         });
     }
 
@@ -25,8 +25,8 @@ class DropUrlFromNewsTable extends Migration
      */
     public function down()
     {
-        Schema::table('news', function (Blueprint $table) {
-            $table->string('url');
+        Schema::table('partners', function (Blueprint $table) {
+            $table->dropColumn('slider_row');
         });
     }
 }

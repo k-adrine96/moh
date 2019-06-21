@@ -29,7 +29,7 @@
                                         </li>
                                         <li>
                                             <i class="message-icon"></i>
-                                            <span>{{$staffMember->email}}</span>
+                                            <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">{{$staffMember->email}}</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -58,11 +58,11 @@
                                     <ul class="worker__number__email">
                                         <li>
                                             <i class="call-icon"></i>
-                                            <span>dafggdfagadfgdg</span>
+                                            <span>phone number</span>
                                         </li>
                                         <li>
                                             <i class="message-icon"></i>
-                                            <span>dfhgdfgdfg</span>
+                                            <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">mail</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -92,11 +92,11 @@
                                     <ul class="worker__number__email">
                                         <li>
                                             <i class="call-icon"></i>
-                                            <span>dafggdfagadfgdg</span>
+                                            <span>phone number</span>
                                         </li>
                                         <li>
                                             <i class="message-icon"></i>
-                                            <span>dfhgdfgdfg</span>
+                                            <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">mail</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -126,11 +126,11 @@
                                     <ul class="worker__number__email">
                                         <li>
                                             <i class="call-icon"></i>
-                                            <span>dafggdfagadfgdg</span>
+                                            <span>phone number</span>
                                         </li>
                                         <li>
                                             <i class="message-icon"></i>
-                                            <span>dfhgdfgdfg</span>
+                                            <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">mail</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -138,26 +138,29 @@
                         </div>
                     </div>
                     <div class="mobile-workers-container editor-content workers__container mobile-workers-container-3">
-                        <div class="workers__container--info">
-                            <p>sdafsdfsdfsdf</p>
-                        </div>
-                        <div class="workers__container--name">
-                            <h1>name</h1>
+                        <div class="workers__info">
+                            <div class="workers__info--image"
+                                 style="background-image: url('{{Storage::url($staffMember->image)}}')"></div>
+                            <div class="workers__info--content">
+                                <div class="workers__info--content--names">
+                                    <h1>dafgadfgdfgadg</h1>
+                                    <a class="mobile-name" href="javascript:;" data-for="mobile-workers-container-3">Name</a>
+                                </div>
+                                <ul class="worker__number__email">
+                                    <li>
+                                        <i class="call-icon"></i>
+                                        <span>phone number</span>
+                                    </li>
+                                    <li>
+                                        <i class="message-icon"></i>
+                                        <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">mail</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </li>
             </ul>
-
-        </section>
-        <section class="partners">
-            <div class="partners--cont">
-                <div class="partners--cont--slider">
-                    @foreach($partners as $partner)
-                        <a href="{{$partner->url}}" class="partners--cont--item"
-                           style="background-image: url('{{Storage::url($partner->image)}}')"></a>
-                    @endforeach
-                </div>
-            </div>
         </section>
     </main>
 @endsection

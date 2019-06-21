@@ -11,6 +11,7 @@ class Partners extends Model
 
     protected $fillable = [
         'image',
-        'url'
+        'url',
+        'slider_row'
     ];
 }

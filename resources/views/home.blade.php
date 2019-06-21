@@ -101,19 +101,5 @@
                 </div>
             </div>
         </section>
-        <section class="partners">
-            <?php //$count = ''; ?>
-            @foreach($partners->chunk(4) as $chunk)
-                <div class="partners--cont">
-                    <?php //$count += 1; ?>
-                    <div class="partners--cont--slider">
-                        @foreach($chunk as $partner)
-                            <a href="{{$partner->url}}" class="partners--cont--item"
-                               style="background-image: url('{{Storage::url($partner->image)}}')"></a>
-                        @endforeach
-                    </div>
-                </div>
-            @endforeach
-        </section>
     </main>
 @endsection
