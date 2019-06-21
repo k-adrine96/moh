@@ -101,46 +101,5 @@
                 </div>
             </div>
         </section>
-        <section class="partners">
-            <?php //$count = ''; ?>
-            @foreach($partners->chunk(4) as $chunk)
-                <div class="partners--cont">
-                    <?php //$count += 1; ?>
-                    <div class="partners--cont--slider">
-                        @foreach($chunk as $partner)
-                            <a href="{{$partner->url}}" class="partners--cont--item"
-                               style="background-image: url('{{Storage::url($partner->image)}}')"></a>
-                        @endforeach
-                    </div>
-                </div>
-            @endforeach
-        </section>
     </main>
 @endsection
-
-
-
-<section class="partners">
-    <div class="partners--cont">
-        <div class="partners--cont--slider">
-            <a href="javascript:;" class="partners--cont--item"
-               style="background-image: url('./img/license-application-icon.png')"></a>
-            <a href="javascript:;" class="partners--cont--item"
-               style="background-image: url('./img/citizen-icon.png')"></a>
-            <a href="javascript:;" class="partners--cont--item"
-               style="background-image: url('./img/e-draft-icon.png')"></a>
-            <a href="javascript:;" class="partners--cont--item"
-               style="background-image: url('./img/sun-icon.png')"></a>
-        </div>
-        <div class="partners-1--cont--slider">
-            <a href="javascript:;" class="partners--cont--item"
-               style="background-image: url('./img/license-application-icon.png')"></a>
-            <a href="javascript:;" class="partners--cont--item"
-               style="background-image: url('./img/citizen-icon.png')"></a>
-            <a href="javascript:;" class="partners--cont--item"
-               style="background-image: url('./img/e-draft-icon.png')"></a>
-            <a href="javascript:;" class="partners--cont--item"
-               style="background-image: url('./img/sun-icon.png')"></a>
-        </div>
-    </div>
-</section>

@@ -147,17 +147,6 @@
                     </div>
                 </li>
             </ul>
-
-        </section>
-        <section class="partners">
-            <div class="partners--cont">
-                <div class="partners--cont--slider">
-                    @foreach($partners as $partner)
-                        <a href="{{$partner->url}}" class="partners--cont--item"
-                           style="background-image: url('{{Storage::url($partner->image)}}')"></a>
-                    @endforeach
-                </div>
-            </div>
         </section>
     </main>
 @endsection
