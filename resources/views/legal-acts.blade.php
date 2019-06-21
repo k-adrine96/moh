@@ -141,3 +141,10 @@
         </section>
     </main>
 @endsection
+
+<!--MOMENT-->
+<script src="./js/libs/moment.js"></script>
+<!--DATE PICKER-->
+<script src="./js/libs/tempusdominus-bootstrap-4.min.js"></script>
+<!--FONT AWESOME-->
+<script src="./js/libs/all.min.js"></script>
