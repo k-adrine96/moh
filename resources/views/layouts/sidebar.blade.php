@@ -92,7 +92,7 @@
                 </ul>
             </li>
             <li>
-                <a href="{{ route('pages' , 'faq') }}" class="first-lvl">Հաճախ տրվեղ հարցեր</a>
+                <a href="{{ route('pages' , 'faq') }}" class="first-lvl">Հաճախ տրվող հարցեր</a>
             </li>
             <li>
                 <a href="{{ route('pages' , 'links') }}" class="first-lvl">Հղումներ</a>
