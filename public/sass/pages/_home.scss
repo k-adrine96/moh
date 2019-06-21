@@ -239,14 +239,16 @@
         cursor: pointer;
         transition: .5s;
         margin: 0 1rem;
+        padding: 3rem;
 
-        &:not(:last-child) {
-          padding: 3rem;
+        //&:not(:last-child) {
+        //  padding: 3rem;
+        //
+        //  @media only screen and (max-width: 320px) {
+        //    padding: 1rem;
+        //  }
+        //}
 
-          @media only screen and (max-width: 320px) {
-            padding: 1rem;
-          }
-        }
 
         &:hover {
           border-color: $main-btn-color;
