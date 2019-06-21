@@ -824,6 +824,16 @@ svg {
   font-size: 1.6rem;
 }
 
+.menu .menu--content .mobile--visible {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .menu .menu--content .mobile--visible {
+    display: block;
+  }
+}
+
 .menu__social--icons li {
   position: relative;
   border: 2px solid white;
@@ -2934,6 +2944,32 @@ svg {
   }
 }
 
+.minister__public--council--header {
+  max-width: 1400px;
+  margin: 25px auto 0;
+}
+
+@media only screen and (min-width: 1921px) {
+  .minister__public--council--header {
+    max-width: 73.5%;
+  }
+}
+
+.minister__public--council--header a {
+  text-decoration: none;
+  font-size: 3.8rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #0071BC;
+}
+
+@media only screen and (max-width: 991px) {
+  .minister__public--council--header a {
+    text-align: center;
+    font-size: 2.8rem;
+  }
+}
+
 .ask__minister--cont {
   max-width: 1400px;
   margin: auto;
@@ -2950,7 +2986,7 @@ svg {
 }
 
 .ask__minister--cont--header h1 {
-  font-size: 4.8rem;
+  font-size: 3.8rem;
   font-weight: 100;
   text-transform: uppercase;
 }
