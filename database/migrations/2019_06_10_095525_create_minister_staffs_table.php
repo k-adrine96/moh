@@ -15,12 +15,12 @@ class CreateMinisterStaffsTable extends Migration
     {
         Schema::create('minister_staffs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('position');
-            $table->string('name');
-            $table->string('phone_number');
-            $table->string('email');
-            $table->string('image');
-            $table->longText('text');
+            $table->string('position')->nullable();
+            $table->string('name')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('email')->nullable();
+            $table->string('image')->nullable();
+            $table->longText('text')->nullable();
             $table->timestamps();
         });
     }

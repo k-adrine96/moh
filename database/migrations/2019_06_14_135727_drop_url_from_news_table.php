@@ -26,7 +26,7 @@ class DropUrlFromNewsTable extends Migration
     public function down()
     {
         Schema::table('news', function (Blueprint $table) {
-            //
+            $table->string('url');
         });
     }
 }
