@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMinisterInfosTable extends Migration
+class CreateMinHistoryItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateMinisterInfosTable extends Migration
      */
     public function up()
     {
-        Schema::create('minister_infos', function (Blueprint $table) {
+        Schema::create('min_history_items', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('year')->nullable();
             $table->string('name');
-            $table->text('description');
+            $table->integer('order')->default(1);
             $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('minister_info_categories')
+            $table->foreign('category_id')->references('id')->on('min_history_categories')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->timestamps();
@@ -32,6 +33,6 @@ class CreateMinisterInfosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('minister_infos');
+        Schema::dropIfExists('min_history_items');
     }
 }

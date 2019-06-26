@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMinisterInfosTable extends Migration
+class CreateLegalActsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,19 @@ class CreateMinisterInfosTable extends Migration
      */
     public function up()
     {
-        Schema::create('minister_infos', function (Blueprint $table) {
+        Schema::create('legal_acts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->text('description');
-            $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('minister_info_categories')
+            $table->date('date');
+            $table->string('file_upload');
+            $table->string('icon');
+            $table->integer('type_id')->unsigned();
+            $table->integer('order')->default(1);
+
+            $table->foreign('type_id')->references('id')->on('legal_acts_types')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+
             $table->timestamps();
         });
     }
@@ -32,6 +37,6 @@ class CreateMinisterInfosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('minister_infos');
+        Schema::dropIfExists('legal_acts');
     }
 }
