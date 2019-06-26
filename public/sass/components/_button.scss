@@ -105,3 +105,14 @@
     //}
   }
 }
+
+.custom__button.btn{
+  color: white;
+  background-color: $color-blue;
+  border: 1px solid transparent;
+  padding: 7px 27px;
+  line-height: 1.5;
+  border-radius: 4.25rem;
+  transition: none;
+  font-size: $main-fz;
+}
