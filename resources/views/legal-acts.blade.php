@@ -38,7 +38,7 @@
                             <script type="text/javascript">
                               $(function () {
                                 $('#datetimepicker4').datetimepicker({
-                                  format: 'L'
+                                  format: 'Y-MM-DD'
                                 });
                               });
                             </script>
@@ -55,7 +55,7 @@
                                             <li class="d-flex align-items-center">
                                                 <i class="pdf__icon" style="background-image: url('{{Storage::url($legalAct->icon)}}')"></i>
                                                 <a href="{{$legalAct->file_upload}}" class="border-btm ml-5">
-                                                    <span>{{$legalAct->name}} <i>{{ $legalAct->date }} </i><!--<b>265կբ</b>--></span>
+                                                    <span>{{$legalAct->name}} <i>{{ $legalAct->date->formatLocalized('%B %d, %Y') }} </i><!--<b>265կբ</b>--></span>
                                                 </a>
                                             </li>
                                         @empty

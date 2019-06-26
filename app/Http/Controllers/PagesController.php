@@ -109,7 +109,7 @@ class PagesController extends Controller
             }
 
             if($request->date) {
-                $legalActs = $legalActs->whereDate($request->date);
+                $legalActs = $legalActs->where('date', $request->date);
             }
 
             $legalActs  = $legalActs->orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
