@@ -28,7 +28,7 @@ use App\MinisterInfoCategory;
 
 class PagesController extends Controller
 {
-    public function index($page)
+    public function index(Request $request, $page)
     {
         $partnersRow1 = Partners::where('slider_row', 1)->orderBy('order', 'asc')->orderBy('id', 'asc')->get();
         $partnersRow2 = Partners::where('slider_row', 2)->orderBy('order', 'asc')->orderBy('id', 'asc')->get();
@@ -98,7 +98,21 @@ class PagesController extends Controller
         }else if($page === 'legal-acts')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'legal-acts')->first();
-            $legalActs  = LegalAct::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
+            $legalActs = new LegalAct();
+
+            if($request->type_id) {
+                $legalActs = $legalActs->whereTypeId($request->type_id);
+            }
+
+            if($request->name) {
+                $legalActs = $legalActs->where('name', 'like', '%'.$request->name.'%');
+            }
+
+            if($request->date) {
+                $legalActs = $legalActs->whereDate($request->date);
+            }
+
+            $legalActs  = $legalActs->orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
             $actsTypes  = LegalActsType::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
 
         }else if($page === 'links')

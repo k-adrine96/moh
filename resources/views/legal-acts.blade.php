@@ -13,7 +13,7 @@
                     <form action="">
                         <div class="form--content">
                             <label for="legal-acts-type">տեսակ</label>
-                            <select title="" id="legal-acts-type" class="Legal__acts--type" style="width: 100%" name="state">
+                            <select title="" id="legal-acts-type" class="Legal__acts--type" style="width: 100%" name="type_id">
                                 <option value="0">Բոլորը</option>
                                 @foreach($actsTypes as $actsType)
                                     <option value="{{$actsType->id}}">{{$actsType->name}}</option>
@@ -22,7 +22,7 @@
                             <div class="form-group">
                                 <label for="date">ամսաթիվ</label>
                                 <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
-                                    <input placeholder="Ամսաթիվ" type="text" id="date" class="form-control datetimepicker-input"
+                                    <input name="date" placeholder="Ամսաթիվ" type="text" id="date" class="form-control datetimepicker-input"
                                            data-target="#datetimepicker4"/>
                                     <div class="input-group-append" data-target="#datetimepicker4"
                                          data-toggle="datetimepicker">
@@ -32,9 +32,9 @@
                             </div>
                             <div class="form-group">
                                 <label for="legal-acts-name">անվանում</label>
-                                <input type="text" class="form-control" id="legal-acts-name" placeholder="Անվանում">
+                                <input name="name" type="text" class="form-control" id="legal-acts-name" placeholder="Անվանում">
                             </div>
-                            <a href="javascript:;" class="margin-auto animated__button animated__button--blue-1">ՈՐՈՆԵԼ</a>
+                            <div class="text-center"><button type="submit" class=" custom__button btn">Որոնել</button></div>
                             <script type="text/javascript">
                               $(function () {
                                 $('#datetimepicker4').datetimepicker({
@@ -51,14 +51,16 @@
                             <div class="pdf__info--row d-flex align-items-start">
                                 <div class="pdf__text">
                                     <ul>
-                                        @foreach($legalActs as $legalAct)
+                                        @forelse($legalActs as $legalAct)
                                             <li class="d-flex align-items-center">
                                                 <i class="pdf__icon" style="background-image: url('{{Storage::url($legalAct->icon)}}')"></i>
                                                 <a href="{{$legalAct->file_upload}}" class="border-btm ml-5">
                                                     <span>{{$legalAct->name}} <i>{{ $legalAct->date }} </i><!--<b>265կբ</b>--></span>
                                                 </a>
                                             </li>
-                                        @endforeach
+                                        @empty
+                                        <h1>No data</h1>
+                                        @endforelse
                                     </ul>
                                 </div>
                             </div>
