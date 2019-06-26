@@ -14,13 +14,17 @@ class LegalAct extends Model
         'type_id'
     ];
 
-    public function type()
-    {
-        return $this->belongsTo(LegalActsType::class, 'type_id', 'id');
-    }
+    protected $dates = [
+        'date'
+    ];
 
     public function getFileLinkAttribute()
     {
         return \Storage::url(json_decode($this->file_upload)[0]->download_link);
+    }
+
+    public function type()
+    {
+        return $this->belongsTo(LegalActsType::class, 'type_id', 'id');
     }
 }
