@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\News;
 use App\Videos;
 use App\Report;
+use App\LegalAct;
 use App\Partners;
 use App\Research;
 use App\Statistic;
@@ -15,10 +16,13 @@ use App\CoverPhotos;
 use App\PressRelease;
 use App\MinisterPage;
 use App\MinisterInfo;
+use App\LegalActsType;
 use App\Announcements;
 use App\MinisterStaff;
 use App\MinistryStaff;
 use App\HomepageSlider;
+use App\MinHistoryItem;
+use App\MinHistoryCategory;
 use App\SpeechAndInterview;
 use App\MinisterInfoCategory;
 
@@ -88,10 +92,14 @@ class PagesController extends Controller
         }else if($page === 'history')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'history')->first();
+            $minHistoryItems = MinHistoryItem::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
+            $minHistoryCats = MinHistoryCategory::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
 
         }else if($page === 'legal-acts')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'legal-acts')->first();
+            $legalActs  = LegalAct::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
+            $actsTypes  = LegalActsType::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
 
         }else if($page === 'links')
         {
@@ -138,9 +146,14 @@ class PagesController extends Controller
         {
             $filesInfo = Informative::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'informative')->first();
+
         }
 
-        return view($page , compact('pagesTexts' , 'coverPhoto', 'content' , 'educationInfos' , 'workInfos' , 'otherInfos' , 'filesInfo' , 'partnersRow1' , 'partnersRow2'));
+        return view($page , compact('pagesTexts' , 'coverPhoto', 'content' ,
+                                            'educationInfos' , 'workInfos' , 'otherInfos' ,
+                                            'filesInfo' , 'partnersRow1' , 'partnersRow2' ,
+                                            'minHistoryItems' , 'minHistoryCats' , 'legalActs' ,
+                                            'actsTypes'));
     }
 
     public function homepage(){

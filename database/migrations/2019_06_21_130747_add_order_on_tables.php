@@ -113,6 +113,9 @@ class AddOrderOnTables extends Migration
         Schema::table('partners', function (Blueprint $table) {
             $table->dropColumn('order');
         });
+        Schema::table('press_releases', function (Blueprint $table) {
+            $table->integer('order')->default(1);
+        });
         Schema::table('reports', function (Blueprint $table) {
             $table->dropColumn('order');
         });

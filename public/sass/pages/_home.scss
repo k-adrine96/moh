@@ -265,7 +265,7 @@
           color: $main-color;
           font-weight: $fw-semiBold;
           margin-bottom: 2rem;
-          @include ellipses(96px, 3);
+          @include ellipses(100px, 3);
 
           @media only screen and (max-width: 320px) {
             font-size: 2.5rem;
