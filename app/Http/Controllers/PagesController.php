@@ -69,16 +69,16 @@ class PagesController extends Controller
 
         }else if($page === 'all-news')
         {
-            $content = News::orderBy('order', 'asc')->orderBy('date', 'asc')->get();
+            $content = News::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'all-news')->first();
 
         }else if($page === 'videos')
         {
-            $content = Videos::orderBy('order', 'asc')->orderBy('date', 'asc')->get();
+            $content = Videos::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'announcement')
         {
-            $content = Announcements::orderBy('order', 'asc')->orderBy('date', 'asc')->get();
+            $content = Announcements::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'announcement')->first();
 
         }else if($page === 'budget')
