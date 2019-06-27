@@ -18,14 +18,14 @@ class Informative extends Model
         'file_date'
     ];
 
-    public function getDownloadAttribute()
-    {
-        if($this->file_upload && $this->file_upload !== '[]') {
-            return 'download';
-        }
-
-        return '';
-    }
+//    public function getDownloadAttribute()
+//    {
+//        if($this->file_upload && $this->file_upload !== '[]') {
+//            return 'download';
+//        }
+//
+//        return '';
+//    }
 
     public function getFileLinkAttribute()
     {
