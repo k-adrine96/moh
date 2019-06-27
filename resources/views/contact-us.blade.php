@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="contact__us--cont">
-                <div class="contact__us--cont--text1">
+                <div class="contact__us--cont--text1 text-justify">
                     {!! $pagesTexts->page_text1 !!}
                 </div>
             </div>

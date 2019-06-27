@@ -12,13 +12,13 @@
                     <div class="message__content--info--image"
                          style="background-image: url('{{Storage::url($content->minister_pic)}}')">
                     </div>
-                    <div class="message__content--info--text">
+                    <div class="message__content--info--text text-justify">
                         {!! $pagesTexts->page_text1 !!}
                     </div>
                 </div>
             </div>
             <div class="message__content--1">
-                <div class="message__content--1--info">
+                <div class="message__content--1--info text-justify">
                     @if($pagesTexts->page_text2)
                         {!! $pagesTexts->page_text2 !!}
                     @endif
@@ -47,7 +47,7 @@
                                         <li class="d-flex align-items-center border-btm">
                                             <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
                                             <a href="{{$educationInfo->url}}" class="">
-                                                <span>{!! $educationInfo->description !!}<!--<b>265կբ</b>--></span>
+                                                <spans>{!! $educationInfo->description !!}<!--<b>265կբ</b>--></spans>
                                             </a>
                                         </li>
                                     </ul>

@@ -7,7 +7,7 @@
                 <h1>Առաքելություն</h1>
             </div>
         </section>
-        <section class="only__text">
+        <section class="only__text text-justify">
             {!! $pagesTexts->page_text1 !!}
         </section>
     </main>

@@ -23,7 +23,7 @@
                                                 <div class="all__announcement--date">
                                                     <p><?php echo date('d F Y l', strtotime($announcement->date)); ?></p>
                                                 </div>
-                                                <div class="all__announcement--body">
+                                                <div class="all__announcement--body text-justify">
                                                     {!! $announcement->description !!}
                                                 </div>
                                             </div>

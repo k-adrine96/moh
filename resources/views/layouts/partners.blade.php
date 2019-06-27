@@ -9,5 +9,6 @@
             @foreach($partnersRow2 as $partnerPic)
                 <a href="{{$partnerPic->url}}" class="partners--cont--item" style="background-image: url('{{Storage::url($partnerPic->image)}}')"></a>
             @endforeach
+        </div>
     </div>
 </section>

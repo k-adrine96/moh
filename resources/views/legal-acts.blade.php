@@ -59,7 +59,7 @@
                                                 </a>
                                             </li>
                                         @empty
-                                        <h1>No data</h1>
+                                            <h1>No data</h1>
                                         @endforelse
                                     </ul>
                                 </div>
