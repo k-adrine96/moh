@@ -69,16 +69,16 @@ class PagesController extends Controller
 
         }else if($page === 'all-news')
         {
-            $content = News::orderBy('order', 'asc')->orderBy('date', 'asc')->get();
+            $content = News::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'all-news')->first();
 
         }else if($page === 'videos')
         {
-            $content = Videos::orderBy('order', 'asc')->orderBy('date', 'asc')->get();
+            $content = Videos::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'announcement')
         {
-            $content = Announcements::orderBy('order', 'asc')->orderBy('date', 'asc')->get();
+            $content = Announcements::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'announcement')->first();
 
         }else if($page === 'budget')
@@ -185,26 +185,32 @@ class PagesController extends Controller
 
     public function showNewsIndividual($id){
 
-        $coverPhoto = CoverPhotos::where('page_slug', 'single-news')->first();
         $newsIndividual = News::where('id', $id)->first();
+        $partnersRow1 = Partners::where('slider_row', 1)->get();
+        $partnersRow2 = Partners::where('slider_row', 2)->get();
+        $coverPhoto = CoverPhotos::where('page_slug', 'single-news')->first();
 
-        return view('single-news' , compact('newsIndividual' , 'coverPhoto'));
+        return view('single-news' , compact('newsIndividual' , 'coverPhoto', 'partnersRow1' , 'partnersRow2'));
     }
 
     public function showAnnouncementIndividual($id){
 
         $announcementIndividual = Announcements::where('id', $id)->first();
+        $partnersRow1 = Partners::where('slider_row', 1)->get();
+        $partnersRow2 = Partners::where('slider_row', 2)->get();
         $coverPhoto = CoverPhotos::where('page_slug', 'single-announcement')->first();
 
-        return view('single-announcement' , compact('announcementIndividual' , 'coverPhoto'));
+        return view('single-announcement' , compact('announcementIndividual' , 'coverPhoto', 'partnersRow1' , 'partnersRow2'));
     }
 
     public function showVideoIndividual($id){
 
         $videoIndividual = Videos::where('id', $id)->first();
+        $partnersRow1 = Partners::where('slider_row', 1)->get();
+        $partnersRow2 = Partners::where('slider_row', 2)->get();
         $coverPhoto = CoverPhotos::where('page_slug', 'single-video')->first();
 
-        return view('single-video' , compact('videoIndividual' , 'coverPhoto'));
+        return view('single-video' , compact('videoIndividual' , 'coverPhoto' , 'partnersRow1' , 'partnersRow2'));
     }
 
 }

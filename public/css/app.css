@@ -3877,6 +3877,10 @@ svg {
   font-weight: normal !important;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .burger__menu {
   cursor: pointer;
   margin-right: 5.6rem;
