@@ -56,3 +56,5 @@ Route::get('/{page}','PagesController@index')->name('pages');
 Route::get('/single-news/{id}','PagesController@showNewsIndividual')->name('show.news.individual');
 Route::get('/single-announcement/{id}','PagesController@showAnnouncementIndividual')->name('show.announcement.individual');
 Route::get('/single-video/{id}','PagesController@showVideoIndividual')->name('show.video.individual');
+
+Route::post('/file-upload','PagesController@fileUpload');

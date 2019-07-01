@@ -54,7 +54,6 @@ function sampleText() {
 
 window.tinymce_init_callback = function(editor)
 {
-  console.log($('meta[name="assets-path"]').attr('content')+'?path=js/skins/voyager');
   editor.remove();
   editor = null;
   tinymce.init({
@@ -66,7 +65,7 @@ window.tinymce_init_callback = function(editor)
     // skin: 'voyager',
     min_height: 600,
     resize: 'vertical',
-    plugins: 'paste print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount imagetools',
+    plugins: 'image paste print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount imagetools',
     extended_valid_elements: 'input[id|name|value|type|class|style|required|placeholder|autocomplete|onclick]',
     file_browser_callback: function (field_name, url, type, win) {
       if (type == 'image') {
@@ -74,9 +73,59 @@ window.tinymce_init_callback = function(editor)
       }
     },
     toolbar: 'styleselect bold italic underline | forecolor backcolor | alignleft aligncenter alignright | bullist numlist outdent indent | link image table youtube giphy | codesample',
-    convert_urls: false,
-    image_caption: true,
-    image_title: true
+
+    convert_urls: true,
+    images_upload_url: `${location.origin}/file-upload`,
+    image_upload_url: `${location.origin}/file-upload`,
+    automatic_uploads: false,
+    file_picker_types: 'image',
+    /* and here's our custom image picker*/
+    file_picker_callback: function (cb, value, meta) {
+      var input = document.createElement('input');
+      input.setAttribute('type', 'file');
+      input.setAttribute('accept', 'image/*');
+      input.onchange = function () {
+        var file = this.files[0];
+        var reader = new FileReader();
+        reader.onload = function () {
+          var id = 'blobid' + (new Date()).getTime();
+          var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+          var base64 = reader.result.split(',')[1];
+          var blobInfo = blobCache.create(id, file, base64);
+          blobCache.add(blobInfo);
+
+
+          /* call the callback and populate the Title field with the file name */
+          cb(blobInfo.blobUri(), { title: file.name });
+        };
+        reader.readAsDataURL(file);
+      };
+
+      input.click();
+    },
+    images_upload_handler: (blobInfo, success, failure) => {
+
+      let formData = new FormData();
+
+      formData.append('image', blobInfo.blob(), blobInfo.filename());
+      formData.append('data', blobInfo.filename());
+      console.log(formData, 'formdata');
+
+      $.ajax({
+        url: `${location.origin}/file-upload`,
+        data: formData,
+        method: 'post',
+        success: function(res) {
+          console.log(res);
+        },
+        error: function(err) {
+          console.log(err);
+        }
+      });
+
+    }
+
+
   });
 };
 

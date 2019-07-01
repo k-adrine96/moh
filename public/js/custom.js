@@ -194,7 +194,6 @@ function sampleText() {
 }
 
 window.tinymce_init_callback = function (editor) {
-  console.log($('meta[name="assets-path"]').attr('content') + '?path=js/skins/voyager');
   editor.remove();
   editor = null;
   __WEBPACK_IMPORTED_MODULE_0_tinymce___default.a.init({
@@ -206,7 +205,7 @@ window.tinymce_init_callback = function (editor) {
     // skin: 'voyager',
     min_height: 600,
     resize: 'vertical',
-    plugins: 'paste print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount imagetools',
+    plugins: 'image paste print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount imagetools',
     extended_valid_elements: 'input[id|name|value|type|class|style|required|placeholder|autocomplete|onclick]',
     file_browser_callback: function file_browser_callback(field_name, url, type, win) {
       if (type == 'image') {
@@ -214,9 +213,56 @@ window.tinymce_init_callback = function (editor) {
       }
     },
     toolbar: 'styleselect bold italic underline | forecolor backcolor | alignleft aligncenter alignright | bullist numlist outdent indent | link image table youtube giphy | codesample',
-    convert_urls: false,
-    image_caption: true,
-    image_title: true
+
+    convert_urls: true,
+    images_upload_url: location.origin + '/file-upload',
+    image_upload_url: location.origin + '/file-upload',
+    automatic_uploads: false,
+    file_picker_types: 'image',
+    /* and here's our custom image picker*/
+    file_picker_callback: function file_picker_callback(cb, value, meta) {
+      var input = document.createElement('input');
+      input.setAttribute('type', 'file');
+      input.setAttribute('accept', 'image/*');
+      input.onchange = function () {
+        var file = this.files[0];
+        var reader = new FileReader();
+        reader.onload = function () {
+          var id = 'blobid' + new Date().getTime();
+          var blobCache = __WEBPACK_IMPORTED_MODULE_0_tinymce___default.a.activeEditor.editorUpload.blobCache;
+          var base64 = reader.result.split(',')[1];
+          var blobInfo = blobCache.create(id, file, base64);
+          blobCache.add(blobInfo);
+
+          /* call the callback and populate the Title field with the file name */
+          cb(blobInfo.blobUri(), { title: file.name });
+        };
+        reader.readAsDataURL(file);
+      };
+
+      input.click();
+    },
+    images_upload_handler: function images_upload_handler(blobInfo, success, failure) {
+
+      var formData = new FormData();
+
+      formData.append('image', blobInfo.blob(), blobInfo.filename());
+      formData.append('data', blobInfo.filename());
+      console.log(formData, 'formdata');
+
+      $.ajax({
+        url: location.origin + '/file-upload',
+        data: formData,
+        method: 'post',
+        success: function success(res) {
+          console.log(res);
+        },
+        error: function error(err) {
+          console.log(err);
+        }
+      });
+    }
+
   });
 };
 
@@ -234,7 +280,7 @@ function tinymce_setup_callback(editor) {
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -27418,8 +27464,8 @@ function tinymce_setup_callback(editor) {
       suffix: null,
       $: DomQuery,
       majorVersion: '5',
-      minorVersion: '0.8',
-      releaseDate: '2019-06-18',
+      minorVersion: '0.9',
+      releaseDate: '2019-06-26',
       editors: legacyEditors,
       i18n: I18n,
       activeEditor: null,
@@ -28436,7 +28482,7 @@ __webpack_require__(48);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -58066,7 +58112,7 @@ __webpack_require__(50);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -58077,7 +58123,7 @@ __webpack_require__(50);
 
     var register = function (editor) {
       editor.addCommand('mcePrint', function () {
-        if (global$1.ie <= 11) {
+        if (global$1.ie && global$1.ie <= 11) {
           editor.getDoc().execCommand('print', false, null);
         } else {
           editor.getWin().print();
@@ -58139,7 +58185,7 @@ __webpack_require__(52);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -58280,7 +58326,7 @@ __webpack_require__(54);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -58877,7 +58923,7 @@ __webpack_require__(56);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -59630,7 +59676,7 @@ __webpack_require__(58);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -59834,7 +59880,7 @@ __webpack_require__(60);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -60338,7 +60384,7 @@ __webpack_require__(62);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -60472,7 +60518,7 @@ __webpack_require__(64);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -60970,7 +61016,7 @@ __webpack_require__(66);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -61145,7 +61191,7 @@ __webpack_require__(68);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -63098,7 +63144,7 @@ __webpack_require__(70);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -64507,7 +64553,7 @@ __webpack_require__(72);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -65873,7 +65919,7 @@ __webpack_require__(74);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -67752,7 +67798,7 @@ __webpack_require__(76);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -68365,7 +68411,7 @@ __webpack_require__(78);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -77969,7 +78015,7 @@ __webpack_require__(80);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -79694,7 +79740,7 @@ __webpack_require__(82);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -79760,7 +79806,7 @@ __webpack_require__(84);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -79877,7 +79923,7 @@ __webpack_require__(86);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -80014,7 +80060,7 @@ __webpack_require__(88);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -80127,7 +80173,7 @@ __webpack_require__(90);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -80290,7 +80336,7 @@ __webpack_require__(92);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -80506,7 +80552,7 @@ __webpack_require__(94);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -80839,7 +80885,7 @@ __webpack_require__(96);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -83199,7 +83245,7 @@ __webpack_require__(98);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function () {
     'use strict';
@@ -83713,7 +83759,7 @@ __webpack_require__(100);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -85558,7 +85604,7 @@ __webpack_require__(102);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -85598,7 +85644,7 @@ __webpack_require__(104);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -85638,7 +85684,7 @@ __webpack_require__(106);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
@@ -87096,7 +87142,7 @@ __webpack_require__(108);
  * For LGPL see License.txt in the project root for license information.
  * For commercial licenses see https://www.tiny.cloud/
  *
- * Version: 5.0.8 (2019-06-18)
+ * Version: 5.0.9 (2019-06-26)
  */
 (function (domGlobals) {
     'use strict';
