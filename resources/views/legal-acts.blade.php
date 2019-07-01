@@ -53,8 +53,7 @@
                                     <ul>
                                         @forelse($legalActs as $legalAct)
                                             <li class="d-flex align-items-center">
-                                                {{--<i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($legalAct->file_link)}}.png")'></i>--}}
-                                                <i class="pdf__icon" style='background-image: url("/img/word.png")'></i>
+                                                <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($legalAct->file_link)}}.png")'></i>
                                                 <a href="{{$legalAct->file_link}}" class="border-btm ml-5" target="_blank">
                                                     <span>{{$legalAct->name}} <i>{{ $legalAct->date->formatLocalized('%B %d, %Y') }} </i><!--<b>265կբ</b>--></span>
                                                 </a>
