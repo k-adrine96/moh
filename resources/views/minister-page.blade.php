@@ -12,13 +12,13 @@
                     <div class="message__content--info--image"
                          style="background-image: url('{{Storage::url($content->minister_pic)}}')">
                     </div>
-                    <div class="message__content--info--text text-justify">
+                    <div class="message__content--info--text text-justify editor-content">
                         {!! $pagesTexts->page_text1 !!}
                     </div>
                 </div>
             </div>
             <div class="message__content--1">
-                <div class="message__content--1--info text-justify">
+                <div class="message__content--1--info text-justify editor-content">
                     @if($pagesTexts->page_text2)
                         {!! $pagesTexts->page_text2 !!}
                     @endif

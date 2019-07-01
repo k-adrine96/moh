@@ -33,7 +33,7 @@
                                                     <div class="all__news--header">
                                                         <a href="{{route('show.news.individual' , $news->id)}}">{{$news->title}}</a>
                                                     </div>
-                                                    <div class="all__news--short--description text-justify">
+                                                    <div class="all__news--short--description text-justify editor-content">
                                                         {!! $news->description !!}
                                                     </div>
                                                 </div>

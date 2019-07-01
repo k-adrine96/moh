@@ -17,7 +17,7 @@
                                     <span>{{$minHistoryCat->name}}</span>
                                 </div>
                                 <div class="pdf__text">
-                                    <div class="text-container text-justify">
+                                    <div class="text-container text-justify editor-content">
                                         {!! $minHistoryCat->description !!}
                                     </div>
                                     <ul>

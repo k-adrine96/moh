@@ -8,7 +8,7 @@
                     <div class="main__cover--item-container">
                         <div class="main__cover--item-container-cont">
                             <h2>{!! $sliderInfo->title !!}</h2>
-                            <p class="text-justify">{!! $sliderInfo->text !!}</p>
+                            <p class="text-justify editor-content">{!! $sliderInfo->text !!}</p>
                             @if($sliderInfo->url)
                                 <a href="{{$sliderInfo->url}}"
                                    class="animated__button animated__button--blue-1">Ավելին</a>
@@ -38,7 +38,7 @@
                                 <div class="news__info">
                                     <span><?php echo date('d F Y l', strtotime($singleNews->date)); ?></span>
                                     <h1>{{$singleNews->title}}</h1>
-                                    <div class="news-description text-justify">{!! $singleNews->description !!}</div>
+                                    <div class="news-description text-justify editor-content">{!! $singleNews->description !!}</div>
                                     <a href="{{route('show.news.individual' , $singleNews->id)}}" class="animated__button animated__button--blue">Ավելին</a>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                     @foreach($announcements as $announcement)
                         <div class="announcements--cont--slider--items">
                             <h1>{{$announcement->title}}</h1>
-                            <div class="announcement-description text-justify">
+                            <div class="announcement-description text-justify editor-content">
                                 {!! $announcement->description !!}
                             </div>
                             <a href="{{route('show.announcement.individual' , $announcement->id)}}" class="animated__button animated__button--yellow-small">Ավելին</a>

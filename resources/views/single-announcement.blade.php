@@ -15,7 +15,7 @@
                 <p><?php echo date('d F Y l' , strtotime($announcementIndividual->date)); ?></p>
             </div>
             <div class="single__announcement--body">
-                <p class="text-justify">{!! $announcementIndividual->description !!}</p>
+                <p class="text-justify editor-content">{!! $announcementIndividual->description !!}</p>
             </div>
         </section>
     </main>
