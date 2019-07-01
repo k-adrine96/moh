@@ -15,9 +15,9 @@ if (!function_exists('getFileIcon')) {
             'zip' => 'zip'
         ];
 
+        dd($icon);
         $extension = \File::extension($icon);
 
-        dd($extension);
 
         $noType = "n";
 
