@@ -17,7 +17,7 @@
                                     <ul>
                                         @foreach($filesInfo as $fileInfo)
                                             <li class="d-flex align-items-center">
-                                                <i class="pdf__icon" style="background-image: url('{{Storage::url($fileInfo->file_icon)}}')"></i>
+                                                <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($fileInfo->file_link)}}.png")'></i>
                                                 <a class="border-btm ml-5" href="{{$fileInfo->file_link}}" {{--{{ $fileInfo->download ?? 'download'}}--}} target="_blank">
                                                     <span>{{$fileInfo->file_name}} <i>{{ $fileInfo->file_date->formatLocalized('%B %d, %Y') }} </i></span>
                                                 </a>
