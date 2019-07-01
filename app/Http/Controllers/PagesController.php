@@ -155,7 +155,7 @@ class PagesController extends Controller
         {
             $filesInfo = Statistic::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'statistics')->first();
-            
+
         }else if($page === 'informative')
         {
             $filesInfo = Informative::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
@@ -213,4 +213,8 @@ class PagesController extends Controller
         return view('single-video' , compact('videoIndividual' , 'coverPhoto' , 'partnersRow1' , 'partnersRow2'));
     }
 
+    public function fileUpload(Request $request)
+    {
+        return $request->all();
+    }
 }
