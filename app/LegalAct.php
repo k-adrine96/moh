@@ -10,7 +10,6 @@ class LegalAct extends Model
         'name',
         'date',
         'file_upload',
-        'icon',
         'type_id'
     ];
 

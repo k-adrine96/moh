@@ -10,7 +10,6 @@ class SpeechAndInterview extends Model
         'file_name',
         'file_upload',
         'file_url',
-        'file_icon',
         'file_date'
     ];
 
