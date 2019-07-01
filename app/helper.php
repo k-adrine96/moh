@@ -17,6 +17,8 @@ if (!function_exists('getFileIcon')) {
 
         $extension = \File::extension($icon);
 
+        dd($extension);
+
         $noType = "n";
 
         if(isset($icons[$extension])) {
