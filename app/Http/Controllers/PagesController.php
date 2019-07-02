@@ -9,6 +9,9 @@ use App\Report;
 use App\LegalAct;
 use App\Partners;
 use App\Research;
+use App\LinksNgo;
+use App\LinksCco;
+use App\LinksLink;
 use App\Statistic;
 use App\PagesTexts;
 use App\Informative;
@@ -16,6 +19,7 @@ use App\CoverPhotos;
 use App\PressRelease;
 use App\MinisterPage;
 use App\MinisterInfo;
+use App\LinksCoWorker;
 use App\LegalActsType;
 use App\Announcements;
 use App\MinisterStaff;
@@ -35,13 +39,13 @@ class PagesController extends Controller
 
         if($page === 'minister-staff')
         {
-            $content = MinisterStaff::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'minister-staff')->first();
+            $content    = MinisterStaff::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
 
         }else if($page === 'ministry-staff')
         {
-            $content = MinistryStaff::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'ministry-staff')->first();
+            $content    = MinistryStaff::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
 
         }else if($page === 'mission')
         {
@@ -55,12 +59,12 @@ class PagesController extends Controller
 
         }else if($page === 'minister-page')
         {
-            $content = MinisterPage::first();
+            $content        = MinisterPage::first();
+            $pagesTexts     = PagesTexts::where('page_slug', 'minister-page')->first();
+            $coverPhoto     = CoverPhotos::where('page_slug', 'minister-page')->first();
             $educationInfos = MinisterInfo::where('category_id', 2)->orderBy('order', 'asc')->orderBy('id', 'asc')->get();
-            $workInfos = MinisterInfo::where('category_id', 3)->orderBy('order', 'asc')->orderBy('id', 'asc')->get();
-            $otherInfos = MinisterInfo::where('category_id', 4)->orderBy('order', 'asc')->orderBy('id', 'asc')->get();
-            $pagesTexts = PagesTexts::where('page_slug', 'minister-page')->first();
-            $coverPhoto = CoverPhotos::where('page_slug', 'minister-page')->first();
+            $workInfos      = MinisterInfo::where('category_id', 3)->orderBy('order', 'asc')->orderBy('id', 'asc')->get();
+            $otherInfos     = MinisterInfo::where('category_id', 4)->orderBy('order', 'asc')->orderBy('id', 'asc')->get();
 
         }else if($page === 'charter')
         {
@@ -70,7 +74,7 @@ class PagesController extends Controller
         }else if($page === 'all-news')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'all-news')->first();
-            $content = News::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
+            $content    = News::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'videos')
         {
@@ -78,8 +82,8 @@ class PagesController extends Controller
 
         }else if($page === 'announcement')
         {
-            $content = Announcements::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'announcement')->first();
+            $content    = Announcements::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'budget')
         {
@@ -91,14 +95,14 @@ class PagesController extends Controller
 
         }else if($page === 'history')
         {
-            $coverPhoto = CoverPhotos::where('page_slug', 'history')->first();
+            $coverPhoto      = CoverPhotos::where('page_slug', 'history')->first();
             $minHistoryItems = MinHistoryItem::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
-            $minHistoryCats = MinHistoryCategory::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
+            $minHistoryCats  = MinHistoryCategory::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
 
         }else if($page === 'legal-acts')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'legal-acts')->first();
-            $legalActs = new LegalAct();
+            $legalActs  = new LegalAct();
 
             if($request->type_id) {
                 $legalActs = $legalActs->whereTypeId($request->type_id);
@@ -112,12 +116,16 @@ class PagesController extends Controller
                 $legalActs = $legalActs->where('date', $request->date);
             }
 
-            $legalActs  = $legalActs->orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
-            $actsTypes  = LegalActsType::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
+            $legalActs = $legalActs->orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
+            $actsTypes = LegalActsType::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
 
         }else if($page === 'links')
         {
-            $coverPhoto = CoverPhotos::where('page_slug', 'links')->first();
+            $coverPhoto     = CoverPhotos::where('page_slug', 'links')->first();
+            $LinksNgos      = LinksNgo::orderBy('order', 'asc')->orderBy('id', 'desc')->get();
+            $LinksCcos      = LinksCco::orderBy('order', 'asc')->orderBy('id', 'desc')->get();
+            $LinksLinks     = LinksLink::orderBy('order', 'asc')->orderBy('id', 'desc')->get();
+            $LinksCoWorkers = LinksCoWorker::orderBy('order', 'asc')->orderBy('id', 'desc')->get();
 
         }else if($page === 'ministry-structure')
         {
@@ -133,33 +141,33 @@ class PagesController extends Controller
 
         }else if($page === 'speeches-interviews')
         {
-            $filesInfo = SpeechAndInterview::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'speeches-interviews')->first();
+            $filesInfo  = SpeechAndInterview::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
 
         }else if($page === 'reports')
         {
-            $filesInfo = Report::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'reports')->first();
+            $filesInfo  = Report::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
 
         }else if($page === 'press-release')
         {
-            $filesInfo = PressRelease::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'press-release')->first();
+            $filesInfo  = PressRelease::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
 
         }else if($page === 'researches')
         {
-            $filesInfo = Research::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'researches')->first();
+            $filesInfo  = Research::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
 
         }else if($page === 'statistics')
         {
-            $filesInfo = Statistic::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'statistics')->first();
+            $filesInfo  = Statistic::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
 
         }else if($page === 'informative')
         {
-            $filesInfo = Informative::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
             $coverPhoto = CoverPhotos::where('page_slug', 'informative')->first();
+            $filesInfo  = Informative::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
 
         }
 
@@ -167,17 +175,17 @@ class PagesController extends Controller
                                             'educationInfos' , 'workInfos' , 'otherInfos' ,
                                             'filesInfo' , 'partnersRow1' , 'partnersRow2' ,
                                             'minHistoryItems' , 'minHistoryCats' , 'legalActs' ,
-                                            'actsTypes'));
+                                            'actsTypes' , 'LinksCoWorkers' , 'LinksNgos' , 'LinksCcos' , 'LinksLinks'));
     }
 
     public function homepage(){
 
-     	$news = News::latest()->take(5)->get();
-     	$videos = Videos::latest()->take(5)->get();
-        $partnersRow1 = Partners::where('slider_row', 1)->get();
-        $partnersRow2 = Partners::where('slider_row', 2)->get();
+     	$news          = News::latest()->take(5)->get();
+     	$videos        = Videos::latest()->take(5)->get();
+        $partnersRow1  = Partners::where('slider_row', 1)->get();
+        $partnersRow2  = Partners::where('slider_row', 2)->get();
      	$announcements = Announcements::latest()->take(5)->get();
-     	$slidersInfo = HomepageSlider::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
+     	$slidersInfo   = HomepageSlider::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
 
         return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partnersRow1' , 'partnersRow2'));
 
@@ -186,19 +194,19 @@ class PagesController extends Controller
     public function showNewsIndividual($id){
 
         $newsIndividual = News::where('id', $id)->first();
-        $partnersRow1 = Partners::where('slider_row', 1)->get();
-        $partnersRow2 = Partners::where('slider_row', 2)->get();
-        $coverPhoto = CoverPhotos::where('page_slug', 'single-news')->first();
+        $partnersRow1   = Partners::where('slider_row', 1)->get();
+        $partnersRow2   = Partners::where('slider_row', 2)->get();
+        $coverPhoto     = CoverPhotos::where('page_slug', 'single-news')->first();
 
         return view('single-news' , compact('newsIndividual' , 'coverPhoto', 'partnersRow1' , 'partnersRow2'));
     }
 
     public function showAnnouncementIndividual($id){
 
+        $partnersRow1           = Partners::where('slider_row', 1)->get();
+        $partnersRow2           = Partners::where('slider_row', 2)->get();
         $announcementIndividual = Announcements::where('id', $id)->first();
-        $partnersRow1 = Partners::where('slider_row', 1)->get();
-        $partnersRow2 = Partners::where('slider_row', 2)->get();
-        $coverPhoto = CoverPhotos::where('page_slug', 'single-announcement')->first();
+        $coverPhoto             = CoverPhotos::where('page_slug', 'single-announcement')->first();
 
         return view('single-announcement' , compact('announcementIndividual' , 'coverPhoto', 'partnersRow1' , 'partnersRow2'));
     }
@@ -206,9 +214,9 @@ class PagesController extends Controller
     public function showVideoIndividual($id){
 
         $videoIndividual = Videos::where('id', $id)->first();
-        $partnersRow1 = Partners::where('slider_row', 1)->get();
-        $partnersRow2 = Partners::where('slider_row', 2)->get();
-        $coverPhoto = CoverPhotos::where('page_slug', 'single-video')->first();
+        $partnersRow1    = Partners::where('slider_row', 1)->get();
+        $partnersRow2    = Partners::where('slider_row', 2)->get();
+        $coverPhoto      = CoverPhotos::where('page_slug', 'single-video')->first();
 
         return view('single-video' , compact('videoIndividual' , 'coverPhoto' , 'partnersRow1' , 'partnersRow2'));
     }

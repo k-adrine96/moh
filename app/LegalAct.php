@@ -10,7 +10,8 @@ class LegalAct extends Model
         'name',
         'date',
         'file_upload',
-        'type_id'
+        'type_id',
+        'order'
     ];
 
     protected $dates = [
