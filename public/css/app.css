@@ -3485,16 +3485,16 @@ svg {
   width: 265px;
 }
 
-.links--row .links--hidden--content .charity__row--content .link__list {
+.links--row .links--hidden--content .charity__row--content .link__list ul {
   padding: 15px 0;
 }
 
-.links--row .links--hidden--content .charity__row--content .link__list li h1 {
+.links--row .links--hidden--content .charity__row--content .link__list ul li h1 {
   font-size: 1.8rem;
   color: #FFBC35;
 }
 
-.links--row .links--hidden--content .charity__row--content .link__list li span {
+.links--row .links--hidden--content .charity__row--content .link__list ul li span {
   font-size: 1.8rem;
 }
 
@@ -3867,14 +3867,12 @@ svg {
   list-style-type: disc;
   list-style-position: outside;
   margin-left: 40px;
-  font-weight: normal !important;
 }
 
 .editor-content ol {
   list-style-type: decimal;
   list-style-position: outside;
   margin-left: 40px;
-  font-weight: normal !important;
 }
 
 .text-justify {
