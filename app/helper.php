@@ -36,7 +36,7 @@ if (!function_exists('getDescription')) {
      */
 
     function getDescription(string $str ) {
-        $description = str_replace("&nbsp;","", $str);
+        $description = str_replace("&nbsp;"," ", $str);
         return $description;
     }
 
