@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="pdf__text">
                                     <div class="text-container text-justify editor-content">
-                                        {!! $minHistoryCat->description !!}
+                                        {!! getDescription($minHistoryCat->description) !!}
                                     </div>
                                     <ul>
                                         @foreach($minHistoryItems as $minHistoryItem)

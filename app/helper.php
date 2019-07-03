@@ -26,4 +26,18 @@ if (!function_exists('getFileIcon')) {
 
         return $noType;
     }
+
+}
+
+if (!function_exists('getDescription')) {
+    /**
+     * @param string $str
+     * @return mixed|string
+     */
+
+    function getDescription(string $str ) {
+        $description = str_replace("&nbsp; ","", $str);
+        return $description;
+    }
+
 }

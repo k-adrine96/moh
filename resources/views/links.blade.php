@@ -109,7 +109,7 @@
                                                 </div>
                                                 <div class="col-lg-8 col-xl-9 link__list text-justify editor-content">
                                                     @if( !is_null($LinksCco->description) )
-                                                        {!! $LinksCco->description !!}
+                                                        {!! getDescription($LinksCco->description) !!}
                                                     @endif
                                                 </div>
                                                 <div class="offset-xl-3 offset-lg-4 col-lg-8 col-xl-9">
