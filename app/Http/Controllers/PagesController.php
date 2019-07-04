@@ -17,6 +17,8 @@ use App\LinksCco;
 use App\Screening;
 use App\LinksLink;
 use App\Statistic;
+use App\Admission;
+use App\StateOrder;
 use App\PagesTexts;
 use App\Informative;
 use App\CoverPhotos;
@@ -35,6 +37,8 @@ use App\MinHistoryCategory;
 use App\SpeechAndInterview;
 use App\AntiCorruptionEvent;
 use App\MinisterInfoCategory;
+use App\AdvertisingPermission;
+use App\LicensDocumentsApplication;
 
 class PagesController extends Controller
 {
@@ -211,6 +215,30 @@ class PagesController extends Controller
             $coverPhoto = CoverPhotos::where('page_slug', 'anti-corruption-events')->first();
             $parents  = AntiCorruptionEvent::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
             $filesInfo  = AntiCorruptionEvent::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'licens-documents-application')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'licens-documents-application')->first();
+            $parents  = LicensDocumentsApplication::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = LicensDocumentsApplication::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'advertising-permission')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'advertising-permission')->first();
+            $parents  = AdvertisingPermission::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = AdvertisingPermission::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'state-order')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'state-order')->first();
+            $parents  = StateOrder::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = StateOrder::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'admission')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'admission')->first();
+            $parents  = Admission::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = Admission::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }
 
