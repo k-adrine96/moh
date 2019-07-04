@@ -34,7 +34,7 @@
                                                         <a href="{{route('show.news.individual' , $news->id)}}">{{$news->title}}</a>
                                                     </div>
                                                     <div class="all__news--short--description text-justify editor-content">
-                                                        {!! $news->description !!}
+                                                        {!! getDescription($news->description) !!}
                                                     </div>
                                                 </div>
                                             </div>

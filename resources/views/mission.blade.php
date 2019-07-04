@@ -8,7 +8,7 @@
             </div>
         </section>
         <section class="only__text text-justify editor-content">
-            {!! $pagesTexts->page_text1 !!}
+            {!! getDescription($pagesTexts->page_text1) !!}
         </section>
     </main>
 @endsection

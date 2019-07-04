@@ -22,7 +22,7 @@
                                 <h2><?php echo date('d F Y l' , strtotime($newsIndividual->date)); ?></h2>
                             </div>
                             <div class="single__news--info--text">
-                                <div class="text-justify editor-content">{!! $newsIndividual->description !!}</div>
+                                <div class="text-justify editor-content">{!! getDescription($newsIndividual->description) !!}</div>
                             </div>
                         </div></div>
                     <div class="col-lg-6 col-xl-5">

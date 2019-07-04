@@ -24,7 +24,7 @@
                                                     <p><?php echo date('d F Y l', strtotime($announcement->date)); ?></p>
                                                 </div>
                                                 <div class="all__announcement--body text-justify editor-content">
-                                                    {!! $announcement->description !!}
+                                                    {!! getDescription($announcement->description) !!}
                                                 </div>
                                             </div>
                                         </div>

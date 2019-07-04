@@ -73,12 +73,12 @@
             <li>
                 <a href="javascript:;" class="first-lvl">ԾՐԱԳՐԵՐ</a>
                 <ul class="hided--content">
-                    <li><a href="javascript:;">Քաղաքականություն</a></li>
-                    <li><a href="javascript:;">Գերակա</a></li>
-                    <li><a href="javascript:;">Ազգային</a></li>
-                    <li><a href="javascript:;">Միջազգային</a></li>
-                    <li><a href="javascript:;">Սկրինինգ</a></li>
-                    <li><a href="javascript:;">Միջողառումներ/հակակոռուպցիոն</a></li>
+                    <li><a href="{{ route('pages' , 'politics') }}">Քաղաքականություն</a></li>
+                    <li><a href="{{ route('pages' , 'superior') }}">Գերակա</a></li>
+                    <li><a href="{{ route('pages' , 'national') }}">Ազգային</a></li>
+                    <li><a href="{{ route('pages' , 'international') }}">Միջազգային</a></li>
+                    <li><a href="{{ route('pages' , 'screening') }}">Սկրինինգ</a></li>
+                    <li><a href="{{ route('pages' , 'anti-corruption-events') }}">Միջոցառումներ/հակակոռուպցիոն</a></li>
 
                 </ul>
             </li>
@@ -108,7 +108,7 @@
                 <a href="javascript:;" class="first-lvl">Քո իրավունքը</a>
             </li>
 
-            @each('partials.sidebar-sections', $data, 'section')
+            @each('partials.sidebar-sections', $sections, 'section')
 
             <li class="mobile--visible">
                 <a href="javascript:;" class="first-lvl">Իրավական ակտեր</a>

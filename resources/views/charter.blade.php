@@ -12,13 +12,13 @@
                 <ul class="pdf__container">
                     <li class="text-center">
                         <div class="pdf__info text-justify editor-content">
-                            {!! $pagesTexts->page_text1 !!}
+                            {!! getDescription($pagesTexts->page_text1) !!}
                         </div>
                     </li>
                     <li>
                         <div class="pdf__info text-justify editor-content">
                             @if($pagesTexts->page_text2)
-                                {!! $pagesTexts->page_text2 !!}
+                                {!! getDescription($pagesTexts->page_text2) !!}
                             @endif
                         </div>
                     </li>
@@ -30,7 +30,7 @@
                                         <li class="d-flex align-items-center text-justify editor-content">
                                             <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
                                             @if($pagesTexts->page_text3)
-                                                {!! $pagesTexts->page_text3 !!}
+                                                {!! getDescription($pagesTexts->page_text3) !!}
                                             @endif
                                         </li>
                                     </ul>

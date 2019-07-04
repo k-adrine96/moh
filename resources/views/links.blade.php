@@ -14,72 +14,21 @@
                     <div class="multicolor-container links--row">
                         <a href="javascript:;" class="links--row--first--lvl">գործընկերներ</a>
                         <ul class="links--hidden--content">
-                            <li class="links__partner--row">
-                                <div class="container-fluid clearfix">
-                                    <div class="row no-gutters">
-                                        <div class="col-sm-6">
-                                            <div class="partner__logo"
-                                                 style="background-image: url('img/links..our-partners/mother-child.png')"></div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="partner__logo"
-                                                 style="background-image: url('img/links..our-partners/world-health-organization.png')"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="links__partner--row">
-                                <div class="container-fluid clearfix">
-                                    <div class="row no-gutters">
-                                        <div class="col-sm-6">
-                                            <div class="partner__logo"
-                                                 style="background-image: url('img/links..our-partners/the-world-bank.png')"></div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="partner__logo"
-                                                 style="background-image: url('img/links..our-partners/oxfam.png')"></div>
+                            @foreach($LinksCoWorkers ->chunk(2) as $chunk)
+                                <li class="links__partner--row">
+                                    <div class="container-fluid clearfix">
+                                        <div class="row no-gutters">
+                                            @foreach($chunk as $coworker)
+                                                <div class="col-sm-6">
+                                                    <a href="{{!is_null($coworker->url) ? $coworker->url : ''}}">
+                                                        <div class="partner__logo" style="background-image: url('{{Storage::url($coworker->icon)}}')"></div>
+                                                    </a>
+                                                </div>
+                                            @endforeach
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="links__partner--row">
-                                <div class="container-fluid clearfix">
-                                    <div class="row no-gutters">
-                                        <div class="col-sm-6">
-                                            <div class="partner__logo"
-                                                 style="background-image: url('img/links..our-partners/save-the-children.png')"></div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="partner__logo"
-                                                 style="background-image: url('img/links..our-partners/aesp.png')"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="links__partner--row">
-                                <div class="container-fluid clearfix">
-                                    <div class="row no-gutters">
-                                        <div class="col-sm-6">
-                                            <div class="partner__logo"
-                                                 style="background-image: url('img/links..our-partners/the-global-found.png')"></div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="partner__logo"
-                                                 style="background-image: url('img/links..our-partners/world-wision.png')"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="links__partner--row">
-                                <div class="container-fluid clearfix">
-                                    <div class="row no-gutters">
-                                        <div class="col-sm-6">
-                                            <div class="partner__logo"
-                                                 style="background-image: url('img/links..our-partners/usa.png')"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </li>
@@ -90,356 +39,51 @@
                             <li class="links__non--governmental--organizations">
                                 <div class="container-fluid p-0">
                                     <div class="row no-gutters">
-                                        <div class="col-sm-6">
-                                            <div class="workers__container">
-                                                <div class="worker__info">
-                                                    <div class="worker__info--header">
-                                                        <h1>ՀՀ առողջապահության նախարարության
-                                                            գլխավոր քարտուղարի պաշտոնակատար</h1>
+                                        @foreach($LinksNgos as $LinksNgo)
+                                            <div class="col-sm-6">
+                                                <div class="workers__container">
+                                                    <div class="worker__info">
+                                                        <div class="worker__info--header">
+                                                            <h1>{{!is_null($LinksNgo->ngo_name) ? $LinksNgo->ngo_name : ''}}</h1>
+                                                        </div>
+                                                        <div class="worker__info--chief">
+                                                            <h1>{{!is_null($LinksNgo->head_position) ? $LinksNgo->head_position : ''}}</h1>
+                                                        </div>
+                                                        <div class="worker__info--name">
+                                                            <p>{{!is_null($LinksNgo->head_name) ? $LinksNgo->head_name : ''}}</p>
+                                                        </div>
+                                                        <ul class="worker__number__email">
+                                                            <li>
+                                                                @if(!is_null($LinksNgo->address))
+                                                                    <i class="location-icon"></i>
+                                                                    <span>{{ $LinksNgo->address }}</span>
+                                                                @endif
+                                                            </li>
+                                                            <li>
+                                                                @if(!is_null($LinksNgo->phone_number))
+                                                                    <i class="call-icon"></i>
+                                                                    <span>{{ $LinksNgo->phone_number }}</span>
+                                                                @endif
+                                                            </li>
+                                                            <li>
+                                                                @if(!is_null($LinksNgo->email))
+                                                                    <i class="message-icon"></i>
+                                                                    <span>{{ $LinksNgo->email }}</span>
+                                                                @endif
+                                                            </li>
+                                                            <li>
+                                                                @if(!is_null($LinksNgo->website_name))
+                                                                    <i class="website-icon"></i>
+                                                                    <a href="{{!is_null($LinksNgo->website_url) ? $LinksNgo->website_url : ''}}">
+                                                                        <span>{{ $LinksNgo->website_name }}</span>
+                                                                    </a>
+                                                                @endif
+                                                            </li>
+                                                        </ul>
                                                     </div>
-                                                    <div class="worker__info--chief">
-                                                        <h1>Անուն Ազգանուն</h1>
-                                                    </div>
-                                                    <div class="worker__info--name">
-                                                        <p>Վահե Հակոբյան</p>
-                                                    </div>
-                                                    <ul class="worker__number__email">
-                                                        <li>
-                                                            <i class="location-icon"></i>
-                                                            <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="call-icon"></i>
-                                                            <span>(+74 60)80 80-03/1123</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="message-icon"></i>
-                                                            <span>minister@moh.am</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="website-icon"></i>
-                                                            <span>www.gerontology.am</span>
-                                                        </li>
-
-                                                    </ul>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="workers__container">
-                                                <div class="worker__info">
-                                                    <div class="worker__info--header">
-                                                        <h1>ՀՀ առողջապահության նախարարության
-                                                            գլխավոր քարտուղարի պաշտոնակատար</h1>
-                                                    </div>
-                                                    <div class="worker__info--chief">
-                                                        <h1>Անուն Ազգանուն</h1>
-                                                    </div>
-                                                    <div class="worker__info--name">
-                                                        <p>Վահե Հակոբյան</p>
-                                                    </div>
-                                                    <ul class="worker__number__email">
-                                                        <li>
-                                                            <i class="location-icon"></i>
-                                                            <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="call-icon"></i>
-                                                            <span>(+74 60)80 80-03/1123</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="message-icon"></i>
-                                                            <span>minister@moh.am</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="website-icon"></i>
-                                                            <span>www.gerontology.am</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="workers__container">
-                                                <div class="worker__info">
-                                                    <div class="worker__info--header">
-                                                        <h1>ՀՀ առողջապահության նախարարության
-                                                            գլխավոր քարտուղարի պաշտոնակատար</h1>
-                                                    </div>
-                                                    <div class="worker__info--chief">
-                                                        <h1>Անուն Ազգանուն</h1>
-                                                    </div>
-                                                    <div class="worker__info--name">
-                                                        <p>Վահե Հակոբյան</p>
-                                                    </div>
-                                                    <ul class="worker__number__email">
-                                                        <li>
-                                                            <i class="location-icon"></i>
-                                                            <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="call-icon"></i>
-                                                            <span>(+74 60)80 80-03/1123</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="message-icon"></i>
-                                                            <span>minister@moh.am</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="website-icon"></i>
-                                                            <span>www.gerontology.am</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="workers__container">
-                                                <div class="worker__info">
-                                                    <div class="worker__info--header">
-                                                        <h1>ՀՀ առողջապահության նախարարության
-                                                            գլխավոր քարտուղարի պաշտոնակատար</h1>
-                                                    </div>
-                                                    <div class="worker__info--chief">
-                                                        <h1>Անուն Ազգանուն</h1>
-                                                    </div>
-                                                    <div class="worker__info--name">
-                                                        <p>Վահե Հակոբյան</p>
-                                                    </div>
-                                                    <ul class="worker__number__email">
-                                                        <li>
-                                                            <i class="location-icon"></i>
-                                                            <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="call-icon"></i>
-                                                            <span>(+74 60)80 80-03/1123</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="message-icon"></i>
-                                                            <span>minister@moh.am</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="website-icon"></i>
-                                                            <span>www.gerontology.am</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="workers__container">
-                                                <div class="worker__info">
-                                                    <div class="worker__info--header">
-                                                        <h1>ՀՀ առողջապահության նախարարության
-                                                            գլխավոր քարտուղարի պաշտոնակատար</h1>
-                                                    </div>
-                                                    <div class="worker__info--chief">
-                                                        <h1>Անուն Ազգանուն</h1>
-                                                    </div>
-                                                    <div class="worker__info--name">
-                                                        <p>Վահե Հակոբյան</p>
-                                                    </div>
-                                                    <ul class="worker__number__email">
-                                                        <li>
-                                                            <i class="location-icon"></i>
-                                                            <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="call-icon"></i>
-                                                            <span>(+74 60)80 80-03/1123</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="message-icon"></i>
-                                                            <span>minister@moh.am</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="website-icon"></i>
-                                                            <span>www.gerontology.am</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="workers__container">
-                                                <div class="worker__info">
-                                                    <div class="worker__info--header">
-                                                        <h1>ՀՀ առողջապահության նախարարության
-                                                            գլխավոր քարտուղարի պաշտոնակատար</h1>
-                                                    </div>
-                                                    <div class="worker__info--chief">
-                                                        <h1>Անուն Ազգանուն</h1>
-                                                    </div>
-                                                    <div class="worker__info--name">
-                                                        <p>Վահե Հակոբյան</p>
-                                                    </div>
-                                                    <ul class="worker__number__email">
-                                                        <li>
-                                                            <i class="location-icon"></i>
-                                                            <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="call-icon"></i>
-                                                            <span>(+74 60)80 80-03/1123</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="message-icon"></i>
-                                                            <span>minister@moh.am</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="website-icon"></i>
-                                                            <span>www.gerontology.am</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="workers__container">
-                                                <div class="worker__info">
-                                                    <div class="worker__info--header">
-                                                        <h1>ՀՀ առողջապահության նախարարության
-                                                            գլխավոր քարտուղարի պաշտոնակատար</h1>
-                                                    </div>
-                                                    <div class="worker__info--chief">
-                                                        <h1>Անուն Ազգանուն</h1>
-                                                    </div>
-                                                    <div class="worker__info--name">
-                                                        <p>Վահե Հակոբյան</p>
-                                                    </div>
-                                                    <ul class="worker__number__email">
-                                                        <li>
-                                                            <i class="location-icon"></i>
-                                                            <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="call-icon"></i>
-                                                            <span>(+74 60)80 80-03/1123</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="message-icon"></i>
-                                                            <span>minister@moh.am</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="website-icon"></i>
-                                                            <span>www.gerontology.am</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="workers__container">
-                                                <div class="worker__info">
-                                                    <div class="worker__info--header">
-                                                        <h1>ՀՀ առողջապահության նախարարության
-                                                            գլխավոր քարտուղարի պաշտոնակատար</h1>
-                                                    </div>
-                                                    <div class="worker__info--chief">
-                                                        <h1>Անուն Ազգանուն</h1>
-                                                    </div>
-                                                    <div class="worker__info--name">
-                                                        <p>Վահե Հակոբյան</p>
-                                                    </div>
-                                                    <ul class="worker__number__email">
-                                                        <li>
-                                                            <i class="location-icon"></i>
-                                                            <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="call-icon"></i>
-                                                            <span>(+74 60)80 80-03/1123</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="message-icon"></i>
-                                                            <span>minister@moh.am</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="website-icon"></i>
-                                                            <span>www.gerontology.am</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="workers__container">
-                                                <div class="worker__info">
-                                                    <div class="worker__info--header">
-                                                        <h1>ՀՀ առողջապահության նախարարության
-                                                            գլխավոր քարտուղարի պաշտոնակատար</h1>
-                                                    </div>
-                                                    <div class="worker__info--chief">
-                                                        <h1>Անուն Ազգանուն</h1>
-                                                    </div>
-                                                    <div class="worker__info--name">
-                                                        <p>Վահե Հակոբյան</p>
-                                                    </div>
-                                                    <ul class="worker__number__email">
-                                                        <li>
-                                                            <i class="location-icon"></i>
-                                                            <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="call-icon"></i>
-                                                            <span>(+74 60)80 80-03/1123</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="message-icon"></i>
-                                                            <span>minister@moh.am</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="website-icon"></i>
-                                                            <span>www.gerontology.am</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="workers__container">
-                                                <div class="worker__info">
-                                                    <div class="worker__info--header">
-                                                        <h1>ՀՀ առողջապահության նախարարության
-                                                            գլխավոր քարտուղարի պաշտոնակատար</h1>
-                                                    </div>
-                                                    <div class="worker__info--chief">
-                                                        <h1>Անուն Ազգանուն</h1>
-                                                    </div>
-                                                    <div class="worker__info--name">
-                                                        <p>Վահե Հակոբյան</p>
-                                                    </div>
-                                                    <ul class="worker__number__email">
-                                                        <li>
-                                                            <i class="location-icon"></i>
-                                                            <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="call-icon"></i>
-                                                            <span>(+74 60)80 80-03/1123</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="message-icon"></i>
-                                                            <span>minister@moh.am</span>
-                                                        </li>
-                                                        <li>
-                                                            <i class="website-icon"></i>
-                                                            <span>www.gerontology.am</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </li>
@@ -451,349 +95,58 @@
                         <a href="javascript:;" class="links--row--first--lvl">մանկական բարեգործական
                             կազմակերպություններ</a>
                         <ul class="links--hidden--content">
-                            <li class="charity__row">
-                                <div class="charity__row--content">
-                                    <div class="container-fluid m-0 p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-4 col-xl-3">
-                                                <div class="charity-background"
-                                                     style="background-image: url('img/childrens-charity-companies/Give Life.png')"></div>
-                                            </div>
-                                            <div class="col-lg-8 col-xl-9">
-                                                <p>«Նվիրիր Կյանք» արյան քաղցկեղով և ծանր հիվանդություններով երեխաներին
-                                                    օգնության Բարեգործական Հիմնադրամը գործում է 2009 թվականից
-                                                    (հիմնադրամի գործադիր մարմնի ղեկավարը` Վերժինե Ոսկանյան): Հիմնադրամի
-                                                    աշխատակազմը հետևյալն է` Վերժինե Ոսկանյան, Ելենա Աղայան, Նունե
-                                                    Ավանեսյան, ովքեր Հիմնադրամի միջոցներից օգտվում են միայն աշխատանքի
-                                                    վարձատրությանն ուղղված միջոցներից:</p>
-                                                <p>2011թ-ի ֆինանսական միջոցները գոյացել են անհատ բարերարների և տարբեր
-                                                    նվիրատուների հանգանակություններից` 64298.0 հազար դրամ և այդ
-                                                    ֆինանսական միջոցներից 2011թ. ֆինանսական տարում օգտագործվել է
-                                                    ընդհանուր 44,434.0 հազ. դրամ,որը ամբողջությամբ ուղղվել է
-                                                    կանոնադրական նպատակներին: Ֆինանսական հաշվետվությունների վերաբերյալ
-                                                    աուդիտն իրականացնող անձ է հանդիսանում «Լոնդոն Բիզնես Գրուպ»ՀՁ
-                                                    ՍՊԸ:</p>
-                                                <p>Հիմնադրամի էքսպերտային խորհրդի անդամներն են`</p>
-                                                <ul class="link__list">
-                                                    <li>
-                                                        <h1>Սամվել Դանիելյան</h1>
-                                                        <span>«Մուրացան» հիվանդանոցային համալիրի քիմիաթերապիայի կլինիկայի ղեկավար</span>
-                                                    </li>
-                                                    <li>
-                                                        <h1>Գրիգոր Բադալյան</h1>
-                                                        <span>«Ուռուցքաբանության ազգային կենտրոնի» մանկական բաժնի վարիչ</span>
-                                                    </li>
-                                                    <li>
-                                                        <h1>Սմբատ Դաղբաշյան</h1>
-                                                        <span>«Արյունաբանության ազգային կենտրոնի» տնօրեն</span>
-                                                    </li>
-                                                </ul>
-                                                <ul class=" worker__number__email">
-                                                    <li>
-                                                        <i class="location-icon"></i>
-                                                        <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="call-icon"></i>
-                                                        <span>(+74 60)80 80-03/1123</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="message-icon"></i>
-                                                        <span>minister@moh.am</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="website-icon"></i>
-                                                        <span>www.gerontology.am</span>
-                                                    </li>
-
-                                                </ul>
+                            @foreach($LinksCcos as $LinksCco)
+                                <li class="charity__row">
+                                    <div class="charity__row--content">
+                                        <div class="container-fluid m-0 p-0">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-4 col-xl-3">
+                                                    @if(!is_null($LinksCco->icon))
+                                                        <div class="charity-background"
+                                                             style="background-image: url('{{Storage::url( $LinksCco->icon ) }}')">
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                                <div class="col-lg-8 col-xl-9 link__list text-justify editor-content">
+                                                    @if( !is_null($LinksCco->description) )
+                                                        {!! getDescription($LinksCco->description) !!}
+                                                    @endif
+                                                </div>
+                                                <div class="offset-xl-3 offset-lg-4 col-lg-8 col-xl-9">
+                                                    <ul class=" worker__number__email">
+                                                        <li>
+                                                            @if(!is_null($LinksCco->address))
+                                                                <i class="location-icon"></i>
+                                                                <span>{{ $LinksCco->address }}</span>
+                                                            @endif
+                                                        </li>
+                                                        <li>
+                                                            @if(!is_null($LinksCco->phone_number))
+                                                                <i class="call-icon"></i>
+                                                                <span>{{ $LinksCco->phone_number }}</span>
+                                                            @endif
+                                                        </li>
+                                                        <li>
+                                                            @if(!is_null($LinksCco->email))
+                                                                <i class="message-icon"></i>
+                                                                <span>{{ $LinksCco->email }}</span>
+                                                            @endif
+                                                        </li>
+                                                        <li>
+                                                            @if(!is_null($LinksCco->website_name))
+                                                                <i class="website-icon"></i>
+                                                                <a href="{{!is_null($LinksCco->website_url) ? $LinksCco->website_url : ''}}">
+                                                                    <span>{{ $LinksCco->website_name }}</span>
+                                                                </a>
+                                                            @endif
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="charity__row">
-                                <div class="charity__row--content">
-                                    <div class="container-fluid m-0 p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-3">
-                                                <div class="charity-background"
-                                                     style="background-image: url('img/childrens-charity-companies/help.png')"></div>
-                                            </div>
-                                            <div class="col-lg-9">
-                                                <p>«Նվիրիր Կյանք» արյան քաղցկեղով և ծանր հիվանդություններով երեխաներին
-                                                    օգնության Բարեգործական Հիմնադրամը գործում է 2009 թվականից
-                                                    (հիմնադրամի գործադիր մարմնի ղեկավարը` Վերժինե Ոսկանյան): Հիմնադրամի
-                                                    աշխատակազմը հետևյալն է` Վերժինե Ոսկանյան, Ելենա Աղայան, Նունե
-                                                    Ավանեսյան, ովքեր Հիմնադրամի միջոցներից օգտվում են միայն աշխատանքի
-                                                    վարձատրությանն ուղղված միջոցներից:</p>
-                                                <p>2011թ-ի ֆինանսական միջոցները գոյացել են անհատ բարերարների և տարբեր
-                                                    նվիրատուների հանգանակություններից` 64298.0 հազար դրամ և այդ
-                                                    ֆինանսական միջոցներից 2011թ. ֆինանսական տարում օգտագործվել է
-                                                    ընդհանուր 44,434.0 հազ. դրամ,որը ամբողջությամբ ուղղվել է
-                                                    կանոնադրական նպատակներին: Ֆինանսական հաշվետվությունների վերաբերյալ
-                                                    աուդիտն իրականացնող անձ է հանդիսանում «Լոնդոն Բիզնես Գրուպ»ՀՁ
-                                                    ՍՊԸ:</p>
-                                                <p>Հիմնադրամի էքսպերտային խորհրդի անդամներն են`</p>
-                                                <ul class=" worker__number__email">
-                                                    <li>
-                                                        <i class="location-icon"></i>
-                                                        <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="call-icon"></i>
-                                                        <span>(+74 60)80 80-03/1123</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="message-icon"></i>
-                                                        <span>minister@moh.am</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="website-icon"></i>
-                                                        <span>www.gerontology.am</span>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="charity__row">
-                                <div class="charity__row--content">
-                                    <div class="container-fluid m-0 p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-3">
-                                                <div class="charity-background"
-                                                     style="background-image: url('img/childrens-charity-companies/echo.png')"></div>
-                                            </div>
-                                            <div class="col-lg-9">
-                                                <p>«Նվիրիր Կյանք» արյան քաղցկեղով և ծանր հիվանդություններով երեխաներին
-                                                    օգնության Բարեգործական Հիմնադրամը գործում է 2009 թվականից
-                                                    (հիմնադրամի գործադիր մարմնի ղեկավարը` Վերժինե Ոսկանյան): Հիմնադրամի
-                                                    աշխատակազմը հետևյալն է` Վերժինե Ոսկանյան, Ելենա Աղայան, Նունե
-                                                    Ավանեսյան, ովքեր Հիմնադրամի միջոցներից օգտվում են միայն աշխատանքի
-                                                    վարձատրությանն ուղղված միջոցներից:</p>
-                                                <p>2011թ-ի ֆինանսական միջոցները գոյացել են անհատ բարերարների և տարբեր
-                                                    նվիրատուների հանգանակություններից` 64298.0 հազար դրամ և այդ
-                                                    ֆինանսական միջոցներից 2011թ. ֆինանսական տարում օգտագործվել է
-                                                    ընդհանուր 44,434.0 հազ. դրամ,որը ամբողջությամբ ուղղվել է
-                                                    կանոնադրական նպատակներին: Ֆինանսական հաշվետվությունների վերաբերյալ
-                                                    աուդիտն իրականացնող անձ է հանդիսանում «Լոնդոն Բիզնես Գրուպ»ՀՁ
-                                                    ՍՊԸ:</p>
-                                                <p>Հիմնադրամի էքսպերտային խորհրդի անդամներն են`</p>
-                                                <ul class=" worker__number__email">
-                                                    <li>
-                                                        <i class="location-icon"></i>
-                                                        <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="call-icon"></i>
-                                                        <span>(+74 60)80 80-03/1123</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="message-icon"></i>
-                                                        <span>minister@moh.am</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="website-icon"></i>
-                                                        <span>www.gerontology.am</span>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="charity__row">
-                                <div class="charity__row--content">
-                                    <div class="container-fluid m-0 p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-3">
-                                                <div class="charity-background"
-                                                     style="background-image: url('img/childrens-charity-companies/hemotology.png')"></div>
-                                            </div>
-                                            <div class="col-lg-9">
-                                                <p>«Նվիրիր Կյանք» արյան քաղցկեղով և ծանր հիվանդություններով երեխաներին
-                                                    օգնության Բարեգործական Հիմնադրամը գործում է 2009 թվականից
-                                                    (հիմնադրամի գործադիր մարմնի ղեկավարը` Վերժինե Ոսկանյան): Հիմնադրամի
-                                                    աշխատակազմը հետևյալն է` Վերժինե Ոսկանյան, Ելենա Աղայան, Նունե
-                                                    Ավանեսյան, ովքեր Հիմնադրամի միջոցներից օգտվում են միայն աշխատանքի
-                                                    վարձատրությանն ուղղված միջոցներից:</p>
-                                                <p>2011թ-ի ֆինանսական միջոցները գոյացել են անհատ բարերարների և տարբեր
-                                                    նվիրատուների հանգանակություններից` 64298.0 հազար դրամ և այդ
-                                                    ֆինանսական միջոցներից 2011թ. ֆինանսական տարում օգտագործվել է
-                                                    ընդհանուր 44,434.0 հազ. դրամ,որը ամբողջությամբ ուղղվել է
-                                                    կանոնադրական նպատակներին: Ֆինանսական հաշվետվությունների վերաբերյալ
-                                                    աուդիտն իրականացնող անձ է հանդիսանում «Լոնդոն Բիզնես Գրուպ»ՀՁ
-                                                    ՍՊԸ:</p>
-                                                <p>Հիմնադրամի էքսպերտային խորհրդի անդամներն են`</p>
-                                                <ul class=" worker__number__email">
-                                                    <li>
-                                                        <i class="location-icon"></i>
-                                                        <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="call-icon"></i>
-                                                        <span>(+74 60)80 80-03/1123</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="message-icon"></i>
-                                                        <span>minister@moh.am</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="website-icon"></i>
-                                                        <span>www.gerontology.am</span>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="charity__row">
-                                <div class="charity__row--content">
-                                    <div class="container-fluid m-0 p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-3">
-                                                <div class="charity-background"
-                                                     style="background-image: url('img/childrens-charity-companies/dream.png')"></div>
-                                            </div>
-                                            <div class="col-lg-9">
-                                                <p>«Նվիրիր Կյանք» արյան քաղցկեղով և ծանր հիվանդություններով երեխաներին
-                                                    օգնության Բարեգործական Հիմնադրամը գործում է 2009 թվականից
-                                                    (հիմնադրամի գործադիր մարմնի ղեկավարը` Վերժինե Ոսկանյան): Հիմնադրամի
-                                                    աշխատակազմը հետևյալն է` Վերժինե Ոսկանյան, Ելենա Աղայան, Նունե
-                                                    Ավանեսյան, ովքեր Հիմնադրամի միջոցներից օգտվում են միայն աշխատանքի
-                                                    վարձատրությանն ուղղված միջոցներից:</p>
-                                                <p>2011թ-ի ֆինանսական միջոցները գոյացել են անհատ բարերարների և տարբեր
-                                                    նվիրատուների հանգանակություններից` 64298.0 հազար դրամ և այդ
-                                                    ֆինանսական միջոցներից 2011թ. ֆինանսական տարում օգտագործվել է
-                                                    ընդհանուր 44,434.0 հազ. դրամ,որը ամբողջությամբ ուղղվել է
-                                                    կանոնադրական նպատակներին: Ֆինանսական հաշվետվությունների վերաբերյալ
-                                                    աուդիտն իրականացնող անձ է հանդիսանում «Լոնդոն Բիզնես Գրուպ»ՀՁ
-                                                    ՍՊԸ:</p>
-                                                <p>Հիմնադրամի էքսպերտային խորհրդի անդամներն են`</p>
-                                                <ul class=" worker__number__email">
-                                                    <li>
-                                                        <i class="location-icon"></i>
-                                                        <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="call-icon"></i>
-                                                        <span>(+74 60)80 80-03/1123</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="message-icon"></i>
-                                                        <span>minister@moh.am</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="website-icon"></i>
-                                                        <span>www.gerontology.am</span>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="charity__row">
-                                <div class="charity__row--content">
-                                    <div class="container-fluid m-0 p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-3">
-                                                <div class="charity-background"
-                                                     style="background-image: url('img/childrens-charity-companies/trust.png')"></div>
-                                            </div>
-                                            <div class="col-lg-9">
-                                                <p>«Նվիրիր Կյանք» արյան քաղցկեղով և ծանր հիվանդություններով երեխաներին
-                                                    օգնության Բարեգործական Հիմնադրամը գործում է 2009 թվականից
-                                                    (հիմնադրամի գործադիր մարմնի ղեկավարը` Վերժինե Ոսկանյան): Հիմնադրամի
-                                                    աշխատակազմը հետևյալն է` Վերժինե Ոսկանյան, Ելենա Աղայան, Նունե
-                                                    Ավանեսյան, ովքեր Հիմնադրամի միջոցներից օգտվում են միայն աշխատանքի
-                                                    վարձատրությանն ուղղված միջոցներից:</p>
-                                                <p>2011թ-ի ֆինանսական միջոցները գոյացել են անհատ բարերարների և տարբեր
-                                                    նվիրատուների հանգանակություններից` 64298.0 հազար դրամ և այդ
-                                                    ֆինանսական միջոցներից 2011թ. ֆինանսական տարում օգտագործվել է
-                                                    ընդհանուր 44,434.0 հազ. դրամ,որը ամբողջությամբ ուղղվել է
-                                                    կանոնադրական նպատակներին: Ֆինանսական հաշվետվությունների վերաբերյալ
-                                                    աուդիտն իրականացնող անձ է հանդիսանում «Լոնդոն Բիզնես Գրուպ»ՀՁ
-                                                    ՍՊԸ:</p>
-                                                <p>Հիմնադրամի էքսպերտային խորհրդի անդամներն են`</p>
-                                                <ul class=" worker__number__email">
-                                                    <li>
-                                                        <i class="location-icon"></i>
-                                                        <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="call-icon"></i>
-                                                        <span>(+74 60)80 80-03/1123</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="message-icon"></i>
-                                                        <span>minister@moh.am</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="website-icon"></i>
-                                                        <span>www.gerontology.am</span>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="charity__row">
-                                <div class="charity__row--content">
-                                    <div class="container-fluid m-0 p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-3">
-                                                <div class="charity-background"
-                                                     style="background-image: url('img/childrens-charity-companies/city-of-smile.png')"></div>
-                                            </div>
-                                            <div class="col-lg-9">
-                                                <p>«Նվիրիր Կյանք» արյան քաղցկեղով և ծանր հիվանդություններով երեխաներին
-                                                    օգնության Բարեգործական Հիմնադրամը գործում է 2009 թվականից
-                                                    (հիմնադրամի գործադիր մարմնի ղեկավարը` Վերժինե Ոսկանյան): Հիմնադրամի
-                                                    աշխատակազմը հետևյալն է` Վերժինե Ոսկանյան, Ելենա Աղայան, Նունե
-                                                    Ավանեսյան, ովքեր Հիմնադրամի միջոցներից օգտվում են միայն աշխատանքի
-                                                    վարձատրությանն ուղղված միջոցներից:</p>
-                                                <p>2011թ-ի ֆինանսական միջոցները գոյացել են անհատ բարերարների և տարբեր
-                                                    նվիրատուների հանգանակություններից` 64298.0 հազար դրամ և այդ
-                                                    ֆինանսական միջոցներից 2011թ. ֆինանսական տարում օգտագործվել է
-                                                    ընդհանուր 44,434.0 հազ. դրամ,որը ամբողջությամբ ուղղվել է
-                                                    կանոնադրական նպատակներին: Ֆինանսական հաշվետվությունների վերաբերյալ
-                                                    աուդիտն իրականացնող անձ է հանդիսանում «Լոնդոն Բիզնես Գրուպ»ՀՁ
-                                                    ՍՊԸ:</p>
-                                                <p>Հիմնադրամի էքսպերտային խորհրդի անդամներն են`</p>
-                                                <ul class=" worker__number__email">
-                                                    <li>
-                                                        <i class="location-icon"></i>
-                                                        <span>Ք․ Երևան, Նորաշեն ողմ․ 23-54</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="call-icon"></i>
-                                                        <span>(+74 60)80 80-03/1123</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="message-icon"></i>
-                                                        <span>minister@moh.am</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="website-icon"></i>
-                                                        <span>www.gerontology.am</span>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </li>
@@ -803,151 +156,81 @@
                         <ul class="links__websites-container links--hidden--content">
                             <li>
                                 <ul class="worker__number__email">
-                                    <li>
-                                        <p>ՀՀ նախագահ</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.president.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ ազգային ժողով</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.parliament.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ սահմանադրական դատարան</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.concourt.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ կառավարություն</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.gov.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հայաստանի հանրապետության էլեկտրոնային կառավարում</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.e-gov.am</a>
-                                    </li>
+                                    @foreach($LinksLinks as $Link)
+                                        @if($Link->type == 'main' )
+                                            <li>
+                                                <p>{{ !is_null($Link->name) ? $Link->name : '' }}</p>
+                                                @if( !is_null($Link->website_name) )
+                                                    <i class="website-icon"></i>
+                                                    <a href="{{!is_null($LinksCco->website_url) ? $LinksCco->website_url : ''}}">{{$Link->website_name}}</a>
+                                                @endif
+                                            </li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                             </li>
                             <li>
                                 <a class="links__second--lvl" href="javascript:;">Նախարարությոևններ</a>
                                 <ul class="links__websites--row worker__number__email">
-                                    <li>
-                                        <p>ՀՀ նախագահ</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.president.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ ազգային ժողով</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.parliament.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ սահմանադրական դատարան</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.concourt.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ կառավարություն</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.gov.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հայաստանի հանրապետության էլեկտրոնային կառավարում</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.e-gov.am</a>
-                                    </li>
+                                    @foreach($LinksLinks as $Link)
+                                        @if($Link->type == 'ministries' )
+                                            <li>
+                                                <p>{{ !is_null($Link->name) ? $Link->name : '' }}</p>
+                                                @if( !is_null($Link->website_name) )
+                                                    <i class="website-icon"></i>
+                                                    <a href="{{!is_null($LinksCco->website_url) ? $LinksCco->website_url : ''}}">{{$Link->website_name}}</a>
+                                                @endif
+                                            </li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                             </li>
                             <li>
                                 <a class="links__second--lvl" href="javascript:;">ՀՀ կառավարության առընթեր մարմիններ</a>
                                 <ul class="links__websites--row worker__number__email">
-                                    <li>
-                                        <p>ՀՀ նախագահ</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.president.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ ազգային ժողով</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.parliament.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ սահմանադրական դատարան</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.concourt.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ կառավարություն</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.gov.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հայաստանի հանրապետության էլեկտրոնային կառավարում</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.e-gov.am</a>
-                                    </li>
+                                    @foreach($LinksLinks as $Link)
+                                        @if($Link->type == 'ra_government_bodies' )
+                                            <li>
+                                                <p>{{ !is_null($Link->name) ? $Link->name : '' }}</p>
+                                                @if( !is_null($Link->website_name) )
+                                                    <i class="website-icon"></i>
+                                                    <a href="{{!is_null($LinksCco->website_url) ? $LinksCco->website_url : ''}}">{{$Link->website_name}}</a>
+                                                @endif
+                                            </li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                             </li>
                             <li>
                                 <a class="links__second--lvl" href="javascript:;">Այլ հղումներ</a>
                                 <ul class="links__websites--row worker__number__email">
-                                    <li>
-                                        <p>ՀՀ նախագահ</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.president.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ ազգային ժողով</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.parliament.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ սահմանադրական դատարան</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.concourt.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ կառավարություն</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.gov.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հայաստանի հանրապետության էլեկտրոնային կառավարում</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.e-gov.am</a>
-                                    </li>
+                                    @foreach($LinksLinks as $Link)
+                                        @if($Link->type == 'other_links' )
+                                            <li>
+                                                <p>{{ !is_null($Link->name) ? $Link->name : '' }}</p>
+                                                @if( !is_null($Link->website_name) )
+                                                    <i class="website-icon"></i>
+                                                    <a href="{{!is_null($LinksCco->website_url) ? $LinksCco->website_url : ''}}">{{$Link->website_name}}</a>
+                                                @endif
+                                            </li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                             </li>
                             <li>
                                 <a class="links__second--lvl" href="javascript:;">Մարզեր</a>
                                 <ul class="links__websites--row worker__number__email">
-                                    <li>
-                                        <p>ՀՀ նախագահ</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.president.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ ազգային ժողով</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.parliament.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ սահմանադրական դատարան</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.concourt.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հհ կառավարություն</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.gov.am</a>
-                                    </li>
-                                    <li>
-                                        <p>հայաստանի հանրապետության էլեկտրոնային կառավարում</p>
-                                        <i class="website-icon"></i>
-                                        <a href="javascript:;">www.e-gov.am</a>
-                                    </li>
+                                    @foreach($LinksLinks as $Link)
+                                        @if($Link->type == 'regions' )
+                                            <li>
+                                                <p>{{ !is_null($Link->name) ? $Link->name : '' }}</p>
+                                                @if( !is_null($Link->website_name) )
+                                                    <i class="website-icon"></i>
+                                                    <a href="{{!is_null($LinksCco->website_url) ? $LinksCco->website_url : ''}}">{{$Link->website_name}}</a>
+                                                @endif
+                                            </li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                             </li>
                         </ul>

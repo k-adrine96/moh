@@ -44,11 +44,11 @@
             </div>
             <div class="contact__us--cont">
                 <div class="contact__us--cont--text1 text-justify editor-content">
-                    {!! $pagesTexts->page_text1 !!}
+                    {!! getDescription($pagesTexts->page_text1) !!}
                 </div>
             </div>
             @if($pagesTexts->page_text2)
-                {!! $pagesTexts->page_text2 !!}
+                {!! getDescription($pagesTexts->page_text2) !!}
             @endif
         </section>
     </main>
