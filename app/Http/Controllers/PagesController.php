@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DynamicSection;
 use Illuminate\Http\Request;
 use App\News;
 use App\Videos;
@@ -178,8 +179,7 @@ class PagesController extends Controller
         $partnersRow2 = Partners::where('slider_row', 2)->get();
      	$announcements = Announcements::latest()->take(5)->get();
      	$slidersInfo = HomepageSlider::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
-
-        return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partnersRow1' , 'partnersRow2'));
+        return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partnersRow1' , 'partnersRow2'))->with('data', $this->data);
 
     }
 

@@ -1,5 +1,9 @@
 <?php
 
+Route::get('route', function (){
+    $sec = \App\DynamicSection::first()->pages;
+    dd($sec);
+});
 /*
 |--------------------------------------------------------------------------
 | Web Routes

@@ -103,9 +103,13 @@
                 <!--<li><a href="javascript:;">Հղումներ</a></li>-->
                 <!--</ul>-->
             </li>
+
             <li>
                 <a href="javascript:;" class="first-lvl">Քո իրավունքը</a>
             </li>
+
+            @each('partials.sidebar-sections', $data, 'section')
+
             <li class="mobile--visible">
                 <a href="javascript:;" class="first-lvl">Իրավական ակտեր</a>
             </li>
