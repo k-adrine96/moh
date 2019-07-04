@@ -5,7 +5,7 @@ if (!function_exists('getFileIcon')) {
      * @param string $icon
      * @return mixed|string
      */
-    function getFileIcon(string $icon ) {
+    function getFileIcon( string $icon ) {
         $icons = [
             'pdf'  => 'pdf',
             'doc'  => 'word',

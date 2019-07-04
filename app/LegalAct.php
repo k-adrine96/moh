@@ -10,7 +10,9 @@ class LegalAct extends Model
         'name',
         'date',
         'file_upload',
+        'file_url',
         'type_id',
+        'parent_id',
         'order'
     ];
 
@@ -26,5 +28,9 @@ class LegalAct extends Model
     public function type()
     {
         return $this->belongsTo(LegalActsType::class, 'type_id', 'id');
+    }
+
+    public function children() {
+        $this->hasMany( LegalAct::class , 'parent_id' , 'id');
     }
 }

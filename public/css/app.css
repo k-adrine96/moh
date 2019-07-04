@@ -3781,6 +3781,10 @@ svg {
   }
 }
 
+.child-file {
+  margin-left: 4%;
+}
+
 .pdf__year--large {
   width: 15%;
 }

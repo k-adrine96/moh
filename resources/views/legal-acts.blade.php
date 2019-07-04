@@ -51,16 +51,24 @@
                             <div class="pdf__info--row d-flex align-items-start">
                                 <div class="pdf__text">
                                     <ul>
-                                        @forelse($legalActs as $legalAct)
+                                        @foreach($parents as $parent)
                                             <li class="d-flex align-items-center">
-                                                <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($legalAct->file_link)}}.png")'></i>
-                                                <a href="{{$legalAct->file_link}}" class="border-btm ml-5" target="_blank">
-                                                    <span>{{$legalAct->name}} <i>{{ $legalAct->date->formatLocalized('%B %d, %Y') }} </i><!--<b>265կբ</b>--></span>
+                                                <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($parent->file_link)}}.png")'></i>
+                                                <a class="border-btm ml-5" href="{{$parent->file_link}}" target="_blank">
+                                                    <span>{{$parent->name}} <i>{{ $parent->date->formatLocalized('%B %d, %Y') }} </i></span>
                                                 </a>
                                             </li>
-                                        @empty
-                                            <h1>No data</h1>
-                                        @endforelse
+                                            @foreach($filesInfo as $fileInfo)
+                                                @if( $fileInfo->parent_id ==  $parent->id)
+                                                    <li class="d-flex align-items-center child-file">
+                                                        <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($fileInfo->file_link)}}.png")'></i>
+                                                        <a class="border-btm ml-5" href="{{$fileInfo->file_link}}" target="_blank">
+                                                            <span>{{$fileInfo->name}} <i>{{ $fileInfo->date->formatLocalized('%B %d, %Y') }} </i></span>
+                                                        </a>
+                                                    </li>
+                                                @endif
+                                            @endforeach
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>

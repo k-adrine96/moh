@@ -6,11 +6,15 @@ use Illuminate\Http\Request;
 use App\News;
 use App\Videos;
 use App\Report;
+use App\Politics;
+use App\Superior;
+use App\National;
 use App\LegalAct;
 use App\Partners;
 use App\Research;
 use App\LinksNgo;
 use App\LinksCco;
+use App\Screening;
 use App\LinksLink;
 use App\Statistic;
 use App\PagesTexts;
@@ -19,6 +23,7 @@ use App\CoverPhotos;
 use App\PressRelease;
 use App\MinisterPage;
 use App\MinisterInfo;
+use App\International;
 use App\LinksCoWorker;
 use App\LegalActsType;
 use App\Announcements;
@@ -28,6 +33,7 @@ use App\HomepageSlider;
 use App\MinHistoryItem;
 use App\MinHistoryCategory;
 use App\SpeechAndInterview;
+use App\AntiCorruptionEvent;
 use App\MinisterInfoCategory;
 
 class PagesController extends Controller
@@ -99,26 +105,6 @@ class PagesController extends Controller
             $minHistoryItems = MinHistoryItem::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
             $minHistoryCats  = MinHistoryCategory::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
 
-        }else if($page === 'legal-acts')
-        {
-            $coverPhoto = CoverPhotos::where('page_slug', 'legal-acts')->first();
-            $legalActs  = new LegalAct();
-
-            if($request->type_id) {
-                $legalActs = $legalActs->whereTypeId($request->type_id);
-            }
-
-            if($request->name) {
-                $legalActs = $legalActs->where('name', 'like', '%'.$request->name.'%');
-            }
-
-            if($request->date) {
-                $legalActs = $legalActs->where('date', $request->date);
-            }
-
-            $legalActs = $legalActs->orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
-            $actsTypes = LegalActsType::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
-
         }else if($page === 'links')
         {
             $coverPhoto     = CoverPhotos::where('page_slug', 'links')->first();
@@ -142,32 +128,89 @@ class PagesController extends Controller
         }else if($page === 'speeches-interviews')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'speeches-interviews')->first();
-            $filesInfo  = SpeechAndInterview::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
+            $filesInfo  = SpeechAndInterview::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'reports')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'reports')->first();
-            $filesInfo  = Report::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
+            $filesInfo  = Report::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'press-release')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'press-release')->first();
-            $filesInfo  = PressRelease::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
+            $filesInfo  = PressRelease::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'researches')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'researches')->first();
-            $filesInfo  = Research::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
+            $filesInfo  = Research::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'statistics')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'statistics')->first();
-            $filesInfo  = Statistic::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
+            $filesInfo  = Statistic::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'informative')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'informative')->first();
-            $filesInfo  = Informative::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
+            $filesInfo  = Informative::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
+
+        }else if($page === 'legal-acts')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'legal-acts')->first();
+            $legalActs  = new LegalAct();
+
+            if($request->type_id) {
+                $legalActs = $legalActs->whereTypeId($request->type_id);
+            }
+
+            if($request->name) {
+                $legalActs = $legalActs->where('name', 'like', '%'.$request->name.'%');
+            }
+
+            if($request->date) {
+                $legalActs = $legalActs->where('date', $request->date);
+            }
+
+            $parents = $legalActs->orderBy('order' , 'asc')->orderBy('date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo = $legalActs->orderBy('order' , 'asc')->orderBy('date', 'desc')->whereNotNull('parent_id')->get();
+            $actsTypes = LegalActsType::orderBy('order' , 'asc')->get();
+
+        }else if($page === 'politics')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'politics')->first();
+            $parents  = Politics::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = Politics::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'superior')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'superior')->first();
+            $parents  = Superior::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = Superior::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'national')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'national')->first();
+            $parents  = National::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = National::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'international')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'international')->first();
+            $parents  = International::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = International::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'screening')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'screening')->first();
+            $parents  = Screening::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = Screening::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'anti-corruption-events')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'anti-corruption-events')->first();
+            $parents  = AntiCorruptionEvent::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = AntiCorruptionEvent::orderBy('order', 'asc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }
 
@@ -175,7 +218,7 @@ class PagesController extends Controller
                                             'educationInfos' , 'workInfos' , 'otherInfos' ,
                                             'filesInfo' , 'partnersRow1' , 'partnersRow2' ,
                                             'minHistoryItems' , 'minHistoryCats' , 'legalActs' ,
-                                            'actsTypes' , 'LinksCoWorkers' , 'LinksNgos' , 'LinksCcos' , 'LinksLinks'));
+                                            'actsTypes' , 'LinksCoWorkers' , 'LinksNgos' , 'LinksCcos' , 'LinksLinks' , 'parents'));
     }
 
     public function homepage(){
