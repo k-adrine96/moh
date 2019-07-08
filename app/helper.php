@@ -8,6 +8,7 @@ if (!function_exists('getFileIcon')) {
     function getFileIcon( string $icon ) {
         $icons = [
             'pdf'  => 'pdf',
+            'PDF'  => 'pdf',
             'doc'  => 'word',
             'docx' => 'word',
             'xls'  => 'excel',
@@ -25,6 +26,33 @@ if (!function_exists('getFileIcon')) {
         }
 
         return $noType;
+    }
+
+}
+
+if (!function_exists('getFileSize')) {
+    /**
+     * @param string $file
+     * @return mixed|string
+     */
+
+    function getFileSize(string $file) {
+
+
+        $size = filesize(public_path($file));
+
+        $units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
+
+        for ($i = 0; $size > 1024; $i++) {
+            $size /= 1024;
+        }
+
+        if(file_exists(public_path($file))){
+            return  round($size, 2) . ' ' . $units[$i];
+        }else{
+            return "0 KB";
+        }
+
     }
 
 }
