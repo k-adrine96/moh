@@ -2185,7 +2185,7 @@ svg {
 }
 
 .announcements--cont--slider--items:first-child {
-  border-color: #FFBC35;
+  border-color: #FFBC35 !important;
 }
 
 .announcements--cont--slider--items:hover {

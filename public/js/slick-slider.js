@@ -8,7 +8,7 @@
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 2000,
     });
     $('.news__content--slider').slick({
@@ -20,7 +20,7 @@
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 2000,
     });
     $('.announcements--cont--slider').slick({
@@ -80,7 +80,7 @@
       slidesToShow: 4,
       slidesToScroll: 1,
       arrows: false,
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 2000,
       responsive: [
         {
@@ -115,7 +115,7 @@
       slidesToShow: 4,
       slidesToScroll: 1,
       arrows: false,
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 2000,
       responsive: [
         {
@@ -148,7 +148,7 @@
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 2000,
     })
 
