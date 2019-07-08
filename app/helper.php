@@ -29,6 +29,28 @@ if (!function_exists('getFileIcon')) {
 
 }
 
+if (!function_exists('getFileSize')) {
+    /**
+     * @param string $file
+     * @return mixed|string
+     */
+
+    function getFileSize(string $file) {
+
+        $size = filesize(public_path($file));
+
+        $units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
+
+        for ($i = 0; $size > 1024; $i++) {
+            $size /= 1024;
+        }
+
+        return  round($size, 2) . ' ' . $units[$i];
+
+    }
+
+}
+
 if (!function_exists('getDescription')) {
     /**
      * @param string $str
