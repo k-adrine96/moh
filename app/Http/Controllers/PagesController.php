@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Faq;
 use App\News;
 use App\Videos;
 use App\Report;
@@ -22,6 +23,7 @@ use App\StateOrder;
 use App\PagesTexts;
 use App\Informative;
 use App\CoverPhotos;
+use App\FaqCategory;
 use App\PressRelease;
 use App\MinisterPage;
 use App\MinisterInfo;
@@ -102,6 +104,9 @@ class PagesController extends Controller
         }else if($page === 'faq')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'faq')->first();
+            $faqs = Faq::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
+            $faqCategories  = FaqCategory::orderBy('order' , 'asc')->orderBy('id' , 'asc')->get();
+
 
         }else if($page === 'history')
         {
@@ -246,7 +251,8 @@ class PagesController extends Controller
                                             'educationInfos' , 'workInfos' , 'otherInfos' ,
                                             'filesInfo' , 'partnersRow1' , 'partnersRow2' ,
                                             'minHistoryItems' , 'minHistoryCats' , 'legalActs' ,
-                                            'actsTypes' , 'LinksCoWorkers' , 'LinksNgos' , 'LinksCcos' , 'LinksLinks' , 'parents'));
+                                            'actsTypes' , 'LinksCoWorkers' , 'LinksNgos' , 'LinksCcos' ,
+                                            'LinksLinks' , 'parents' , 'faqs' , 'faqCategories'));
     }
 
     public function homepage(){
