@@ -47,7 +47,7 @@ if (!function_exists('getFileSize')) {
         if(file_exists($file)){
             return  round($size, 2) . ' ' . $units[$i];
         }else{
-            return 0;
+            return '0 KB';
         }
 
     }
