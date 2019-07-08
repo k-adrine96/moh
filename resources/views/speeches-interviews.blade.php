@@ -16,6 +16,7 @@
                                 <div class="pdf__text">
                                     <ul>
                                         @foreach($filesInfo as $fileInfo)
+                                            {{dd(getFileSize($fileInfo->file_link))}}
                                             <li class="d-flex align-items-center">
                                                 <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($fileInfo->file_link)}}.png")'></i>
                                                 <a class="border-btm ml-5" href="{{$fileInfo->file_link}}" target="_blank">

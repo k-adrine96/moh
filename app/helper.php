@@ -37,6 +37,7 @@ if (!function_exists('getFileSize')) {
 
     function getFileSize(string $file) {
 
+
         $size = filesize(public_path($file));
 
         $units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
@@ -45,7 +46,11 @@ if (!function_exists('getFileSize')) {
             $size /= 1024;
         }
 
-        return  round($size, 2) . ' ' . $units[$i];
+        if(file_exists(public_path($file))){
+            return  round($size, 2) . ' ' . $units[$i];
+        }else{
+            return "0 KB";
+        }
 
     }
 
