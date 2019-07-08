@@ -8,6 +8,7 @@ if (!function_exists('getFileIcon')) {
     function getFileIcon( string $icon ) {
         $icons = [
             'pdf'  => 'pdf',
+            'PDF'  => 'pdf',
             'doc'  => 'word',
             'docx' => 'word',
             'xls'  => 'excel',
