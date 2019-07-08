@@ -132,32 +132,32 @@ class PagesController extends Controller
         }else if($page === 'speeches-interviews')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'speeches-interviews')->first();
-            $filesInfo  = SpeechAndInterview::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
+            $filesInfo  = SpeechAndInterview::orderBy('order', 'asc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'reports')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'reports')->first();
-            $filesInfo  = Report::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
+            $filesInfo  = Report::orderBy('order', 'asc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'press-release')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'press-release')->first();
-            $filesInfo  = PressRelease::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
+            $filesInfo  = PressRelease::orderBy('order', 'asc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'researches')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'researches')->first();
-            $filesInfo  = Research::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
+            $filesInfo  = Research::orderBy('order', 'asc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'statistics')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'statistics')->first();
-            $filesInfo  = Statistic::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
+            $filesInfo  = Statistic::orderBy('order', 'asc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'informative')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'informative')->first();
-            $filesInfo  = Informative::orderBy('order', 'asc')->orderBy('date', 'desc')->get();
+            $filesInfo  = Informative::orderBy('order', 'asc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'legal-acts')
         {
