@@ -13,7 +13,7 @@ if (!function_exists('getFileIcon')) {
             'docx' => 'word',
             'xls'  => 'excel',
             'xlsx' => 'excel1',
-            'zip' => 'zip'
+            'zip'  => 'zip'
         ];
 
         $extension = \File::extension($icon);
