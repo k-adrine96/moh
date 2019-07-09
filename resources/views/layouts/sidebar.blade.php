@@ -49,7 +49,7 @@
                     </li>
                     <li><a href="javascript:;">Ենթակայության կառուցներ</a></li>
                     <li><a href="{{ route('pages' , 'budget') }}">Բյուջե</a></li>
-                    <li><a href="javascript:;">Ան խորհրդատուներ</a></li>
+                    <li><a href="{{ route('pages' , 'moh-consultants') }}">Ան խորհրդատուներ</a></li>
                     <li><a href="{{ route('pages' , 'public-council') }}">Նախարարին կից հասարակական խորհուրդ</a></li>
                 </ul>
             </li>

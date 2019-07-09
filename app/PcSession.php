@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class National extends Model
+class PcSession extends Model
 {
     protected $fillable = [
+        'year',
         'file_name',
         'file_upload',
         'file_url',
         'file_date',
-        'parent_id',
         'order'
     ];
 
@@ -26,9 +26,5 @@ class National extends Model
         }
 
         return $this->attributes['file_url'];
-    }
-
-    public function children() {
-        $this->hasMany( National::class , 'parent_id' , 'id');
     }
 }

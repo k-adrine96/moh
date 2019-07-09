@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class National extends Model
+class Budget extends Model
 {
-    protected $fillable = [
+    protected $fillable  = [
         'file_name',
         'file_upload',
         'file_url',
         'file_date',
-        'parent_id',
+        'category_id',
         'order'
     ];
 
@@ -28,7 +28,8 @@ class National extends Model
         return $this->attributes['file_url'];
     }
 
-    public function children() {
-        $this->hasMany( National::class , 'parent_id' , 'id');
+    public function category()
+    {
+        return $this->belongsTo(BudgetCategory::class , 'category_id' , 'id');
     }
 }
