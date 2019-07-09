@@ -42,10 +42,14 @@ use App\MohConsultant;
 use App\BudgetCategory;
 use App\HomepageSlider;
 use App\MinHistoryItem;
+use App\StaffingVacancy;
+use App\StaffingStaffList;
 use App\MinHistoryCategory;
 use App\SpeechAndInterview;
 use App\AntiCorruptionEvent;
+use App\StaffingTenderResult;
 use App\MinisterInfoCategory;
+use App\StaffingJobAcceptance;
 use App\AdvertisingPermission;
 use App\LicensDocumentsApplication;
 
@@ -147,10 +151,6 @@ class PagesController extends Controller
             $PcAppeals   = PcAppeal::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
             $PcResults   = PcResult::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
             $PcSessions  = PcSession::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
-
-        }else if($page === 'staff-list')
-        {
-            $coverPhoto = CoverPhotos::where('page_slug', 'staff-list')->first();
 
         }else if($page === 'speeches-interviews')
         {
@@ -262,6 +262,30 @@ class PagesController extends Controller
             $coverPhoto = CoverPhotos::where('page_slug', 'admission')->first();
             $parents    = Admission::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
             $filesInfo  = Admission::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'staffing-staff-list')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'staffing-staff-list')->first();
+            $parents    = StaffingStaffList::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = StaffingStaffList::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'staffing-vacancy')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'staffing-vacancy')->first();
+            $parents    = StaffingVacancy::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = StaffingVacancy::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'staffing-tender-results')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'staffing-tender-results')->first();
+            $parents    = StaffingTenderResult::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = StaffingTenderResult::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'staffing-job-acceptance')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'staffing-job-acceptance')->first();
+            $parents    = StaffingJobAcceptance::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = StaffingJobAcceptance::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }
 

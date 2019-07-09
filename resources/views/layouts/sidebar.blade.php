@@ -41,10 +41,10 @@
                     <li>
                         <a href="javascript:;" class="second-lvl">Կադրային ապահովում</a>
                         <ul class="second--hidden--content">
-                            <li><a href="{{ route('pages' , 'staff-list') }}">Հաստիքացուցակ</a></li>
-                            <li><a href="javascript:;">Թափուր հաստիքներ</a></li>
-                            <li><a href="javascript:;">Մրցույթների հայտարարություններ, արդյունքներ</a></li>
-                            <li><a href="javascript:;">Աշխատանքի ընդունման կարգ</a></li>
+                            <li><a href="{{ route('pages' , 'staffing-staff-list') }}">Հաստիքացուցակ</a></li>
+                            <li><a href="{{ route('pages' , 'staffing-vacancy') }}">Թափուր հաստիքներ</a></li>
+                            <li><a href="{{ route('pages' , 'staffing-tender-results') }}">Մրցույթների հայտարարություններ, արդյունքներ</a></li>
+                            <li><a href="{{ route('pages' , 'staffing-job-acceptance') }}">Աշխատանքի ընդունման կարգ</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:;">Ենթակայության կառուցներ</a></li>

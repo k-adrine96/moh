@@ -22,7 +22,11 @@ class LegalAct extends Model
 
     public function getFileLinkAttribute()
     {
-        return \Storage::url(json_decode($this->file_upload)[0]->download_link);
+        if($this->file_upload && $this->file_upload !== '[]') {
+            return \Storage::url(json_decode($this->file_upload)[0]->download_link);
+        }
+
+        return $this->attributes['file_url'];
     }
 
     public function type()

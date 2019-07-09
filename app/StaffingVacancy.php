@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AdvertisingPermission extends Model
+class StaffingVacancy extends Model
 {
-    protected $fillable = [
+    protected $fillable  = [
         'file_name',
         'file_upload',
         'file_url',
@@ -29,6 +29,6 @@ class AdvertisingPermission extends Model
     }
 
     public function children() {
-        $this->hasMany( AdvertisingPermission::class , 'parent_id' , 'id');
+        $this->hasMany( StaffingVacancy::class , 'parent_id' , 'id');
     }
 }
