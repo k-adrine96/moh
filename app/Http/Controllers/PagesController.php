@@ -292,7 +292,7 @@ class PagesController extends Controller
         }else if($page === 'your-rights')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'your-rights')->first();
-            $content     = YourRightsVideo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $content     = YourRightsVideo::orderBy('order', 'desc')->orderBy('date', 'desc')->orderBy('id', 'desc')->get();
             $parents    = YourRightsFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
             $filesInfo  = YourRightsFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
