@@ -103,13 +103,13 @@
                 <!--</ul>-->
             </li>
             <li>
-                <a href="javascript:;" class="first-lvl">Քո իրավունքը</a>
+                <a href="{{ route('pages' , 'your-rights') }}" class="first-lvl">Քո իրավունքը</a>
             </li>
             <li class="mobile--visible">
-                <a href="javascript:;" class="first-lvl">Իրավական ակտեր</a>
+                <a href="{{ route('pages' , 'legal-acts') }}" class="first-lvl">Իրավական ակտեր</a>
             </li>
             <li class="mobile--visible">
-                <a href="javascript:;" class="first-lvl">Հետադարձ կապ</a>
+                <a href="{{ route('pages' , 'contact-us') }}" class="first-lvl">Հետադարձ կապ</a>
             </li>
         </ul>
         <div class="menu__social">

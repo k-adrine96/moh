@@ -64,8 +64,33 @@ if (!function_exists('getDescription')) {
      */
 
     function getDescription(string $str ) {
+
         $description = str_replace("&nbsp;"," ", $str);
         return $description;
+    }
+
+}
+
+if (!function_exists('getVideoKey')) {
+    /**
+     * @param string $str
+     * @return mixed|string
+     */
+
+    function getVideoKey(string $str ) {
+
+        if(strstr($str,"v="))
+        {
+            $videoKey = substr($str, strrpos($str, '=') + 1);
+        }else{
+            $videoKey = substr($str, strrpos($str, '/') + 1);
+        }
+        return $videoKey;
+
+
+//        if (($pos = strpos($data, "_")) !== FALSE) {
+//            $whatIWant = substr($data, $pos+1);
+//        }
     }
 
 }

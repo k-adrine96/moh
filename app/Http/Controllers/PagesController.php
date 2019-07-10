@@ -42,6 +42,8 @@ use App\MohConsultant;
 use App\BudgetCategory;
 use App\HomepageSlider;
 use App\MinHistoryItem;
+use App\YourRightsFile;
+use App\YourRightsVideo;
 use App\StaffingVacancy;
 use App\StaffingStaffList;
 use App\MinHistoryCategory;
@@ -286,6 +288,13 @@ class PagesController extends Controller
             $coverPhoto = CoverPhotos::where('page_slug', 'staffing-job-acceptance')->first();
             $parents    = StaffingJobAcceptance::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
             $filesInfo  = StaffingJobAcceptance::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'your-rights')
+        {
+            $coverPhoto = CoverPhotos::where('page_slug', 'your-rights')->first();
+            $content     = YourRightsVideo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $parents    = YourRightsFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = YourRightsFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }
 
