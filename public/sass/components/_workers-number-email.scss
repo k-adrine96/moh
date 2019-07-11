@@ -23,8 +23,8 @@
     .location-icon {
       @include backimg;
       background-image: url("/img/location-icon-yellow.png");
-      height: 49px !important;
-      width: 35px!important;
+      height: 48px !important;
+      width: 34px !important;
     }
 
     .call-icon {
@@ -54,6 +54,7 @@
     span {
       font-size: $main-fz;
       color: $main-color;
+      width: 80%;
 
       @media only screen and (max-width: 1024px) {
         font-size: $small-fz;

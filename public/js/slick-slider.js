@@ -150,7 +150,19 @@
       arrows: false,
       autoplay: true,
       autoplaySpeed: 2000,
-    })
+    });
+
+    $('.single__news--slider').slick({
+      // prevArrow: ('.partners-prev'),
+      // nextArrow: ('.partners-next'),
+      dots: false,
+      infinite: true,
+      speed: 2000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+
+    });
 
   }
 
