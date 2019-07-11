@@ -38,9 +38,9 @@
     }
 
     .website-icon {
-      @include backimg;
-      background-image: url("/img/website-icon.png");
-    }
+           @include backimg;
+           background-image: url("/img/website-icon.png");
+         }
 
     a {
       text-decoration: none;
