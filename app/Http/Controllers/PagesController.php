@@ -26,6 +26,7 @@ use App\Statistic;
 use App\Admission;
 use App\StateOrder;
 use App\PagesTexts;
+use App\SsOtherOrg;
 use App\Informative;
 use App\CoverPhotos;
 use App\FaqCategory;
@@ -43,6 +44,7 @@ use App\BudgetCategory;
 use App\HomepageSlider;
 use App\MinHistoryItem;
 use App\YourRightsFile;
+use App\SsStationeryOrg;
 use App\YourRightsVideo;
 use App\StaffingVacancy;
 use App\StaffingStaffList;
@@ -145,6 +147,16 @@ class PagesController extends Controller
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'moh-consultants')->first();
             $content    = MohConsultant::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+
+        }else if($page === 'sub-structures-stationery-orgs')
+        {
+            $content    = SsStationeryOrg::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $coverPhoto = CoverPhotos::where('page_slug', 'sub-structures-stationery-orgs')->first();
+
+        }else if($page === 'sub-structures-other-orgs')
+        {
+            $content    = SsOtherOrg::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $coverPhoto = CoverPhotos::where('page_slug', 'sub-structures-other-orgs')->first();
 
         }else if($page === 'public-council')
         {

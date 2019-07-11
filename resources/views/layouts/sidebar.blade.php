@@ -35,7 +35,7 @@
                             <li><a href="{{ route('pages' , 'minister-staff') }}">նախարարի աշխատակազմ</a></li>
                             <li><a href="{{ route('pages' , 'ministry-structure') }}">Կառուցվածքի գծապատկեր</a></li>
                             <li><a href="javascript:;">Լիզենզավորման գործակալություն</a></li>
-                            <li><a href="javascript:;">Առողջապահական ծրագրերի իրականացման գրասենյակ</a></li>
+                            <li><a href="https://www.healthpiu.am/" target="_blank">Առողջապահական ծրագրերի իրականացման գրասենյակ</a></li>
                         </ul>
                     </li>
                     <li>
@@ -47,7 +47,16 @@
                             <li><a href="{{ route('pages' , 'staffing-job-acceptance') }}">Աշխատանքի ընդունման կարգ</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:;">Ենթակայության կառուցներ</a></li>
+                    <li>
+                        <a href="javascript:;" class="second-lvl">Ենթակայության կառուցներ</a>
+                        <ul class="second--hidden--content">
+                            <li><a href="{{--{{ route('pages' , '') }}--}}">Առողջապահության ազգային ինստիտուտ</a></li>
+                            <li><a href="{{--{{ route('pages' , '') }}--}}">Դեղերի և բժշկական տեխնոլոգիաների փորձագիտական կենտրոն</a></li>
+                            <li><a href="{{--{{ route('pages' , '') }}--}}">Հանրապետական գիտաբժշկական գրադարան</a></li>
+                            <li><a href="{{ route('pages' , 'sub-structures-stationery-orgs') }}">Ստացիոնար բուժօգնություն իրականացնող կազմակերպություններ</a></li>
+                            <li><a href="{{ route('pages' , 'sub-structures-other-orgs') }}">Այլ կազմակերպություններ</a></li>
+                        </ul>
+                    </li>
                     <li><a href="{{ route('pages' , 'budget') }}">Բյուջե</a></li>
                     <li><a href="{{ route('pages' , 'moh-consultants') }}">Ան խորհրդատուներ</a></li>
                     <li><a href="{{ route('pages' , 'public-council') }}">Նախարարին կից հասարակական խորհուրդ</a></li>
