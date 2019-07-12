@@ -17,8 +17,8 @@
                                     <div class="worker__info--header">
                                         <h1>{{!is_null($organisation->organisation_name) ? $organisation->organisation_name : ''}}</h1>
                                     </div>
-                                    <div class="worker__info--chief">
-                                        <h1>{{!is_null($organisation->head_position) ? $organisation->head_position : ''}}</h1>
+                                    <div class="worker__info--chief mt-4">
+                                        <p>{{!is_null($organisation->head_position) ? $organisation->head_position : ''}}</p>
                                     </div>
                                     <div class="worker__info--name">
                                         <p>{{!is_null($organisation->head_name) ? $organisation->head_name : ''}}</p>
@@ -50,13 +50,23 @@
                                                 </a>
                                             @endif
                                         </li>
-                                        <li class="d-flex align-items-center organisation-file">
-                                            <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($organisation->file_link)}}.png")'></i>
-                                            <a class="border-btm ml-5" href="{{$organisation->file_link}}" target="_blank">
-                                                <span>{{$organisation->file_name}} <i>{{ $organisation->file_date->formatLocalized('%B %d, %Y') }} </i><b> {{getFileSize($organisation->file_link)}}</b></span>
-                                            </a>
-                                        </li>
                                     </ul>
+                                    <div class="pdf__info">
+                                        <div class="pdf__info--row d-flex align-items-start">
+                                            <div class="pdf__text">
+                                                <ul>
+                                                    <li class="d-flex align-items-center">
+                                                        <i class="pdf__icon"
+                                                           style='background-image: url("/img/{{getFileIcon($organisation->file_link)}}.png")'></i>
+                                                        <a class="border-btm ml-5" href="{{$organisation->file_link}}"
+                                                           target="_blank">
+                                                            <span>{{$organisation->file_name}} <i>{{ $organisation->file_date->formatLocalized('%B %d, %Y') }} </i><b> {{getFileSize($organisation->file_link)}}</b></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             @endforeach
                         </div>
