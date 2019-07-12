@@ -2,7 +2,8 @@
 
 @section('content')
     <main>
-        <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
+        <section class="secondary__cover"
+                 style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
                 <h1>Ան խորհրդատուներ</h1>
             </div>
@@ -33,10 +34,16 @@
                                                 <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">{{$consultant->email}}</a>
                                             </li>
                                         @endif
+                                        @if(!is_null($consultant->working_place))
+                                            <li>
+                                                <i class="location-icon"></i>
+                                                <span>{{$consultant->working_place}}</span>
+                                            </li>
+                                        @endif
                                     </ul>
-                                    <div class="worker__info--header">
-                                        <p>{{!is_null($consultant->working_place) ? $consultant->working_place : ''}}</p>
-                                    </div>
+                                    {{--<div class="worker__info--header">--}}
+                                    {{--<p>{{!is_null($consultant->working_place) ? $consultant->working_place : ''}}</p>--}}
+                                    {{--</div>--}}
                                 </div>
                             @endforeach
                         </div>
