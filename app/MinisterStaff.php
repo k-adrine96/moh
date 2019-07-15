@@ -2,12 +2,12 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
+use Illuminate\Database\Eloquent\Model;
 
 class MinisterStaff extends Model
 {
-//    use Translatable;
+    use Translatable;
 
     protected $fillable = [
         'position',
@@ -15,6 +15,12 @@ class MinisterStaff extends Model
         'phone_number',
         'email',
         'image',
+        'text'
+    ];
+
+    protected $Translatable = [
+        'position',
+        'name',
         'text'
     ];
 }

@@ -2,10 +2,13 @@
 
 namespace App;
 
+use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
 
 class LinksNgo extends Model
 {
+    use Translatable;
+
     protected $fillable = [
         'ngo_name',
 		'head_position',
@@ -16,5 +19,12 @@ class LinksNgo extends Model
 		'website_name',
 		'website_url',
 		'order'
+    ];
+
+    protected $Translatable = [
+        'ngo_name',
+        'head_position',
+        'head_name',
+        'address'
     ];
 }

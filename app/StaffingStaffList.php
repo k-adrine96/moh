@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class StaffingStaffList extends Model
 {
+    use Translatable;
+
     protected $fillable  = [
         'file_name',
         'file_upload',
@@ -15,9 +18,9 @@ class StaffingStaffList extends Model
         'order'
     ];
 
-    protected $dates = [
-        'file_date'
-    ];
+    protected $dates = ['file_date'];
+
+    protected $Translatable = [ 'file_name' ];
 
     public function getFileLinkAttribute()
     {

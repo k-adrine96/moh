@@ -2,12 +2,12 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
+use Illuminate\Database\Eloquent\Model;
 
 class HomepageSlider extends Model
 {
-//    use Translatable;
+    use Translatable;
 
     protected $fillable = [
         'title',
@@ -15,5 +15,10 @@ class HomepageSlider extends Model
         'image',
         'url',
         'date'
+    ];
+
+    protected $Translatable = [
+        'title',
+        'text'
     ];
 }

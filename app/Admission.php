@@ -2,10 +2,13 @@
 
 namespace App;
 
+use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
 
 class Admission extends Model
 {
+    use Translatable;
+
     protected $fillable = [
         'file_name',
         'file_upload',
@@ -15,9 +18,9 @@ class Admission extends Model
         'order'
     ];
 
-    protected $dates = [
-        'file_date'
-    ];
+    protected $dates = ['file_date'];
+
+    protected $Translatable = ['file_name'];
 
     public function getFileLinkAttribute()
     {

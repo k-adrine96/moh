@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class SsMedicalLibraryInfo extends Model
 {
+    use Translatable;
+
     protected $fillable = [
         'organisation_name',
         'head_position',
@@ -18,8 +21,13 @@ class SsMedicalLibraryInfo extends Model
         'order'
     ];
 
-    protected $dates = [
-        'file_date'
+    protected $dates = ['file_date'];
+
+    protected $Translatable = [
+        'organisation_name',
+        'head_position',
+        'head_name',
+        'address'
     ];
 
     public function getFileLinkAttribute()
