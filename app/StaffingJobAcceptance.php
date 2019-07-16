@@ -20,7 +20,7 @@ class StaffingJobAcceptance extends Model
 
     protected $dates = ['file_date'];
 
-    protected $Translatable = [ 'file_name' ];
+    protected $translatable = [ 'file_name' ];
 
     public function getFileLinkAttribute()
     {
@@ -32,6 +32,6 @@ class StaffingJobAcceptance extends Model
     }
 
     public function children() {
-        $this->hasMany( StaffingJobAcceptance::class , 'parent_id' , 'id');
+        return $this->hasMany( StaffingJobAcceptance::class , 'parent_id' , 'id');
     }
 }

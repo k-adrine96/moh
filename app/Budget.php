@@ -2,8 +2,8 @@
 
 namespace App;
 
-use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class Budget extends Model
 {
@@ -20,7 +20,7 @@ class Budget extends Model
 
     protected $dates = ['file_date'];
 
-    protected $Translatable = ['file_name'];
+    protected $translatable = ['file_name'];
 
     public function getFileLinkAttribute()
     {

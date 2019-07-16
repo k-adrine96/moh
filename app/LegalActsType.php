@@ -2,8 +2,8 @@
 
 namespace App;
 
-use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class LegalActsType extends Model
 {
@@ -14,5 +14,7 @@ class LegalActsType extends Model
         'slug'
     ];
 
-    protected $Translatable = ['name'];
+    protected $translatable = [
+        'name'
+    ];
 }

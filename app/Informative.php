@@ -2,8 +2,8 @@
 
 namespace App;
 
-use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class Informative extends Model
 {
@@ -18,7 +18,7 @@ class Informative extends Model
 
     protected $dates = ['file_date'];
 
-    protected $Translatable = ['file_name'];
+    protected $translatable = ['file_name'];
 
 //    public function getDownloadAttribute()
 //    {

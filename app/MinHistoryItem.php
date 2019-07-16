@@ -2,8 +2,8 @@
 
 namespace App;
 
-use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class MinHistoryItem extends Model
 {
@@ -15,11 +15,11 @@ class MinHistoryItem extends Model
         'category_id'
     ];
 
-    protected $Translatable = ['name'];
+    protected $translatable = ['name'];
 
     public function category()
     {
-        $this->belongsTo(MinHistoryCategory::Class, 'category_id', 'id');
+        return $this->belongsTo(MinHistoryCategory::Class, 'category_id', 'id');
     }
 }
 

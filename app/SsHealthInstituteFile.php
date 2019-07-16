@@ -20,7 +20,7 @@ class SsHealthInstituteFile extends Model
 
     protected $dates = ['file_date'];
 
-    protected $Translatable = ['file_name'];
+    protected $translatable = ['file_name'];
 
     public function getFileLinkAttribute()
     {
@@ -32,6 +32,6 @@ class SsHealthInstituteFile extends Model
     }
 
     public function children() {
-        $this->hasMany( SsHealthInstituteFile::class , 'parent_id' , 'id');
+        return $this->hasMany( SsHealthInstituteFile::class , 'parent_id' , 'id');
     }
 }

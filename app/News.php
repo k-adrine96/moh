@@ -2,8 +2,8 @@
 
 namespace App;
 
-use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class News extends Model
 {
@@ -17,7 +17,7 @@ class News extends Model
         'date'
     ];
 
-    protected $Translatable = [
+    protected $translatable = [
         'title',
         'description'
     ];

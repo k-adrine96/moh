@@ -20,7 +20,7 @@ class LinksCco extends Model
         'order'
     ];
 
-    protected $Translatable = [
+    protected $translatable = [
         'description',
         'address'
     ];

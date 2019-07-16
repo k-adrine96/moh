@@ -2,8 +2,8 @@
 
 namespace App;
 
-use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class MinisterInfo extends Model
 {
@@ -15,7 +15,7 @@ class MinisterInfo extends Model
         'category_id'
     ];
 
-    protected $Translatable = ['description'];
+    protected $translatable = ['description'];
 
     public function category()
     {

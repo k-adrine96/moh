@@ -2,8 +2,8 @@
 
 namespace App;
 
-use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class AdvertisingPermission extends Model
 {
@@ -20,7 +20,7 @@ class AdvertisingPermission extends Model
 
     protected $dates = ['file_date'];
 
-    protected $Translatable = ['file_name'];
+    protected $translatable = ['file_name'];
 
     public function getFileLinkAttribute()
     {
@@ -32,6 +32,6 @@ class AdvertisingPermission extends Model
     }
 
     public function children() {
-        $this->hasMany( AdvertisingPermission::class , 'parent_id' , 'id');
+        return $this->hasMany( AdvertisingPermission::class , 'parent_id' , 'id');
     }
 }

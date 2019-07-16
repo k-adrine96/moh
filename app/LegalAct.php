@@ -21,7 +21,7 @@ class LegalAct extends Model
 
     protected $dates = ['date'];
 
-    protected $Translatable = ['name'];
+    protected $translatable = ['name'];
 
     public function getFileLinkAttribute()
     {
@@ -38,6 +38,6 @@ class LegalAct extends Model
     }
 
     public function children() {
-        $this->hasMany( LegalAct::class , 'parent_id' , 'id');
+        return $this->hasMany( LegalAct::class , 'parent_id' , 'id');
     }
 }

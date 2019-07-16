@@ -2,8 +2,8 @@
 
 namespace App;
 
-use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class MinistryStaff extends Model
 {
@@ -16,7 +16,7 @@ class MinistryStaff extends Model
         'email'
     ];
 
-    protected $Translatable = [
+    protected $translatable = [
         'position',
         'name'
     ];

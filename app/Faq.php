@@ -2,8 +2,8 @@
 
 namespace App;
 
-use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class Faq extends Model
 {
@@ -16,7 +16,7 @@ class Faq extends Model
         'order'
     ];
 
-    protected $Translatable = [
+    protected $translatable = [
         'question',
         'answer'
     ];

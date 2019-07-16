@@ -20,7 +20,7 @@ class Politics extends Model
 
     protected $dates = ['file_date'];
 
-    protected $Translatable = [ 'file_name' ];
+    protected $translatable = [ 'file_name' ];
 
     public function getFileLinkAttribute()
     {
@@ -32,7 +32,7 @@ class Politics extends Model
     }
 
     public function children() {
-        $this->hasMany( Politics::class , 'parent_id' , 'id');
+        return $this->hasMany( Politics::class , 'parent_id' , 'id');
     }
 
 }

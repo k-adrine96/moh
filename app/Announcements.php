@@ -15,7 +15,7 @@ class Announcements extends Model
         'date'
     ];
 
-    protected $Translatable = [
+    protected $translatable = [
         'title',
         'description'
     ];

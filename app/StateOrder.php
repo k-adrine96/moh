@@ -20,7 +20,7 @@ class StateOrder extends Model
 
     protected $dates = ['file_date'];
 
-    protected $Translatable = [ 'file_name' ];
+    protected $translatable = [ 'file_name' ];
 
     public function getFileLinkAttribute()
     {
@@ -32,6 +32,6 @@ class StateOrder extends Model
     }
 
     public function children() {
-        $this->hasMany( StateOrder::class , 'parent_id' , 'id');
+        return $this->hasMany( StateOrder::class , 'parent_id' , 'id');
     }
 }

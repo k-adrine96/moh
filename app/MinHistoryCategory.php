@@ -2,8 +2,8 @@
 
 namespace App;
 
-use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class MinHistoryCategory extends Model
 {
@@ -15,5 +15,7 @@ class MinHistoryCategory extends Model
         'description'
     ];
 
-    protected $Translatable = ['description'];
+    protected $translatable = [
+        'description'
+    ];
 }

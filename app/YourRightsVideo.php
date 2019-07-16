@@ -16,5 +16,5 @@ class YourRightsVideo extends Model
         'order'
     ];
 
-    protected $Translatable = ['title'];
+    protected $translatable = ['title'];
 }

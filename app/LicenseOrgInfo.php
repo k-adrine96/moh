@@ -21,7 +21,7 @@ class LicenseOrgInfo extends Model
         'order'
     ];
 
-    protected $Translatable = [
+    protected $translatable = [
         'organisation_name',
         'head_position',
         'head_name',

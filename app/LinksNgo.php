@@ -21,7 +21,7 @@ class LinksNgo extends Model
 		'order'
     ];
 
-    protected $Translatable = [
+    protected $translatable = [
         'ngo_name',
         'head_position',
         'head_name',
