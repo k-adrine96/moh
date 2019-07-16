@@ -30,99 +30,36 @@
                 <h1>կենսագրություն</h1>
             </div>
             <ul class="pdf__container">
-                <li>
-                    <div class="pdf__info">
-                        <div class="pdf__info--header">
-                            <h1>կրթություն</h1>
-                        </div>
-                        @foreach($educationInfos as $educationInfo)
-                            <div class="pdf__info--row d-flex d-flex align-items-center">
-                                <div class="pdf__year pdf__year--large">
-                                    @if($educationInfo->name)
-                                        <span>{{$educationInfo->name}}</span>
-                                    @endif
-                                </div>
-                                <div class="pdf__text">
-                                    <ul>
-                                        <li class="d-flex align-items-center border-btm">
-                                            <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                            <a href="{{$educationInfo->url}}" class="">
-                                                <spans>{!! $educationInfo->description !!}<!--<b>265կբ</b>--></spans>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                @foreach($minInfoCats as $minInfoCat)
+                    <li>
+                        <div class="pdf__info">
+                            <div class="pdf__info--header">
+                                <h1>{{$minInfoCat->name}}</h1>
                             </div>
-                        @endforeach
-                    </div>
-                </li>
-                <li>
-                    <div class="pdf__info">
-                        <div class="pdf__info--header">
-                            <h1>Աշխատանքային գործունեություն</h1>
+                            @foreach($minInfoItems as $minInfoItem)
+                                @if($minInfoCat->id == $minInfoItem->category_id)
+                                    <div class="pdf__info--row d-flex d-flex align-items-center">
+                                        <div class="pdf__year pdf__year--large">
+                                            @if($minInfoItem->name)
+                                                <span>{{$minInfoItem->name}}</span>
+                                            @endif
+                                        </div>
+                                        <div class="pdf__text">
+                                            <ul>
+                                                <li class="d-flex align-items-center border-btm">
+                                                    <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
+                                                    <a href="{{$minInfoItem->url}}" class="">
+                                                        <spans>{!! $minInfoItem->description !!}<!--<b>265կբ</b>--></spans>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
                         </div>
-                        @foreach($workInfos as $workInfo)
-                            <div class="pdf__info--row d-flex align-items-center">
-                                <div class="pdf__year pdf__year--large">
-                                    @if($workInfo->name)
-                                        <span>{{$workInfo->name}}</span>
-                                    @endif
-                                </div>
-                                <div class="pdf__text">
-                                    <ul>
-                                        <li class="d-flex align-items-center border-btm">
-                                            <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                            <a href="{{$workInfo->url}}" class="">
-                                                <span>{!! $workInfo->description !!} <!--<b>265կբ</b>--></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </li>
-                <li>
-                    <div class="pdf__info">
-                        <div class="pdf__info--header">
-                            <h1>այլ տվյալներ</h1>
-                        </div>
-                        @foreach($otherInfos as $otherInfo)
-                            <div class="pdf__info--row d-flex align-items-center">
-                                <div class="pdf__year pdf__year--large">
-                                    @if($otherInfo->name)
-                                        <span>{{$otherInfo->name}}</span>
-                                    @endif
-                                </div>
-                                <div class="pdf__text">
-                                    <ul>
-                                        <li class="d-flex align-items-center border-btm">
-                                            <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
-                                            <a href="{{$otherInfo->url}}" class="">
-                                                <span>{!! $otherInfo->description !!}<!--<b>265կբ</b>--></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </li>
-                <li>
-                    <div class="pdf__info">
-                        <div class="pdf__info--header">
-                            <h1>անձնական տվյալներ</h1>
-                        </div>
-                        <div class="pdf__info--row pdf__info--img--text d-flex align-items-center">
-                            <div class="biography__content--image"
-                                 style="background-image: url('{{Storage::url($content->minister_personal_info_pic)}}')">
-                            </div>
-                            <div class="biography__text">
-                                <p>{{$content->minister_personal_info_pic_title}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                @endforeach
             </ul>
         </section>
         <section class="minister__public--council">

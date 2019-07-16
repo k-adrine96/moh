@@ -84,7 +84,7 @@ class PagesController extends Controller
 
         }else if($page === 'mission')
         {
-            $pagesTexts = PagesTexts::where('page_slug', 'mission')->first();
+            $pagesTexts = PagesTexts::where('page_slug', 'mission')->withTranslations()->first();
             $coverPhoto = CoverPhotos::where('page_slug', 'mission')->first();
 
         }else if($page === 'contact-us')
@@ -94,12 +94,11 @@ class PagesController extends Controller
 
         }else if($page === 'minister-page')
         {
-            $content        = MinisterPage::first();
-            $pagesTexts     = PagesTexts::where('page_slug', 'minister-page')->first();
-            $coverPhoto     = CoverPhotos::where('page_slug', 'minister-page')->first();
-            $educationInfos = MinisterInfo::where('category_id', 2)->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
-            $workInfos      = MinisterInfo::where('category_id', 3)->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
-            $otherInfos     = MinisterInfo::where('category_id', 4)->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $content         = MinisterPage::first();
+            $pagesTexts      = PagesTexts::where('page_slug', 'minister-page')->first();
+            $coverPhoto      = CoverPhotos::where('page_slug', 'minister-page')->first();
+            $minInfoItems    = MinisterInfo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $minInfoCats     = MinisterInfoCategory::orderBy('order', 'desc')->orderBy('id', 'asc')->get();
 
         }else if($page === 'charter')
         {
@@ -351,12 +350,11 @@ class PagesController extends Controller
         }
 
         return view($page , compact('pagesTexts' , 'coverPhoto', 'content' ,
-                                            'educationInfos' , 'workInfos' , 'otherInfos' ,
-                                            'filesInfo' , 'filesCats' , 'partnersRow1' , 'partnersRow2' ,
-                                            'minHistoryItems' , 'minHistoryCats' , 'legalActs' ,
-                                            'actsTypes' , 'LinksCoWorkers' , 'LinksNgos' , 'LinksCcos' ,
-                                            'LinksLinks' , 'parents' , 'faqs' , 'faqCategories' ,
-                                            'PcStaffs' , 'PcAppeals' , 'PcResults' , 'PcSessions'));
+                                            'minInfoItems' , 'minInfoCats' , 'filesInfo' , 'filesCats' ,
+                                            'partnersRow1' , 'partnersRow2' , 'minHistoryItems' ,
+                                            'minHistoryCats' , 'legalActs' , 'actsTypes' , 'LinksCoWorkers' ,
+                                            'LinksNgos' , 'LinksCcos' , 'LinksLinks' , 'parents' , 'faqs' ,
+                                            'faqCategories' , 'PcStaffs' , 'PcAppeals' , 'PcResults' , 'PcSessions'));
     }
 
     public function homepage(){

@@ -41,125 +41,43 @@
                     @include('partials.minister-staff-member-info')
                 @endforeach
             @endforeach
-
-
             <ul class="minister__structure--mobile">
-                <li>
-                    <div class="minister__staff--container minister__staff--mobile">
-                        <div class="minister__staff--container--width">
-                            <div class="workers__info">
-                                <div class="workers__info--image"
-                                     style="background-image: url('{{Storage::url($staffMember->image)}}')"></div>
-                                <div class="workers__info--content">
-                                    <div class="workers__info--content--names">
-                                        <h1>dafgadfgdfgadg</h1>
-                                        <a class="mobile-name" href="javascript:;" data-for="mobile-workers-container-1">Name</a>
+                @foreach($content as $staffMember)
+                    <li>
+                        <div class="minister__staff--container minister__staff--mobile">
+                            <div class="minister__staff--container--width">
+                                <div class="workers__info">
+                                    <div class="workers__info--image"
+                                         style="background-image: url('{{Storage::url($staffMember->image)}}')"></div>
+                                    <div class="workers__info--content">
+                                        <div class="workers__info--content--names">
+                                            <h1>{{$staffMember->position}}</h1>
+                                            <a class="mobile-name" href="javascript:;" data-for="mobile-workers-container-{{$staffMember->id}}">{{$staffMember->name}}</a>
+                                        </div>
+                                        <ul class="worker__number__email">
+                                            <li>
+                                                <i class="call-icon"></i>
+                                                <span>{{$staffMember->phone_number}}</span>
+                                            </li>
+                                            <li>
+                                                <i class="message-icon"></i>
+                                                <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">{{$staffMember->email}}</a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <ul class="worker__number__email">
-                                        <li>
-                                            <i class="call-icon"></i>
-                                            <span>phone number</span>
-                                        </li>
-                                        <li>
-                                            <i class="message-icon"></i>
-                                            <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">mail</a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="mobile-workers-container editor-content workers__container mobile-workers-container-1">
-                        <div class="workers__container--info">
-                            aksjhfjksahfjhsaf
-                        </div>
-                        <div class="workers__container--name">
-                            <h1>name</h1>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="minister__staff--container minister__staff--mobile">
-                        <div class="minister__staff--container--width">
-                            <div class="workers__info">
-                                <div class="workers__info--image"
-                                     style="background-image: url('{{Storage::url($staffMember->image)}}')"></div>
-                                <div class="workers__info--content">
-                                    <div class="workers__info--content--names">
-                                        <h1>dafgadfgdfgadg</h1>
-                                        <a class="mobile-name" href="javascript:;" data-for="mobile-workers-container-2">Name</a>
-                                    </div>
-                                    <ul class="worker__number__email">
-                                        <li>
-                                            <i class="call-icon"></i>
-                                            <span>phone number</span>
-                                        </li>
-                                        <li>
-                                            <i class="message-icon"></i>
-                                            <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">mail</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="mobile-workers-container editor-content workers__container mobile-workers-container-{{$staffMember->id}}">
+                            <div class="workers__container--info">
+                                {!! $staffMember->text !!}
+                            </div>
+                            <div class="workers__container--name">
+                                <h1>{{ $staffMember->name }}</h1>
                             </div>
                         </div>
-                    </div>
-                    <div class="mobile-workers-container editor-content workers__container mobile-workers-container-2">
-                        <div class="workers__container--info">
-                            aksjhfjksahfjhsaf
-                        </div>
-                        <div class="workers__container--name">
-                            <h1>name</h1>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="minister__staff--container minister__staff--mobile">
-                        <div class="minister__staff--container--width">
-                            <div class="workers__info">
-                                <div class="workers__info--image"
-                                     style="background-image: url('{{Storage::url($staffMember->image)}}')"></div>
-                                <div class="workers__info--content">
-                                    <div class="workers__info--content--names">
-                                        <h1>dafgadfgdfgadg</h1>
-                                        <a class="mobile-name" href="javascript:;" data-for="mobile-workers-container-3">Name</a>
-                                    </div>
-                                    <ul class="worker__number__email">
-                                        <li>
-                                            <i class="call-icon"></i>
-                                            <span>phone number</span>
-                                        </li>
-                                        <li>
-                                            <i class="message-icon"></i>
-                                            <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">mail</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mobile-workers-container editor-content workers__container mobile-workers-container-3">
-                        <div class="workers__info">
-                            <div class="workers__info--image"
-                                 style="background-image: url('{{Storage::url($staffMember->image)}}')"></div>
-                            <div class="workers__info--content">
-                                <div class="workers__info--content--names">
-                                    <h1>dafgadfgdfgadg</h1>
-                                    <a class="mobile-name" href="javascript:;" data-for="mobile-workers-container-3">Name</a>
-                                </div>
-                                <ul class="worker__number__email">
-                                    <li>
-                                        <i class="call-icon"></i>
-                                        <span>phone number</span>
-                                    </li>
-                                    <li>
-                                        <i class="message-icon"></i>
-                                        <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">mail</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                @endforeach
             </ul>
         </section>
     </main>
