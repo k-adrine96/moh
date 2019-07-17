@@ -156,7 +156,7 @@
       // prevArrow: ('.partners-prev'),
       // nextArrow: ('.partners-next'),
       dots: false,
-      infinite: true,
+      infinite: false,
       speed: 2000,
       slidesToShow: 1,
       slidesToScroll: 1,

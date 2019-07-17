@@ -31,3 +31,9 @@
         </section>
     </main>
 @endsection
+@push('css')
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+@endpush
+@push('js')
+    <script src="/js/jquery.fancybox.min.js"></script>
+@endpush
