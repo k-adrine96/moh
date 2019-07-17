@@ -10,9 +10,10 @@
         </section>
         <section class="single__news clearfix">
             <div class="single__news--slider">
-                <div class="single__news--image" style="background-image: url('img/single-news-1.png')"></div>
-                <div class="single__news--image" style="background-image: url('img/single-news-1.png')"></div>
-                <div class="single__news--image" style="background-image: url('img/single-news-1.png')"></div>
+                <a class="single__news--image"  data-fancybox="gallery" href="/img/single-news-1.png"><img src="/img/single-news-1.png"></a>
+                <a class="single__news--image"  data-fancybox="gallery" href="/img/single-news-1.png"><img src="/img/single-news-1.png"></a>
+                <a class="single__news--image"  data-fancybox="gallery" href="/img/single-news-1.png"><img src="/img/single-news-1.png"></a>
+
             </div>
             <div class="single__news--info">
                 <div class="single__news--info--header">
@@ -83,3 +84,9 @@
         {{--</section>--}}
     </main>
 @endsection
+@push('css')
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+@endpush
+@push('js')
+    <script src="/js/jquery.fancybox.min.js"></script>
+@endpush
