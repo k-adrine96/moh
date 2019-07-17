@@ -40,6 +40,8 @@ use App\Announcements;
 use App\MinisterStaff;
 use App\MinistryStaff;
 use App\MohConsultant;
+use App\LicenseOrgFile;
+use App\LicenseOrgInfo;
 use App\BudgetCategory;
 use App\HomepageSlider;
 use App\MinHistoryItem;
@@ -52,9 +54,15 @@ use App\MinHistoryCategory;
 use App\SpeechAndInterview;
 use App\AntiCorruptionEvent;
 use App\StaffingTenderResult;
+use App\SsMedicalLibraryFile;
+use App\SsMedicalLibraryInfo;
 use App\MinisterInfoCategory;
+use App\SsHealthInstituteFile;
+use App\SsHealthInstituteInfo;
 use App\StaffingJobAcceptance;
 use App\AdvertisingPermission;
+use App\SsDrugMedicalExpertFile;
+use App\SsDrugMedicalExpertInfo;
 use App\LicensDocumentsApplication;
 
 class PagesController extends Controller
@@ -76,7 +84,7 @@ class PagesController extends Controller
 
         }else if($page === 'mission')
         {
-            $pagesTexts = PagesTexts::where('page_slug', 'mission')->first();
+            $pagesTexts = PagesTexts::where('page_slug', 'mission')->withTranslations()->first();
             $coverPhoto = CoverPhotos::where('page_slug', 'mission')->first();
 
         }else if($page === 'contact-us')
@@ -86,12 +94,11 @@ class PagesController extends Controller
 
         }else if($page === 'minister-page')
         {
-            $content        = MinisterPage::first();
-            $pagesTexts     = PagesTexts::where('page_slug', 'minister-page')->first();
-            $coverPhoto     = CoverPhotos::where('page_slug', 'minister-page')->first();
-            $educationInfos = MinisterInfo::where('category_id', 2)->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
-            $workInfos      = MinisterInfo::where('category_id', 3)->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
-            $otherInfos     = MinisterInfo::where('category_id', 4)->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $content         = MinisterPage::first();
+            $pagesTexts      = PagesTexts::where('page_slug', 'minister-page')->first();
+            $coverPhoto      = CoverPhotos::where('page_slug', 'minister-page')->first();
+            $minInfoItems    = MinisterInfo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $minInfoCats     = MinisterInfoCategory::orderBy('order', 'desc')->orderBy('id', 'asc')->get();
 
         }else if($page === 'charter')
         {
@@ -304,19 +311,50 @@ class PagesController extends Controller
         }else if($page === 'your-rights')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'your-rights')->first();
-            $content     = YourRightsVideo::orderBy('order', 'desc')->orderBy('date', 'desc')->orderBy('id', 'desc')->get();
+            $content    = YourRightsVideo::orderBy('order', 'desc')->orderBy('date', 'desc')->orderBy('id', 'desc')->get();
             $parents    = YourRightsFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
             $filesInfo  = YourRightsFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'license-organization')
+        {
+            $pagesTexts = PagesTexts::where('page_slug', 'license-organization')->first();
+            $coverPhoto = CoverPhotos::where('page_slug', 'license-organization')->first();
+            $content    = LicenseOrgInfo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $parents    = LicenseOrgFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = LicenseOrgFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'sub-structures-health-institute')
+        {
+            $pagesTexts = PagesTexts::where('page_slug', 'sub-structures-health-institute')->first();
+            $coverPhoto = CoverPhotos::where('page_slug', 'sub-structures-health-institute')->first();
+            $content    = SsHealthInstituteInfo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $parents    = SsHealthInstituteFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = SsHealthInstituteFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'sub-structures-drug-medical-expertise')
+        {
+            $pagesTexts = PagesTexts::where('page_slug', 'sub-structures-drug-medical-expertise')->first();
+            $coverPhoto = CoverPhotos::where('page_slug', 'sub-structures-drug-medical-expertise')->first();
+            $content    = SsDrugMedicalExpertInfo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $parents    = SsDrugMedicalExpertFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = SsDrugMedicalExpertFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+
+        }else if($page === 'sub-structures-medical-library')
+        {
+            $pagesTexts = PagesTexts::where('page_slug', 'sub-structures-medical-library')->first();
+            $coverPhoto = CoverPhotos::where('page_slug', 'sub-structures-medical-library')->first();
+            $content    = SsMedicalLibraryInfo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $parents    = SsMedicalLibraryFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = SsMedicalLibraryFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }
 
         return view($page , compact('pagesTexts' , 'coverPhoto', 'content' ,
-                                            'educationInfos' , 'workInfos' , 'otherInfos' ,
-                                            'filesInfo' , 'filesCats' , 'partnersRow1' , 'partnersRow2' ,
-                                            'minHistoryItems' , 'minHistoryCats' , 'legalActs' ,
-                                            'actsTypes' , 'LinksCoWorkers' , 'LinksNgos' , 'LinksCcos' ,
-                                            'LinksLinks' , 'parents' , 'faqs' , 'faqCategories' ,
-                                            'PcStaffs' , 'PcAppeals' , 'PcResults' , 'PcSessions'));
+                                            'minInfoItems' , 'minInfoCats' , 'filesInfo' , 'filesCats' ,
+                                            'partnersRow1' , 'partnersRow2' , 'minHistoryItems' ,
+                                            'minHistoryCats' , 'legalActs' , 'actsTypes' , 'LinksCoWorkers' ,
+                                            'LinksNgos' , 'LinksCcos' , 'LinksLinks' , 'parents' , 'faqs' ,
+                                            'faqCategories' , 'PcStaffs' , 'PcAppeals' , 'PcResults' , 'PcSessions'));
     }
 
     public function homepage(){
@@ -325,8 +363,8 @@ class PagesController extends Controller
      	$videos        = Videos::latest()->take(5)->get();
         $partnersRow1  = Partners::where('slider_row', 1)->get();
         $partnersRow2  = Partners::where('slider_row', 2)->get();
-     	$announcements = Announcements::latest()->take(5)->get();
-     	$slidersInfo   = HomepageSlider::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+        $announcements = Announcements::latest()->take(5)->get();
+        $slidersInfo   = HomepageSlider::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
         return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partnersRow1' , 'partnersRow2'));
 

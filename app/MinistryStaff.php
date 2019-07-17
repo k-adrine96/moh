@@ -7,12 +7,17 @@ use TCG\Voyager\Traits\Translatable;
 
 class MinistryStaff extends Model
 {
-//    use Translatable;
+    use Translatable;
 
     protected $fillable  = [
         'position',
         'name',
         'phone_number',
         'email'
+    ];
+
+    protected $translatable = [
+        'position',
+        'name'
     ];
 }

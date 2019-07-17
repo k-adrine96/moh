@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class PcResult extends Model
 {
+    use Translatable;
+
     protected $fillable = [
         'year',
         'file_name',
@@ -15,9 +18,9 @@ class PcResult extends Model
         'order'
     ];
 
-    protected $dates = [
-        'file_date'
-    ];
+    protected $dates = ['file_date'];
+
+    protected $translatable = [ 'file_name' ];
 
     public function getFileLinkAttribute()
     {

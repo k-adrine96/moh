@@ -7,7 +7,7 @@ use TCG\Voyager\Traits\Translatable;
 
 class MinisterStaff extends Model
 {
-//    use Translatable;
+    use Translatable;
 
     protected $fillable = [
         'position',
@@ -15,6 +15,12 @@ class MinisterStaff extends Model
         'phone_number',
         'email',
         'image',
+        'text'
+    ];
+
+    protected $translatable = [
+        'position',
+        'name',
         'text'
     ];
 }

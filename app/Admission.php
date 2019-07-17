@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class Admission extends Model
 {
+    use Translatable;
+
     protected $fillable = [
         'file_name',
         'file_upload',
@@ -15,9 +18,9 @@ class Admission extends Model
         'order'
     ];
 
-    protected $dates = [
-        'file_date'
-    ];
+    protected $dates = ['file_date'];
+
+    protected $translatable = ['file_name'];
 
     public function getFileLinkAttribute()
     {
@@ -29,6 +32,6 @@ class Admission extends Model
     }
 
     public function children() {
-        $this->hasMany( Admission::class , 'parent_id' , 'id');
+        return $this->hasMany( Admission::class , 'parent_id' , 'id');
     }
 }
