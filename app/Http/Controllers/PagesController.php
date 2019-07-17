@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App;
 use Illuminate\Http\Request;
 use App\Faq;
 use App\News;
@@ -84,7 +84,7 @@ class PagesController extends Controller
 
         }else if($page === 'mission')
         {
-            $pagesTexts = PagesTexts::where('page_slug', 'mission')->withTranslations()->first();
+            $pagesTexts = PagesTexts::where('page_slug', 'mission')->withTranslation('en')->first();
             $coverPhoto = CoverPhotos::where('page_slug', 'mission')->first();
 
         }else if($page === 'contact-us')

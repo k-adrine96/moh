@@ -1,11 +1,15 @@
 <div class="menu">
     <div class="menu-container">
         <div class="language menu__language text-right">
-            <select class="language--bar" name="state">
-                <option value="arm">Հայերեն</option>
-                <option value="rus">Русский</option>
-                <option value="eng">English</option>
-            </select>
+            <ul>
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                    <li>
+                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                            {{ $properties['native'] }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
         </div>
         <form class="menu--form" action="">
             <div class="input-group mb-3">

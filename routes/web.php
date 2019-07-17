@@ -23,10 +23,17 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/','PagesController@homepage')->name('home');
-Route::get('/{page}','PagesController@index')->name('pages');
-Route::get('/single-news/{id}','PagesController@showNewsIndividual')->name('show.news.individual');
-Route::get('/single-announcement/{id}','PagesController@showAnnouncementIndividual')->name('show.announcement.individual');
-Route::get('/single-video/{id}','PagesController@showVideoIndividual')->name('show.video.individual');
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ],
+    function() {
+        Route::get('/', 'PagesController@homepage')->name('home');
+        Route::get('/{page}', 'PagesController@index')->name('pages');
+        Route::get('/single-news/{id}', 'PagesController@showNewsIndividual')->name('show.news.individual');
+        Route::get('/single-announcement/{id}', 'PagesController@showAnnouncementIndividual')->name('show.announcement.individual');
+        Route::get('/single-video/{id}', 'PagesController@showVideoIndividual')->name('show.video.individual');
 
-Route::post('/file-upload','PagesController@fileUpload');
+        Route::post('/file-upload', 'PagesController@fileUpload');
+});

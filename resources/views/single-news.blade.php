@@ -14,7 +14,7 @@
             @endphp
             <div class="single__news--slider">
                 @foreach($images as $img)
-                    <div class="single__news--image" style="background-image: url('{{Storage::url($img)}}')"></div>
+                    <a class="single__news--image"  data-fancybox="gallery" href="{{Storage::url($img)}}"><img src="{{Storage::url($img)}}"></a>
                 @endforeach
             </div>
             <div class="single__news--info">

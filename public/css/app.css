@@ -2436,6 +2436,10 @@ svg {
   padding-top: 8rem;
 }
 
+.single__news--image img {
+  width: 100%;
+}
+
 @media only screen and (min-width: 1921px) {
   .single__news {
     max-width: 73.5%;

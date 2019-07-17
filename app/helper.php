@@ -97,3 +97,10 @@ if (!function_exists('getVideoKey')) {
     }
 
 }
+
+if(!function_exists('locURL')){
+
+    function locURL($url, $array = []){
+        return LaravelLocalization::getLocalizedURL(app()->getLocale(), !empty($array) ? url($url, $array) : $url);
+    }
+}

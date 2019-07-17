@@ -53,6 +53,10 @@
   margin: auto;
   padding-top: 8rem;
 
+  &--image img {
+    width: 100%;
+  }
+
   @media only screen and (min-width: 1921px) {
     max-width: $main-content-width-big;
   }
