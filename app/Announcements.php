@@ -7,11 +7,16 @@ use TCG\Voyager\Traits\Translatable;
 
 class Announcements extends Model
 {
-//    use Translatable;
+    use Translatable;
 
     protected $fillable = [
         'title',
         'description',
         'date'
+    ];
+
+    protected $translatable = [
+        'title',
+        'description'
     ];
 }

@@ -1,11 +1,15 @@
 <div class="menu">
     <div class="menu-container">
         <div class="language menu__language text-right">
-            <select class="language--bar" name="state">
-                <option value="arm">Հայերեն</option>
-                <option value="rus">Русский</option>
-                <option value="eng">English</option>
-            </select>
+            <ul>
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                    <li>
+                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                            {{ $properties['native'] }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
         </div>
         <form class="menu--form" action="">
             <div class="input-group mb-3">
@@ -34,22 +38,31 @@
                             <li><a href="{{ route('pages' , 'ministry-staff') }}">Նախարարության աշխատակազմ</a></li>
                             <li><a href="{{ route('pages' , 'minister-staff') }}">նախարարի աշխատակազմ</a></li>
                             <li><a href="{{ route('pages' , 'ministry-structure') }}">Կառուցվածքի գծապատկեր</a></li>
-                            <li><a href="javascript:;">Լիզենզավորման գործակալություն</a></li>
-                            <li><a href="javascript:;">Առողջապահական ծրագրերի իրականացման գրասենյակ</a></li>
+                            <li><a href="{{ route('pages' , 'license-organization') }}">Լիզենզավորման գործակալություն</a></li>
+                            <li><a href="https://www.healthpiu.am/" target="_blank">Առողջապահական ծրագրերի իրականացման գրասենյակ</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:;" class="second-lvl">Կադրային ապահովում</a>
                         <ul class="second--hidden--content">
-                            <li><a href="{{ route('pages' , 'staff-list') }}">Հաստիքացուցակ</a></li>
-                            <li><a href="javascript:;">Թափուր հաստիքներ</a></li>
-                            <li><a href="javascript:;">Մրցույթների հայտարարություններ, արդյունքներ</a></li>
-                            <li><a href="javascript:;">Աշխատանքի ընդունման կարգ</a></li>
+                            <li><a href="{{ route('pages' , 'staffing-staff-list') }}">Հաստիքացուցակ</a></li>
+                            <li><a href="{{ route('pages' , 'staffing-vacancy') }}">Թափուր հաստիքներ</a></li>
+                            <li><a href="{{ route('pages' , 'staffing-tender-results') }}">Մրցույթների հայտարարություններ, արդյունքներ</a></li>
+                            <li><a href="{{ route('pages' , 'staffing-job-acceptance') }}">Աշխատանքի ընդունման կարգ</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:;">Ենթակայության կառուցներ</a></li>
+                    <li>
+                        <a href="javascript:;" class="second-lvl">Ենթակայության կառուցներ</a>
+                        <ul class="second--hidden--content">
+                            <li><a href="{{ route('pages' , 'sub-structures-health-institute') }}">Առողջապահության ազգային ինստիտուտ</a></li>
+                            <li><a href="{{ route('pages' , 'sub-structures-drug-medical-expertise') }}">Դեղերի և բժշկական տեխնոլոգիաների փորձագիտական կենտրոն</a></li>
+                            <li><a href="{{ route('pages' , 'sub-structures-medical-library') }}">Հանրապետական գիտաբժշկական գրադարան</a></li>
+                            <li><a href="{{ route('pages' , 'sub-structures-stationery-orgs') }}">Ստացիոնար բուժօգնություն իրականացնող կազմակերպություններ</a></li>
+                            <li><a href="{{ route('pages' , 'sub-structures-other-orgs') }}">Այլ կազմակերպություններ</a></li>
+                        </ul>
+                    </li>
                     <li><a href="{{ route('pages' , 'budget') }}">Բյուջե</a></li>
-                    <li><a href="javascript:;">Ան խորհրդատուներ</a></li>
+                    <li><a href="{{ route('pages' , 'moh-consultants') }}">Ան խորհրդատուներ</a></li>
                     <li><a href="{{ route('pages' , 'public-council') }}">Նախարարին կից հասարակական խորհուրդ</a></li>
                 </ul>
             </li>
@@ -105,16 +118,16 @@
             </li>
 
             <li>
-                <a href="javascript:;" class="first-lvl">Քո իրավունքը</a>
+                <a href="{{ route('pages' , 'your-rights') }}" class="first-lvl">Քո իրավունքը</a>
             </li>
 
             @each('partials.sidebar-sections', $data, 'section')
 
             <li class="mobile--visible">
-                <a href="javascript:;" class="first-lvl">Իրավական ակտեր</a>
+                <a href="{{ route('pages' , 'legal-acts') }}" class="first-lvl">Իրավական ակտեր</a>
             </li>
             <li class="mobile--visible">
-                <a href="javascript:;" class="first-lvl">Հետադարձ կապ</a>
+                <a href="{{ route('pages' , 'contact-us') }}" class="first-lvl">Հետադարձ կապ</a>
             </li>
         </ul>
         <div class="menu__social">

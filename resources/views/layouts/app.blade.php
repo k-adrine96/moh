@@ -45,7 +45,8 @@
     </div>
     @include('layouts.sidebar')
     @stack('js')
-    @if(config('app.env') == 'local')
+    @stack('css')
+    @if(config('app.env') == 'production')
         <script src="http://localhost:35729/livereload.js"></script>
     @endif
 </body>

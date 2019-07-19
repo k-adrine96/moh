@@ -5,4 +5,5 @@
 /.vagrant
 .env
 package-lock.json
+composer.lock
 /public/storage

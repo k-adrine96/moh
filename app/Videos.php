@@ -8,7 +8,7 @@ use TCG\Voyager\Traits\Translatable;
 
 class Videos extends Model
 {
-//    use Translatable;
+    use Translatable;
 
     protected $fillable = [
         'title',

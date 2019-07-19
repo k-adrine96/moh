@@ -17,8 +17,7 @@
                                     @foreach($chunk as $video)
                                         <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-6">
                                             <div class="video__content">
-                                                <?php $videoKey = explode('/', $video->video_url)[3]; ?>
-                                                <iframe width="80%" height="315" src="https://www.youtube.com/embed/{{$videoKey}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                <iframe width="80%" height="315" src="https://www.youtube.com/embed/{{getVideoKey($video->video_url)}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                 <div class="video__content--header">
                                                     <a href="{{route('show.video.individual' , $video->id)}}">{{$video->title}}</a>
                                                 </div>

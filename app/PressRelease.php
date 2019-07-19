@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class PressRelease extends Model
 {
+    use Translatable;
+
     protected $fillable  = [
         'file_name',
         'file_upload',
@@ -13,9 +16,9 @@ class PressRelease extends Model
         'file_date'
     ];
 
-    protected $dates = [
-        'file_date'
-    ];
+    protected $dates = ['file_date'];
+
+    protected $translatable = [ 'file_name' ];
 
     public function getFileLinkAttribute()
     {

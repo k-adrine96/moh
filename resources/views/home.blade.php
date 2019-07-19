@@ -9,8 +9,10 @@
                             <h2>{!! $sliderInfo->title !!}</h2>
                             <p class="text-justify editor-content">{!! $sliderInfo->text !!}</p>
                             @if($sliderInfo->url)
-                                <a href="{{$sliderInfo->url}}"
-                                   class="animated__button animated__button--blue-1">Ավելին</a>
+                                <div class="main-cover-button">
+                                    <a href="{{$sliderInfo->url}}"
+                                       class="animated__button animated__button--blue-1">Ավելին</a>
+                                </div>
                             @endif
                         </div>
                     </div>
