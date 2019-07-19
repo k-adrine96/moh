@@ -4,9 +4,7 @@
     <table class="table table-bordered">
         <thead>
         <tr>
-            @foreach($data['items'] as $i)
-                <th>{{ $i }}</th>
-            @endforeach
+            <th>name</th>
             @if($data['action'])
                 <th>Action</th>
             @endif

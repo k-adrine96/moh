@@ -102,7 +102,6 @@
                                             if($dynamic_page){
                                                     $collect = collect()->push([
                                                     'table_title' => 'Dynamic Page Files',
-                                                    'items' => $model->translatable,
                                                     'action' => true,
                                                     'row' => $dynamic_page->files,
                                                     'route' => $url
