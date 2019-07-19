@@ -17,9 +17,7 @@
                     </li>
                     <li>
                         <div class="pdf__info text-justify editor-content">
-                            @if($pagesTexts->page_text2)
-                                {!! getDescription($pagesTexts->page_text2) !!}
-                            @endif
+                            {!! !is_null( $pagesTexts->page_text2 ) ? getDescription($pagesTexts->page_text2) : '' !!}
                         </div>
                     </li>
                     <li>
@@ -29,9 +27,7 @@
                                     <ul>
                                         <li class="d-flex align-items-center text-justify editor-content">
                                             <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
-                                            @if($pagesTexts->page_text3)
-                                                {!! getDescription($pagesTexts->page_text3) !!}
-                                            @endif
+                                            {!! !is_null( $pagesTexts->page_text3 ) ? getDescription($pagesTexts->page_text3) : '' !!}
                                         </li>
                                     </ul>
                                 </div>

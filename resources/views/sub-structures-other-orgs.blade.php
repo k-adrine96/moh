@@ -1,4 +1,4 @@
-g@extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
     <main>
@@ -63,7 +63,7 @@ g@extends('layouts.app')
                                                                    style='background-image: url("/img/{{getFileIcon($organisation->file_link)}}.png")'></i>
                                                                 <a class="border-btm ml-5" href="{{$organisation->file_link}}"
                                                                    target="_blank">
-                                                                    <span>{{$organisation->file_name}} <i>{{ $organisation->file_date->formatLocalized('%B %d, %Y') }} </i><b> {{getFileSize($organisation->file_link)}}</b></span>
+                                                                    <span>{{$organisation->file_name}} <i>{{--{{ $organisation->file_date->formatLocalized('%B %d, %Y') }}--}} </i><b> {{getFileSize($organisation->file_link)}}</b></span>
                                                                 </a>
                                                             </li>
                                                         </ul>

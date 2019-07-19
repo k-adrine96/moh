@@ -19,9 +19,12 @@
             </div>
             <div class="message__content--1">
                 <div class="message__content--1--info text-justify editor-content">
-                    @if($pagesTexts->page_text2)
-                        {!! getDescription($pagesTexts->page_text2) !!}
-                    @endif
+                    {!! !is_null( $pagesTexts->page_text2 ) ? getDescription($pagesTexts->page_text2) : '' !!}
+                </div>
+            </div>
+            <div class="message__content--1">
+                <div class="message__content--1--info text-justify editor-content">
+                    {!! !is_null( $pagesTexts->page_text3 ) ? getDescription($pagesTexts->page_text3) : '' !!}
                 </div>
             </div>
         </section>
