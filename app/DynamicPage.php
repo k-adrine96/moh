@@ -8,7 +8,7 @@ use TCG\Voyager\Traits\Translatable;
 class DynamicPage extends Model
 {
     use Translatable;
-    protected $fillable = ['display', 'order', 'name', 'slug', 'dynamic_section_id'];
+    protected $fillable = ['display', 'order', 'name', 'slug', 'dynamic_section_id', 'video', 'cover_photo'];
     public $translatable = ['name'];
 
     public function files()

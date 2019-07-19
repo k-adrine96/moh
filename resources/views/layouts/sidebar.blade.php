@@ -108,6 +108,7 @@
                 <a href="javascript:;" class="first-lvl">Քո իրավունքը</a>
             </li>
 
+            @each('partials.sidebar-sections', $pages, 'page')
             @each('partials.sidebar-sections', $sections, 'section')
 
             <li class="mobile--visible">

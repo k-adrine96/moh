@@ -32,8 +32,8 @@ Route::get('/{page}','PagesController@index')->name('pages');
 Route::get('/single-news/{id}','PagesController@showNewsIndividual')->name('show.news.individual');
 Route::get('/single-announcement/{id}','PagesController@showAnnouncementIndividual')->name('show.announcement.individual');
 Route::get('/single-video/{id}','PagesController@showVideoIndividual')->name('show.video.individual');
-Route::get('{section}/{page}', 'PagesController@page')->name('show.page');
-Route::get('{section}/{page}/{sub}', 'PagesController@subPage')->name('show.sub.page');
-
+Route::get('page/{page}', 'PagesController@page')->name('show.page');
+Route::get('/{section}/{page}', 'PagesController@pageSection')->name('show.section.page');
+Route::get('/{section}/{page}/{sub}', 'PagesController@subPage')->name('show.section.page.sub');
 Route::post('/file-upload','PagesController@fileUpload');
 

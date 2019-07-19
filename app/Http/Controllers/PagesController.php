@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DynamicPage;
 use App\DynamicSection;
 use Foo\DataProviderIssue2922\SecondHelloWorldTest;
 use Illuminate\Http\Request;
@@ -42,6 +43,7 @@ class PagesController extends Controller
 {
     public function index(Request $request, $page)
     {
+        dd(4444444);
         $partnersRow1 = Partners::where('slider_row', 1)->orderBy('order', 'asc')->orderBy('id', 'asc')->get();
         $partnersRow2 = Partners::where('slider_row', 2)->orderBy('order', 'asc')->orderBy('id', 'asc')->get();
 
@@ -231,7 +233,7 @@ class PagesController extends Controller
         $partnersRow2  = Partners::where('slider_row', 2)->get();
      	$announcements = Announcements::latest()->take(5)->get();
      	$slidersInfo = HomepageSlider::orderBy('order', 'asc')->orderBy('id', 'asc')->get();
-        return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partnersRow1' , 'partnersRow2'))->with('sections', $this->data);
+        return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partnersRow1' , 'partnersRow2'));
 
 
     }
@@ -271,18 +273,24 @@ class PagesController extends Controller
         return $request->all();
     }
 
-    public function page($section, $page)
+    public function pageSection($section, $page)
     {
         $section = DynamicSection::whereSlug($section)->firstOrFail();
-        $page = $section->pages()->whereSlug($page)->firstOrFail();
-        return view('', compact('page'));
+        $page = DynamicPage::whereSlug($page)->firstOrFail();
+        return view('partials.dynamic-page.page', compact('page'));
     }
 
     public function subPage($section, $page, $sub_page)
     {
         $section = DynamicSection::whereSlug($section)->firstOrFail();
-        $page = $section->pages()->whereSlug($page)->firstOrFail();
-        $subpage = $page->subpages()->whereSlug($sub_page)->firstOrFail();
-        return view('', compact('subpage'));
+        $p = $section->pages()->whereSlug($page)->firstOrFail();
+        $page = $p->subpages()->whereSlug($sub_page)->firstOrFail();
+        return view('partials.dynamic-page.page', compact('page'));
+    }
+
+    public function page($page)
+    {
+        $page = DynamicPage::whereSlug($page)->firstOrFail();
+        return view('partials.dynamic-page.page', compact('page'));
     }
 }
