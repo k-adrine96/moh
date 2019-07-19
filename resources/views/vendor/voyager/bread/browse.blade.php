@@ -243,9 +243,6 @@
                                             </td>
                                         @endforeach
                                         <td class="no-sort no-click" id="bread-actions">
-                                            <a title="Edit" class="btn btn-sm btn-success pull-right edit">
-                                                <i class="voyager-edit"></i> <span class="hidden-xs hidden-sm">Copy</span>
-                                            </a>
                                             @foreach(Voyager::actions() as $action)
 
                                                 @if (!method_exists($action, 'massAction'))

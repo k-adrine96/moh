@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 use App;
+
+use App\DynamicPage;
+use App\DynamicSection;
+use Foo\DataProviderIssue2922\SecondHelloWorldTest;
 use Illuminate\Http\Request;
 use App\Faq;
 use App\News;
@@ -403,5 +407,26 @@ class PagesController extends Controller
     public function fileUpload(Request $request)
     {
         return $request->all();
+    }
+
+    public function pageSection($section, $page)
+    {
+        $section = DynamicSection::whereSlug($section)->firstOrFail();
+        $page = DynamicPage::whereSlug($page)->firstOrFail();
+        return view('partials.dynamic-page.page', compact('page'));
+    }
+
+    public function subPage($section, $page, $sub_page)
+    {
+        $section = DynamicSection::whereSlug($section)->firstOrFail();
+        $p = $section->pages()->whereSlug($page)->firstOrFail();
+        $page = $p->subpages()->whereSlug($sub_page)->firstOrFail();
+        return view('partials.dynamic-page.page', compact('page'));
+    }
+
+    public function page($page)
+    {
+        $page = DynamicPage::whereSlug($page)->firstOrFail();
+        return view('partials.dynamic-page.page', compact('page'));
     }
 }

@@ -116,12 +116,12 @@
                 <!--<li><a href="javascript:;">Հղումներ</a></li>-->
                 <!--</ul>-->
             </li>
-
             <li>
                 <a href="{{ route('pages' , 'your-rights') }}" class="first-lvl">Քո իրավունքը</a>
             </li>
 
-            @each('partials.sidebar-sections', $data, 'section')
+            @each('partials.sidebar-sections', $pages, 'page')
+            @each('partials.sidebar-sections', $sections, 'section')
 
             <li class="mobile--visible">
                 <a href="{{ route('pages' , 'legal-acts') }}" class="first-lvl">Իրավական ակտեր</a>

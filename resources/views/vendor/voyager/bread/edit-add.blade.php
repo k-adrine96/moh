@@ -91,22 +91,29 @@
                             @endforeach
                             <!-- files panel -->
                                 @if(Request::segment(4) == 'edit')
-                                    @if(Request::segment(2) == 'dynamic-pages' || 'dynamic-sub-pages')
-                                        @php
-                                            $url = url(request()->route()->getPrefix()."/dynamic-page-files/");
+                                    @php
+                                        $url = url(request()->route()->getPrefix()."/dynamic-page-files/");
+                                        if(Request::segment(2) == 'dynamic-pages'){
                                             $model = new \App\DynamicPage;
-                                            $files = $model::with('files')->find(Request::segment(3))->files;
-                                            $collect = collect()->push([
-                                                'table_title' => 'Dynamic Page Files',
-                                                'items' => $model->translatable,
-                                                'action' => true,
-                                                'row' => $files,
-                                                'route' => $url
-                                            ]);
-                                            $data = $collect->collapse();
-                                        @endphp
-                                        @include('partials.dynamic-index', ['data' => $data])
-                                    @endif
+                                        } elseif(Request::segment(2) == 'dynamic-sub-pages'){
+                                            $model = new \App\DynamicSubPage;
+                                        } if(isset($model)){
+                                            $dynamic_page = $model::with('files')->find(Request::segment(3));
+                                            if($dynamic_page){
+                                                    $collect = collect()->push([
+                                                    'table_title' => 'Dynamic Page Files',
+                                                    'items' => $model->translatable,
+                                                    'action' => true,
+                                                    'row' => $dynamic_page->files,
+                                                    'route' => $url
+                                                ]);
+                                                $data = $collect->collapse();
+                                            }
+                                        }
+                                    @endphp
+                                    @isset($data)
+                                        @include('vendor.voyager.bread.dynamic-index', ['data' => $data])
+                                    @endisset
                                 @endif
                             <!-- files panel -->
 
