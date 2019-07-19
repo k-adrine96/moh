@@ -7,9 +7,16 @@ use TCG\Voyager\Traits\Translatable;
 
 class MinisterPage extends Model
 {
+    use Translatable;
+
     protected $fillable = [
         'minister_pic',
         'minister_personal_info_pic',
-        'minister_personal_info_pic_title',
+        'minister_personal_info_pic_title'
+    ];
+
+    protected $translatable = [
+        'minister_personal_info_pic',
+        'minister_personal_info_pic_title'
     ];
 }

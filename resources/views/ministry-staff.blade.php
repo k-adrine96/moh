@@ -21,14 +21,18 @@
                                         <p>{{$staffMember->name}}</p>
                                     </div>
                                     <ul class="worker__number__email">
-                                        <li>
-                                            <i class="call-icon"></i>
-                                            <span>{{$staffMember->phone_number}}</span>
-                                        </li>
-                                        <li>
-                                            <i class="message-icon"></i>
-                                            <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">{{$staffMember->email}}</a>
-                                        </li>
+                                        @if(!is_null($staffMember->phone_number))
+                                            <li>
+                                                <i class="call-icon"></i>
+                                                <span>{{$staffMember->phone_number}}</span>
+                                            </li>
+                                        @endif
+                                        @if(!is_null($staffMember->email))
+                                            <li>
+                                                <i class="message-icon"></i>
+                                                <a href="mailto:toid@example.com?Subject=subject here&Body=bodytext">{{$staffMember->email}}</a>
+                                            </li>
+                                        @endif
                                     </ul>
                                 </div>
                             @endforeach

@@ -19,50 +19,14 @@
                                     <div class="pdf__info--row d-flex align-items-start">
                                         <div class="pdf__text">
                                             <ul>
-                                                <li class="d-flex align-items-center">
-                                                    <i class="pdf__icon"
-                                                       style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="border-btm ml-5">
-                                            <span class="">Հայաստանի Հանրապետության առողջապահության նախարարին կից հասարակական խորհրդի կազմը
-                                                <b>25կբ</b></span>
-                                                    </a>
-                                                </li>
-                                                <li class="d-flex align-items-center">
-                                                    <i class="pdf__icon"
-                                                       style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="border-btm ml-5">
-                                            <span class="">Հայաստանի Հանրապետության առողջապահության նախարարին կից հասարակական խորհուրդ ստեղծելու,
-                                                հասարակական խորհրդի աշխատակարգը հաստատելու մասին (06 մայիս 2016թ․ N1370-Ա)
-                                                <b>1016կբ</b></span>
-                                                    </a>
-                                                </li>
-                                                <li class="d-flex align-items-center">
-                                                    <i class="pdf__icon"
-                                                       style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="border-btm ml-5">
-                                            <span class="">Հայաստանի Հանրապետության առողջապահության նախարարին կից հասարակական խորհուրդ ստեղծելու,
-                                                հասարակական խորհրդի աշխատակարգը հաստատելու մասին (06 մայիս 2016թ․ N1370-Ա)
-                                                <b>1016կբ</b></span>
-                                                    </a>
-                                                </li>
-                                                <li class="d-flex align-items-center">
-                                                    <i class="pdf__icon"
-                                                       style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="border-btm ml-5">
-                                            <span class="">Հայաստանի Հանրապետության առողջապահության նախարարին կից հասարակական խորհուրդ ստեղծելու,
-                                                հասարակական խորհրդի աշխատակարգը հաստատելու մասին (06 մայիս 2016թ․ N1370-Ա)
-                                                <b>1016կբ</b></span>
-                                                    </a>
-                                                </li>
-                                                <li class="d-flex align-items-center">
-                                                    <i class="pdf__icon"
-                                                       style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="border-btm ml-5">
-                                            <span class="">Հայաստանի Հանրապետության առողջապահության նախարարին կից հասարակական խորհուրդ ստեղծելու,
-                                                հասարակական խորհրդի աշխատակարգը հաստատելու մասին (06 մայիս 2016թ․ N1370-Ա)
-                                                <b>1016կբ</b></span>
-                                                    </a>
-                                                </li>
+                                                @foreach($PcStaffs as $fileInfo)
+                                                    <li class="d-flex align-items-center">
+                                                        <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($fileInfo->file_link)}}.png")'></i>
+                                                        <a class="border-btm ml-5" href="{{$fileInfo->file_link}}" target="_blank">
+                                                            <span>{{$fileInfo->file_name}} <i>{{--{{ $fileInfo->file_date->formatLocalized('%B %d, %Y') }}--}} </i><b> {{getFileSize($fileInfo->file_link)}}</b></span>
+                                                        </a>
+                                                    </li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                     </div>
@@ -77,140 +41,23 @@
                         <ul class="background__zebra public__council--hidden--content">
                             <li >
                                 <div class="pdf__info">
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>07․02․19</span>
+                                    @foreach($PcSessions as $fileInfo)
+                                        <div class="pdf__info--row d-flex d-flex align-items-center">
+                                            <div class="pdf__year pdf__year--large">
+                                                <span>{{$fileInfo->year}}</span>
+                                            </div>
+                                            <div class="pdf__text">
+                                                <ul>
+                                                    <li class="d-flex align-items-center">
+                                                        <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($fileInfo->file_link)}}.png")'></i>
+                                                        <a class="border-btm ml-5" href="{{$fileInfo->file_link}}" target="_blank">
+                                                            <span>{{$fileInfo->file_name}} <i>{{--{{ $fileInfo->file_date->formatLocalized('%B %d, %Y') }}--}} </i><b> {{getFileSize($fileInfo->file_link)}}</b></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
-                                                <b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>07․02․19</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
-                                                <b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </li>
                         </ul>
@@ -222,140 +69,23 @@
                         <ul class="background__zebra public__council--hidden--content">
                             <li >
                                 <div class="pdf__info">
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>07․02․19</span>
+                                    @foreach($PcAppeals as $fileInfo)
+                                        <div class="pdf__info--row d-flex d-flex align-items-center">
+                                            <div class="pdf__year pdf__year--large">
+                                                <span>{{$fileInfo->year}}</span>
+                                            </div>
+                                            <div class="pdf__text">
+                                                <ul>
+                                                    <li class="d-flex align-items-center">
+                                                        <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($fileInfo->file_link)}}.png")'></i>
+                                                        <a class="border-btm ml-5" href="{{$fileInfo->file_link}}" target="_blank">
+                                                            <span>{{$fileInfo->file_name}} <i>{{--{{ $fileInfo->file_date->formatLocalized('%B %d, %Y') }}--}} </i><b> {{getFileSize($fileInfo->file_link)}}</b></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
-                                                <b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>07․02․19</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
-                                                <b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </li>
                         </ul>
@@ -367,140 +97,23 @@
                         <ul class="background__zebra public__council--hidden--content">
                             <li >
                                 <div class="pdf__info">
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>07․02․19</span>
+                                    @foreach($PcResults as $fileInfo)
+                                        <div class="pdf__info--row d-flex d-flex align-items-center">
+                                            <div class="pdf__year pdf__year--large">
+                                                <span>{{$fileInfo->year}}</span>
+                                            </div>
+                                            <div class="pdf__text">
+                                                <ul>
+                                                    <li class="d-flex align-items-center">
+                                                        <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($fileInfo->file_link)}}.png")'></i>
+                                                        <a class="border-btm ml-5" href="{{$fileInfo->file_link}}" target="_blank">
+                                                            <span>{{$fileInfo->file_name}} <i>{{--{{ $fileInfo->file_date->formatLocalized('%B %d, %Y') }}--}} </i><b> {{getFileSize($fileInfo->file_link)}}</b></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
-                                                <b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>07․02․19</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում
-                                                <b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="pdf__info--row d-flex d-flex align-items-center">
-                                        <div class="pdf__year pdf__year--large">
-                                            <span>1988-2004</span>
-                                        </div>
-                                        <div class="pdf__text">
-                                            <ul>
-                                                <li class="d-flex align-items-center ">
-                                                    <i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>
-                                                    <a href="javascript:;" class="pl-4">
-                                            <span class="border-btm">սովորել է Երևանի Մխիթար Հերացու
-                                                անվան պետական բժշկական համալսարանի
-                                                բուժական ֆակուլտետում<b>265կբ</b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </li>
                         </ul>

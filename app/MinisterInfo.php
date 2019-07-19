@@ -3,14 +3,19 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class MinisterInfo extends Model
 {
+    use Translatable;
+
     protected $fillable = [
         'name',
         'description',
         'category_id'
     ];
+
+    protected $translatable = ['description'];
 
     public function category()
     {

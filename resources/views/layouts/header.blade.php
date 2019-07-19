@@ -19,11 +19,20 @@
                     <div class="row">
                         <div class="col-12 p-0 ">
                             <div class="language text-right">
-                                <select class="language--bar" name="state">
-                                    <option value="arm">Հայերեն</option>
-                                    <option value="rus">Русский</option>
-                                    <option value="eng">English</option>
-                                </select>
+{{--                                <select class="language--bar" name="state">--}}
+{{--                                    <option value="arm">Հայերեն</option>--}}
+{{--                                    <option value="rus">Русский</option>--}}
+{{--                                    <option value="eng">English</option>--}}
+{{--                                </select>--}}
+                                <ul>
+                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                        <li>
+                                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                {{ $properties['native'] }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
                             </div>
                         </div>
                     </div>

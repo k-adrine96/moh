@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class AntiCorruptionEvent extends Model
 {
+    use Translatable;
+
     protected $fillable = [
         'file_name',
         'file_upload',
@@ -15,16 +18,20 @@ class AntiCorruptionEvent extends Model
         'order'
     ];
 
-    protected $dates = [
-        'file_date'
-    ];
+    protected $dates = ['file_date'];
+
+    protected $translatable = ['file_name'];
 
     public function getFileLinkAttribute()
     {
-        return \Storage::url(json_decode($this->file_upload)[0]->download_link);
+        if($this->file_upload && $this->file_upload !== '[]') {
+            return \Storage::url(json_decode($this->file_upload)[0]->download_link);
+        }
+
+        return $this->attributes['file_url'];
     }
 
     public function children() {
-        $this->hasMany( AntiCorruptionEvent::class , 'parent_id' , 'id');
+        return $this->hasMany( AntiCorruptionEvent::class , 'parent_id' , 'id');
     }
 }
