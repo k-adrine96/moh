@@ -8,17 +8,12 @@ class CreateDynamicSubPageIntermediateTablesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     *`dynamic_intermediate_table`
      * @return void
      */
     public function up()
     {
-        Schema::table('dynamic_intermediate_table', function(Blueprint $table){
-            $table->dropForeign('dynamic_sub_page_id');
-            $table->dropColumn('dynamic_sub_page_id');
-        });
-
-        Schema::create('dynamic_sub_page_intermediate', function (Blueprint $table) {
+       Schema::create('dynamic_sub_page_intermediate', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('dynamic_page_file_id');
             $table->unsignedBigInteger('dynamic_sub_page_id')->nullable();

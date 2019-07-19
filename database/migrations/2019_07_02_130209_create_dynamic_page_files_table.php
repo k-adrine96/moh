@@ -63,15 +63,11 @@ class CreateDynamicPageFilesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('dynamic_page_file_id');
             $table->unsignedBigInteger('dynamic_page_id')->nullable();
-            $table->unsignedBigInteger('dynamic_sub_page_id')->nullable();
 
             $table->foreign('dynamic_page_file_id')->references('id')->on('dynamic_page_files')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->foreign('dynamic_page_id')->references('id')->on('dynamic_pages')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-            $table->foreign('dynamic_sub_page_id')->references('id')->on('dynamic_sub_pages')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->timestamps();
