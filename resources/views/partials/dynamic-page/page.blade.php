@@ -7,7 +7,7 @@
             </div>
         </section>
 
-        @if(isset($page->video) && $page->video)
+        @if(isset($page->video) && count($page->video))
             <section class="videos">
                 <div class="videos__row">
                     <div class="container-fluid">
