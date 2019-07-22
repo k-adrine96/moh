@@ -314,12 +314,12 @@ class PagesController extends Controller
 
     public function homepage(){
 
-     	$news          = News::latest()->take(5)->get();
-     	$videos        = Videos::latest()->take(5)->get();
+     	$news          = ( new News )->baseTranslate()->latest()->take(5)->get();
+     	$videos        = ( new Videos )->baseTranslate()->latest()->take(5)->get();
         $partnersRow1  = Partners::where('slider_row', 1)->get();
         $partnersRow2  = Partners::where('slider_row', 2)->get();
-        $announcements = Announcements::latest()->take(5)->get();
-        $slidersInfo   = HomepageSlider::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+        $announcements = ( new Announcements )->baseTranslate()->latest()->take(5)->get();
+        $slidersInfo   = ( new HomepageSlider )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
         return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partnersRow1' , 'partnersRow2'));
 
@@ -327,7 +327,7 @@ class PagesController extends Controller
 
     public function showNewsIndividual($id){
 
-        $newsIndividual = News::where('id', $id)->first();
+        $newsIndividual = ( new News )->baseTranslate()->where('id', $id)->first();
         $partnersRow1   = Partners::where('slider_row', 1)->get();
         $partnersRow2   = Partners::where('slider_row', 2)->get();
         $coverPhoto     = CoverPhotos::where('page_slug', 'single-news')->first();
@@ -339,7 +339,7 @@ class PagesController extends Controller
 
         $partnersRow1           = Partners::where('slider_row', 1)->get();
         $partnersRow2           = Partners::where('slider_row', 2)->get();
-        $announcementIndividual = Announcements::where('id', $id)->first();
+        $announcementIndividual = ( new Announcements )->baseTranslate()->where('id', $id)->first();
         $coverPhoto             = CoverPhotos::where('page_slug', 'single-announcement')->first();
 
         return view('single-announcement' , compact('announcementIndividual' , 'coverPhoto', 'partnersRow1' , 'partnersRow2'));
@@ -347,7 +347,7 @@ class PagesController extends Controller
 
     public function showVideoIndividual($id){
 
-        $videoIndividual = Videos::where('id', $id)->first();
+        $videoIndividual = ( new Videos )->baseTranslate()->where('id', $id)->first();
         $partnersRow1    = Partners::where('slider_row', 1)->get();
         $partnersRow2    = Partners::where('slider_row', 2)->get();
         $coverPhoto      = CoverPhotos::where('page_slug', 'single-video')->first();

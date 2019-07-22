@@ -7,23 +7,22 @@
             </div>
         </section>
 
-        @if(isset($page->video) && !empty($page->video))
-            <section class="videos">
-                <div class="videos__row">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-6">
-                                <div class="video__content">
-                                    <video width="320" height="240" controls>
-                                        <source src="/storage/{{ $page->video }}" type="video/mp4">
-                                        <iframe width="80%" height="315" src="https://www.youtube.com/embed/{{getVideoKey($video->video_url)}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </video>
-                                </div>
-                            </div>
+        @if($page->video)
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-6">
+                        <div class="video__content">
+                            <video width="320" height="240" controls>
+                                <source src="/storage/{{ $page->video }}" type="video/mp4">
+                                <iframe width="80%" height="315"
+                                        src="https://www.youtube.com/embed/{{getVideoKey($page->video)}}" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                </iframe>
+                            </video>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         @endif
 
         @if($page->description)

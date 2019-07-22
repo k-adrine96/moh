@@ -37,7 +37,7 @@
                                          style="background-image: url({{Storage::url($featuredImage)}})"></div>
                                 </div>
                                 <div class="news__info">
-                                    <span><?php echo date('d F Y l', strtotime($singleNews->date)); ?></span>
+                                    <span>{{ $singleNews->date->formatLocalized('%B %d, %Y') }}</span>
                                     <h1>{{$singleNews->title}}</h1>
                                     <div class="news-description text-justify editor-content">{!! $singleNews->description !!}</div>
                                     <a href="{{route('show.news.individual' , $singleNews->id)}}" class="animated__button animated__button--blue">Ավելին</a>
@@ -88,7 +88,7 @@
                                     </iframe>
                                 </div>
                                 <div class="video__items--text">
-                                    <span><?php echo date('d F Y l', strtotime($video->date)); ?></span>
+                                    <span>{{ $video->date->formatLocalized('%B %d, %Y') }}</span>
                                     <h1>{{$video->title}}</h1>
                                     <a href="{{route('show.video.individual' , $video->id)}}" class="margin-auto animated__button animated__button--blue">ավելին</a>
                                 </div>

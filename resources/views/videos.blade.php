@@ -22,7 +22,7 @@
                                                     <a href="{{route('show.video.individual' , $video->id)}}">{{$video->title}}</a>
                                                 </div>
                                                 <div class="video__content--date">
-                                                    <p><?php echo date('d F Y l', strtotime($video->date)); ?></p>
+                                                    <p>{{ $video->date->formatLocalized('%B %d, %Y') }}</p>
                                                 </div>
                                             </div>
                                         </div>

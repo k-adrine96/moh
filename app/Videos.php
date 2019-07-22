@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
 
-class Videos extends Model
+class Videos extends BaseModel
 {
     use Translatable;
 
@@ -17,4 +17,6 @@ class Videos extends Model
     ];
 
     protected $translatable = ['title'];
+
+    protected $dates = ['date'];
 }

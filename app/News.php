@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class News extends Model
+class News extends BaseModel
 {
     use Translatable;
 
@@ -21,6 +21,8 @@ class News extends Model
         'title',
         'description'
     ];
+
+    protected $dates = ['date'];
 
 //     public function setVideoAttribute($yVideo)
 //     {
