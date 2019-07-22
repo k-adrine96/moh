@@ -8,7 +8,10 @@ use TCG\Voyager\Traits\Translatable;
 class DynamicPageFile extends model
 {
     use Translatable;
-    protected $fillable = ['name', 'file', 'date', 'order'];
+    protected $fillable = ['name', 'file', 'file_url' , 'date', 'parent_id' , 'order'];
+
+    protected $dates = ['date'];
+
     protected $translatable = ['name'];
 
     public function getFileLinkAttribute()
@@ -16,6 +19,11 @@ class DynamicPageFile extends model
         if($this->file && $this->file !== '[]') {
             return \Storage::url(json_decode($this->file)[0]->download_link);
         }
-        return true;
+
+        return $this->attributes['file_url'];
+    }
+
+    public function children() {
+        return $this->hasMany( DynamicPageFile::class , 'parent_id' , 'id');
     }
 }

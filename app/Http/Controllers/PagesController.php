@@ -369,15 +369,26 @@ class PagesController extends Controller
 
     public function subPage($section, $page, $sub_page)
     {
-        $section = DynamicSection::whereSlug($section)->firstOrFail();
         $p = $section->pages()->whereSlug($page)->firstOrFail();
-        $page = $p->subpages()->whereSlug($sub_page)->firstOrFail();
-        return view('partials.dynamic-page.page', compact('page'));
+        $parents = $p->with(['files' => function($q){
+           $q->whereNull('parent_id');
+        }])->subpages()->whereSlug($sub_page)->firstOrFail();
+        $children = $p->with(['files' => function($q){
+            $q->whereNotNull('parent_id');
+        }])->subpages()->whereSlug($sub_page)->firstOrFail();
+        $section = DynamicSection::whereSlug($section)->firstOrFail();
+        return view('partials.dynamic-page.page', compact('page' , 'parents' , 'children'));
     }
 
     public function page($page)
     {
         $page = DynamicPage::whereSlug($page)->firstOrFail();
-        return view('partials.dynamic-page.page', compact('page'));
+        $parents = $page->with(['files' => function($q){
+            $q->whereNull('parent_id');
+        }])->firstOrFail();
+        $children = $page->with(['files' => function($q){
+            $q->whereNotNull('parent_id');
+        }])->firstOrFail();
+        return view('partials.dynamic-page.page', compact('page', 'parents' , 'children'));
     }
 }
