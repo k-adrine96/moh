@@ -15,9 +15,9 @@
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
-$locale = 'hy';
-Carbon::setLocale($locale);
-setlocale(LC_TIME, $locale);
+//$locale = 'hy';
+Carbon::now()->setLocale(config('app.locale'));
+setlocale(LC_TIME, config('app.locale'));
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

@@ -236,8 +236,8 @@ class PagesController extends Controller
         }else if($page === 'admission')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'admission')->first();
-            $parents    = Admission::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get()->translate('locale' , App::getLocale());
-            $filesInfo  = Admission::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get()->translate('locale' , App::getLocale());
+            $parents    = (new Admission)->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = (new Admission)->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'staffing-staff-list')
         {
