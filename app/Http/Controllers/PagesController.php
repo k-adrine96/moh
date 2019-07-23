@@ -363,27 +363,27 @@ class PagesController extends Controller
 
     public function pageSection($section, $page)
     {
-        $section = ( new DynamicSection )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->whereSlug($section)->firstOrFail();
-        $page = ( new DynamicPage )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->whereSlug($page)->firstOrFail();
-
-        return view('partials.dynamic-page.page', compact('page'));
+        $section = ( new DynamicSection )->baseTranslate()->whereSlug($section)->firstOrFail();
+        $page = ( new DynamicPage )->baseTranslate()->whereSlug($page)->firstOrFail();
+        $parents  = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNull('parent_id')->get();
+        $children = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNotNull('parent_id')->get();
+        return view('partials.dynamic-page.page', compact('page', 'parents' , 'children'));
     }
 
     public function subPage($section, $page, $sub_page)
     {
-        $p = $section->pages()->whereSlug($page)->firstOrFail();
-        $parents = $p->baseTranslate()->orderBy('order', 'desc')->orderBy('date', 'desc')->with(['files' => function($q){ $q->whereNull('parent_id'); }])->subpages()->whereSlug($sub_page)->firstOrFail();
-        $children = $p->baseTranslate()->orderBy('order', 'desc')->orderBy('date', 'desc')->with(['files' => function($q){ $q->whereNotNull('parent_id'); }])->subpages()->whereSlug($sub_page)->firstOrFail();
-        $section = ( new DynamicSection )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->whereSlug($section)->firstOrFail();
-
+        $section  = ( new DynamicSection )->baseTranslate()->whereSlug($section)->firstOrFail();
+        $page     = $section->pages()->whereSlug($page)->firstOrFail()->baseTranslate()->subpages()->whereSlug($sub_page)->firstOrFail();
+        $parents  = $page->files()->orderBy('order', 'desc')->orderBy('id', 'desc')->whereNull('parent_id')->get();
+        $children = $page->files()->orderBy('order', 'desc')->orderBy('id', 'desc')->whereNotNull('parent_id')->get();
         return view('partials.dynamic-page.page', compact('page' , 'parents' , 'children'));
     }
 
     public function page($page)
     {
-        $page = ( new DynamicPage )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->whereSlug($page)->firstOrFail();
-        $parents = $page->baseTranslate()->orderBy('order', 'desc')->orderBy('date', 'desc')->with(['files' => function($q){ $q->whereNull('parent_id'); }])->firstOrFail();
-        $children = $page->baseTranslate()->orderBy('order', 'desc')->orderBy('date', 'desc')->with(['files' => function($q){ $q->whereNotNull('parent_id'); }])->firstOrFail();
+        $page     = ( new DynamicPage )->baseTranslate()->whereSlug($page)->firstOrFail();
+        $parents  = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNull('parent_id')->get();
+        $children = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNotNull('parent_id')->get();
 
         return view('partials.dynamic-page.page', compact('page', 'parents' , 'children'));
     }
