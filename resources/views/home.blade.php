@@ -82,9 +82,8 @@
                         <div class="video__items">
                             <div class="mobile-video-card">
                                 <div class="video__items--video">
-                                    <?php $videoKey = explode('/', $video->video_url)[3]; ?>
                                     <iframe class="video" width="90%" height="320px"
-                                            src="https://www.youtube.com/embed/{{$videoKey}}">
+                                            src="https://www.youtube.com/embed/{{getVideoKey($video->video_url)}}">
                                     </iframe>
                                 </div>
                                 <div class="video__items--text">

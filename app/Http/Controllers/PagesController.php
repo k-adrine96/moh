@@ -35,7 +35,6 @@ class PagesController extends Controller
         }else if($page === 'ministry-staff')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'ministry-staff')->first();
-            dd((new MinistryStaff)->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get());
             $content    = ( new MinistryStaff )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
         }else if($page === 'mission')
