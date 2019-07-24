@@ -454,6 +454,25 @@ svg {
   padding-right: 50px;
 }
 
+.language ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.language ul li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.language ul li a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #333333;
+}
+
 .header__navigation {
   margin-right: 7rem;
 }

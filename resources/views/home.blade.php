@@ -7,7 +7,7 @@
                     <div class="main__cover--item-container">
                         <div class="main__cover--item-container-cont">
                             <h2>{!! $sliderInfo->getTranslatedAttribute('title') !!}</h2>
-                            <p class="text-justify editor-content">{!! getDescription($sliderInfo->getTranslatedAttribute('text')) !!}</p>
+                            <p class="text-justify editor-content">{!! $sliderInfo->getTranslatedAttribute('text') !!}</p>
                             @if($sliderInfo->url)
                                 <div class="main-cover-button">
                                     <a href="{{$sliderInfo->url}}"
@@ -39,7 +39,7 @@
                                 <div class="news__info">
                                     <span>{{ $singleNews->date->formatLocalized('%B %d, %Y') }}</span>
                                     <h1>{{$singleNews->getTranslatedAttribute('title')}}</h1>
-                                    <div class="news-description text-justify editor-content">{!! getDescription($singleNews->getTranslatedAttribute('description')) !!}</div>
+                                    <div class="news-description text-justify editor-content">{!! $singleNews->getTranslatedAttribute('description') !!}</div>
                                     <a href="{{route('show.news.individual' , $singleNews->id)}}" class="animated__button animated__button--blue">Ավելին</a>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                         <div class="announcements--cont--slider--items">
                             <h1>{{$announcement->getTranslatedAttribute('title')}}</h1>
                             <div class="announcement-description text-justify editor-content">
-                                {!! getDescription($announcement->getTranslatedAttribute('description')) !!}
+                                {!! $announcement->getTranslatedAttribute('description') !!}
                             </div>
                             <a href="{{route('show.announcement.individual' , $announcement->id)}}" class="animated__button animated__button--yellow-small">Ավելին</a>
                         </div>
