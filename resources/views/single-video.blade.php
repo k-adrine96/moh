@@ -12,12 +12,12 @@
                 <h1>{{$videoIndividual->title}}</h1>
             </div>
             <div class="single__video--date">
-                <p><?php echo date('d F Y l' , strtotime($videoIndividual->date)); ?></p>
+                <p>{{ $videoIndividual->date->formatLocalized('%B %d, %Y') }}</p>
             </div>
             <div class="single__video--video text-center m-auto">
                 <?php $videoKey = explode('/', $videoIndividual->video_url)[3]; ?>
                 <iframe class="video" width="100%" height="700px"
-                        src="https://www.youtube.com/embed/{{$videoKey}}">
+                        src="https://www.youtube.com/embed/{{getVideoKey($videoIndividual->video_url)}}">
                 </iframe>
             </div>
         </section>

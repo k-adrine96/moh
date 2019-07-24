@@ -28,13 +28,13 @@
                                                 </div>
                                                 <div class="col-sm-12 pl-3 col-lg-6">
                                                     <div class="all__news--date">
-                                                        <span><?php echo date('d F Y l' , strtotime($news->date)); ?></span>
+                                                        <span>{{ $news->date->formatLocalized('%B %d, %Y') }}</span>
                                                     </div>
                                                     <div class="all__news--header">
-                                                        <a href="{{route('show.news.individual' , $news->id)}}">{{$news->title}}</a>
+                                                        <a href="{{route('show.news.individual' , $news->id)}}">{{$news->getTranslatedAttribute('title')}}</a>
                                                     </div>
                                                     <div class="all__news--short--description text-justify editor-content">
-                                                        {!! getDescription($news->description) !!}
+                                                        {!! getDescription($news->getTranslatedAttribute('description')) !!}
                                                     </div>
                                                 </div>
                                             </div>

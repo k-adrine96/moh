@@ -16,7 +16,9 @@ class Informative extends Model
         'file_date'
     ];
 
-    protected $dates = ['file_date'];
+    protected $dates = [
+        'file_date'
+    ];
 
     protected $translatable = ['file_name'];
 

@@ -13,8 +13,7 @@ class PressRelease extends Model
         'file_name',
         'file_upload',
         'file_url',
-        'file_date',
-        'order'
+        'file_date'
     ];
 
     protected $dates = ['file_date'];

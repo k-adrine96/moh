@@ -12,10 +12,10 @@
                 <h1>{{$announcementIndividual->title}}</h1>
             </div>
             <div class="single__announcement--date">
-                <p><?php echo date('d F Y l' , strtotime($announcementIndividual->date)); ?></p>
+                <p>{{ $announcementIndividual->date->formatLocalized('%B %d, %Y') }}</p>
             </div>
             <div class="single__announcement--body">
-                <p class="text-justify editor-content">{!! getDescription($announcementIndividual->description) !!}</p>
+                <p class="text-justify editor-content">{!! $announcementIndividual->description !!}</p>
             </div>
         </section>
     </main>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-	<main>
+    <main>
         <section class="secondary__cover aks__minister--cover"
                  style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">

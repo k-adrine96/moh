@@ -9,12 +9,8 @@
         </section>
         <section class="only__text text-justify editor-content">
             {!! getDescription($pagesTexts->page_text1) !!}
-            @if(!is_null($pagesTexts->page_text2))
-                {!! getDescription($pagesTexts->page_text2) !!}
-            @endif
-            @if(!is_null($pagesTexts->page_text3))
-                {!! getDescription($pagesTexts->page_text3) !!}
-            @endif
+            {!! !is_null( $pagesTexts->page_text2 ) ? getDescription($pagesTexts->page_text2) : '' !!}
+            {!! !is_null( $pagesTexts->page_text3 ) ? getDescription($pagesTexts->page_text3) : '' !!}
         </section>
         <section class="legal__acts">
             <div class="legal__acts--container">

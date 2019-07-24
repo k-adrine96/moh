@@ -38,8 +38,6 @@ if (!function_exists('getFileSize')) {
 
     function getFileSize(string $file) {
 
-
-
         if(file_exists(public_path($file))) {
 
             $size = filesize(public_path($file));

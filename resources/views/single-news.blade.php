@@ -22,7 +22,7 @@
                     <h1>{{$newsIndividual->title}}</h1>
                 </div>
                 <div class="single__news--info--date">
-                    <h2>{{date('d F Y l' , strtotime($newsIndividual->date))}}</h2>
+                    <h2>{{ $newsIndividual->date->formatLocalized('%B %d, %Y') }}</h2>
                 </div>
                 <div class="single__news--info--text">
                     {!! getDescription($newsIndividual->description) !!}

@@ -22,6 +22,8 @@ class News extends Model
         'description'
     ];
 
+    protected $dates = ['date'];
+
 //     public function setVideoAttribute($yVideo)
 //     {
 //         $this->video = explode('/', $yVideo)[3];

@@ -17,4 +17,6 @@ class Videos extends Model
     ];
 
     protected $translatable = ['title'];
+
+    protected $dates = ['date'];
 }

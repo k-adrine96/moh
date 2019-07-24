@@ -15,14 +15,14 @@
                 @foreach($faqCategories as $faqCategory)
                     <li class="multicolor">
                     <div class="multicolor-container faq__row">
-                        <a href="javascript:;" class="faq__row--first--lvl">{{$faqCategory->name}}</a>
+                        <a href="javascript:;" class="faq__row--first--lvl">{{ $faqCategory->getTranslatedAttribute('name') }}</a>
                         <ul class="faq__row--hided--content">
                             @foreach($faqs as $faq)
                                 @if($faq->category_id == $faqCategory->id)
                                     <li>
-                                        <a href="javascript:;" class="faq__second-lvl">{{$faq->question}}</a>
+                                        <a href="javascript:;" class="faq__second-lvl">{{ $faq->getTranslatedAttribute('question') }}</a>
                                         <ul class="faq__second--hidden--content">
-                                            <li>{{$faq->answer}}</li>
+                                            <li>{{ $faq->getTranslatedAttribute('answer') }}</li>
                                         </ul>
                                     </li>
                                 @endif

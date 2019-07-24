@@ -9,12 +9,8 @@
         </section>
         <section class="only__text text-justify editor-content">
             {!! getDescription($pagesTexts->page_text1) !!}
-            @if(!is_null($pagesTexts->page_text2))
-                {!! getDescription($pagesTexts->page_text2) !!}
-            @endif
-            @if(!is_null($pagesTexts->page_text3))
-                {!! getDescription($pagesTexts->page_text3) !!}
-            @endif
+            {!! !is_null( $pagesTexts->page_text2 ) ? getDescription($pagesTexts->page_text2) : '' !!}
+            {!! !is_null( $pagesTexts->page_text3 ) ? getDescription($pagesTexts->page_text3) : '' !!}
         </section>
         <section class="legal__acts">
             <div class="legal__acts--container">
@@ -105,7 +101,7 @@
                                                                    style='background-image: url("/img/{{getFileIcon($organisation->file_link)}}.png")'></i>
                                                                 <a class="border-btm ml-5" href="{{$organisation->file_link}}"
                                                                    target="_blank">
-                                                                    <span>{{$organisation->file_name}} <i>{{ $organisation->file_date->formatLocalized('%B %d, %Y') }} </i><b> {{getFileSize($organisation->file_link)}}</b></span>
+                                                                    <span>{{$organisation->file_name}} <i>{{--{{ $organisation->file_date->formatLocalized('%B %d, %Y') }}--}} </i><b> {{getFileSize($organisation->file_link)}}</b></span>
                                                                 </a>
                                                             </li>
                                                         </ul>

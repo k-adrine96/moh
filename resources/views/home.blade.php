@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <main>
         <section class="main__cover">
@@ -7,8 +6,8 @@
                 <div class="main__cover--item" style="background-image: url('{{Storage::url($sliderInfo->image)}}')">
                     <div class="main__cover--item-container">
                         <div class="main__cover--item-container-cont">
-                            <h2>{!! $sliderInfo->title !!}</h2>
-                            <p class="text-justify editor-content">{!! getDescription($sliderInfo->text) !!}</p>
+                            <h2>{!! $sliderInfo->getTranslatedAttribute('title') !!}</h2>
+                            <p class="text-justify editor-content">{!! getDescription($sliderInfo->getTranslatedAttribute('text')) !!}</p>
                             @if($sliderInfo->url)
                                 <div class="main-cover-button">
                                     <a href="{{$sliderInfo->url}}"
@@ -38,9 +37,9 @@
                                          style="background-image: url({{Storage::url($featuredImage)}})"></div>
                                 </div>
                                 <div class="news__info">
-                                    <span><?php echo date('d F Y l', strtotime($singleNews->date)); ?></span>
-                                    <h1>{{$singleNews->title}}</h1>
-                                    <div class="news-description text-justify editor-content">{!! getDescription($singleNews->description) !!}</div>
+                                    <span>{{ $singleNews->date->formatLocalized('%B %d, %Y') }}</span>
+                                    <h1>{{$singleNews->getTranslatedAttribute('title')}}</h1>
+                                    <div class="news-description text-justify editor-content">{!! getDescription($singleNews->getTranslatedAttribute('description')) !!}</div>
                                     <a href="{{route('show.news.individual' , $singleNews->id)}}" class="animated__button animated__button--blue">Ավելին</a>
                                 </div>
                             </div>
@@ -61,9 +60,9 @@
                 <div class="announcements--cont--slider">
                     @foreach($announcements as $announcement)
                         <div class="announcements--cont--slider--items">
-                            <h1>{{$announcement->title}}</h1>
+                            <h1>{{$announcement->getTranslatedAttribute('title')}}</h1>
                             <div class="announcement-description text-justify editor-content">
-                                {!! getDescription($announcement->description) !!}
+                                {!! getDescription($announcement->getTranslatedAttribute('description')) !!}
                             </div>
                             <a href="{{route('show.announcement.individual' , $announcement->id)}}" class="animated__button animated__button--yellow-small">Ավելին</a>
                         </div>
@@ -83,14 +82,13 @@
                         <div class="video__items">
                             <div class="mobile-video-card">
                                 <div class="video__items--video">
-                                    <?php $videoKey = explode('/', $video->video_url)[3]; ?>
                                     <iframe class="video" width="90%" height="320px"
-                                            src="https://www.youtube.com/embed/{{$videoKey}}">
+                                            src="https://www.youtube.com/embed/{{getVideoKey($video->video_url)}}">
                                     </iframe>
                                 </div>
                                 <div class="video__items--text">
-                                    <span><?php echo date('d F Y l', strtotime($video->date)); ?></span>
-                                    <h1>{{$video->title}}</h1>
+                                    <span>{{ $video->date->formatLocalized('%B %d, %Y') }}</span>
+                                    <h1>{{$video->getTranslatedAttribute('title')}}</h1>
                                     <a href="{{route('show.video.individual' , $video->id)}}" class="margin-auto animated__button animated__button--blue">ավելին</a>
                                 </div>
                             </div>

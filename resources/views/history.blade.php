@@ -14,11 +14,11 @@
                         <div class="pdf__info">
                             <div class="pdf__info--row d-flex align-items-start">
                                 <div class="pdf__year pdf__year--small">
-                                    <span>{{$minHistoryCat->name}}</span>
+                                    <span>{{ $minHistoryCat->getTranslatedAttribute('name') }}</span>
                                 </div>
                                 <div class="pdf__text">
                                     <div class="text-container text-justify editor-content">
-                                        {!! getDescription($minHistoryCat->description) !!}
+                                        {!! getDescription($minHistoryCat->getTranslatedAttribute('description')) !!}
                                     </div>
                                     <ul>
                                         @foreach($minHistoryItems as $minHistoryItem)
@@ -32,7 +32,7 @@
                                                             <div class="pdf__text">
                                                                 <ul>
                                                                     <li>
-                                                                        <p class="yellow-border border-btm">{{$minHistoryItem->name}}</p>
+                                                                        <p class="yellow-border border-btm">{{$minHistoryItem->getTranslatedAttribute('name')}}</p>
                                                                     </li>
                                                                 </ul>
                                                             </div>

@@ -40,10 +40,6 @@
   }
 }
 
-.child-file {
-  margin-left: 4%;
-}
-
 // Large size of year container in pdf info
 .pdf__year--large {
   width: 15%;
@@ -115,11 +111,13 @@
   list-style-type: disc;
   list-style-position: outside;
   margin-left: 40px;
+  font-weight: normal !important;
 }
 .editor-content ol {
   list-style-type: decimal;
   list-style-position: outside;
   margin-left: 40px;
+  font-weight: normal !important;
 }
 
 //custom styles for text editor

@@ -21,10 +21,10 @@
                                                     <a href="{{route('show.announcement.individual' , $announcement->id)}}">{{$announcement->title}}</a>
                                                 </div>
                                                 <div class="all__announcement--date">
-                                                    <p><?php echo date('d F Y l', strtotime($announcement->date)); ?></p>
+                                                    <p>{{ $announcement->date->formatLocalized('%B %d, %Y') }}</p>
                                                 </div>
                                                 <div class="all__announcement--body text-justify editor-content">
-                                                    {!! getDescription($announcement->description) !!}
+                                                    {!! getDescription($announcement->getTranslatedAttribute('description')) !!}
                                                 </div>
                                             </div>
                                         </div>

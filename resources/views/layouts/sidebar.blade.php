@@ -86,21 +86,22 @@
             <li>
                 <a href="javascript:;" class="first-lvl">ԾՐԱԳՐԵՐ</a>
                 <ul class="hided--content">
-                    <li><a href="{{ route('pages' , 'politics') }}">Քաղաքականություն</a></li>
-                    <li><a href="{{ route('pages' , 'superior') }}">Գերակա</a></li>
-                    <li><a href="{{ route('pages' , 'national') }}">Ազգային</a></li>
-                    <li><a href="{{ route('pages' , 'international') }}">Միջազգային</a></li>
-                    <li><a href="{{ route('pages' , 'screening') }}">Սկրինինգ</a></li>
-                    <li><a href="{{ route('pages' , 'anti-corruption-events') }}">Միջոցառումներ/հակակոռուպցիոն</a></li>
+                    <li><a href="javascript:;">Քաղաքականություն</a></li>
+                    <li><a href="javascript:;">Գերակա</a></li>
+                    <li><a href="javascript:;">Ազգային</a></li>
+                    <li><a href="javascript:;">Միջազգային</a></li>
+                    <li><a href="javascript:;">Սկրինինգ</a></li>
+                    <li><a href="javascript:;">Միջողառումներ/հակակոռուպցիոն</a></li>
+
                 </ul>
             </li>
             <li>
                 <a href="javascript:;" class="first-lvl">ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ</a>
                 <ul class="hided--content">
-                    <li><a href="{{ route('pages' , 'licens-documents-application') }}">Լիցենզավորում/Փաստաթղթեր/Հայտ</a></li>
-                    <li><a href="{{ route('pages' , 'advertising-permission') }}">Գովազդի թույլտվություն</a></li>
-                    <li><a href="{{ route('pages' , 'state-order') }}">Պետական պատվեր/Սոցիալական փաթեթ</a></li>
-                    <li><a href="{{ route('pages' , 'admission') }}">Ընդունելություն/Կարգ, ցանկ, արդյունքներ</a></li>
+                    <li><a href="javascript:;">Լիցենզավորում/Փաստաթղթեր/Հայտ</a></li>
+                    <li><a href="javascript:;">Գովազդի թույլտվություն</a></li>
+                    <li><a href="javascript:;">Պետական պատվեր/Սոցիալական փաթեթ</a></li>
+                    <li><a href="javascript:;">Ընդունելություն/Կարգ, ցանկ, արդյունքներ</a></li>
                 </ul>
             </li>
             <li>
@@ -118,6 +119,10 @@
             <li>
                 <a href="{{ route('pages' , 'your-rights') }}" class="first-lvl">Քո իրավունքը</a>
             </li>
+
+            @each('partials.sidebar-sections', $pages, 'page')
+            @each('partials.sidebar-sections', $sections, 'section')
+
             <li class="mobile--visible">
                 <a href="{{ route('pages' , 'legal-acts') }}" class="first-lvl">Իրավական ակտեր</a>
             </li>

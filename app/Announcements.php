@@ -19,4 +19,6 @@ class Announcements extends Model
         'title',
         'description'
     ];
+
+    protected $dates = ['date'];
 }
