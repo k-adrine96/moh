@@ -55,7 +55,7 @@
                                             <li class="d-flex align-items-center">
                                                 <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($parent->file_link)}}.png")'></i>
                                                 <a class="border-btm ml-5" href="{{$parent->file_link}}" target="_blank">
-                                                    <span>{{$parent->getTranslatedAttribute('file_name')}} <i>{{ $parent->date->formatLocalized('%B %d, %Y') }} </i><b> {{getFileSize($parent->file_link)}}</b></span>
+                                                    <span>{{$parent->getTranslatedAttribute('name')}} <i>{{ $parent->date->formatLocalized('%B %d, %Y') }} </i><b> {{getFileSize($parent->file_link)}}</b></span>
                                                 </a>
                                             </li>
                                             @foreach($filesInfo as $fileInfo)
@@ -63,7 +63,7 @@
                                                     <li class="d-flex align-items-center child-file">
                                                         <i class="pdf__icon" style='background-image: url("/img/{{getFileIcon($fileInfo->file_link)}}.png")'></i>
                                                         <a class="border-btm ml-5" href="{{$fileInfo->file_link}}" target="_blank">
-                                                            <span>{{$fileInfo->getTranslatedAttribute('file_name')}} <i>{{ $fileInfo->date->formatLocalized('%B %d, %Y') }} </i><b> {{getFileSize($fileInfo->file_link)}}</b></span>
+                                                            <span>{{$fileInfo->getTranslatedAttribute('name')}} <i>{{ $fileInfo->date->formatLocalized('%B %d, %Y') }} </i><b> {{getFileSize($fileInfo->file_link)}}</b></span>
                                                         </a>
                                                     </li>
                                                 @endif
