@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class DynamicPageFile extends BaseModel
+class DynamicPageFile extends Model
 {
     use Translatable;
     protected $fillable = ['name', 'file', 'file_url' , 'date', 'parent_id' , 'order'];

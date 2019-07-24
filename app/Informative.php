@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class Informative extends BaseModel
+class Informative extends Model
 {
     use Translatable;
 
@@ -16,7 +16,9 @@ class Informative extends BaseModel
         'file_date'
     ];
 
-    protected $dates = ['file_date'];
+    protected $dates = [
+        'file_date'
+    ];
 
     protected $translatable = ['file_name'];
 

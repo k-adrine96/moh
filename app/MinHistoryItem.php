@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class MinHistoryItem extends BaseModel
+class MinHistoryItem extends Model
 {
     use Translatable;
 

@@ -30,75 +30,75 @@ class PagesController extends Controller
         if($page === 'minister-staff')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'minister-staff')->first();
-            $content    = ( new MinisterStaff )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $content    = MinisterStaff::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
         }else if($page === 'ministry-staff')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'ministry-staff')->first();
-            $content    = ( new MinistryStaff )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $content    = MinistryStaff::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
         }else if($page === 'mission')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'mission')->first();
-            $pagesTexts = ( new PagesTexts )->baseTranslate()->where('page_slug', 'mission')->first();
+            $pagesTexts = PagesTexts::where('page_slug', 'mission')->first();
 
         }else if($page === 'contact-us')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'contact-us')->first();
-            $pagesTexts = ( new PagesTexts )->baseTranslate()->where('page_slug', 'contact-us')->first();
+            $pagesTexts = PagesTexts::where('page_slug', 'contact-us')->first();
 
         }else if($page === 'minister-page')
         {
             $coverPhoto      = CoverPhotos::where('page_slug', 'minister-page')->first();
-            $content         = ( new MinisterPage )->baseTranslate()->first();
-            $pagesTexts      = ( new PagesTexts )->baseTranslate()->where('page_slug', 'minister-page')->first();
-            $minInfoItems    = ( new MinisterInfo )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
-            $minInfoCats     = ( new MinisterInfoCategory )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'asc')->get();
+            $content         = MinisterPage::first();
+            $pagesTexts      = PagesTexts::where('page_slug', 'minister-page')->first();
+            $minInfoItems    = MinisterInfo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $minInfoCats     = MinisterInfoCategory::orderBy('order', 'desc')->orderBy('id', 'asc')->get();
 
         }else if($page === 'charter')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'charter')->first();
-            $pagesTexts = ( new PagesTexts )->baseTranslate()->where('page_slug', 'charter')->first();
+            $pagesTexts = PagesTexts::where('page_slug', 'charter')->first();
 
         }else if($page === 'all-news')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'all-news')->first();
-            $content    = ( new News )->baseTranslate()->orderBy('order', 'desc')->orderBy('date', 'desc')->get();
+            $content    = News::orderBy('order', 'desc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'videos')
         {
-            $content = ( new Videos )->baseTranslate()->orderBy('order', 'desc')->orderBy('date', 'desc')->get();
+            $content = Videos::orderBy('order', 'desc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'announcement')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'announcement')->first();
-            $content    = ( new Announcements )->baseTranslate()->orderBy('order', 'desc')->orderBy('date', 'desc')->get();
+            $content    = Announcements::orderBy('order', 'desc')->orderBy('date', 'desc')->get();
 
         }else if($page === 'budget')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'budget')->first();
             $filesCats  = BudgetCategory::orderBy('order' , 'desc')->orderBy('id' , 'desc')->get();
-            $filesInfo  = ( new Budget )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
+            $filesInfo  = Budget::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'faq')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'faq')->first();
-            $faqs = ( new Faq )->baseTranslate()->orderBy('order' , 'desc')->orderBy('id' , 'desc')->get();
-            $faqCategories  = ( new FaqCategory )->baseTranslate()->orderBy('order' , 'desc')->orderBy('id' , 'desc')->get();
+            $faqs = Faq::orderBy('order' , 'desc')->orderBy('id' , 'desc')->get();
+            $faqCategories  = FaqCategory::orderBy('order' , 'desc')->orderBy('id' , 'desc')->get();
 
 
         }else if($page === 'history')
         {
             $coverPhoto      = CoverPhotos::where('page_slug', 'history')->first();
-            $minHistoryItems = ( new MinHistoryItem )->baseTranslate()->orderBy('order' , 'desc')->orderBy('id' , 'desc')->get();
-            $minHistoryCats  = ( new MinHistoryCategory )->baseTranslate()->orderBy('order' , 'desc')->orderBy('id' , 'desc')->get();
+            $minHistoryItems = MinHistoryItem::orderBy('order' , 'desc')->orderBy('id' , 'desc')->get();
+            $minHistoryCats  = MinHistoryCategory::orderBy('order' , 'desc')->orderBy('id' , 'desc')->get();
 
         }else if($page === 'links')
         {
             $coverPhoto     = CoverPhotos::where('page_slug', 'links')->first();
-            $LinksNgos      = ( new LinksNgo )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
-            $LinksCcos      = ( new LinksCco )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
-            $LinksLinks     = ( new LinksLink )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $LinksNgos      = LinksNgo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $LinksCcos      = LinksCco::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $LinksLinks     = LinksLink::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
             $LinksCoWorkers = LinksCoWorker::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
         }else if($page === 'ministry-structure')
@@ -108,55 +108,55 @@ class PagesController extends Controller
         }else if($page === 'moh-consultants')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'moh-consultants')->first();
-            $content    = ( new MohConsultant )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $content    = MohConsultant::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
         }else if($page === 'sub-structures-stationery-orgs')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'sub-structures-stationery-orgs')->first();
-            $content    = ( new SsStationeryOrg )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $content    = SsStationeryOrg::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
         }else if($page === 'sub-structures-other-orgs')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'sub-structures-other-orgs')->first();
-            $content    = ( new SsOtherOrg )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $content    = SsOtherOrg::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
         }else if($page === 'public-council')
         {
             $coverPhoto  = CoverPhotos::where('page_slug', 'public-council')->first();
-            $PcStaffs    = ( new PcStaff )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
-            $PcAppeals   = ( new PcAppeal )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
-            $PcResults   = ( new PcResult )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
-            $PcSessions  = ( new PcSession )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
+            $PcStaffs    = PcStaff::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
+            $PcAppeals   = PcAppeal::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
+            $PcResults   = PcResult::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
+            $PcSessions  = PcSession::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'speeches-interviews')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'speeches-interviews')->first();
-            $filesInfo  = ( new SpeechAndInterview )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
+            $filesInfo  = SpeechAndInterview::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'reports')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'reports')->first();
-            $filesInfo  = ( new Report )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
+            $filesInfo  = Report::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'press-release')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'press-release')->first();
-            $filesInfo  = ( new PressRelease )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
+            $filesInfo  = PressRelease::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'researches')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'researches')->first();
-            $filesInfo  = ( new Research )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
+            $filesInfo  = Research::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'statistics')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'statistics')->first();
-            $filesInfo  = ( new Statistic )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
+            $filesInfo  = Statistic::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'informative')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'informative')->first();
-            $filesInfo  = ( new Informative )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
+            $filesInfo  = Informative::orderBy('order', 'desc')->orderBy('file_date', 'desc')->get();
 
         }else if($page === 'legal-acts')
         {
@@ -172,135 +172,135 @@ class PagesController extends Controller
             }
 
             if($request->date) {
-                $legalActs = ( new $legalActs )->baseTranslate()->where('date', $request->date);
+                $legalActs = $legalActs::where('date', $request->date);
             }
 
             $actsTypes = LegalActsType::orderBy('order' , 'desc')->get();
-            $parents   = ( new $legalActs )->baseTranslate()->orderBy('order' , 'desc')->orderBy('date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo = ( new $legalActs )->baseTranslate()->orderBy('order' , 'desc')->orderBy('date', 'desc')->whereNotNull('parent_id')->get();
+            $parents   = $legalActs::orderBy('order' , 'desc')->orderBy('date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo = $legalActs::orderBy('order' , 'desc')->orderBy('date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'politics')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'politics')->first();
-            $parents    = ( new Politics )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new Politics )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = Politics::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = Politics::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'superior')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'superior')->first();
-            $parents    = ( new Superior )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new Superior )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = Superior::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = Superior::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'national')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'national')->first();
-            $parents    = ( new National )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new National )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = National::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = National::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'international')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'international')->first();
-            $parents    = ( new International )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new International )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = International::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = International::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'screening')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'screening')->first();
-            $parents    = ( new Screening )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new Screening )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = Screening::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = Screening::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'anti-corruption-events')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'anti-corruption-events')->first();
-            $parents    = ( new AntiCorruptionEvent )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new AntiCorruptionEvent )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = AntiCorruptionEvent::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = AntiCorruptionEvent::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'licens-documents-application')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'licens-documents-application')->first();
-            $parents    = ( new LicensDocumentsApplication )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new LicensDocumentsApplication )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = LicensDocumentsApplication::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = LicensDocumentsApplication::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'advertising-permission')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'advertising-permission')->first();
-            $parents    = ( new AdvertisingPermission )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new AdvertisingPermission )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = AdvertisingPermission::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = AdvertisingPermission::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'state-order')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'state-order')->first();
-            $parents    = ( new StateOrder )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new StateOrder )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = StateOrder::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = StateOrder::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'admission')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'admission')->first();
-            $parents    = (new Admission)->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = (new Admission)->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = Admission::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = Admission::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'staffing-staff-list')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'staffing-staff-list')->first();
-            $parents    = ( new StaffingStaffList )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new StaffingStaffList )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = StaffingStaffList::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = StaffingStaffList::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'staffing-vacancy')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'staffing-vacancy')->first();
-            $parents    = ( new StaffingVacancy )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new StaffingVacancy )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = StaffingVacancy::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = StaffingVacancy::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'staffing-tender-results')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'staffing-tender-results')->first();
-            $parents    = ( new StaffingTenderResult )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new StaffingTenderResult )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = StaffingTenderResult::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = StaffingTenderResult::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'staffing-job-acceptance')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'staffing-job-acceptance')->first();
-            $parents    = ( new StaffingJobAcceptance )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new StaffingJobAcceptance )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $parents    = StaffingJobAcceptance::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = StaffingJobAcceptance::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'your-rights')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'your-rights')->first();
-            $content    = ( new YourRightsVideo )->baseTranslate()->orderBy('order', 'desc')->orderBy('date', 'desc')->orderBy('id', 'desc')->get();
-            $parents    = ( new YourRightsFile )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new YourRightsFile )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $content    = YourRightsVideo::orderBy('order', 'desc')->orderBy('date', 'desc')->orderBy('id', 'desc')->get();
+            $parents    = YourRightsFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = YourRightsFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'license-organization')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'license-organization')->first();
-            $pagesTexts = ( new PagesTexts )->baseTranslate()->where('page_slug', 'license-organization')->first();
-            $content    = ( new LicenseOrgInfo )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
-            $parents    = ( new LicenseOrgFile )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new LicenseOrgFile )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $pagesTexts = PagesTexts::where('page_slug', 'license-organization')->first();
+            $content    = LicenseOrgInfo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $parents    = LicenseOrgFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = LicenseOrgFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'sub-structures-health-institute')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'sub-structures-health-institute')->first();
-            $pagesTexts = ( new PagesTexts )->baseTranslate()->where('page_slug', 'sub-structures-health-institute')->first();
-            $content    = ( new SsHealthInstituteInfo )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
-            $parents    = ( new SsHealthInstituteFile )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new SsHealthInstituteFile )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $pagesTexts = PagesTexts::where('page_slug', 'sub-structures-health-institute')->first();
+            $content    = SsHealthInstituteInfo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $parents    = SsHealthInstituteFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = SsHealthInstituteFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'sub-structures-drug-medical-expertise')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'sub-structures-drug-medical-expertise')->first();
-            $pagesTexts = ( new PagesTexts )->baseTranslate()->where('page_slug', 'sub-structures-drug-medical-expertise')->first();
-            $content    = ( new SsDrugMedicalExpertInfo )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
-            $parents    = ( new SsDrugMedicalExpertFile )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new SsDrugMedicalExpertFile )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $pagesTexts = PagesTexts::where('page_slug', 'sub-structures-drug-medical-expertise')->first();
+            $content    = SsDrugMedicalExpertInfo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $parents    = SsDrugMedicalExpertFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = SsDrugMedicalExpertFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }else if($page === 'sub-structures-medical-library')
         {
             $coverPhoto = CoverPhotos::where('page_slug', 'sub-structures-medical-library')->first();
-            $pagesTexts = ( new PagesTexts )->baseTranslate()->where('page_slug', 'sub-structures-medical-library')->first();
-            $content    = ( new SsMedicalLibraryInfo )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
-            $parents    = ( new SsMedicalLibraryFile )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
-            $filesInfo  = ( new SsMedicalLibraryFile )->baseTranslate()->orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
+            $pagesTexts = PagesTexts::where('page_slug', 'sub-structures-medical-library')->first();
+            $content    = SsMedicalLibraryInfo::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+            $parents    = SsMedicalLibraryFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNull('parent_id')->get();
+            $filesInfo  = SsMedicalLibraryFile::orderBy('order', 'desc')->orderBy('file_date', 'desc')->whereNotNull('parent_id')->get();
 
         }
 
@@ -314,12 +314,12 @@ class PagesController extends Controller
 
     public function homepage(){
 
-     	$news          = ( new News )->baseTranslate()->latest()->take(5)->get();
-     	$videos        = ( new Videos )->baseTranslate()->latest()->take(5)->get();
+     	$news          = News::latest()->take(5)->get();
+     	$videos        = Videos::latest()->take(5)->get();
         $partnersRow1  = Partners::where('slider_row', 1)->get();
         $partnersRow2  = Partners::where('slider_row', 2)->get();
-        $announcements = ( new Announcements )->baseTranslate()->latest()->take(5)->get();
-        $slidersInfo   = ( new HomepageSlider )->baseTranslate()->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+        $announcements = Announcements::latest()->take(5)->get();
+        $slidersInfo   = HomepageSlider::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
         return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partnersRow1' , 'partnersRow2'));
 
@@ -327,7 +327,7 @@ class PagesController extends Controller
 
     public function showNewsIndividual($id){
 
-        $newsIndividual = ( new News )->baseTranslate()->where('id', $id)->first();
+        $newsIndividual = News::where('id', $id)->first();
         $partnersRow1   = Partners::where('slider_row', 1)->get();
         $partnersRow2   = Partners::where('slider_row', 2)->get();
         $coverPhoto     = CoverPhotos::where('page_slug', 'single-news')->first();
@@ -339,7 +339,7 @@ class PagesController extends Controller
 
         $partnersRow1           = Partners::where('slider_row', 1)->get();
         $partnersRow2           = Partners::where('slider_row', 2)->get();
-        $announcementIndividual = ( new Announcements )->baseTranslate()->where('id', $id)->first();
+        $announcementIndividual = Announcements::where('id', $id)->first();
         $coverPhoto             = CoverPhotos::where('page_slug', 'single-announcement')->first();
 
         return view('single-announcement' , compact('announcementIndividual' , 'coverPhoto', 'partnersRow1' , 'partnersRow2'));
@@ -347,7 +347,7 @@ class PagesController extends Controller
 
     public function showVideoIndividual($id){
 
-        $videoIndividual = ( new Videos )->baseTranslate()->where('id', $id)->first();
+        $videoIndividual = Videos::where('id', $id)->first();
         $partnersRow1    = Partners::where('slider_row', 1)->get();
         $partnersRow2    = Partners::where('slider_row', 2)->get();
         $coverPhoto      = CoverPhotos::where('page_slug', 'single-video')->first();
@@ -362,25 +362,27 @@ class PagesController extends Controller
 
     public function pageSection($section, $page)
     {
-        $section = ( new DynamicSection )->baseTranslate()->whereSlug($section)->firstOrFail();
-        $page = ( new DynamicPage )->baseTranslate()->whereSlug($page)->firstOrFail();
+        $section  = DynamicSection::whereSlug($section)->firstOrFail();
+        $page     = DynamicPage::whereSlug($page)->firstOrFail();
         $parents  = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNull('parent_id')->get();
         $children = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNotNull('parent_id')->get();
+
         return view('partials.dynamic-page.page', compact('page', 'parents' , 'children'));
     }
 
     public function subPage($section, $page, $sub_page)
     {
-        $section  = ( new DynamicSection )->baseTranslate()->whereSlug($section)->firstOrFail();
-        $page     = $section->pages()->whereSlug($page)->firstOrFail()->baseTranslate()->subpages()->whereSlug($sub_page)->firstOrFail();
+        $section  = DynamicSection::whereSlug($section)->firstOrFail();
+        $page     = $section->pages()->whereSlug($page)->firstOrFail()->subpages()->whereSlug($sub_page)->firstOrFail();
         $parents  = $page->files()->orderBy('order', 'desc')->orderBy('id', 'desc')->whereNull('parent_id')->get();
         $children = $page->files()->orderBy('order', 'desc')->orderBy('id', 'desc')->whereNotNull('parent_id')->get();
+
         return view('partials.dynamic-page.page', compact('page' , 'parents' , 'children'));
     }
 
     public function page($page)
     {
-        $page     = ( new DynamicPage )->baseTranslate()->whereSlug($page)->firstOrFail();
+        $page     = DynamicPage::whereSlug($page)->firstOrFail();
         $parents  = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNull('parent_id')->get();
         $children = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNotNull('parent_id')->get();
 

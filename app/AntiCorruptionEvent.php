@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class AntiCorruptionEvent extends BaseModel
+class AntiCorruptionEvent extends Model
 {
     use Translatable;
 

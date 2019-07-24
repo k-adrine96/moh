@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class LinksCoWorker extends BaseModel
+class LinksCoWorker extends Model
 {
     protected $fillable = [
         'icon',

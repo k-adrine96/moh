@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
 
-class Videos extends BaseModel
+class Videos extends Model
 {
     use Translatable;
 

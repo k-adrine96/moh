@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class StaffingTenderResult extends BaseModel
+class StaffingTenderResult extends Model
 {
     use Translatable;
 

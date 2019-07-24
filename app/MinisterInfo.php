@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class MinisterInfo extends BaseModel
+class MinisterInfo extends Model
 {
     use Translatable;
 

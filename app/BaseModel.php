@@ -9,9 +9,7 @@ class BaseModel extends Model
 {
     public function baseTranslate(){
 
-        $this->with(['translations' => function($q){
-            $q->whereLocale(App::getLocale());
-        }]);
+        $this->with('translations');
 
         return $this;
     }

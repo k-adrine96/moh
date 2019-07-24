@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class YourRightsVideo extends BaseModel
+class YourRightsVideo extends Model
 {
     use Translatable;
 

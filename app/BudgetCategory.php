@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BudgetCategory extends BaseModel
+class BudgetCategory extends Model
 {
     protected $fillable = [
         'year',

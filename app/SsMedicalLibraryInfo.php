@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class SsMedicalLibraryInfo extends BaseModel
+class SsMedicalLibraryInfo extends Model
 {
     use Translatable;
 

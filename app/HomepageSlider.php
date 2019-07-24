@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class HomepageSlider extends BaseModel
+class HomepageSlider extends Model
 {
     use Translatable;
 

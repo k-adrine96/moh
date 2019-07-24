@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CoverPhotos extends BaseModel
+class CoverPhotos extends Model
 {
     protected $fillable = [
         'page_name',

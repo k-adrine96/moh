@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class SpeechAndInterview extends BaseModel
+class SpeechAndInterview extends Model
 {
     use Translatable;
 

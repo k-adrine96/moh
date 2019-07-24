@@ -31,10 +31,10 @@
                                                         <span>{{ $news->date->formatLocalized('%B %d, %Y') }}</span>
                                                     </div>
                                                     <div class="all__news--header">
-                                                        <a href="{{route('show.news.individual' , $news->id)}}">{{$news->title}}</a>
+                                                        <a href="{{route('show.news.individual' , $news->id)}}">{{$news->getTranslatedAttribute('title')}}</a>
                                                     </div>
                                                     <div class="all__news--short--description text-justify editor-content">
-                                                        {!! $news->description !!}
+                                                        {!! getDescription($news->getTranslatedAttribute('description')) !!}
                                                     </div>
                                                 </div>
                                             </div>

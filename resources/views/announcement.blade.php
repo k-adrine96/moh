@@ -24,7 +24,7 @@
                                                     <p>{{ $announcement->date->formatLocalized('%B %d, %Y') }}</p>
                                                 </div>
                                                 <div class="all__announcement--body text-justify editor-content">
-                                                    {!! $announcement->description !!}
+                                                    {!! getDescription($announcement->getTranslatedAttribute('description')) !!}
                                                 </div>
                                             </div>
                                         </div>
