@@ -8,21 +8,20 @@
         </section>
 
         @if($page->video)
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-6">
-                        <div class="video__content">
-                            <video width="320" height="240" controls>
-                                <source src="/storage/{{ $page->video }}" type="video/mp4">
+            <section class="single__announcement">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="offset-md-2 col-md-8 offset-lg-0 col-lg-6">
+                            <div class="video__content col-md-offset-1">
                                 <iframe width="80%" height="315"
                                         src="https://www.youtube.com/embed/{{getVideoKey($page->video)}}" frameborder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                                 </iframe>
-                            </video>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         @endif
 
         @if($page->description)

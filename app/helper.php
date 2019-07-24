@@ -64,10 +64,11 @@ if (!function_exists('getDescription')) {
      * @return mixed|string
      */
 
-    function getDescription(string $str ) {
-
-        $description = str_replace("&nbsp;"," ", $str);
-        return $description;
+    function getDescription( $str ) {
+        if(!is_null($str)){
+            $description = str_replace("&nbsp;"," ", $str);
+            return $description;
+        }
     }
 
 }
