@@ -8,13 +8,13 @@
             </div>
         </section>
         <section class="only__text text-justify editor-content">
-            {!! getDescription($pagesTexts->page_text1) !!}
+            {!! getDescription($pagesTexts->getTranslatedAttribute('page_text1')) !!}
         </section>
         <section class="only__text text-justify editor-content">
-            {!! !is_null( $pagesTexts->page_text2 ) ? getDescription($pagesTexts->page_text2) : '' !!}
+            {!! !is_null( $pagesTexts->page_text2 ) ? getDescription($pagesTexts->getTranslatedAttribute('page_text2')) : '' !!}
         </section>
         <section class="only__text text-justify editor-content">
-            {!! !is_null( $pagesTexts->page_text3 ) ? getDescription($pagesTexts->page_text3) : '' !!}
+            {!! !is_null( $pagesTexts->page_text3 ) ? getDescription($pagesTexts->getTranslatedAttribute('page_text3')) : '' !!}
         </section>
     </main>
 @endsection

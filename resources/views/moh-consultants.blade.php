@@ -16,10 +16,10 @@
                             @foreach($chunk as $consultant)
                                 <div class="worker__info min-worker">
                                     <div class="worker__info--header">
-                                        <h1>{{!is_null($consultant->position) ? $consultant->position : ''}}</h1>
+                                        <h1>{{!is_null($consultant->position) ? $consultant->getTranslatedAttribute('position') : ''}}</h1>
                                     </div>
                                     <div class="worker__info--name">
-                                        <p>{{!is_null($consultant->name) ? $consultant->name : ''}}</p>
+                                        <p>{{!is_null($consultant->name) ? $consultant->getTranslatedAttribute('name') : ''}}</p>
                                     </div>
                                     <ul class="worker__number__email">
                                         @if(!is_null($consultant->phone_number))
@@ -37,7 +37,7 @@
                                         @if(!is_null($consultant->working_place))
                                             <li>
                                                 <i class="location-icon"></i>
-                                                <span>{{$consultant->working_place}}</span>
+                                                <span>{{$consultant->getTranslatedAttribute('working_place')}}</span>
                                             </li>
                                         @endif
                                     </ul>

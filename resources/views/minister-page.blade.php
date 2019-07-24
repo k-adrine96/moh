@@ -13,18 +13,18 @@
                          style="background-image: url('{{Storage::url($content->minister_pic)}}')">
                     </div>
                     <div class="message__content--info--text text-justify editor-content">
-                        {!! getDescription($pagesTexts->page_text1) !!}
+                        {!! getDescription($pagesTexts->getTranslatedAttribute('page_text1')) !!}
                     </div>
                 </div>
             </div>
             <div class="message__content--1">
                 <div class="message__content--1--info text-justify editor-content">
-                    {!! !is_null( $pagesTexts->page_text2 ) ? getDescription($pagesTexts->page_text2) : '' !!}
+                    {!! !is_null( $pagesTexts->page_text2 ) ? getDescription($pagesTexts->getTranslatedAttribute('page_text2')) : '' !!}
                 </div>
             </div>
             <div class="message__content--1">
                 <div class="message__content--1--info text-justify editor-content">
-                    {!! !is_null( $pagesTexts->page_text3 ) ? getDescription($pagesTexts->page_text3) : '' !!}
+                    {!! !is_null( $pagesTexts->page_text3 ) ? getDescription($pagesTexts->getTranslatedAttribute('page_text3')) : '' !!}
                 </div>
             </div>
         </section>
@@ -37,14 +37,14 @@
                     <li>
                         <div class="pdf__info">
                             <div class="pdf__info--header">
-                                <h1>{{$minInfoCat->name}}</h1>
+                                <h1>{{$minInfoCat->getTranslatedAttribute('name')}}</h1>
                             </div>
                             @foreach($minInfoItems as $minInfoItem)
                                 @if($minInfoCat->id == $minInfoItem->category_id)
                                     <div class="pdf__info--row d-flex d-flex align-items-center">
                                         <div class="pdf__year pdf__year--large">
                                             @if($minInfoItem->name)
-                                                <span>{{$minInfoItem->name}}</span>
+                                                <span>{{$minInfoItem->getTranslatedAttribute('name')}}</span>
                                             @endif
                                         </div>
                                         <div class="pdf__text">
@@ -52,7 +52,7 @@
                                                 <li class="d-flex align-items-center border-btm">
                                                     <!--<i class="pdf__icon" style="background-image: url('img/pdf-icon.png')"></i>-->
                                                     <a href="{{$minInfoItem->url}}" class="">
-                                                        <spans>{!! $minInfoItem->description !!}<!--<b>265կբ</b>--></spans>
+                                                        <spans>{!! getDescription($minInfoItem->getTranslatedAttribute('description')) !!}<!--<b>265կբ</b>--></spans>
                                                     </a>
                                                 </li>
                                             </ul>

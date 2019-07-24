@@ -15,10 +15,10 @@
                             @foreach($chunk as $staffMember)
                                 <div class="worker__info min-worker">
                                     <div class="worker__info--header">
-                                        <h1>{{$staffMember->position}}</h1>
+                                        <h1>{{$staffMember->getTranslatedAttribute('position')}}</h1>
                                     </div>
                                     <div class="worker__info--name">
-                                        <p>{{$staffMember->name}}</p>
+                                        <p>{{$staffMember->getTranslatedAttribute('name')}}</p>
                                     </div>
                                     <ul class="worker__number__email">
                                         @if(!is_null($staffMember->phone_number))

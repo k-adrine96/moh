@@ -44,19 +44,19 @@
                                                 <div class="workers__container">
                                                     <div class="worker__info">
                                                         <div class="worker__info--header">
-                                                            <h1>{{!is_null($LinksNgo->ngo_name) ? $LinksNgo->ngo_name : ''}}</h1>
+                                                            <h1>{{!is_null($LinksNgo->ngo_name) ? $LinksNgo->getTranslatedAttribute('ngo_name') : ''}}</h1>
                                                         </div>
                                                         <div class="worker__info--chief">
-                                                            <h1>{{!is_null($LinksNgo->head_position) ? $LinksNgo->head_position : ''}}</h1>
+                                                            <h1>{{!is_null($LinksNgo->head_position) ? $LinksNgo->getTranslatedAttribute('head_position') : ''}}</h1>
                                                         </div>
                                                         <div class="worker__info--name">
-                                                            <p>{{!is_null($LinksNgo->head_name) ? $LinksNgo->head_name : ''}}</p>
+                                                            <p>{{!is_null($LinksNgo->head_name) ? $LinksNgo->getTranslatedAttribute('head_name') : ''}}</p>
                                                         </div>
                                                         <ul class="worker__number__email">
                                                             <li>
                                                                 @if(!is_null($LinksNgo->address))
                                                                     <i class="location-icon"></i>
-                                                                    <span>{{ $LinksNgo->address }}</span>
+                                                                    <span>{{ $LinksNgo->getTranslatedAttribute('address') }}</span>
                                                                 @endif
                                                             </li>
                                                             <li>
@@ -109,7 +109,7 @@
                                                 </div>
                                                 <div class="col-lg-8 col-xl-9 link__list text-justify editor-content">
                                                     @if( !is_null($LinksCco->description) )
-                                                        {!! getDescription($LinksCco->description) !!}
+                                                        {!! getDescription($LinksCco->getTranslatedAttribute('description')) !!}
                                                     @endif
                                                 </div>
                                                 <div class="offset-xl-3 offset-lg-4 col-lg-8 col-xl-9">
@@ -117,7 +117,7 @@
                                                         <li>
                                                             @if(!is_null($LinksCco->address))
                                                                 <i class="location-icon"></i>
-                                                                <span>{{ $LinksCco->address }}</span>
+                                                                <span>{{ $LinksCco->getTranslatedAttribute('address') }}</span>
                                                             @endif
                                                         </li>
                                                         <li>
@@ -159,7 +159,7 @@
                                     @foreach($LinksLinks as $Link)
                                         @if($Link->type == 'main' )
                                             <li>
-                                                <p>{{ !is_null($Link->name) ? $Link->name : '' }}</p>
+                                                <p>{{ !is_null($Link->name) ? $Link->getTranslatedAttribute('name') : '' }}</p>
                                                 @if( !is_null($Link->website_name) )
                                                     <i class="website-icon"></i>
                                                     <a href="{{!is_null($LinksCco->website_url) ? $LinksCco->website_url : ''}}">{{$Link->website_name}}</a>
@@ -175,7 +175,7 @@
                                     @foreach($LinksLinks as $Link)
                                         @if($Link->type == 'ministries' )
                                             <li>
-                                                <p>{{ !is_null($Link->name) ? $Link->name : '' }}</p>
+                                                <p>{{ !is_null($Link->name) ? $Link->getTranslatedAttribute('name') : '' }}</p>
                                                 @if( !is_null($Link->website_name) )
                                                     <i class="website-icon"></i>
                                                     <a href="{{!is_null($LinksCco->website_url) ? $LinksCco->website_url : ''}}">{{$Link->website_name}}</a>
@@ -191,7 +191,7 @@
                                     @foreach($LinksLinks as $Link)
                                         @if($Link->type == 'ra_government_bodies' )
                                             <li>
-                                                <p>{{ !is_null($Link->name) ? $Link->name : '' }}</p>
+                                                <p>{{ !is_null($Link->name) ? $Link->getTranslatedAttribute('name') : '' }}</p>
                                                 @if( !is_null($Link->website_name) )
                                                     <i class="website-icon"></i>
                                                     <a href="{{!is_null($LinksCco->website_url) ? $LinksCco->website_url : ''}}">{{$Link->website_name}}</a>
@@ -207,7 +207,7 @@
                                     @foreach($LinksLinks as $Link)
                                         @if($Link->type == 'other_links' )
                                             <li>
-                                                <p>{{ !is_null($Link->name) ? $Link->name : '' }}</p>
+                                                <p>{{ !is_null($Link->name) ? $Link->getTranslatedAttribute('name') : '' }}</p>
                                                 @if( !is_null($Link->website_name) )
                                                     <i class="website-icon"></i>
                                                     <a href="{{!is_null($LinksCco->website_url) ? $LinksCco->website_url : ''}}">{{$Link->website_name}}</a>
@@ -223,7 +223,7 @@
                                     @foreach($LinksLinks as $Link)
                                         @if($Link->type == 'regions' )
                                             <li>
-                                                <p>{{ !is_null($Link->name) ? $Link->name : '' }}</p>
+                                                <p>{{ !is_null($Link->name) ? $Link->getTranslatedAttribute('name') : '' }}</p>
                                                 @if( !is_null($Link->website_name) )
                                                     <i class="website-icon"></i>
                                                     <a href="{{!is_null($LinksCco->website_url) ? $LinksCco->website_url : ''}}">{{$Link->website_name}}</a>

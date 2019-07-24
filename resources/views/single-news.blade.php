@@ -19,13 +19,13 @@
             </div>
             <div class="single__news--info">
                 <div class="single__news--info--header">
-                    <h1>{{$newsIndividual->title}}</h1>
+                    <h1>{{$newsIndividual->getTranslatedAttribute('title')}}</h1>
                 </div>
                 <div class="single__news--info--date">
                     <h2>{{ $newsIndividual->date->formatLocalized('%B %d, %Y') }}</h2>
                 </div>
                 <div class="single__news--info--text">
-                    {!! getDescription($newsIndividual->description) !!}
+                    {!! getDescription($newsIndividual->getTranslatedAttribute('description')) !!}
                 </div>
             </div>
         </section>

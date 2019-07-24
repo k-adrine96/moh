@@ -18,9 +18,9 @@
                                      style="background-image: url('{{Storage::url($staffMember->image)}}')"></div>
                                 <div class="workers__info--content">
                                     <div class="workers__info--content--names">
-                                        <h1>{{$staffMember->position}}</h1>
+                                        <h1>{{$staffMember->getTranslatedAttribute('position')}}</h1>
                                         <a class="kuku" href="javascript:;"
-                                           data-for="workers__container-{{$staffMember->id}}">{{$staffMember->name}}</a>
+                                           data-for="workers__container-{{$staffMember->id}}">{{$staffMember->getTranslatedAttribute('name')}}</a>
                                     </div>
                                     <ul class="worker__number__email">
                                         <li>
@@ -51,8 +51,8 @@
                                          style="background-image: url('{{Storage::url($staffMember->image)}}')"></div>
                                     <div class="workers__info--content">
                                         <div class="workers__info--content--names">
-                                            <h1>{{$staffMember->position}}</h1>
-                                            <a class="mobile-name" href="javascript:;" data-for="mobile-workers-container-{{$staffMember->id}}">{{$staffMember->name}}</a>
+                                            <h1>{{$staffMember->getTranslatedAttribute('position')}}</h1>
+                                            <a class="mobile-name" href="javascript:;" data-for="mobile-workers-container-{{$staffMember->id}}">{{$staffMember->getTranslatedAttribute('name')}}</a>
                                         </div>
                                         <ul class="worker__number__email">
                                             <li>
@@ -70,10 +70,10 @@
                         </div>
                         <div class="mobile-workers-container editor-content workers__container mobile-workers-container-{{$staffMember->id}}">
                             <div class="workers__container--info">
-                                {!! $staffMember->text !!}
+                                {!! getDescription($staffMember->getTranslatedAttribute('text')) !!}
                             </div>
                             <div class="workers__container--name">
-                                <h1>{{ $staffMember->name }}</h1>
+                                <h1>{{ $staffMember->getTranslatedAttribute('name') }}</h1>
                             </div>
                         </div>
                     </li>

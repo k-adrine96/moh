@@ -9,7 +9,7 @@
         </section>
         <section class="single__video">
             <div class="single__video--header">
-                <h1>{{$videoIndividual->title}}</h1>
+                <h1>{{$videoIndividual->getTranslatedAttribute('title')}}</h1>
             </div>
             <div class="single__video--date">
                 <p>{{ $videoIndividual->date->formatLocalized('%B %d, %Y') }}</p>

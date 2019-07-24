@@ -9,13 +9,13 @@
         </section>
         <section class="single__announcement">
             <div class="single__announcement--header">
-                <h1>{{$announcementIndividual->title}}</h1>
+                <h1>{{$announcementIndividual->getTranslatedAttribute('title')}}</h1>
             </div>
             <div class="single__announcement--date">
                 <p>{{ $announcementIndividual->date->formatLocalized('%B %d, %Y') }}</p>
             </div>
             <div class="single__announcement--body">
-                <p class="text-justify editor-content">{!! $announcementIndividual->description !!}</p>
+                <p class="text-justify editor-content">{!! getDescription($announcementIndividual->getTranslatedAttribute('description')) !!}</p>
             </div>
         </section>
     </main>
