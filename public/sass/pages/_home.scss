@@ -253,7 +253,7 @@
         //  }
         //}
 
-        &.slick-current {
+        &:first-child {
           border-color: $main-btn-color!important;
         }
 

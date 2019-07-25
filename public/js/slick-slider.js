@@ -27,7 +27,7 @@
       prevArrow: ('.announcements-prev'),
       nextArrow: ('.announcements-next'),
       dots: false,
-      infinite: true,
+      infinite: false,
       speed: 4000,
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -40,7 +40,6 @@
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
-            infinite: true,
           }
         },
         {

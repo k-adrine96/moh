@@ -2204,7 +2204,7 @@ svg {
   padding: 3rem;
 }
 
-.announcements--cont--slider--items.slick-current {
+.announcements--cont--slider--items:first-child {
   border-color: #FFBC35 !important;
 }
 
