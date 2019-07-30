@@ -38,7 +38,7 @@
             <div class="footer__container--info">
                 <ul class="footer__container--info--contact d-flex justify-content-center">
                     <li>
-                        <h1>{!! __tr('address') !!}`</h1>
+                        <h1>{!! __tr('address') !!}</h1>
                         <p>{!! __tr('location') !!}</p>
                     </li>
                     <li>
@@ -55,7 +55,7 @@
                             2302, {!! __tr('email') !!} <a href="javascript:;">pr@moh.am</a></p>
                     </li>
                     <li>
-                        <h1>{!! __tr('last-update') !!}`</h1>
+                        <h1>{!! __tr('last-update') !!}</h1>
                         <p>21․02․2019</p>
                     </li>
                 </ul>
