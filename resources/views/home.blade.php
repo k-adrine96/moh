@@ -10,8 +10,7 @@
                             <p class="text-justify editor-content">{!! getDescription($sliderInfo->getTranslatedAttribute('text')) !!}</p>
                             @if($sliderInfo->url)
                                 <div class="main-cover-button">
-                                    <a href="{{$sliderInfo->url}}"
-                                       class="animated__button animated__button--blue-1">{!! __tr('more') !!}</a>
+                                    <a href="{{$sliderInfo->url}}" class="animated__button animated__button--blue-1">{!! __tr('more') !!}</a>
                                 </div>
                             @endif
                         </div>
