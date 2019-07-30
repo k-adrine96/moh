@@ -4,7 +4,7 @@
     <main>
         <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
-                <h1>{{ __tr('side_social_package') }}</h1>
+                <h1>{!! __tr('side_social_package') !!}</h1>
             </div>
         </section>
         <section class="legal__acts">

@@ -4,7 +4,7 @@
 	<main>
         <section class="secondary__cover aks__minister--cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
-                <h1>{{ __tr('side_ministry_staff') }}</h1>
+                <h1>{!! __tr('side_ministry_staff') !!}</h1>
             </div>
         </section>
         <section class="workers__content">

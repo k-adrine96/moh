@@ -4,7 +4,7 @@
     <main>
         <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
-                <h1>{{ __tr('header_contact-us') }}</h1>
+                <h1>{!! __tr('header_contact-us') !!}</h1>
             </div>
         </section>
         <section class="contact__us">
@@ -33,8 +33,8 @@
                             <textarea class="form-control" placeholder="Հաղորդագրություն"></textarea>
                         </div>
                         <div class="contact__us--btns d-flex justify-content-center">
-                            <a href="javascript:;" class="animated__button animated__button--yellow">{{ __tr('delete') }}</a>
-                            <a href="javascript:;" class="animated__button animated__button--blue-1">{{ __tr('send') }}</a>
+                            <a href="javascript:;" class="animated__button animated__button--yellow">{!! __tr('delete') !!}</a>
+                            <a href="javascript:;" class="animated__button animated__button--blue-1">{!! __tr('send') !!}</a>
                         </div>
                     </form>
                 </div>

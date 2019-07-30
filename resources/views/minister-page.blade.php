@@ -7,7 +7,7 @@
         </section>
         <section class="message__container">
             <div class="message__content">
-                <h1>{{ __tr('message') }}</h1>
+                <h1>{!! __tr('message') !!}</h1>
                 <div class="message__content--info d-flex">
                     <div class="message__content--info--image"
                          style="background-image: url('{{Storage::url($content->minister_pic)}}')">
@@ -30,7 +30,7 @@
         </section>
         <section class="biography__container">
             <div class="biography__container--header">
-                <h1>{{ __tr('biography') }}</h1>
+                <h1>{!! __tr('biography') !!}</h1>
             </div>
             <ul class="pdf__container">
                 @foreach($minInfoCats as $minInfoCat)
@@ -67,16 +67,16 @@
         </section>
         <section class="minister__public--council">
             <div class="minister__public--council--header">
-                <a href="{{ route('pages' , 'public-council') }}">{{ __tr('side_public_council') }}</a>
+                <a href="{{ route('pages' , 'public-council') }}">{!! __tr('side_public_council') !!}</a>
             </div>
         </section>
         <section class="ask__minister--cont">
             <div class="ask__minister--cont--header">
-                <h1>{{ __tr('question_to_minister') }}</h1>
+                <h1>{!! __tr('question_to_minister') !!}</h1>
             </div>
             <div class="ask__minister">
                 <div class="ask__minister--content">
-                    <h1>{{ __tr('waiting_to_your_question') }}</h1>
+                    <h1>{!! __tr('waiting_to_your_question') !!}</h1>
                     <form action="" class="ask__minister--form">
                         <div class="input-group mb-4">
                             <div class="input-group-prepend">
@@ -96,8 +96,8 @@
                             <textarea class="form-control" placeholder="Հաղորդագրություն"></textarea>
                         </div>
                         <div class="ask__minister--btns d-flex justify-content-center">
-                            <a href="javascript:;" class="animated__button animated__button--yellow">{{ __tr('delete') }}</a>
-                            <a href="javascript:;" class="animated__button animated__button--blue-1">{{ __tr('send') }}</a>
+                            <a href="javascript:;" class="animated__button animated__button--yellow">{!! __tr('delete') !!}</a>
+                            <a href="javascript:;" class="animated__button animated__button--blue-1">{!! __tr('send') !!}</a>
                         </div>
                     </form>
                 </div>

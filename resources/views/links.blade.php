@@ -5,14 +5,14 @@
         <section class="secondary__cover aks__minister--cover"
                  style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
-                <h1>{{ __tr('side_links') }}</h1>
+                <h1>{!! __tr('side_links') !!}</h1>
             </div>
         </section>
         <section class="links">
             <ul class="background__zebra">
                 <li class="multicolor">
                     <div class="multicolor-container links--row">
-                        <a href="javascript:;" class="links--row--first--lvl">{{ __tr('partners') }}</a>
+                        <a href="javascript:;" class="links--row--first--lvl">{!! __tr('partners') !!}</a>
                         <ul class="links--hidden--content">
                             @foreach($LinksCoWorkers ->chunk(2) as $chunk)
                                 <li class="links__partner--row">
@@ -34,7 +34,7 @@
                 </li>
                 <li class="multicolor">
                     <div class="multicolor-container links--row">
-                        <a href="javascript:;" class="links--row--first--lvl">{{ __tr('ngos') }}</a>
+                        <a href="javascript:;" class="links--row--first--lvl">{!! __tr('ngos') !!}</a>
                         <ul class="links--hidden--content">
                             <li class="links__non--governmental--organizations">
                                 <div class="container-fluid p-0">
@@ -92,7 +92,7 @@
                 </li>
                 <li class="multicolor">
                     <div class="multicolor-container links--row">
-                        <a href="javascript:;" class="links--row--first--lvl">{{ __tr('ccos') }}</a>
+                        <a href="javascript:;" class="links--row--first--lvl">{!! __tr('ccos') !!}</a>
                         <ul class="links--hidden--content">
                             @foreach($LinksCcos as $LinksCco)
                                 <li class="charity__row">
@@ -151,7 +151,7 @@
                 </li>
                 <li class="multicolor">
                     <div class="multicolor-container links--row">
-                        <a href="javascript:;" class="links--row--first--lvl">{{ __tr('side_links') }}</a>
+                        <a href="javascript:;" class="links--row--first--lvl">{!! __tr('side_links') !!}</a>
                         <ul class="links__websites-container links--hidden--content">
                             <li>
                                 <ul class="worker__number__email">
@@ -169,7 +169,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a class="links__second--lvl" href="javascript:;">{{ __tr('ministries') }}</a>
+                                <a class="links__second--lvl" href="javascript:;">{!! __tr('ministries') !!}</a>
                                 <ul class="links__websites--row worker__number__email">
                                     @foreach($LinksLinks as $Link)
                                         @if($Link->type == 'ministries' )
@@ -185,7 +185,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a class="links__second--lvl" href="javascript:;">{{ __tr('governmental_bodies') }}</a>
+                                <a class="links__second--lvl" href="javascript:;">{!! __tr('governmental_bodies') !!}</a>
                                 <ul class="links__websites--row worker__number__email">
                                     @foreach($LinksLinks as $Link)
                                         @if($Link->type == 'ra_government_bodies' )
@@ -201,7 +201,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a class="links__second--lvl" href="javascript:;">{{ __tr('other_links') }}</a>
+                                <a class="links__second--lvl" href="javascript:;">{!! __tr('other_links') !!}</a>
                                 <ul class="links__websites--row worker__number__email">
                                     @foreach($LinksLinks as $Link)
                                         @if($Link->type == 'other_links' )
@@ -217,7 +217,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a class="links__second--lvl" href="javascript:;">{{ __tr('regions') }}</a>
+                                <a class="links__second--lvl" href="javascript:;">{!! __tr('regions') !!}</a>
                                 <ul class="links__websites--row worker__number__email">
                                     @foreach($LinksLinks as $Link)
                                         @if($Link->type == 'regions' )

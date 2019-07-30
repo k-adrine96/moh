@@ -46,13 +46,13 @@
                         <a href="javascript:;">info@moh.am</a>
                     </li>
                     <li>
-                        <h1>{!! __tr('phone-number') !!}`</h1>
+                        <h1>{!! __tr('phone-number') !!}</h1>
                         <p> (+374 60) 80 80 03 /2303</p>
                     </li>
                     <li>
-                        <h1>{!! __tr('info-responsible') !!}`</h1>
+                        <h1>{!! __tr('info-responsible') !!}</h1>
                         <p>(+374 60) 80-80-03 /2301 {!! __tr('or') !!} <br>
-                            2302, {!! __tr('email') !!}՝ <a href="javascript:;">pr@moh.am</a></p>
+                            2302, {!! __tr('email') !!} <a href="javascript:;">pr@moh.am</a></p>
                     </li>
                     <li>
                         <h1>{!! __tr('last-update') !!}`</h1>

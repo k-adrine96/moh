@@ -7,7 +7,7 @@
                         <li><a href="{{ route('home') }}"></a></li>
                         <li>
                             <a href="{{ route('home') }}">
-                                {{ __tr('ramoh') }}
+                                {!! __tr('ramoh') !!}
                             </a>
                         </li>
                     </ul>
@@ -40,10 +40,10 @@
                     <div class="row">
                         <div class="col-12 p-0 d-flex align-items-center justify-content-end">
                             <ul class="header__navigation d-flex p-1">
-                                <li><a href="{{ route('home') }}">{{ __tr('header_home') }}</a></li>
-                                <li><a href="{{ route('pages' , 'contact-us') }}">{{ __tr('header_contact-us') }}</a></li>
-                                <li><a href="{{ route('pages' , 'minister-page') }}">{{ __tr('header_minister') }}</a></li>
-                                <li><a href="{{ route('pages' , 'legal-acts') }}">{{ __tr('header_legal-acts') }}</a></li>
+                                <li><a href="{{ route('home') }}">{!! __tr('header_home') !!}</a></li>
+                                <li><a href="{{ route('pages' , 'contact-us') }}">{!! __tr('header_contact-us') !!}</a></li>
+                                <li><a href="{{ route('pages' , 'minister-page') }}">{!! __tr('header_minister') !!}</a></li>
+                                <li><a href="{{ route('pages' , 'legal-acts') }}">{!! __tr('header_legal-acts') !!}</a></li>
                             </ul>
                             <div class="burger__menu">
                                 <div class="burger__menu--lines burger__menu--line-1"></div>

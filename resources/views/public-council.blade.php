@@ -5,14 +5,14 @@
         <section class="secondary__cover aks__minister--cover"
                  style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
-                <h1>{{ __tr('side_public_council') }}</h1>
+                <h1>{!! __tr('side_public_council') !!}</h1>
             </div>
         </section>
         <section class="public__council">
             <ul class="background__zebra">
                 <li class="multicolor">
                     <div class="multicolor-container public__council--row">
-                        <a href="javascript:;" class="public__council--row--first--lvl">{{ __tr('staff_working_procedures') }}</a>
+                        <a href="javascript:;" class="public__council--row--first--lvl">{!! __tr('staff_working_procedures') !!}</a>
                         <ul class="public__council--hidden--content">
                             <li>
                                 <div class="pdf__info">
@@ -37,7 +37,7 @@
                 </li>
                 <li class="multicolor">
                     <div class="multicolor-container public__council--row">
-                        <a href="javascript:;" class="public__council--row--first--lvl">{{ __tr('sessions') }}</a>
+                        <a href="javascript:;" class="public__council--row--first--lvl">{!! __tr('sessions') !!}</a>
                         <ul class="background__zebra public__council--hidden--content">
                             <li >
                                 <div class="pdf__info">
@@ -65,7 +65,7 @@
                 </li>
                 <li class="multicolor">
                     <div class="multicolor-container public__council--row">
-                        <a href="javascript:;" class="public__council--row--first--lvl">{{ __tr('bids') }}</a>
+                        <a href="javascript:;" class="public__council--row--first--lvl">{!! __tr('bids') !!}</a>
                         <ul class="background__zebra public__council--hidden--content">
                             <li >
                                 <div class="pdf__info">
@@ -93,7 +93,7 @@
                 </li>
                 <li class="multicolor">
                     <div class="multicolor-container public__council--row">
-                        <a href="javascript:;" class="public__council--row--first--lvl">{{ __tr('results') }}</a>
+                        <a href="javascript:;" class="public__council--row--first--lvl">{!! __tr('results') !!}</a>
                         <ul class="background__zebra public__council--hidden--content">
                             <li >
                                 <div class="pdf__info">
