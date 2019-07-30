@@ -38,24 +38,24 @@
             <div class="footer__container--info">
                 <ul class="footer__container--info--contact d-flex justify-content-center">
                     <li>
-                        <h1>{{ __tr('address') }}`</h1>
-                        <p>{{ __tr('location') }}</p>
+                        <h1>{!! __tr('address') !!}`</h1>
+                        <p>{!! __tr('location') !!}</p>
                     </li>
                     <li>
-                        <h1>{{ __tr('email') }}</h1>
+                        <h1>{!! __tr('email') !!}</h1>
                         <a href="javascript:;">info@moh.am</a>
                     </li>
                     <li>
-                        <h1>{{ __tr('phone-number') }}`</h1>
+                        <h1>{!! __tr('phone-number') !!}`</h1>
                         <p> (+374 60) 80 80 03 /2303</p>
                     </li>
                     <li>
-                        <h1>{{ __tr('info-responsible') }}`</h1>
-                        <p>(+374 60) 80-80-03 /2301 {{ __tr('or') }} <br>
-                            2302, {{ __tr('email') }}՝ <a href="javascript:;">pr@moh.am</a></p>
+                        <h1>{!! __tr('info-responsible') !!}`</h1>
+                        <p>(+374 60) 80-80-03 /2301 {!! __tr('or') !!} <br>
+                            2302, {!! __tr('email') !!}՝ <a href="javascript:;">pr@moh.am</a></p>
                     </li>
                     <li>
-                        <h1>{{ __tr('last-update') }}`</h1>
+                        <h1>{!! __tr('last-update') !!}`</h1>
                         <p>21․02․2019</p>
                     </li>
                 </ul>
