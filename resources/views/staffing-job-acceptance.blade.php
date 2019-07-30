@@ -4,7 +4,7 @@
     <main>
         <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
-                <h1>Աշխատանքի ընդունման կարգ</h1>
+                <h1>{{ __tr('side_job_procedure') }}</h1>
             </div>
         </section>
         <section class="legal__acts">

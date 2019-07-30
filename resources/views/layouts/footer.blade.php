@@ -38,30 +38,30 @@
             <div class="footer__container--info">
                 <ul class="footer__container--info--contact d-flex justify-content-center">
                     <li>
-                        <h1>Հասցե`</h1>
-                        <p>Երևան 0010, <br> Կառավարական տուն N 3</p>
+                        <h1>{{ __tr('address') }}`</h1>
+                        <p>{{ __tr('location') }}</p>
                     </li>
                     <li>
-                        <h1>Էլ․ փոստ`</h1>
+                        <h1>{{ __tr('email') }}</h1>
                         <a href="javascript:;">info@moh.am</a>
                     </li>
                     <li>
-                        <h1>Տեղեկատու հեռախոս`</h1>
+                        <h1>{{ __tr('phone-number') }}`</h1>
                         <p> (+374 60) 80 80 03 /2303</p>
                     </li>
                     <li>
-                        <h1>Տեղեկատվության պատասխանատու`</h1>
-                        <p>(+374 60) 80-80-03 /2301 կամ <br>
-                            2302, էլ. փոստ՝ <a href="javascript:;">pr@moh.am</a></p>
+                        <h1>{{ __tr('info-responsible') }}`</h1>
+                        <p>(+374 60) 80-80-03 /2301 {{ __tr('or') }} <br>
+                            2302, {{ __tr('email') }}՝ <a href="javascript:;">pr@moh.am</a></p>
                     </li>
                     <li>
-                        <h1>Թարմացվել է`</h1>
+                        <h1>{{ __tr('last-update') }}`</h1>
                         <p>21․02․2019</p>
                     </li>
                 </ul>
             </div>
             <div class="footer__container--copyright">
-                <p>© 2019, Հեղինակային իրավունքները պաշտպանված են:</p>
+                <p>© @php echo date('Y'); @endphp, {{ __tr('rights-reserved') }}</p>
                 <!--<h1>Պատրաստված է` <a href="http://mgplab.com/" target="_blank">-->
                     <!--MEGAPOLIS[LAB]-->
                 <!--</a>-->

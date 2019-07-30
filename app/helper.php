@@ -87,12 +87,9 @@ if (!function_exists('getVideoKey')) {
         }else{
             $videoKey = substr($str, strrpos($str, '/') + 1);
         }
+
         return $videoKey;
 
-
-//        if (($pos = strpos($data, "_")) !== FALSE) {
-//            $whatIWant = substr($data, $pos+1);
-//        }
     }
 
 }
@@ -101,5 +98,18 @@ if(!function_exists('locURL')){
 
     function locURL($url, $array = []){
         return LaravelLocalization::getLocalizedURL(app()->getLocale(), !empty($array) ? url($url, $array) : $url);
+    }
+}
+
+if(!function_exists('__tr')) {
+    function __tr($slug) {
+
+        $tr = \App\WebSiteTranslation::whereTextSlug($slug)->first();
+
+        if(!is_null($tr)) {
+            return $tr->getTranslatedAttribute('text');
+        } else {
+            return $slug;
+        }
     }
 }

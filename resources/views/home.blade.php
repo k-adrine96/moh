@@ -11,7 +11,7 @@
                             @if($sliderInfo->url)
                                 <div class="main-cover-button">
                                     <a href="{{$sliderInfo->url}}"
-                                       class="animated__button animated__button--blue-1">Ավելին</a>
+                                       class="animated__button animated__button--blue-1">{{ __tr('more') }}</a>
                                 </div>
                             @endif
                         </div>
@@ -22,7 +22,7 @@
         <section class="news__background">
             <div class="news__content mx-auto">
                 <h1 class="news__content--header">
-                    ՆՈՐՈՒԹՅՈՒՆՆԵՐ
+                    {{ __tr('side_news') }}
                 </h1>
                 <div class="news__content--slider">
                     @foreach($news as $singleNews)
@@ -40,7 +40,7 @@
                                     <span>{{ $singleNews->date->formatLocalized('%B %d, %Y') }}</span>
                                     <h1>{{$singleNews->getTranslatedAttribute('title')}}</h1>
                                     <div class="news-description text-justify editor-content">{!! getDescription($singleNews->getTranslatedAttribute('description')) !!}</div>
-                                    <a href="{{route('show.news.individual' , $singleNews->id)}}" class="animated__button animated__button--blue">Ավելին</a>
+                                    <a href="{{route('show.news.individual' , $singleNews->id)}}" class="animated__button animated__button--blue">{{ __tr('more') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
         <section class="announcements">
             <div class="announcements--cont mx-auto">
                 <div class="announcements--cont--header mb-4">
-                    <h1>հայտարարություններ</h1>
+                    <h1>{{ __tr('side_announcements') }}</h1>
                 </div>
                 <div class="announcements--cont--slider">
                     @foreach($announcements as $announcement)
@@ -64,7 +64,7 @@
                             <div class="announcement-description text-justify editor-content">
                                 {!! getDescription($announcement->getTranslatedAttribute('description')) !!}
                             </div>
-                            <a href="{{route('show.announcement.individual' , $announcement->id)}}" class="animated__button animated__button--yellow-small">Ավելին</a>
+                            <a href="{{route('show.announcement.individual' , $announcement->id)}}" class="animated__button animated__button--yellow-small">{{ __tr('more') }}</a>
                         </div>
                     @endforeach
                 </div>
@@ -76,7 +76,7 @@
         </section>
         <section class="videos__background">
             <div class="videos__background--content mx-auto">
-                <h1>ՏԵՍԱՆՅՈւԹԵՐ</h1>
+                <h1>{{ __tr('side_videos') }}</h1>
                 <div class="videos__background--content--slider">
                     @foreach($videos as $video)
                         <div class="video__items">
@@ -89,7 +89,7 @@
                                 <div class="video__items--text">
                                     <span>{{ $video->date->formatLocalized('%B %d, %Y') }}</span>
                                     <h1>{{$video->getTranslatedAttribute('title')}}</h1>
-                                    <a href="{{route('show.video.individual' , $video->id)}}" class="margin-auto animated__button animated__button--blue">ավելին</a>
+                                    <a href="{{route('show.video.individual' , $video->id)}}" class="margin-auto animated__button animated__button--blue">{{ __tr('more') }}</a>
                                 </div>
                             </div>
                         </div>

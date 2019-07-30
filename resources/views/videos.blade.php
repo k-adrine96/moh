@@ -4,7 +4,7 @@
     <main>
         <section class="secondary__cover" style="background: #0c5460">
             <div class="secondary__cover--content">
-                <h1>Տեսադարան</h1>
+                <h1>{{ __tr('side_videos') }}</h1>
             </div>
         </section>
         <section class="videos">

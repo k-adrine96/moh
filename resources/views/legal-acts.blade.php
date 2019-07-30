@@ -4,7 +4,7 @@
 	<main>
         <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
-                <h1>Իրավական ակտեր</h1>
+                <h1>{{ __tr('header_legal-acts') }}</h1>
             </div>
         </section>
         <section class="legal__acts">
@@ -12,15 +12,15 @@
                 <div class="legal__acts--container--form">
                     <form action="">
                         <div class="form--content">
-                            <label for="legal-acts-type">տեսակ</label>
+                            <label for="legal-acts-type">{{ __tr('type') }}</label>
                             <select title="" id="legal-acts-type" class="Legal__acts--type" style="width: 100%" name="type_id">
-                                <option value="0">Բոլորը</option>
+                                <option value="0">{{ __tr('all') }}</option>
                                 @foreach($actsTypes as $actsType)
                                     <option value="{{$actsType->id}}">{{$actsType->getTranslatedAttribute('name')}}</option>
                                 @endforeach
                             </select>
                             <div class="form-group">
-                                <label for="date">ամսաթիվ</label>
+                                <label for="date">{{ __tr('date') }}</label>
                                 <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
                                     <input name="date" placeholder="Ամսաթիվ" type="text" id="date" class="form-control datetimepicker-input"
                                            data-target="#datetimepicker4"/>
@@ -31,10 +31,10 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="legal-acts-name">անվանում</label>
+                                <label for="legal-acts-name">{{ __tr('file_name') }}</label>
                                 <input name="name" type="text" class="form-control" id="legal-acts-name" placeholder="Անվանում">
                             </div>
-                            <div class="text-center"><button type="submit" class=" custom__button btn">Որոնել</button></div>
+                            <div class="text-center"><button type="submit" class=" custom__button btn">{{ __tr('search') }}</button></div>
                             <script type="text/javascript">
                               $(function () {
                                 $('#datetimepicker4').datetimepicker({
