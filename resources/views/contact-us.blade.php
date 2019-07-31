@@ -30,7 +30,7 @@
                             <input type="text" class="form-control" placeholder="{!! strip_tags(__tr('theme')) !!}" aria-label="Username" aria-describedby="">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="{!! strip_tags(__tr('placeholder_message')) !!}"></textarea>
+                            <textarea class="form-control lh-04" placeholder="{!! strip_tags(__tr('placeholder_message')) !!}"></textarea>
                         </div>
                         <div class="contact__us--btns d-flex justify-content-center">
                             <a href="javascript:;" class="animated__button animated__button--yellow">{!! __tr('delete') !!}</a>

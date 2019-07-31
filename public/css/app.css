@@ -3922,6 +3922,10 @@ svg {
   margin-left: 50px;
 }
 
+.lh-04 {
+  line-height: 0.4;
+}
+
 .burger__menu {
   cursor: pointer;
   margin-right: 5.6rem;
