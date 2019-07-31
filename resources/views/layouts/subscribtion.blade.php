@@ -20,8 +20,5 @@
             </div>
             <a href="javascript:;" class="margin-auto animated__button animated__button--yellow">{!! __tr('sub_subscribe') !!}</a>
         </div>
-        <div class="subscription__content--info pt-4">
-            <a href="javascript:;">{!! __tr('sub_privacy') !!}</a>
-        </div>
     </div>
 </section>
