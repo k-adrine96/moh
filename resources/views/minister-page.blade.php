@@ -89,7 +89,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><img src="/img/email-1-icon.png" alt=""></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="{!! __tr('email') !!}" aria-label="Username"
+                            <input type="text" class="form-control" placeholder='{!! __tr('email') !!}' aria-label="Username"
                                    aria-describedby="basic-addon1">
                         </div>
                         <div class="form-group">
