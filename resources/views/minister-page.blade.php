@@ -93,7 +93,7 @@
                                    aria-describedby="basic-addon1">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="{!! strip_tags(__tr('placeholder_message')) !!}"></textarea>
+                            <textarea class="form-control" placeholder="<?php echo strip_tags(__tr('placeholder_message')); ?>"></textarea>
                         </div>
                         <div class="ask__minister--btns d-flex justify-content-center">
                             <a href="javascript:;" class="animated__button animated__button--yellow">{!! __tr('delete') !!}</a>
