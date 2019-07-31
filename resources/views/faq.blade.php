@@ -9,7 +9,7 @@
         </section>
         <section class="faq">
             <div class="faq__header">
-                <h1>հաճախ տրվող հարցեր</h1>
+                <h1>{!! __tr('side_faq') !!}</h1>
             </div>
             <ul class="background__zebra">
                 @foreach($faqCategories as $faqCategory)
