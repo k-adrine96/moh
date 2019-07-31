@@ -8,14 +8,14 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="name"><img src="/img/name-icon.png" alt=""></span>
                 </div>
-                <input type="text" class="form-control subs__input" placeholder="Անուն" aria-label="Username"
+                <input type="text" class="form-control subs__input" placeholder="{!! __tr('name') !!}" aria-label="Username"
                        aria-describedby="name">
             </div>
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="email"><img src="/img/email-icon.png" alt=""></span>
                 </div>
-                <input type="email" class="form-control subs__input" placeholder="Էլ․ հասցե"
+                <input type="email" class="form-control subs__input" placeholder="{!! __tr('email') !!}"
                        aria-label="Username" aria-describedby="email">
             </div>
             <a href="javascript:;" class="margin-auto animated__button animated__button--yellow">{!! __tr('sub_subscribe') !!}</a>
