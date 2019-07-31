@@ -89,11 +89,11 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><img src="/img/email-1-icon.png" alt=""></span>
                             </div>
-                            <input type="text" class="form-control" placeholder='{!! __tr('email') !!}' aria-label="Username"
+                            <input type="text" class="form-control" placeholder="{!! __tr('email') !!}" aria-label="Username"
                                    aria-describedby="basic-addon1">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="{!! __tr('placeholder_message') !!}"></textarea>
+                            <textarea class="form-control" placeholder="{{ __tr('placeholder_message') }}"></textarea>
                         </div>
                         <div class="ask__minister--btns d-flex justify-content-center">
                             <a href="javascript:;" class="animated__button animated__button--yellow">{!! __tr('delete') !!}</a>
