@@ -61,7 +61,7 @@
                 </ul>
             </div>
             <div class="footer__container--copyright">
-                <p>© @php echo date('Y') .','. __tr('rights-reserved'); @endphp</p>
+                <p>© @php echo date('Y'); @endphp, {!! __tr('rights-reserved') !!}</p>
                 <!--<h1>Պատրաստված է` <a href="http://mgplab.com/" target="_blank">-->
                     <!--MEGAPOLIS[LAB]-->
                 <!--</a>-->
