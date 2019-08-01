@@ -4,7 +4,7 @@
             @foreach($socials as $social)
                 @if(!is_null($social->slug))
                     <li class="rounded-circle">
-                        <a href="{{$social->url}}">
+                        <a href="{{$social->url}}" target="_blank">
                             <i class="{{$social->slug}}--icon"></i>
                         </a>
                     </li>
