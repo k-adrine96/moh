@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App, App\Faq, App\News, App\Videos, App\Budget, App\Report;
-use App\PcStaff, App\PcAppeal, App\PcResult, App\Politics;
+use App\PcStaff, App\PcAppeal, App\PcResult, App\Politics, App\Social;
 use App\Superior, App\National, App\LegalAct, App\Partners;
 use App\Research, App\LinksNgo, App\LinksCco, App\PcSession;
 use App\Screening, App\LinksLink, App\Statistic, App\Admission;
@@ -26,6 +26,7 @@ class PagesController extends Controller
     {
         $partnersRow1 = Partners::where('slider_row', 1)->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
         $partnersRow2 = Partners::where('slider_row', 2)->orderBy('order', 'desc')->orderBy('id', 'desc')->get();
+        $socials      = Social::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
         if($page === 'minister-staff')
         {
@@ -309,7 +310,7 @@ class PagesController extends Controller
                                             'partnersRow1' , 'partnersRow2' , 'minHistoryItems' ,
                                             'minHistoryCats' , 'legalActs' , 'actsTypes' , 'LinksCoWorkers' ,
                                             'LinksNgos' , 'LinksCcos' , 'LinksLinks' , 'parents' , 'faqs' ,
-                                            'faqCategories' , 'PcStaffs' , 'PcAppeals' , 'PcResults' , 'PcSessions'));
+                                            'faqCategories' , 'PcStaffs' , 'PcAppeals' , 'PcResults' , 'PcSessions' , 'socials'));
     }
 
     public function homepage(){
@@ -319,9 +320,10 @@ class PagesController extends Controller
         $partnersRow1  = Partners::where('slider_row', 1)->get();
         $partnersRow2  = Partners::where('slider_row', 2)->get();
         $announcements = Announcements::latest()->take(5)->get();
+        $socials       = Social::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
         $slidersInfo   = HomepageSlider::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
-        return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partnersRow1' , 'partnersRow2'));
+        return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partnersRow1' , 'partnersRow2' , 'socials'));
 
     }
 
@@ -331,8 +333,9 @@ class PagesController extends Controller
         $partnersRow1   = Partners::where('slider_row', 1)->get();
         $partnersRow2   = Partners::where('slider_row', 2)->get();
         $coverPhoto     = CoverPhotos::where('page_slug', 'single-news')->first();
+        $socials        = Social::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
-        return view('single-news' , compact('newsIndividual' , 'coverPhoto', 'partnersRow1' , 'partnersRow2'));
+        return view('single-news' , compact('newsIndividual' , 'coverPhoto', 'partnersRow1' , 'partnersRow2' , 'socials'));
     }
 
     public function showAnnouncementIndividual($id){
@@ -340,9 +343,10 @@ class PagesController extends Controller
         $partnersRow1           = Partners::where('slider_row', 1)->get();
         $partnersRow2           = Partners::where('slider_row', 2)->get();
         $announcementIndividual = Announcements::where('id', $id)->first();
+        $socials                = Social::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
         $coverPhoto             = CoverPhotos::where('page_slug', 'single-announcement')->first();
 
-        return view('single-announcement' , compact('announcementIndividual' , 'coverPhoto', 'partnersRow1' , 'partnersRow2'));
+        return view('single-announcement' , compact('announcementIndividual' , 'coverPhoto', 'partnersRow1' , 'partnersRow2' , 'socials'));
     }
 
     public function showVideoIndividual($id){
@@ -351,8 +355,9 @@ class PagesController extends Controller
         $partnersRow1    = Partners::where('slider_row', 1)->get();
         $partnersRow2    = Partners::where('slider_row', 2)->get();
         $coverPhoto      = CoverPhotos::where('page_slug', 'single-video')->first();
+        $socials         = Social::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
-        return view('single-video' , compact('videoIndividual' , 'coverPhoto' , 'partnersRow1' , 'partnersRow2'));
+        return view('single-video' , compact('videoIndividual' , 'coverPhoto' , 'partnersRow1' , 'partnersRow2' , 'socials'));
     }
 
     public function fileUpload(Request $request)
