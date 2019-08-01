@@ -1,36 +1,15 @@
 <footer class="footer">
     <div class="footer__container--social">
         <ul class="footer--social d-flex align-items-center justify-content-center">
-            <li class="rounded-circle">
-                <a href="javascript:;">
-                    <i class="facebook--icon"></i>
-                </a>
-            </li>
-            <li class="rounded-circle">
-                <a href="javascript:;">
-                    <i class="youtube--icon"></i>
-                </a>
-            </li>
-            <li class="rounded-circle">
-                <a href="javascript:;">
-                    <i class="linkedin--icon"></i>
-                </a>
-            </li>
-            <li class="rounded-circle">
-                <a href="javascript:;">
-                    <i class="google--icon"></i>
-                </a>
-            </li>
-            <li class="rounded-circle">
-                <a href="javascript:;">
-                    <i class="twitter--icon"></i>
-                </a>
-            </li>
-            <li class="rounded-circle">
-                <a href="javascript:;">
-                    <i class="instagram--icon"></i>
-                </a>
-            </li>
+            @foreach($socials as $social)
+                @if(!is_null($social->slug))
+                    <li class="rounded-circle">
+                        <a href="{{$social->url}}">
+                            <i class="{{$social->slug}}--icon"></i>
+                        </a>
+                    </li>
+                @endif
+            @endforeach
         </ul>
     </div>
     <div class="footer-main-content">
