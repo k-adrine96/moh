@@ -309,8 +309,8 @@ class PagesController extends Controller
                                             'minInfoItems' , 'minInfoCats' , 'filesInfo' , 'filesCats' ,
                                             'partnersRow1' , 'partnersRow2' , 'minHistoryItems' ,
                                             'minHistoryCats' , 'legalActs' , 'actsTypes' , 'LinksCoWorkers' ,
-                                            'LinksNgos' , 'LinksCcos' , 'LinksLinks' , 'parents' , 'faqs' ,
-                                            'faqCategories' , 'PcStaffs' , 'PcAppeals' , 'PcResults' , 'PcSessions' , 'socials'));
+                                            'LinksNgos' , 'LinksCcos' , 'LinksLinks' , 'parents' , 'faqs' , 'socials' ,
+                                            'faqCategories' , 'PcStaffs' , 'PcAppeals' , 'PcResults' , 'PcSessions'));
     }
 
     public function homepage(){
