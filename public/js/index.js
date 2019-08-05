@@ -41,4 +41,9 @@ $(document).ready(function () {
   onlyToggle('.faq__second-lvl', '.faq__second--hidden--content');
   onlyToggle('.public__council--row--first--lvl', '.public__council--hidden--content');
 
+
+  $('.print-page').on('click',function () {
+    window.print();
+  });
+
 });

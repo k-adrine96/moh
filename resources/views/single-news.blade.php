@@ -29,6 +29,9 @@
                 </div>
             </div>
         </section>
+        <section class="main__cont__size print-container">
+            <a class="print-page" href="javascript:;"></a>
+        </section>
     </main>
 @endsection
 @push('css')

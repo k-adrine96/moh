@@ -94,7 +94,7 @@ svg {
     font-style: normal;
 
     src: url(/fonts/slick.eot?ced611daf7709cc778da928fec876475);
-    src: url(/fonts/slick.eot?ced611daf7709cc778da928fec876475?#iefix) format('embedded-opentype'), url(/fonts/slick.woff?b7c9e1e479de3b53f1e4e30ebac2403a) format('woff'), url(/fonts/slick.ttf?d41f55a78e6f49a5512878df1737e58a) format('truetype'), url(/fonts/slick.svg?f97e3bbf73254b0112091d0192f17aec#slick) format('svg');
+    src: url(/fonts/slick.eot?ced611daf7709cc778da928fec876475?#iefix) format('embedded-opentype'), url(/fonts/slick.woff?b7c9e1e479de3b53f1e4e30ebac2403a) format('woff'), url(/fonts/slick.ttf?d41f55a78e6f49a5512878df1737e58a) format('truetype'), url(/fonts/slick.svg?526d7fdf63614222d376257221e8b754#slick) format('svg');
 }
 /* Arrows */
 .slick-prev,
@@ -400,7 +400,7 @@ svg {
     display: none;
 }
 .header {
-  height: 10rem;
+  height: 14rem;
   padding-top: 1.8rem;
   -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
           box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
@@ -1165,12 +1165,19 @@ svg {
 }
 
 .menu--form {
-  margin: 10rem auto 0;
+  text-align: -webkit-right;
+  margin-top: 1rem;
 }
 
 .menu--form .input-group {
-  margin-left: 4rem;
-  width: 32rem;
+  margin-right: 47px;
+  width: 25rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu--form .input-group {
+    margin-right: 0;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1180,11 +1187,12 @@ svg {
 }
 
 .menu--form .input-group input {
-  height: 5rem;
+  height: 4rem;
   border-radius: 30px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #E6E6E6;
   font-size: 1.8rem;
   padding-left: 2rem;
+  border-right: none;
 }
 
 @media only screen and (max-height: 600px) {
@@ -1196,7 +1204,7 @@ svg {
 .menu--form .input-group .input-group-append .input-group-text {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #E6E6E6;
   background-color: #FFFFFF;
   width: 4rem;
   padding: 0;
@@ -1205,7 +1213,7 @@ svg {
 .menu--form .input-group .form-control:focus {
   color: #495057;
   background-color: #FFFFFF;
-  border-color: #FFFFFF;
+  border-color: #4D4D4D;
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1709,6 +1717,42 @@ svg {
   font-size: 1.8rem;
 }
 
+.print-container .print-page {
+  display: block;
+  background-image: url("/img/print-icon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+}
+
+@media print {
+  .header {
+    display: none;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .subscription {
+    display: none;
+  }
+
+  .partners {
+    display: none;
+  }
+
+  .empty-div {
+    display: none;
+  }
+
+  .secondary__cover {
+    display: none;
+  }
+}
+
 .language .select2-container {
   width: 95px !important;
   outline: none !important;
@@ -1888,7 +1932,7 @@ svg {
 }
 
 .empty-div {
-  height: 10rem;
+  height: 14rem;
 }
 
 .only__text {
@@ -1935,11 +1979,11 @@ svg {
   }
 }
 
-.main__cover--item-container-cont {
+.main__cover--item-container-cont > {
   max-width: 60rem;
 }
 
-.main__cover--item-container-cont h2 {
+.main__cover--item-container-cont > h2 {
   font-size: 3.8rem;
   color: #4D4D4D;
   font-weight: lighter;
@@ -1952,16 +1996,16 @@ svg {
 }
 
 @media only screen and (max-width: 767px) {
-  .main__cover--item-container-cont h2 {
+  .main__cover--item-container-cont > h2 {
     font-size: 2.4rem;
   }
 }
 
-.main__cover--item-container-cont h2 span {
+.main__cover--item-container-cont > h2 span {
   color: #FFBC35;
 }
 
-.main__cover--item-container-cont p {
+.main__cover--item-container-cont > p {
   font-size: 1.8rem;
   color: #4D4D4D;
   margin: 2.3rem auto;
@@ -1973,7 +2017,7 @@ svg {
   -webkit-line-clamp: 4;
 }
 
-.main__cover--item-container-cont .main-cover-button {
+.main__cover--item-container-cont > .main-cover-button {
   margin-top: 150px;
 }
 
@@ -3931,9 +3975,21 @@ svg {
   margin-right: 5.6rem;
 }
 
+@media only screen and (max-width: 991px) {
+  .burger__menu {
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .burger__menu {
+    margin-right: 0;
+  }
+}
+
 .burger__menu--second {
   position: absolute;
-  top: 60px;
+  top: 16px;
   right: 40px;
   padding-right: 0;
 }
