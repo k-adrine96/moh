@@ -9,11 +9,12 @@
                             <article class="post">
                                 <div class="post-footer">
                                     <h4><a href="{{ $item['url'] }}">{{ strip_tags($item['search_text']) }}</a></h4>
+                                    <br>
                                 </div>
                             </article>
                         </div>
                     @empty
-                        <p class="p--style">@lang('db.F_NO_DATA')</p>
+                        <p class="p--style"></p>
                     @endforelse
                 </div>
             </div>
