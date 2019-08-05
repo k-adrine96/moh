@@ -28,6 +28,7 @@
                     {!! getDescription($newsIndividual->getTranslatedAttribute('description')) !!}
                 </div>
             </div>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://moh.mgplab.com&display=popup"> share this </a>
         </section>
     </main>
 @endsection
