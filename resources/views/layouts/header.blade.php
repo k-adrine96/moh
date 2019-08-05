@@ -55,11 +55,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 p-0 d-flex align-items-center justify-content-end">
-                            <ul class="header__navigation d-flex p-1">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <ul class="header__navigation d-flex">
                                 <li><a href="{{ route('home') }}">{!! __tr('header_home') !!}</a></li>
                                 <li><a href="{{ route('pages' , 'contact-us') }}">{!! __tr('header_contact-us') !!}</a>
                                 </li>
@@ -75,8 +72,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
         </div>
     </div>
 </header>
