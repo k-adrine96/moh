@@ -1,0 +1,31 @@
+.print-container {
+
+  .print-page {
+    display: block;
+    background-image: url("/img/print-icon.jpg");
+    @include backimg();
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media print {
+  .header {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .subscription {
+    display: none;
+  }
+  .partners {
+    display: none;
+  }
+  .empty-div {
+    display: none;
+  }
+  .secondary__cover {
+    display: none;
+  }
+}

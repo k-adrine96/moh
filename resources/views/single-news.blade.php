@@ -30,6 +30,9 @@
             </div>
             <a href="https://www.facebook.com/sharer/sharer.php?u=http://moh.mgplab.com&display=popup"> share this </a>
         </section>
+        <section class="main__cont__size print-container">
+            <a class="print-page" href="javascript:;"></a>
+        </section>
     </main>
 @endsection
 @push('css')
