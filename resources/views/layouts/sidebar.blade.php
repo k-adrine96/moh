@@ -11,9 +11,9 @@
                 @endforeach
             </ul>
         </div>
-        <form class="menu--form" action="">
+        <form class="menu--form" action="/search">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"
+                <input type="text" class="form-control" name="search" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"
                        aria-describedby="search">
                 <div class="input-group-append">
                     <span class="input-group-text" id="search"><img src="/img/search-logo.png" alt=""></span>

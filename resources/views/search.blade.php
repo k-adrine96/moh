@@ -31,7 +31,7 @@
 @endsection
 
 @push('js')
-    <script>
-        $('.search-pagination').find('ul').removeClass('pagination').addClass('pagination-custom');
-    </script>
+{{--    <script>--}}
+{{--        $('.search-pagination').find('ul').removeClass('pagination').addClass('pagination-custom');--}}
+{{--    </script>--}}
 @endpush

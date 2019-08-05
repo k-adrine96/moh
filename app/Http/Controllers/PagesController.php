@@ -335,7 +335,7 @@ class PagesController extends Controller
     public function search(Request $request, $keyword)
     {
         $page = $request->get('page', 1);
-        $perPage = 20;
+        $perPage = 15;
         $search = new Search($keyword);
         $items = $search->getResult();
         $count = count($items);

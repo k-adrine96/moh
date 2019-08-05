@@ -92,8 +92,9 @@ class Search extends Model
                     $res = $model->whereTranslation($item, 'like', "%$this->keyword%", ['en', 'ru'], true)->distinct()->get();
 
                     foreach ($res as $_item) {
+                        $_item->file_name ? $searchText = $_item->file_name : $searchText = $_item->$item;
                         $this->result[$_item->getTable() . ':' . $_item->id] = [
-                            'search_text' => $_item->$item,
+                            'search_text' => $searchText,
                             'url' => '/'.$_item->page_url
                         ];
                     }
