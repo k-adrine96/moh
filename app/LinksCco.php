@@ -20,6 +20,8 @@ class LinksCco extends Model
         'order'
     ];
 
+    public $page_url = 'links';
+
     protected $translatable = [
         'description',
         'address'

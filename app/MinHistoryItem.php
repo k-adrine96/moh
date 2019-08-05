@@ -15,6 +15,8 @@ class MinHistoryItem extends Model
         'category_id'
     ];
 
+    public $page_url = 'history';
+
     protected $translatable = ['name'];
 
     public function category()

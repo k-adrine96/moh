@@ -18,6 +18,8 @@ class Politics extends Model
 		'order'
     ];
 
+    public $page_url = 'politics';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [ 'file_name' ];

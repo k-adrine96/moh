@@ -16,6 +16,8 @@ class Report extends Model
         'file_date'
     ];
 
+    public $page_url = 'reports';
+
     protected $dates = [
         'file_date'
     ];

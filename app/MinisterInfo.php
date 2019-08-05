@@ -15,6 +15,8 @@ class MinisterInfo extends Model
         'category_id'
     ];
 
+    public $page_url = 'minister-page';
+
     protected $translatable = ['description'];
 
     public function category()

@@ -18,6 +18,8 @@ class AdvertisingPermission extends Model
         'order'
     ];
 
+    public $page_url = 'advertising-permission';
+
     protected $dates = ['file_date'];
 
     protected $translatable = ['file_name'];

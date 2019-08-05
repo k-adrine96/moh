@@ -18,6 +18,8 @@ class Budget extends Model
         'order'
     ];
 
+    public $page_url = 'budget';
+
     protected $dates = ['file_date'];
 
     protected $translatable = ['file_name'];

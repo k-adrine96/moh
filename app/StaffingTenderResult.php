@@ -18,6 +18,8 @@ class StaffingTenderResult extends Model
         'order'
     ];
 
+    public $page_url = 'staffing-tender-results';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [ 'file_name' ];

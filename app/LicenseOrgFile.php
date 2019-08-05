@@ -18,6 +18,8 @@ class LicenseOrgFile extends Model
         'order'
     ];
 
+    public $page_url = 'license-organization';
+
     protected $dates = ['file_date'];
 
     protected $translatable = ['file_name'];

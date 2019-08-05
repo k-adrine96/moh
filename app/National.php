@@ -18,6 +18,8 @@ class National extends Model
         'order'
     ];
 
+    public $page_url = 'national';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [ 'file_name' ];

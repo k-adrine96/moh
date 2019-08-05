@@ -24,6 +24,8 @@ class SsHealthInstituteInfo extends Model
         'order'
     ];
 
+    public $page_url = 'sub-structures-health-institute';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [

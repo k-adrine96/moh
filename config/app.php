@@ -180,6 +180,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        Appstract\BootstrapComponents\BootstrapComponentsServiceProvider::class,
     ],
 
     /*
@@ -229,7 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
-
+        'BootstrapComponents' => Appstract\BootstrapComponents\BootstrapComponentsFacade::class
     ],
 
 ];

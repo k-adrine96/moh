@@ -18,6 +18,8 @@ class AntiCorruptionEvent extends Model
         'order'
     ];
 
+    public $page_url = 'anti-corruption-events';
+
     protected $dates = ['file_date'];
 
     protected $translatable = ['file_name'];

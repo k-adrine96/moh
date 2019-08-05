@@ -18,6 +18,8 @@ class StaffingStaffList extends Model
         'order'
     ];
 
+    public $page_url = 'staffing-staff-list';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [ 'file_name' ];

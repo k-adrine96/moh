@@ -21,6 +21,8 @@ class LicenseOrgInfo extends Model
         'order'
     ];
 
+    public $page_url = 'license-organization';
+
     protected $translatable = [
         'organisation_name',
         'head_position',

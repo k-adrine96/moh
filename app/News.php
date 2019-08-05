@@ -17,6 +17,10 @@ class News extends Model
         'date'
     ];
 
+    public function getPageUrlAttribute() {
+        return 'single-news/'.$this->id;
+    }
+
     protected $translatable = [
         'title',
         'description'

@@ -30,6 +30,7 @@ Route::group(
     ],
     function() {
         Route::get('/', 'PagesController@homepage')->name('home');
+        Route::get('/search/{keyword}', 'PagesController@search')->name('search');
         Route::get('/{page}', 'PagesController@index')->name('pages');
         Route::get('/single-news/{id}', 'PagesController@showNewsIndividual')->name('show.news.individual');
         Route::get('/single-announcement/{id}', 'PagesController@showAnnouncementIndividual')->name('show.announcement.individual');

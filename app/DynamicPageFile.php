@@ -8,7 +8,14 @@ use TCG\Voyager\Traits\Translatable;
 class DynamicPageFile extends Model
 {
     use Translatable;
-    protected $fillable = ['name', 'file', 'file_url' , 'date', 'parent_id' , 'order'];
+    protected $fillable = [
+        'name',
+        'file',
+        'file_url' ,
+        'date',
+        'parent_id' ,
+        'order'
+    ];
 
     protected $dates = ['date'];
 
