@@ -78,7 +78,8 @@ class Search extends Model
     {
         parent::__construct([]);
         $this->keyword = trim($keyword);
-        $this->result = collect();
+        strlen($keyword) >= 3 ? $this->result = collect() : $this->result = 'No Result';
+//        $this->result = collect();
     }
 
     public function getResult()
@@ -93,10 +94,12 @@ class Search extends Model
 
                     foreach ($res as $_item) {
                         $_item->file_name ? $searchText = $_item->file_name : $searchText = $_item->$item;
-                        $this->result[$_item->getTable() . ':' . $_item->id] = [
-                            'search_text' => $searchText,
-                            'url' => '/'.$_item->page_url
-                        ];
+                        if($this->result != 'No Result'){
+                            $this->result[$_item->getTable() . ':' . $_item->id] = [
+                                'search_text' => $searchText,
+                                'url' => '/'.$_item->page_url
+                            ];
+                        }
                     }
                 }
             }

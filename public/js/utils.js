@@ -1,5 +1,25 @@
 (function (window, $) {
 
+  var redirect = function () {
+    if ($('.search_').val().length >= 3) {
+      const url = location.origin + '/search/' + $('.search_').val();
+      location.href = url;
+    }
+  };
+  // $(document).on('click', '.menu--form img', function (e) {
+  //   console.log($(this));
+  //   e.preventDefault();
+  //   redirect();
+  // });
+  $(document).on('keydown', '.search_', function (e) {
+    if (e.key === 'Enter') {
+      redirect();
+    }
+  });
+
+
+
+
   window.stopPropagation = function (el, event) {
     $(el).on(event, function (e) {
       e.stopPropagation();
@@ -37,3 +57,4 @@
   }
 
 })(window, jQuery);
+

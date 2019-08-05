@@ -338,21 +338,29 @@ class PagesController extends Controller
         $perPage = 15;
         $search = new Search($keyword);
         $items = $search->getResult();
-        $count = count($items);
 
         $partnersRow1           = Partners::where('slider_row', 1)->get();
         $partnersRow2           = Partners::where('slider_row', 2)->get();
         $socials                = Social::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
 
-        return view('search', [
-            'partnersRow1' => $partnersRow1,
-            'partnersRow2' => $partnersRow2,
-            'socials' => $socials,
-            'count' => $count,
-            'perPage' => $perPage,
-            'items' => $items->forPage($page, $perPage),
-            'pagination' => \BootstrapComponents::pagination($items, $page, $perPage, '', ['arrows' => true])
-        ]);
+        if($items != 'No Result'){
+            $count = count($items);
+            return view('search', [
+                'partnersRow1' => $partnersRow1,
+                'partnersRow2' => $partnersRow2,
+                'socials' => $socials,
+                'count' => $count,
+                'perPage' => $perPage,
+                'items' => $items->forPage($page, $perPage),
+                'pagination' => \BootstrapComponents::pagination($items, $page, $perPage, '', ['arrows' => true])
+            ]);
+        }else{
+            return view('search', [
+                'partnersRow1' => $partnersRow1,
+                'partnersRow2' => $partnersRow2,
+                'socials' => $socials
+            ]);
+        }
     }
 
     public function homepage(){
