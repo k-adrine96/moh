@@ -18,6 +18,8 @@ class SsDrugMedicalExpertFile extends Model
         'order'
     ];
 
+    public $page_url = 'sub-structures-drug-medical-expertise';
+
     protected $dates = [
         'file_date'
     ];

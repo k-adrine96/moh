@@ -16,6 +16,8 @@ class Statistic extends Model
         'file_date'
     ];
 
+    public $page_url = 'statistics';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [ 'file_name' ];

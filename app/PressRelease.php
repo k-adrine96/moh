@@ -16,6 +16,8 @@ class PressRelease extends Model
         'file_date'
     ];
 
+    public $page_url = 'press-release';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [ 'file_name' ];

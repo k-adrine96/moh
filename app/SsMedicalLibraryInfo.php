@@ -21,6 +21,8 @@ class SsMedicalLibraryInfo extends Model
         'order'
     ];
 
+    public $page_url = 'sub-structures-medical-library';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [

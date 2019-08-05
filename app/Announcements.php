@@ -15,6 +15,10 @@ class Announcements extends Model
         'date'
     ];
 
+    public function getPageUrlAttribute() {
+        return 'single-announcement/'.$this->id;
+    }
+
     protected $translatable = [
         'title',
         'description'

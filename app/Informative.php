@@ -16,6 +16,8 @@ class Informative extends Model
         'file_date'
     ];
 
+    public $page_url = 'informative';
+
     protected $dates = [
         'file_date'
     ];

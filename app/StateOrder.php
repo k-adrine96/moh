@@ -18,6 +18,8 @@ class StateOrder extends Model
         'order'
     ];
 
+    public $page_url = 'state-order';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [ 'file_name' ];

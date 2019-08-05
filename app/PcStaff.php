@@ -17,6 +17,8 @@ class PcStaff extends Model
         'order'
     ];
 
+    public $page_url = 'public-council';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [ 'file_name' ];

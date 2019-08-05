@@ -16,6 +16,8 @@ class SpeechAndInterview extends Model
         'file_date'
     ];
 
+    public $page_url = 'speeches-interviews';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [ 'file_name' ];

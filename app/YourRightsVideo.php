@@ -16,5 +16,7 @@ class YourRightsVideo extends Model
         'order'
     ];
 
+    public $page_url = 'your-rights';
+
     protected $translatable = ['title'];
 }

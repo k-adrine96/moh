@@ -18,6 +18,8 @@ class MohConsultant extends Model
         'order'
     ];
 
+    public $page_url = 'moh-consultants';
+
     protected $translatable = [
         'position',
         'name',

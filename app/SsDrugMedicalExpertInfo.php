@@ -21,6 +21,8 @@ class SsDrugMedicalExpertInfo extends Model
         'order'
     ];
 
+    public $page_url = 'sub-structures-drug-medical-expertise';
+
     protected $translatable = [
         'organisation_name',
         'head_position',

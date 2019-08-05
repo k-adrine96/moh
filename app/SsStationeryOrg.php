@@ -24,6 +24,8 @@ class SsStationeryOrg extends Model
         'order'
     ];
 
+    public $page_url = 'sub-structures-stationery-orgs';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [

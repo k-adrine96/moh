@@ -18,6 +18,8 @@ class Admission extends Model
         'order'
     ];
 
+    public $page_url = 'admission';
+
     protected $dates = ['file_date'];
 
     protected $translatable = ['file_name'];

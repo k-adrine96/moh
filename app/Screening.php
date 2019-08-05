@@ -18,6 +18,8 @@ class Screening extends Model
         'order'
     ];
 
+    public $page_url = 'screening';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [ 'file_name' ];

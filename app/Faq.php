@@ -16,6 +16,8 @@ class Faq extends Model
         'order'
     ];
 
+    public $page_url = 'faq';
+
     protected $translatable = [
         'question',
         'answer'

@@ -16,6 +16,8 @@ class Research extends Model
         'file_date'
     ];
 
+    public $page_url = 'researches';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [ 'file_name' ];

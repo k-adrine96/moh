@@ -16,6 +16,8 @@ class MinistryStaff extends Model
         'email'
     ];
 
+    public $page_url = 'ministry-staff';
+
     protected $translatable = [
         'position',
         'name'

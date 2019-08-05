@@ -16,6 +16,8 @@ class LinksLink extends Model
         'order'
     ];
 
+    public $page_url = 'links';
+
     protected $translatable = [
         'name',
     ];

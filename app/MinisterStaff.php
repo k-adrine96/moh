@@ -18,6 +18,8 @@ class MinisterStaff extends Model
         'text'
     ];
 
+    public $page_url = 'minister-staff';
+
     protected $translatable = [
         'position',
         'name',

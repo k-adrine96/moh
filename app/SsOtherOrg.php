@@ -24,6 +24,8 @@ class SsOtherOrg extends Model
         'order'
     ];
 
+    public $page_url = 'sub-structures-other-orgs';
+
     protected $dates = ['file_date'];
 
     protected $translatable = [

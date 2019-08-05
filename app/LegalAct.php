@@ -19,6 +19,8 @@ class LegalAct extends Model
         'order'
     ];
 
+    public $page_url = 'legal-acts';
+
     protected $dates = ['date'];
 
     protected $translatable = ['name'];
