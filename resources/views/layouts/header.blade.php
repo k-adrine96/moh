@@ -37,15 +37,25 @@
                         </div>
                     </div>
                 </div>
-                <form class="menu--form" action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"
+                {{--<form class="menu--form">--}}
+                    {{--<div class="input-group">--}}
+                        {{--<input type="text" class="form-control" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"--}}
+                               {{--aria-describedby="search">--}}
+                        {{--<div class="input-group-append">--}}
+                            {{--<span class="input-group-text" id="search"><img src="/img/search-logo.png" alt=""></span>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</form>--}}
+                <div class="menu--form">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control search_" name="search" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"
                                aria-describedby="search">
                         <div class="input-group-append">
                             <span class="input-group-text" id="search"><img src="/img/search-logo.png" alt=""></span>
                         </div>
                     </div>
-                </form>
+                </div>
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 p-0 d-flex align-items-center justify-content-end">

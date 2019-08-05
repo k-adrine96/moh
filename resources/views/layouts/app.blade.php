@@ -40,6 +40,19 @@
         <section class="empty-div"></section>
         @yield('content')
         @include('layouts.partners')
+        <section class="hot-line">
+            <div class="hot-line-icon">
+                <a href="javascript:;"></a>
+                <a href="javascript:;">թեժ գիծ</a>
+            </div>
+            <div class="hot-line-info">
+                <i></i>
+                <ul>
+                    <li><p>055 123456</p></li>
+                    <li><p>055 123456</p></li>
+                </ul>
+            </div>
+        </section>
         @include('layouts.subscribtion')
         @include('layouts.footer')
     </div>

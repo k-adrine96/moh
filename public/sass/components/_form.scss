@@ -104,10 +104,14 @@
     .form-control:focus {
       color: #495057;
       background-color: $color-white;
-      border-color: $main-color;
+      border-color: #E6E6E6;
       outline: 0;
       box-shadow: none;
     }
+  }
+
+  img {
+    cursor: pointer;
   }
 }
 .ask__minister--form {

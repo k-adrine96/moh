@@ -984,6 +984,84 @@ svg {
   }
 }
 
+.hot-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1400px;
+  margin: auto;
+  padding-bottom: 25px;
+}
+
+.hot-line-icon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #FFBC35;
+  border-radius: 100%;
+  z-index: 10;
+}
+
+.hot-line-icon a {
+  text-decoration: none;
+}
+
+.hot-line-icon a:first-child {
+  background-image: url("/img/hot-line-icon.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+.hot-line-icon a:last-child {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hot-line-info {
+  position: relative;
+  width: 0;
+  height: 100px;
+  background-color: #FFBC35;
+  border-bottom-right-radius: 85px;
+  border-top-right-radius: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-left: -49px;
+}
+
+.hot-line-info ul li p {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  height: 23px;
+  overflow: hidden;
+}
+
 .animated__button:link,
 .animated__button:visited {
   text-transform: uppercase;
@@ -1213,10 +1291,14 @@ svg {
 .menu--form .input-group .form-control:focus {
   color: #495057;
   background-color: #FFFFFF;
-  border-color: #4D4D4D;
+  border-color: #E6E6E6;
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.menu--form img {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 320px) {
@@ -3822,6 +3904,41 @@ svg {
   }
 }
 
+.search-content {
+  max-width: 1400px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.search-content ul .bordered {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.search-content ul li {
+  padding: 8px 0;
+}
+
+.search-content ul li a {
+  font-size: 1.8rem;
+  color: #333333;
+}
+
+.search-pagination .page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #FFBC35;
+  border-color: #FFBC35;
+}
+
+.search-pagination .page-item .page-link {
+  padding: 1rem 1.5rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #FFBC35;
+  background-color: #fff;
+  border: 1px solid #FFBC35;
+}
+
 .main__cont__size {
   max-width: 1400px;
   margin: auto;
@@ -3843,6 +3960,11 @@ svg {
   .margin-auto {
     margin: auto;
   }
+}
+
+.hot-line-show {
+  width: 220px;
+  padding: 25px;
 }
 
 .pdf__year {
