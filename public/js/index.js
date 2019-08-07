@@ -6,6 +6,7 @@ $(document).ready(function () {
 
 
   $(document).on('click', function () {
+    $('.hot-line-info').removeClass('hot-line-show');
     Menu.close();
 
     $('.menu--content > li > a').removeClass('active');
@@ -46,4 +47,25 @@ $(document).ready(function () {
     window.print();
   });
 
+  $('.hot-line-icon').on('click',function () {
+    $('.hot-line-info').toggleClass('hot-line-show');
+  });
+  stopPropagation('.hot-line-icon', 'click');
+
+
+  var redirect = function () {
+    if ($('.search_').val().length >= 3) {
+      const url = location.origin + '/search/' + $('.search_').val();
+      location.href = url;
+    }
+  };
+  $(document).on('keydown', '.search_', function (e) {
+    if (e.key === 'Enter') {
+      redirect();
+    }
+  });
+
+  $('.menu--form img').on('click', function (e) {
+    redirect();
+  });
 });

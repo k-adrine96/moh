@@ -79,7 +79,6 @@ class Search extends Model
         parent::__construct([]);
         $this->keyword = trim($keyword);
         strlen($keyword) >= 3 ? $this->result = collect() : $this->result = 'No Result';
-//        $this->result = collect();
     }
 
     public function getResult()

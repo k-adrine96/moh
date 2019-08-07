@@ -1,0 +1,42 @@
+.search-content {
+  @include mainWidth();
+  padding-top: 50px;
+
+  ul {
+
+    .bordered {
+      border-bottom: 1px solid #c4c4c4;
+    }
+    li {
+      padding: 8px 0;
+
+      a {
+        font-size: $main-fz;
+        color: $color-hex-gray;
+      }
+    }
+  }
+}
+
+.search-pagination {
+
+  .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: $main-btn-color;
+    border-color: $main-btn-color;
+  }
+
+  .page-item {
+
+    .page-link {
+      padding: 1rem 1.5rem;
+      margin-left: -1px;
+      line-height: 1.25;
+      color: $main-btn-color;
+      background-color: #fff;
+      border: 1px solid $main-btn-color;
+    }
+  }
+
+}

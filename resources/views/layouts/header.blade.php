@@ -37,19 +37,26 @@
                         </div>
                     </div>
                 </div>
-                <form class="menu--form" action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"
+                {{--<form class="menu--form">--}}
+                    {{--<div class="input-group">--}}
+                        {{--<input type="text" class="form-control" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"--}}
+                               {{--aria-describedby="search">--}}
+                        {{--<div class="input-group-append">--}}
+                            {{--<span class="input-group-text" id="search"><img src="/img/search-logo.png" alt=""></span>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</form>--}}
+                <div class="menu--form">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control search_" name="search" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"
                                aria-describedby="search">
                         <div class="input-group-append">
                             <span class="input-group-text" id="search"><img src="/img/search-logo.png" alt=""></span>
                         </div>
                     </div>
-                </form>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 p-0 d-flex align-items-center justify-content-end">
-                            <ul class="header__navigation d-flex p-1">
+                </div>
+                        <div class="d-flex align-items-center justify-content-end">
+                            <ul class="header__navigation d-flex">
                                 <li><a href="{{ route('home') }}">{!! __tr('header_home') !!}</a></li>
                                 <li><a href="{{ route('pages' , 'contact-us') }}">{!! __tr('header_contact-us') !!}</a>
                                 </li>
@@ -65,8 +72,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
         </div>
     </div>
 </header>

@@ -1,0 +1,77 @@
+.hot-line {
+  display: flex;
+  @include mainWidth();
+  padding-bottom: 25px;
+
+  &-icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: $main-btn-color;
+    border-radius: 100%;
+    z-index: 10;
+    a {
+      text-decoration: none;
+
+      &:first-child {
+        background-image: url("/img/hot-line-icon.png");
+        @include backimg;
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+      }
+
+      &:last-child {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &-info {
+    position: relative;
+    width: 0;
+    height: 100px;
+    background-color: $main-btn-color;
+    border-bottom-right-radius: 85px;
+    border-top-right-radius: 85px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    transition: .5s;
+    margin-left: -49px;
+    //i {
+    //  display: block;
+    //  background-image: url("/img/hot-line-icon.png");
+    //  @include backimg;
+    //  width: 40px;
+    //  height: 40px;
+    //}
+
+    ul {
+
+      li {
+
+        p {
+          font-size: 1.8rem;
+          color: white;
+          font-weight: bold;
+          height: 23px;
+          overflow: hidden;
+        }
+
+      }
+
+    }
+  }
+}

@@ -1,41 +1,34 @@
 @extends('layouts.app')
 @section('content')
-    <section class="section section-lg bg-white text-left">
-        <div class="shell no-gutters">
-            @if(isset($items))
-                <div class="col-lg-10">
-                    <div class="range range-60 range-xs-left">
-                        @forelse($items as $item)
-                            <div class="cell-md-7 cell-lg-5 wow jackInTheBox">
-                                <article class="post">
-                                    <div class="post-footer">
-                                        <h4><a href="{{ $item['url'] }}">{{ strip_tags($item['search_text']) }}</a></h4>
-                                        <br>
-                                    </div>
-                                </article>
+    <section class="search-content">
+        @if(isset($items))
+            <ul>
+                @forelse($items as $item)
+                    <li class="bordered"><a href="{{ $item['url'] }}">{{ strip_tags($item['search_text']) }}</a></li>
+                @empty
+                    <li><h1>No result found!!!</h1></li>
+                @endforelse
+            </ul>
+            @if($count > $perPage)
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12" style="margin: 30px 0;">
+                            <div class="search-pagination">
+                                {{ $pagination }}
                             </div>
-                        @empty
-                            <p class="p--style"></p>
-                        @endforelse
-                    </div>
-                </div>
-                @if($count > $perPage)
-                    <div class="col-md-12" style="margin: 30px 0;">
-                        <div class="search-pagination">
-                            {{ $pagination }}
                         </div>
                     </div>
-                @endif
-                @else
-                    <h1>You should search with more than one character!!!</h1>
+                </div>
             @endif
-        </div>
+        @else
+            <h1>You should search with more than one character!!!</h1>
+        @endif
     </section>
     <div class="clearfix"></div>
 @endsection
 
 @push('js')
-{{--    <script>--}}
-{{--        $('.search-pagination').find('ul').removeClass('pagination').addClass('pagination-custom');--}}
-{{--    </script>--}}
+    {{--    <script>--}}
+    {{--        $('.search-pagination').find('ul').removeClass('pagination').addClass('pagination-custom');--}}
+    {{--    </script>--}}
 @endpush
