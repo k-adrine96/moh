@@ -3,7 +3,7 @@
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{$coverPhoto->page_name}}" />
     <meta property="og:description"   content="{!! getDescription($pagesTexts->getTranslatedAttribute('page_text2')) !!}" />
-    <meta property="og:image"         content="http://moh.mgplab.com/{{Storage::url($coverPhoto->page_cover_photo)}}" />
+    <meta property="og:image"         content="{{$_SERVER['APP_URL']."/".Storage::url($coverPhoto->page_cover_photo)}}" />
 @endsection
 @extends('layouts.app')
 @section('content')
