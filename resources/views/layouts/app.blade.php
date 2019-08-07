@@ -6,9 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Moh</title>
-    <meta property="fb:app_id" content="{{env('FB_APP_ID')}}">
     @yield('meta')
-    <meta property="og:image:size"    content="200" />
+    <meta property="fb:app_id" content="{{env('FB_APP_ID')}}">
     <!--FAVICON-->
     <link rel="icon" href="/img/moh-logo.png">
 
