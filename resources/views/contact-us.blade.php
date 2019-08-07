@@ -1,3 +1,4 @@
+@include('partials.fb-share-meta', ['description' => getDescription($pagesTexts->getTranslatedAttribute('page_text1')) ])
 @extends('layouts.app')
 
 @section('content')
@@ -45,12 +46,11 @@
             <div class="contact__us--cont">
                 <div class="contact__us--cont--text1 text-justify editor-content">
                     {!! getDescription($pagesTexts->getTranslatedAttribute('page_text1')) !!}
-                </div>
-                <div class="contact__us--cont--text1 text-justify editor-content">
                     {!! !is_null( $pagesTexts->page_text2 ) ? getDescription($pagesTexts->getTranslatedAttribute('page_text2')) : '' !!}
-                </div>
-                <div class="contact__us--cont--text1 text-justify editor-content">
                     {!! !is_null( $pagesTexts->page_text3 ) ? getDescription($pagesTexts->getTranslatedAttribute('page_text3')) : '' !!}
+                </div>
+                <div class="fb_share_btn">
+                    <div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button_count"></div>
                 </div>
             </div>
         </section>

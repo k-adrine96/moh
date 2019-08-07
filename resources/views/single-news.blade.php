@@ -1,3 +1,9 @@
+@section('meta')
+    <meta property="og:url"           content="{{url()->current()}}" />
+    <meta property="og:title"         content="{{$newsIndividual->getTranslatedAttribute('title')}}" />
+    <meta property="og:description"   content="{{ strip_tags(getDescription($newsIndividual->getTranslatedAttribute('description'))) }}" />
+    <meta property="og:image"         content="{{$_SERVER['APP_URL']."/".Storage::url(json_decode($newsIndividual->images[0]))}}" />
+@endsection
 @extends('layouts.app')
 @section('content')
     <main>
@@ -31,6 +37,9 @@
         <section class="main__cont__size print-container">
             <a class="print-page" href="javascript:;"></a>
         </section>
+        <div class="fb_share_btn">
+            <div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button_count"></div>
+        </div>
     </main>
 @endsection
 @push('css')
