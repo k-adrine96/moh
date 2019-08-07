@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <main>
         <section class="secondary__cover"

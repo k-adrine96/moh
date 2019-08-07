@@ -1,5 +1,11 @@
+@section('meta')
+    <meta property="og:url"           content="{{url()->current()}}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{$coverPhoto->page_name}}" />
+    <meta property="og:description"   content="{!! getDescription($pagesTexts->getTranslatedAttribute('page_text2')) !!}" />
+    <meta property="og:image"         content="{{Storage::url($coverPhoto->page_cover_photo)}}" />
+@endsection
 @extends('layouts.app')
-
 @section('content')
     <main>
         <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
@@ -36,6 +42,7 @@
                     </li>
                 </ul>
             </div>
+            <div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button_count"></div>
         </section>
     </main>
 @endsection
