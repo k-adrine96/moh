@@ -19,16 +19,15 @@ use Illuminate\Support\Facades\Route;
 Carbon::now()->setLocale(config('app.locale'));
 setlocale(LC_TIME, config('app.locale'));
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ],
     function() {
+        Route::group(['prefix' => 'admin'], function () {
+            Voyager::routes();
+        });
         Route::get('/', 'PagesController@homepage')->name('home');
         Route::get('/search/{keyword}', 'PagesController@search')->name('search');
         Route::get('/{page}', 'PagesController@index')->name('pages');

@@ -3,15 +3,32 @@
 namespace App;
 
 use App;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class BaseModel extends Model
 {
+    public static function boot()
+    {
+        parent::boot();
 
-    public function getLastUpdate($model) {
-
-        Event::listen(['eloquent.saved: *', 'eloquent.created: *' , 'eloquent.update: *'], function() {
-            dd($this->updated_at);
+        self::created(function () {
+            self::dateUpdate();
         });
+
+        self::updated(function () {
+            self::dateUpdate();
+        });
+
+        self::deleted(function () {
+            self::dateUpdate();
+        });
+    }
+
+    public static function dateUpdate()
+    {
+        \TCG\Voyager\Models\Setting::where('key', 'admin.last_update')->first()->update([
+            'value' => Carbon::now()->format('d/m/Y H:i:s')
+        ]);
     }
 }
