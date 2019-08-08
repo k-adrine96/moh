@@ -7,7 +7,7 @@ use TCG\Voyager\Traits\Translatable;
 /**
  * @property array $result
  */
-class Search extends Model
+class Search extends BaseModel
 {
     protected $keyword;
     protected $result;

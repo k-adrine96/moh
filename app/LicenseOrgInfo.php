@@ -5,7 +5,7 @@ namespace App;
 use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
 
-class LicenseOrgInfo extends Model
+class LicenseOrgInfo extends BaseModel
 {
     use Translatable;
 

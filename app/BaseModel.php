@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class BaseModel extends Model
 {
-    public function baseTranslate(){
 
-        $this->with('translations');
+    public function getLastUpdate($model) {
 
-        return $this;
+        Event::listen(['eloquent.saved: *', 'eloquent.created: *' , 'eloquent.update: *'], function() {
+            dd($this->updated_at);
+        });
     }
 }

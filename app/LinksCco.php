@@ -5,7 +5,7 @@ namespace App;
 use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
 
-class LinksCco extends Model
+class LinksCco extends BaseModel
 {
     use Translatable;
 

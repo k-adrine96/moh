@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class DynamicSection extends Model
+class DynamicSection extends BaseModel
 {
     use Translatable;
     protected $fillable = ['name', 'slug', 'order', 'display'];
