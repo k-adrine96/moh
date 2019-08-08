@@ -1,3 +1,4 @@
+{{dd($_SERVER['APP_URL'])}}
 @include('partials.fb-share-meta', [
                                         'description' => getDescription($pagesTexts->getTranslatedAttribute('page_text2')) ,
                                         'image'       => $_SERVER['APP_URL']."/".Storage::url($coverPhoto->page_cover_photo)
