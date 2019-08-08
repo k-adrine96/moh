@@ -1,3 +1,4 @@
+{{dd($_SERVER[])}}
 @include('partials.fb-share-meta', [ 'description' => getDescription($pagesTexts->getTranslatedAttribute('page_text2')) ])
 {{--@section('meta')
     <meta property="og:url"           content="{{url()->current()}}" />
