@@ -67,4 +67,8 @@ $(document).ready(function () {
   $('.menu--form img').on('click', function (e) {
     redirect();
   });
+
+  $('#_subscribe').click(function () {
+    $('#form_subscribe').submit();
+  });
 });

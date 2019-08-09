@@ -40,8 +40,8 @@
         @include('layouts.header')
         <section class="empty-div"></section>
         @yield('content')
-        @if(session()->has('subscribe'))
-            @include('partials.popup', ['message' => session()->get('subscribe')])
+        @if(session()->has('success'))
+            @include('partials.popup', ['message' => session()->get('success')])
         @endif
         @include('layouts.partners')
         <section class="hot-line">

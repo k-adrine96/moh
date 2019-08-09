@@ -20,6 +20,7 @@ use App\SsStationeryOrg, App\YourRightsVideo, App\StaffingVacancy, App\StaffingS
 use App\SsDrugMedicalExpertFile, App\SsDrugMedicalExpertInfo, App\LicensDocumentsApplication;
 use App\MinHistoryCategory, App\SpeechAndInterview, App\AntiCorruptionEvent, App\StaffingTenderResult;
 use App\SsMedicalLibraryFile, App\SsMedicalLibraryInfo, App\MinisterInfoCategory, App\SsHealthInstituteFile;
+use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
@@ -376,7 +377,6 @@ class PagesController extends Controller
         return view('home' , compact('slidersInfo' , 'news' , 'announcements' , 'videos', 'partnersRow1' , 'partnersRow2' , 'socials'));
 
     }
-
     public function showNewsIndividual($id){
 
         $newsIndividual = News::find( $id);
@@ -455,10 +455,19 @@ class PagesController extends Controller
         ]);
 
         App\Subscribe::create($request->all());
-        return redirect()->back()->with('subscribe', 'Դուք Հաջողությամբ բաժանորդագրվել էք։');
+        return redirect()->back()->with('success', 'You have been successfully subscribed.');
     }
 
-    public function send(){
-        App\Jobs\Subscribe::dispatch();
+    public function contactMailSend(Request $request){
+        $this->validate($request,[
+            'name'    => 'required',
+            'email'   => 'required',
+            'message' => 'required'
+        ]);
+
+        Mail::to(config('mail.from.address'))
+            ->send(new App\Mail\ContactUs($request->all()));
+
+        return redirect()->back()->with('success', 'Mail was successfully send.');
     }
 }
