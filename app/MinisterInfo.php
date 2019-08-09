@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class MinisterInfo extends Model
+class MinisterInfo extends BaseModel
 {
     use Translatable;
 
@@ -14,6 +14,8 @@ class MinisterInfo extends Model
         'description',
         'category_id'
     ];
+
+    public $page_url = 'minister-page';
 
     protected $translatable = ['description'];
 

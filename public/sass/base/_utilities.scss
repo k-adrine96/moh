@@ -26,6 +26,11 @@
   }
 }
 
+.hot-line-show {
+  width: 220px;
+  padding: 25px;
+}
+
 .pdf__year {
   line-height: 0.9;
 
@@ -133,6 +138,13 @@
 //Line Height Customizer
 .lh-04{
   line-height: 0.4;
+}
+
+//fb share button
+.fb_share_btn{
+  max-width: 1400px;
+  margin: auto;
+  padding: 2rem 0;
 }
 
 //custom styles for organisations files

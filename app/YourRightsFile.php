@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class YourRightsFile extends Model
+class YourRightsFile extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class YourRightsFile extends Model
         'parent_id',
         'order'
     ];
+
+    public $page_url = 'your-rights';
 
     protected $dates = [ 'file_date'];
 

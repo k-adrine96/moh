@@ -4,7 +4,12 @@
     <main>
         <section class="secondary__cover" style="background-image: url('{{Storage::url($coverPhoto->page_cover_photo)}}')">
             <div class="secondary__cover--content">
-                <h1>Ընդունելություն/Կարգ, ցանկ, արդյունքներ</h1>{!! __tr('side_admission_results') !!}
+{{--                <h3>
+                    <a href="{{ route('home') }}">
+                        {!! __tr('header_home') !!}
+                    </a>/{!! __tr('side_admission_results') !!}
+                </h3>--}}
+                <h1>{!! __tr('side_admission_results') !!}</h1>
             </div>
         </section>
         <section class="legal__acts">

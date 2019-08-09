@@ -58,23 +58,28 @@
   }
 }
 .menu--form {
-
-  margin: 10rem auto 0;
+  text-align: -webkit-right;
+  margin-top: 1rem;
 
   .input-group {
-    margin-left: 4rem;
-    width: 32rem;
+    margin-right: 47px;
+    width: 25rem;
+
+    @media only screen and (max-width: 768px){
+      margin-right: 0;
+    }
 
     @media only screen and (max-width: 480px){
       width: 23rem;
     }
 
     input {
-      height: 5rem;
+      height: 4rem;
       border-radius: 30px;
-      @include border($color-white);
+      @include border(#E6E6E6);
       font-size: $main-fz;
       padding-left: 2rem;
+      border-right: none;
 
       @media only screen and (max-height: 600px){
         height: 3rem;
@@ -87,20 +92,26 @@
 
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
-        @include border($color-white);
+        @include border(#E6E6E6);
         background-color: $color-white;
         width: 4rem;
         padding: 0;
       }
     }
 
+
+
     .form-control:focus {
       color: #495057;
       background-color: $color-white;
-      border-color: $color-white;
+      border-color: #E6E6E6;
       outline: 0;
       box-shadow: none;
     }
+  }
+
+  img {
+    cursor: pointer;
   }
 }
 .ask__minister--form {

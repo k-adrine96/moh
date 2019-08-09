@@ -1,3 +1,7 @@
+@include('partials.fb-share-meta', [
+    'description' => getDescription($pagesTexts->getTranslatedAttribute('page_text1')) ,
+    'image'       => $_SERVER['REQUEST_SCHEME']."://".$_SERVER['SERVER_NAME']."/".Storage::url($coverPhoto->page_cover_photo)
+])
 @extends('layouts.app')
 
 @section('content')
@@ -64,6 +68,9 @@
                     </li>
                 @endforeach
             </ul>
+            <div class="fb_share_btn">
+                <div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button_count"></div>
+            </div>
         </section>
         <section class="minister__public--council">
             <div class="minister__public--council--header">

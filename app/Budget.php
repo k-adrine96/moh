@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class Budget extends Model
+class Budget extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class Budget extends Model
         'category_id',
         'order'
     ];
+
+    public $page_url = 'budget';
 
     protected $dates = ['file_date'];
 

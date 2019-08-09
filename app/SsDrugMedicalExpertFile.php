@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class SsDrugMedicalExpertFile extends Model
+class SsDrugMedicalExpertFile extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class SsDrugMedicalExpertFile extends Model
         'parent_id',
         'order'
     ];
+
+    public $page_url = 'sub-structures-drug-medical-expertise';
 
     protected $dates = [
         'file_date'

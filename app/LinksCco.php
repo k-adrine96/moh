@@ -5,7 +5,7 @@ namespace App;
 use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
 
-class LinksCco extends Model
+class LinksCco extends BaseModel
 {
     use Translatable;
 
@@ -19,6 +19,8 @@ class LinksCco extends Model
         'website_url',
         'order'
     ];
+
+    public $page_url = 'links';
 
     protected $translatable = [
         'description',

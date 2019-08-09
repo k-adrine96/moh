@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class StaffingJobAcceptance extends Model
+class StaffingJobAcceptance extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class StaffingJobAcceptance extends Model
         'parent_id',
         'order'
     ];
+
+    public $page_url = 'staffing-job-acceptance';
 
     protected $dates = ['file_date'];
 

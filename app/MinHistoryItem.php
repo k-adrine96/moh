@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class MinHistoryItem extends Model
+class MinHistoryItem extends BaseModel
 {
     use Translatable;
 
@@ -14,6 +14,8 @@ class MinHistoryItem extends Model
         'name',
         'category_id'
     ];
+
+    public $page_url = 'history';
 
     protected $translatable = ['name'];
 

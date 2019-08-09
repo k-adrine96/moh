@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class AdvertisingPermission extends Model
+class AdvertisingPermission extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class AdvertisingPermission extends Model
         'parent_id',
         'order'
     ];
+
+    public $page_url = 'advertising-permission';
 
     protected $dates = ['file_date'];
 

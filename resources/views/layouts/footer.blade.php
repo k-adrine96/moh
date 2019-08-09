@@ -35,7 +35,7 @@
                     </li>
                     <li>
                         <h1>{!! __tr('last-update') !!}</h1>
-                        <p>21․02․2019</p>
+                        <p>{{ setting('admin.last_update') }}</p>
                     </li>
                 </ul>
             </div>

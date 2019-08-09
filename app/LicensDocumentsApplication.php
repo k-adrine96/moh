@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class LicensDocumentsApplication extends Model
+class LicensDocumentsApplication extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class LicensDocumentsApplication extends Model
         'parent_id',
         'order'
     ];
+
+    public $page_url = 'licens-documents-application';
 
     protected $dates = ['file_date'];
 

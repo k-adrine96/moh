@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class News extends Model
+class News extends BaseModel
 {
     use Translatable;
 
@@ -16,6 +16,10 @@ class News extends Model
         'video',
         'date'
     ];
+
+    public function getPageUrlAttribute() {
+        return 'single-news/'.$this->id;
+    }
 
     protected $translatable = [
         'title',

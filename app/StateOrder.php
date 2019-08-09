@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class StateOrder extends Model
+class StateOrder extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class StateOrder extends Model
         'parent_id',
         'order'
     ];
+
+    public $page_url = 'state-order';
 
     protected $dates = ['file_date'];
 

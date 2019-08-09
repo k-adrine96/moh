@@ -9,6 +9,7 @@
 @import "layout/subscription";
 @import "layout/footer";
 @import "layout/menu";
+@import "layout/hot-line";
 ////COMPONENTS
 //
 @import "components/button";
@@ -19,6 +20,7 @@
 @import "components/numbered-list";
 @import "components/text-contaiener";
 @import "components/workser";
+@import "components/print";
 //
 ////OTHER
 @import "Other/select2";
@@ -45,6 +47,7 @@
 @import "pages/ministry-structure";
 @import "pages/single__announcement";
 @import "pages/single-video";
+@import "pages/search";
 
 ////BASE
 @import "base/utilities";

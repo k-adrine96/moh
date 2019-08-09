@@ -1,25 +1,26 @@
 <div class="menu">
     <div class="menu-container">
-        <div class="language menu__language text-right">
-            <ul>
-                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                    <li>
-                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                            {{ $properties['native'] }}
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-        <form class="menu--form" action="">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"
-                       aria-describedby="search">
-                <div class="input-group-append">
-                    <span class="input-group-text" id="search"><img src="/img/search-logo.png" alt=""></span>
-                </div>
-            </div>
-        </form>
+        {{--<div class="language menu__language text-right">--}}
+            {{--<ul>--}}
+                {{--@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)--}}
+                    {{--<li>--}}
+                        {{--<a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">--}}
+                            {{--{{ $properties['native'] }}--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                {{--@endforeach--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+        {{--<form class="menu--form" action="">--}}
+            {{--<div class="input-group mb-3">--}}
+                {{--<input type="text" class="form-control" placeholder="ՈՐՈՆԵԼ" aria-label="Recipient's username"--}}
+                       {{--aria-describedby="search">--}}
+                {{--<div class="input-group-append">--}}
+                    {{--<span class="input-group-text" id="search"><img src="/img/search-logo.png" alt=""></span>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</form>--}}
+
         <div class="burger__menu burger__menu--second">
             <div class="burger__menu--lines burger__menu--line-1"></div>
             <div class="burger__menu--lines burger__menu--line-2"></div>

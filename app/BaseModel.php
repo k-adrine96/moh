@@ -3,14 +3,32 @@
 namespace App;
 
 use App;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class BaseModel extends Model
 {
-    public function baseTranslate(){
+    public static function boot()
+    {
+        parent::boot();
 
-        $this->with('translations');
+        self::created(function () {
+            self::dateUpdate();
+        });
 
-        return $this;
+        self::updated(function () {
+            self::dateUpdate();
+        });
+
+        self::deleted(function () {
+            self::dateUpdate();
+        });
+    }
+
+    public static function dateUpdate()
+    {
+        \TCG\Voyager\Models\Setting::where('key', 'admin.last_update')->first()->update([
+            'value' => Carbon::now()->format('d/m/Y H:i:s')
+        ]);
     }
 }

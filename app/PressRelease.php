@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class PressRelease extends Model
+class PressRelease extends BaseModel
 {
     use Translatable;
 
@@ -15,6 +15,8 @@ class PressRelease extends Model
         'file_url',
         'file_date'
     ];
+
+    public $page_url = 'press-release';
 
     protected $dates = ['file_date'];
 

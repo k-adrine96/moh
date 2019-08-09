@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class SsMedicalLibraryInfo extends Model
+class SsMedicalLibraryInfo extends BaseModel
 {
     use Translatable;
 
@@ -20,6 +20,8 @@ class SsMedicalLibraryInfo extends Model
         'website_url',
         'order'
     ];
+
+    public $page_url = 'sub-structures-medical-library';
 
     protected $dates = ['file_date'];
 

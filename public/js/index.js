@@ -40,5 +40,31 @@ $(document).ready(function () {
   onlyToggle('.faq__row--first--lvl', '.faq__row--hided--content');
   onlyToggle('.faq__second-lvl', '.faq__second--hidden--content');
   onlyToggle('.public__council--row--first--lvl', '.public__council--hidden--content');
-  
+
+
+  $('.print-page').on('click',function () {
+    window.print();
+  });
+
+  $('.hot-line-icon').on('click',function () {
+    $('.hot-line-info').toggleClass('hot-line-show');
+  });
+  stopPropagation('.hot-line-icon', 'click');
+
+
+  var redirect = function () {
+    if ($('.search_').val().length >= 3) {
+      const url = location.origin + '/search/' + $('.search_').val();
+      location.href = url;
+    }
+  };
+  $(document).on('keydown', '.search_', function (e) {
+    if (e.key === 'Enter') {
+      redirect();
+    }
+  });
+
+  $('.menu--form img').on('click', function (e) {
+    redirect();
+  });
 });

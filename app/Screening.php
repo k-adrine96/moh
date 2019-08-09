@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class Screening extends Model
+class Screening extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class Screening extends Model
         'parent_id',
         'order'
     ];
+
+    public $page_url = 'screening';
 
     protected $dates = ['file_date'];
 

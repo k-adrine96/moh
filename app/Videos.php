@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
 
-class Videos extends Model
+class Videos extends BaseModel
 {
     use Translatable;
 
@@ -15,6 +15,10 @@ class Videos extends Model
         'date',
         'video_url'
     ];
+
+    public function getPageUrlAttribute() {
+        return 'single-video/'.$this->id;
+    }
 
     protected $translatable = ['title'];
 

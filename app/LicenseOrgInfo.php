@@ -5,7 +5,7 @@ namespace App;
 use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
 
-class LicenseOrgInfo extends Model
+class LicenseOrgInfo extends BaseModel
 {
     use Translatable;
 
@@ -20,6 +20,8 @@ class LicenseOrgInfo extends Model
         'website_url',
         'order'
     ];
+
+    public $page_url = 'license-organization';
 
     protected $translatable = [
         'organisation_name',

@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class MinistryStaff extends Model
+class MinistryStaff extends BaseModel
 {
     use Translatable;
 
@@ -15,6 +15,8 @@ class MinistryStaff extends Model
         'phone_number',
         'email'
     ];
+
+    public $page_url = 'ministry-staff';
 
     protected $translatable = [
         'position',

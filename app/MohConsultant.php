@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class MohConsultant extends Model
+class MohConsultant extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class MohConsultant extends Model
         'working_place',
         'order'
     ];
+
+    public $page_url = 'moh-consultants';
 
     protected $translatable = [
         'position',

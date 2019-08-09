@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class YourRightsVideo extends Model
+class YourRightsVideo extends BaseModel
 {
     use Translatable;
 
@@ -15,6 +15,8 @@ class YourRightsVideo extends Model
         'video_url',
         'order'
     ];
+
+    public $page_url = 'your-rights';
 
     protected $translatable = ['title'];
 }

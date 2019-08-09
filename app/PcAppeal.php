@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class PcAppeal extends Model
+class PcAppeal extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class PcAppeal extends Model
         'file_date',
         'order'
     ];
+
+    public $page_url = 'public-council';
 
     protected $dates = ['file_date'];
 

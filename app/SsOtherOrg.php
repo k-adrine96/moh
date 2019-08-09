@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class SsOtherOrg extends Model
+class SsOtherOrg extends BaseModel
 {
     use Translatable;
 
@@ -23,6 +23,8 @@ class SsOtherOrg extends Model
         'file_date',
         'order'
     ];
+
+    public $page_url = 'sub-structures-other-orgs';
 
     protected $dates = ['file_date'];
 

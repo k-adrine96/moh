@@ -1,3 +1,9 @@
+@section('meta')
+    <meta property="og:url"           content="{{url()->current()}}" />
+    <meta property="og:title"         content="{{$announcementIndividual->getTranslatedAttribute('title')}}" />
+    <meta property="og:description"   content="{{ strip_tags(getDescription($announcementIndividual->getTranslatedAttribute('description'))) }}" />
+    <meta property="og:image"         content="{{$_SERVER['APP_URL']."/".Storage::url($coverPhoto->page_cover_photo)}}" />
+@endsection
 @extends('layouts.app')
 
 @section('content')
@@ -18,5 +24,11 @@
                 <p class="text-justify editor-content">{!! getDescription($announcementIndividual->getTranslatedAttribute('description')) !!}</p>
             </div>
         </section>
+        <section class="main__cont__size print-container">
+            <a class="print-page" href="javascript:;"></a>
+        </section>
+        <div class="fb_share_btn">
+            <div class="fb-share-button" data-href="{{url()->current()}}" data-layout="button_count"></div>
+        </div>
     </main>
 @endsection

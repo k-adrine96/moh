@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class SsDrugMedicalExpertInfo extends Model
+class SsDrugMedicalExpertInfo extends BaseModel
 {
     use Translatable;
 
@@ -20,6 +20,8 @@ class SsDrugMedicalExpertInfo extends Model
         'website_url',
         'order'
     ];
+
+    public $page_url = 'sub-structures-drug-medical-expertise';
 
     protected $translatable = [
         'organisation_name',

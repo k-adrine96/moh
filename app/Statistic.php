@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class Statistic extends Model
+class Statistic extends BaseModel
 {
     use Translatable;
 
@@ -15,6 +15,8 @@ class Statistic extends Model
         'file_url',
         'file_date'
     ];
+
+    public $page_url = 'statistics';
 
     protected $dates = ['file_date'];
 

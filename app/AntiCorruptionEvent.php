@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class AntiCorruptionEvent extends Model
+class AntiCorruptionEvent extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class AntiCorruptionEvent extends Model
         'parent_id',
         'order'
     ];
+
+    public $page_url = 'anti-corruption-events';
 
     protected $dates = ['file_date'];
 

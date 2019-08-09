@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 
-class International extends Model
+class International extends BaseModel
 {
     use Translatable;
 
@@ -17,6 +17,8 @@ class International extends Model
         'parent_id',
         'order'
     ];
+
+    public $page_url = 'international';
 
     protected $dates = ['file_date'];
 
