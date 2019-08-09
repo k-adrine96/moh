@@ -38,4 +38,5 @@ Route::group(
         Route::get('/{section}/{page}', 'PagesController@pageSection')->name('show.section.page');
         Route::get('/{section}/{page}/{sub}', 'PagesController@subPage')->name('show.section.page.sub');
         Route::post('/file-upload', 'PagesController@fileUpload');
+        Route::post('subscribe', 'PagesController@subscribe')->name('subscribe');
 });

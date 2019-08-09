@@ -393,4 +393,15 @@ class PagesController extends Controller
 
         return view('partials.dynamic-page.page', compact('page', 'parents' , 'children'));
     }
+
+    public function subscribe(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required'
+        ]);
+
+        App\Subscribe::create($request->all());
+        return redirect()->back()->with('subscribe', 'Դուք Հաջողությամբ բաժանորդագրվել էք։');
+    }
 }

@@ -18,7 +18,7 @@ class DynamicPage extends Model
 
     public function section()
     {
-        return $this->belongsTo(DynamicSection::class, 'section_id');
+        return $this->belongsTo(DynamicSection::class, 'dynamic_section_id');
     }
 
     public function subpages()

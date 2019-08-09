@@ -39,6 +39,9 @@
         @include('layouts.header')
         <section class="empty-div"></section>
         @yield('content')
+        @if(session()->has('subscribe'))
+            @include('partials.popup', ['message' => session()->get('subscribe')])
+        @endif
         @include('layouts.partners')
         @include('layouts.subscribtion')
         @include('layouts.footer')

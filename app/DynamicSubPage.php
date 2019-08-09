@@ -15,4 +15,9 @@ class DynamicSubPage extends Model
     {
         return $this->belongsToMany(DynamicPageFile::class, 'dynamic_sub_page_intermediate',  'dynamic_sub_page_id');
     }
+
+    public function page()
+    {
+        return $this->belongsTo(DynamicPage::class, 'dynamic_page_id');
+    }
 }

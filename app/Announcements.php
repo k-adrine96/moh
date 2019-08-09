@@ -20,5 +20,7 @@ class Announcements extends Model
         'description'
     ];
 
+    public $route = 'show.announcement.individual';
+
     protected $dates = ['date'];
 }

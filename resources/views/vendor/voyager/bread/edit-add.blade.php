@@ -39,7 +39,6 @@
                         {{ csrf_field() }}
 
                         <div class="panel-body">
-
                             @if (count($errors) > 0)
                                 <div class="alert alert-danger">
                                     <ul>
@@ -53,8 +52,15 @@
                             <!-- Adding / Editing -->
                             @php
                                 $dataTypeRows = $dataType->{($edit ? 'editRows' : 'addRows' )};
+                                $segment2 = Request::segment(2);
                             @endphp
-
+                                @if($edit && $segment2 == 'dynamic-pages' || $segment2 == 'dynamic-sub-pages')
+                                    @if($segment2 == 'dynamic-pages')
+                                            <span>Page url:&nbsp;&nbsp;&nbsp;{{url($dataTypeContent->section()->count() ? $dataTypeContent->section->slug.'/'.$dataTypeContent->slug : $dataTypeContent->slug)}}</span>
+                                        @else
+                                            <span>Page url:&nbsp;&nbsp;&nbsp;{{url($dataTypeContent->page()->count() ? $dataTypeContent->page->slug.'/'.$dataTypeContent->slug : $dataTypeContent->slug)}}</span>
+                                    @endif
+                                @endif
                             @foreach($dataTypeRows as $row)
                                 <!-- GET THE DISPLAY OPTIONS -->
                                 @php

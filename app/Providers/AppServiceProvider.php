@@ -2,9 +2,13 @@
 
 namespace App\Providers;
 
+use App\News;
 use Carbon\Carbon;
-use Illuminate\Support\ServiceProvider;
+use App\Announcements;
+use App\Observers\NewsObserver;
 use Illuminate\Support\Facades\Schema;
+use App\Observers\AnnouncementObserver;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,6 +29,9 @@ class AppServiceProvider extends ServiceProvider
 
         setlocale(LC_TIME, $locales[app()->getLocale()]);
         \Carbon\Carbon::setLocale($locales[app()->getLocale()]);
+
+        News::observe(NewsObserver::class);
+        Announcements::observe(AnnouncementObserver::class);
     }
 
     /**
@@ -34,6 +41,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+
     }
 }
