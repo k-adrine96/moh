@@ -52,15 +52,21 @@
                             <!-- Adding / Editing -->
                             @php
                                 $dataTypeRows = $dataType->{($edit ? 'editRows' : 'addRows' )};
-                                $segment2 = Request::segment(2);
+                                $dynamicPages = in_array('dynamic-pages', Request::segments());
+                                $dynamicSubPages = in_array('dynamic-sub-pages', Request::segments());
                             @endphp
-                                @if($edit && $segment2 == 'dynamic-pages' || $segment2 == 'dynamic-sub-pages')
-                                    @if($segment2 == 'dynamic-pages')
-                                            <span>Page url:&nbsp;&nbsp;&nbsp;{{url($dataTypeContent->section()->count() ? $dataTypeContent->section->slug.'/'.$dataTypeContent->slug : $dataTypeContent->slug)}}</span>
+                            @if($edit && $dynamicPages || $dynamicSubPages)
+                                <div class="form-group col-md-3 ">
+                                    <label class="control-label">Page URL</label>
+                                    <p style="border: 1px solid #e4eaec;padding: 5px 15px;">
+                                        @if($dynamicPages)
+                                            {{url($dataTypeContent->section()->count() ? $dataTypeContent->section->slug.'/'.$dataTypeContent->slug : $dataTypeContent->slug)}}
                                         @else
-                                            <span>Page url:&nbsp;&nbsp;&nbsp;{{url($dataTypeContent->page()->count() ? $dataTypeContent->page->slug.'/'.$dataTypeContent->slug : $dataTypeContent->slug)}}</span>
-                                    @endif
-                                @endif
+                                            {{url($dataTypeContent->page()->count() ? $dataTypeContent->page->slug.'/'.$dataTypeContent->slug : $dataTypeContent->slug)}}
+                                        @endif
+                                    </p>
+                                </div>
+                            @endif
                             @foreach($dataTypeRows as $row)
                                 <!-- GET THE DISPLAY OPTIONS -->
                                 @php

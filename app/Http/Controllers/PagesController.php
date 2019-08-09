@@ -417,31 +417,34 @@ class PagesController extends Controller
 
     public function pageSection($section, $page)
     {
-        $section  = DynamicSection::whereSlug($section)->firstOrFail();
         $page     = DynamicPage::whereSlug($page)->firstOrFail();
+        $section  = DynamicSection::whereSlug($section)->firstOrFail();
+        $socials  = Social::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
         $parents  = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNull('parent_id')->get();
         $children = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNotNull('parent_id')->get();
 
-        return view('partials.dynamic-page.page', compact('page', 'parents' , 'children'));
+        return view('partials.dynamic-page.page', compact('page', 'parents' , 'children' , 'socials'));
     }
 
     public function subPage($section, $page, $sub_page)
     {
         $section  = DynamicSection::whereSlug($section)->firstOrFail();
+        $socials  = Social::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
         $page     = $section->pages()->whereSlug($page)->firstOrFail()->subpages()->whereSlug($sub_page)->firstOrFail();
         $parents  = $page->files()->orderBy('order', 'desc')->orderBy('id', 'desc')->whereNull('parent_id')->get();
         $children = $page->files()->orderBy('order', 'desc')->orderBy('id', 'desc')->whereNotNull('parent_id')->get();
 
-        return view('partials.dynamic-page.page', compact('page' , 'parents' , 'children'));
+        return view('partials.dynamic-page.page', compact('page' , 'parents' , 'children' , 'socials'));
     }
 
     public function page($page)
     {
         $page     = DynamicPage::whereSlug($page)->firstOrFail();
+        $socials  = Social::orderBy('order', 'desc')->orderBy('id', 'desc')->get();
         $parents  = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNull('parent_id')->get();
         $children = $page->files()->orderBy('order', 'desc')->orderBy('date', 'desc')->whereNotNull('parent_id')->get();
 
-        return view('partials.dynamic-page.page', compact('page', 'parents' , 'children'));
+        return view('partials.dynamic-page.page', compact('page', 'parents' , 'children' , 'socials'));
     }
 
     public function subscribe(Request $request)
@@ -453,5 +456,9 @@ class PagesController extends Controller
 
         App\Subscribe::create($request->all());
         return redirect()->back()->with('subscribe', 'Դուք Հաջողությամբ բաժանորդագրվել էք։');
+    }
+
+    public function send(){
+        App\Jobs\Subscribe::dispatch();
     }
 }
