@@ -23,11 +23,3 @@
         </form>
     </div>
 </section>
-
-@push('js')
-    <script>
-        $('#_subscribe').click(function () {
-            $('#form_subscribe').submit();
-        });
-    </script>
-@endpush

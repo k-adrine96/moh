@@ -2898,10 +2898,9 @@ svg {
 
 .contact__us--info--form .contact__us--btns {
   margin-top: 4.5rem;
-}
-
-.contact__us--info--form .contact__us--btns a:not(:last-child) {
-  margin-right: 2rem;
+  /*a:not(:last-child) {
+          margin-right: 2rem;
+        }*/
 }
 
 .contact__us--info--map {

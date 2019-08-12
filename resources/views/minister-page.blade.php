@@ -11,7 +11,7 @@
         </section>
         <section class="message__container">
             <div class="message__content">
-                <h1>{!! __tr('message') !!}</h1>
+                <h1>{!! __tr('minister_message') !!}</h1>
                 <div class="message__content--info d-flex">
                     <div class="message__content--info--image"
                          style="background-image: url('{{Storage::url($content->minister_pic)}}')">
@@ -81,34 +81,7 @@
             <div class="ask__minister--cont--header">
                 <h1>{!! __tr('question_to_minister') !!}</h1>
             </div>
-            <div class="ask__minister">
-                <div class="ask__minister--content">
-                    <h1>{!! __tr('waiting_to_your_question') !!}</h1>
-                    <form action="" class="ask__minister--form">
-                        <div class="input-group mb-4">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><img src="/img/username-icon.png" alt=""></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="{!! strip_tags(__tr('name_surname')) !!}" aria-label="Username"
-                                   aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-4">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><img src="/img/email-1-icon.png" alt=""></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="{!! strip_tags(__tr('email')) !!}" aria-label="Username"
-                                   aria-describedby="basic-addon1">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control lh-04" placeholder="{!! strip_tags(__tr('placeholder_message')) !!}"></textarea>
-                        </div>
-                        <div class="ask__minister--btns d-flex justify-content-center">
-                            <a href="javascript:;" class="animated__button animated__button--yellow">{!! __tr('delete') !!}</a>
-                            <a href="javascript:;" class="animated__button animated__button--blue-1">{!! __tr('send') !!}</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            @include('partials.contact-mail-form')
         </section>
     </main>
 @endsection
