@@ -20,4 +20,9 @@ class DynamicSubPage extends BaseModel
     {
         return $this->belongsTo(DynamicPage::class, 'dynamic_page_id');
     }
+
+    public function section()
+    {
+        return $this->page->section ? $this->page->section : false;
+    }
 }
