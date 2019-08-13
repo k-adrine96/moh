@@ -58,14 +58,15 @@
                             @if($edit && $dynamicPages || $dynamicSubPages)
                                 <div class="form-group col-md-3 ">
                                     <label class="control-label">Page URL</label>
-                                    <p style="border: 1px solid #e4eaec;padding: 5px 15px;">
+                                    <div>
                                         @if($dynamicPages)
-                                            {{url($dataTypeContent->section()->count() ? $dataTypeContent->section->slug.'/'.$dataTypeContent->slug : 'page/'.$dataTypeContent->slug)}}
+                                            {{ $pageURL = url($dataTypeContent->section()->count() ? $dataTypeContent->section->slug.'/'.$dataTypeContent->slug : 'page/'.$dataTypeContent->slug)}}
                                         @elseif($dynamicSubPages && $dataTypeContent->section())
-                                            {{url($dataTypeContent->section()->slug.'/'.$dataTypeContent->page->slug.'/'.$dataTypeContent->slug)}}
+                                            {{ $pageURL = url($dataTypeContent->section()->slug.'/'.$dataTypeContent->page->slug.'/'.$dataTypeContent->slug)}}
                                         @endif
-                                    </p>
-                                    <button type="button" class="btn btn-default">Copy</button>
+                                        <input type="text" value="{{$pageURL}}" style="border: 1px solid #e4eaec;padding: 5px 15px; float: left;">
+                                        <button type="button" class="btn btn-primary" style="margin: 0 0 0 20px;">Copy</button>
+                                    </div>
                                 </div>
                             @endif
                             @foreach($dataTypeRows as $row)
