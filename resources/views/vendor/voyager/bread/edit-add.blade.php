@@ -250,6 +250,7 @@
             copyText.select();
             document.execCommand("copy");
             $('.alert-success').show();
+            alert('Copied To Clipboard');
         });
     </script>
 @stop
