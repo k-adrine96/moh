@@ -60,9 +60,9 @@
                                     <label class="control-label">Page URL</label>
                                     <div>
                                         @if($dynamicPages)
-                                            {{ $pageURL = url($dataTypeContent->section()->count() ? $dataTypeContent->section->slug.'/'.$dataTypeContent->slug : 'page/'.$dataTypeContent->slug)}}
+                                            @php $pageURL = url($dataTypeContent->section()->count() ? $dataTypeContent->section->slug.'/'.$dataTypeContent->slug : 'page/'.$dataTypeContent->slug) @endphp
                                         @elseif($dynamicSubPages && $dataTypeContent->section())
-                                            {{ $pageURL = url($dataTypeContent->section()->slug.'/'.$dataTypeContent->page->slug.'/'.$dataTypeContent->slug)}}
+                                            @php $pageURL = url($dataTypeContent->section()->slug.'/'.$dataTypeContent->page->slug.'/'.$dataTypeContent->slug) @endphp
                                         @endif
                                         <input type="text" value="{{$pageURL}}" style="border: 1px solid #e4eaec;padding: 5px 15px; float: left;">
                                         <button type="button" class="btn btn-primary" style="margin: 0 0 0 20px;">Copy</button>
