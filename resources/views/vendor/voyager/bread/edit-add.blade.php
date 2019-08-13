@@ -56,7 +56,7 @@
                                 $dynamicSubPages = in_array('dynamic-sub-pages', Request::segments());
                             @endphp
                             @if($edit && $dynamicPages || $dynamicSubPages)
-                                <div class="form-group col-md-3 alert-success">
+                                <div class="form-group col-md-3">
                                     <label class="control-label">Page URL</label>
                                     <div>
                                         @if($dynamicPages)
@@ -248,8 +248,7 @@
             var copyText = document.getElementById("copyText");
             copyText.select();
             document.execCommand("copy");
-            // alert("Copied the text: " + copyText.value);
-            $('.alert-success').show();
+            alert(copyText.value + "copied to clipboard");
         });
     </script>
 @stop
