@@ -65,6 +65,7 @@
                                             {{url($dataTypeContent->section()->slug.'/'.$dataTypeContent->page->slug.'/'.$dataTypeContent->slug)}}
                                         @endif
                                     </p>
+                                    <button type="button" class="btn btn-default">Copy</button>
                                 </div>
                             @endif
                             @foreach($dataTypeRows as $row)
