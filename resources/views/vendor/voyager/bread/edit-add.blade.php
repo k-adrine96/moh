@@ -57,7 +57,7 @@
                             @endphp
                             @if($edit && $dynamicPages || $dynamicSubPages)
                                 <div class="form-group col-md-3">
-                                    <div class="alert alert-success hidden" role="alert">Copied To Clipboard</div>
+                                    <div class="alert alert-success" style="display: none;" role="alert">Copied To Clipboard</div>
                                     <label class="control-label">Page URL</label>
                                     <div>
                                     @if($dynamicPages)
