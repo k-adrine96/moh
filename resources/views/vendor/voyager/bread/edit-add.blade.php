@@ -249,8 +249,8 @@
             var copyText = document.getElementById("copyText");
             copyText.select();
             document.execCommand("copy");
-            $('.alert-success').css('display' , 'block !important');
-            // alert('Copied To Clipboard');
+            // $('.alert-success').css('display' , 'block !important');
+            alert('Copied To Clipboard');
         });
     </script>
 @stop
