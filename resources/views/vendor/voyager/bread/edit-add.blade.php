@@ -66,6 +66,7 @@
                                         @endif
                                         <input id="copyText" type="text" value="{{$pageURL}}" style="border: 1px solid #e4eaec;padding: 5px 15px; float: left; width: 300px;">
                                         <button id="copyBtn" type="button" class="btn btn-primary" style="margin: 0 0 0 20px;">Copy</button>
+                                        <div class="alert alert-success hidden" role="alert">Copied To Clipboard</div>
                                     </div>
                                 </div>
                             @endif
@@ -248,7 +249,7 @@
             var copyText = document.getElementById("copyText");
             copyText.select();
             document.execCommand("copy");
-            alert(copyText.value + " copied to clipboard");
+            $('.alert-success').show();
         });
     </script>
 @stop
