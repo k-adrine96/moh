@@ -57,16 +57,16 @@
                             @endphp
                             @if($edit && $dynamicPages || $dynamicSubPages)
                                 <div class="form-group col-md-3">
+                                    <div class="alert alert-success hidden" role="alert">Copied To Clipboard</div>
                                     <label class="control-label">Page URL</label>
                                     <div>
-                                        @if($dynamicPages)
+                                    @if($dynamicPages)
                                             @php $pageURL = url($dataTypeContent->section()->count() ? $dataTypeContent->section->slug.'/'.$dataTypeContent->slug : 'page/'.$dataTypeContent->slug) @endphp
                                         @elseif($dynamicSubPages && $dataTypeContent->section())
                                             @php $pageURL = url($dataTypeContent->section()->slug.'/'.$dataTypeContent->page->slug.'/'.$dataTypeContent->slug) @endphp
                                         @endif
-                                        <input id="copyText" type="text" value="{{$pageURL}}" style="border: 1px solid #e4eaec;padding: 5px 15px; float: left; width: 300px;">
-                                        <button id="copyBtn" type="button" class="btn btn-primary" style="margin: 0 0 0 20px;">Copy</button>
-                                        <div class="alert alert-success hidden" role="alert">Copied To Clipboard</div>
+                                            <input id="copyText" type="text" value="{{$pageURL}}" style="border: 1px solid #e4eaec;padding: 5px 15px; float: left; width: 300px;">
+                                            <button id="copyBtn" type="button" class="btn btn-primary" style="margin: 0 0 0 20px;">Copy</button>
                                     </div>
                                 </div>
                             @endif
@@ -249,7 +249,7 @@
             var copyText = document.getElementById("copyText");
             copyText.select();
             document.execCommand("copy");
-            $('.alert-success').css('display' , 'block');
+            $('.alert-success').css('display' , 'block !important');
             // alert('Copied To Clipboard');
         });
     </script>
