@@ -248,7 +248,7 @@
             var copyText = document.getElementById("copyText");
             copyText.select();
             document.execCommand("copy");
-            alert(copyText.value + "copied to clipboard");
+            alert(copyText.value + " copied to clipboard");
         });
     </script>
 @stop
