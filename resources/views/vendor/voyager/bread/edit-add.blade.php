@@ -64,8 +64,8 @@
                                         @elseif($dynamicSubPages && $dataTypeContent->section())
                                             @php $pageURL = url($dataTypeContent->section()->slug.'/'.$dataTypeContent->page->slug.'/'.$dataTypeContent->slug) @endphp
                                         @endif
-                                        <input type="text" value="{{$pageURL}}" style="border: 1px solid #e4eaec;padding: 5px 15px; float: left;">
-                                        <button type="button" class="btn btn-primary" style="margin: 0 0 0 20px;">Copy</button>
+                                        <input id="copyText" type="text" value="{{$pageURL}}" style="border: 1px solid #e4eaec;padding: 5px 15px; float: left; width: 300px;">
+                                        <button id="copyBtn" type="button" class="btn btn-primary" style="margin: 0 0 0 20px;">Copy</button>
                                     </div>
                                 </div>
                             @endif
@@ -243,6 +243,12 @@
                 $('#confirm_delete_modal').modal('hide');
             });
             $('[data-toggle="tooltip"]').tooltip();
+        });
+        document.getElementById("copyBtn").addEventListener('click', event => {
+            var copyText = document.getElementById("copyText");
+            copyText.select();
+            document.execCommand("copy");
+            alert("Copied the text: " + copyText.value);
         });
     </script>
 @stop
