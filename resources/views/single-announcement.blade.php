@@ -2,7 +2,7 @@
     <meta property="og:url"           content="{{url()->current()}}" />
     <meta property="og:title"         content="{{$announcementIndividual->getTranslatedAttribute('title')}}" />
     <meta property="og:description"   content="{{ strip_tags(getDescription($announcementIndividual->getTranslatedAttribute('description'))) }}" />
-    <meta property="og:image"         content="{{$_SERVER['APP_URL']."/".Storage::url($coverPhoto->page_cover_photo)}}" />
+    <meta property="og:image"         content="{{$_SERVER['REQUEST_SCHEME']."://".$_SERVER['SERVER_NAME']."/".Storage::url($coverPhoto->page_cover_photo)}}" />
 @endsection
 @extends('layouts.app')
 

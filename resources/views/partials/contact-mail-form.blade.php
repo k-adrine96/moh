@@ -16,7 +16,7 @@
             </div>
             <div class="input-group mb-4">
                 <div class="input-group-prepend">
-                    <span class="input-group-text"><img src="img/theme-icon.png" alt=""></span>
+                    <span class="input-group-text"><img src="/img/theme-icon.png" alt=""></span>
                 </div>
                 <input name="subject" type="text" class="form-control" placeholder="{!! strip_tags(__tr('theme')) !!}" aria-label="Username" aria-describedby="">
             </div>

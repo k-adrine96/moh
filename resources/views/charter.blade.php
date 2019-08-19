@@ -29,7 +29,7 @@
                                 <div class="pdf__text">
                                     <ul>
                                         <li class="d-flex align-items-center text-justify editor-content">
-                                            <i class="pdf__icon" style="background-image: url('img/xls-icon.png')"></i>
+                                            <i class="pdf__icon" style="background-image: url('/img/excel.png')"></i>
                                             {!! !is_null( $pagesTexts->page_text3 ) ? getDescription($pagesTexts->getTranslatedAttribute('page_text3')) : '' !!}
                                         </li>
                                     </ul>

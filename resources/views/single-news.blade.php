@@ -2,7 +2,7 @@
     <meta property="og:url"           content="{{url()->current()}}" />
     <meta property="og:title"         content="{{$newsIndividual->getTranslatedAttribute('title')}}" />
     <meta property="og:description"   content="{{ strip_tags(getDescription($newsIndividual->getTranslatedAttribute('description'))) }}" />
-    <meta property="og:image"         content="{{$_SERVER['APP_URL']."/".Storage::url(json_decode($newsIndividual->images[0]))}}" />
+    <meta property="og:image"         content="{{$_SERVER['REQUEST_SCHEME']."://".$_SERVER['SERVER_NAME']."/".Storage::url(json_decode($newsIndividual->images[0]))}}" />
 @endsection
 @extends('layouts.app')
 @section('content')
