@@ -251,6 +251,7 @@
             document.execCommand("copy");
             // $('.alert-success').css('display' , 'block !important');
             alert('Copied To Clipboard');
+            // document.getElementById("copyBtn").text == 'Copied!';
         });
     </script>
 @stop

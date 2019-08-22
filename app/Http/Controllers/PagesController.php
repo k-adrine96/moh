@@ -325,6 +325,10 @@ class PagesController extends Controller
             return $this->search($request, $request->keyword);
         }
 
+        if(!view()->exists($page)) {
+            return abort(404);  
+        }
+
         return view($page , compact('pagesTexts' , 'coverPhoto', 'content' ,
                                             'minInfoItems' , 'minInfoCats' , 'filesInfo' , 'filesCats' ,
                                             'partnersRow1' , 'partnersRow2' , 'minHistoryItems' ,

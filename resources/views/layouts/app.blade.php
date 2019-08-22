@@ -12,8 +12,8 @@
     <link rel="icon" href="/img/moh-logo.png">
 
     <!--FONT-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
+{{--    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">--}}
+    <link rel="stylesheet" href="/css/fonts.css">
     {{--<link rel="stylesheet" href="/css/style.css">--}}
     <link rel="stylesheet" href="/css/app.css">
     @stack('css')
