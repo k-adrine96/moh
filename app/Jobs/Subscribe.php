@@ -37,9 +37,9 @@ class Subscribe implements ShouldQueue
      */
     public function handle()
     {
-        Mail::to($this->subscribes)
-            ->cc($this->subscribes)
-            ->bcc($this->subscribes)
-            ->send(new SubscribeMail($this->data));
+//        Mail::to($this->subscribes)
+//            ->cc($this->subscribes)
+//            ->bcc($this->subscribes)
+//            ->send(new SubscribeMail($this->data));
     }
 }
