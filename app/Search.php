@@ -64,15 +64,26 @@ class Search extends BaseModel
         SpeechAndInterview::class,
         SsStationeryOrg::class,
     ];
-//    protected $displayNames = [
-//        'name',
-//        'title',
-//        'file_name',
-//        'page_name',
-//        'ngo_name',
-//        'organisation_name',
-//        'website_name'
-//    ];
+    protected $displayNames = [
+        'name',
+        'title',
+        'file_name',
+        'page_name',
+        'ngo_name',
+        'organisation_name',
+        'website_name',
+        'description',
+        'head_position',
+        'head_name',
+        'address',
+        'phone_number',
+        'email',
+        'question',
+        'answer',
+        'text',
+        'position',
+        'working_place',
+    ];
 
     public function __construct(string $keyword)
     {
@@ -88,16 +99,18 @@ class Search extends BaseModel
             $columns = Schema::getColumnListing($model->getTable());
 
             foreach ($columns as $item) {
-                if (property_exists($model, 'translatable')) {
-                    $res = $model->whereTranslation($item, 'like', "%$this->keyword%", ['en', 'ru'], true)->distinct()->get();
+                if(in_array($item , $this->displayNames)){
+                    if (property_exists($model, 'translatable')) {
+                        $res = $model->whereTranslation($item, 'like', "%$this->keyword%", ['hy', 'en', 'ru'], true)->distinct()->get();
 
-                    foreach ($res as $_item) {
-                        $_item->file_name ? $searchText = $_item->file_name : $searchText = $_item->$item;
-                        if($this->result != 'No Result'){
-                            $this->result[$_item->getTable() . ':' . $_item->id] = [
-                                'search_text' => $searchText,
-                                'url' => '/'.$_item->page_url
-                            ];
+                        foreach ($res as $_item) {
+                            $_item->file_name ? $searchText = $_item->file_name : $searchText = $_item->$item;
+                            if($this->result != 'No Result'){
+                                $this->result[$_item->getTable() . ':' . $_item->id] = [
+                                    'search_text' => $searchText,
+                                    'url' => '/'.$_item->page_url
+                                ];
+                            }
                         }
                     }
                 }
