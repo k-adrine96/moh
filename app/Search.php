@@ -101,7 +101,7 @@ class Search extends BaseModel
             foreach ($columns as $item) {
                 if(in_array($item , $this->displayNames)){
                     if (property_exists($model, 'translatable')) {
-                        $res = $model->whereTranslation($item, 'like', "%$this->keyword%", ['hy', 'en', 'ru'], true)->distinct()->get();
+                        $res = $model->whereTranslation($item, 'like', "%$this->keyword%", ['en', 'ru'], true)->distinct()->get();
 
                         foreach ($res as $_item) {
                             $_item->file_name ? $searchText = $_item->file_name : $searchText = $_item->$item;
