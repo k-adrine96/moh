@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 30, 2019 at 01:58 PM
+-- Generation Time: Sep 03, 2019 at 01:55 PM
 -- Server version: 5.6.45
 -- PHP Version: 7.2.7
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admissions` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -56,9 +56,9 @@ INSERT INTO `admissions` (`id`, `file_name`, `file_upload`, `file_url`, `file_da
 
 CREATE TABLE `advertising_permissions` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -99,7 +99,8 @@ INSERT INTO `announcements` (`id`, `title`, `description`, `date`, `created_at`,
 (5, 'Նախարարի կամ նախարարի տեղակալների մոտ քաղաքացիների ընդունելություն', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Նախարարի կամ նախարարի տեղակալների մոտ քաղաքացիների ընդունելությունը կազմակերպվում է յուրաքանչյուր շաբաթվա աշխատանքային երեքշաբթի օրերին` ժամը 16:00-ին:Ընդունելությանը գրանցվելու համար քաղաքացիները կարող են երկուշաբթիից ուրբաթ, բացառությամբ ոչ աշխատանքային օրերի, ժամը &nbsp;09:30-12:45 և 14:00-17:30&nbsp; դիմել Հայաստանի Հանրապետության առողջապահության նախարարության տեղեկատվական կենտրոն` համաձայն գործող կարգի:</p>\r\n</body>\r\n</html>', '2019-06-21', '2019-06-24 08:42:00', '2019-06-24 08:43:51', 1),
 (6, '2019 թվականի հունիսի 28-ին ժամը 16:00-ին ՀՀ առողջապահության նախարարությունում (Կառավարության տուն 3) տեղի կունենա լիցենզավորման հանձնաժողովի նիստ:', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Քննարկվելու են լիցենզիա ստանալու վերաբերյալ հետևյալ կազմակերպությունների և անհատ ձեռնարկատերերի կողմից ներկայացված հայտերը` &laquo;Մեծ Մասրիկի առողջության առաջնային պահպանման կենտրոն&raquo; ՊՈԱԿ, &laquo;Ֆարմասերվիս Դեղատուն&raquo; ՍՊԸ, &laquo;Փարսարմ&raquo; ՍՊԸ, &laquo;Դանիելյան&raquo; ՍՊԸ, &laquo;Մ.Գ. ՖԱՐՄ&raquo; ՍՊԸ, &laquo;ԳՈՒՐՄԱՆ ՖՈՒԴ&raquo; ՍՊԸ, Ա/Ձ Լուսինե Աթանեսյան, Ա/Ձ Գևորգ Գևորգյան, Ա/Ձ Ժորա Կակոյան, Ա/Ձ Թագուհի Բաբայան, Ա/Ձ Աշխեն Հաջաթյան, Ա/Ձ Կարեն Զաքարյան, Ա/Ձ Գևորգ Հակոբյան, Ա/Ձ Լուսինե Հակոբյան, Ա/Ձ Գևորգ Ղազարյան, Ա/Ձ Մարինե Սահակյան, &laquo;Մեծ Մասրիկի առողջության առաջնային պահպանման կենտրոն&raquo; ՊՈԱԿ, &laquo;Նիկոլայ Նասիբյանի Անվան Նոյեմբերյանի Բժշկական Կենտրոն&raquo; ՓԲԸ, &laquo;ԱԼՖԱ-ՖԱՐՄ&raquo; ՓԲԸ, &laquo;ՈՒիգմոր Քլինիք&raquo; ՓԲԸ, &laquo;Աջափնյակ&raquo; Բժշկական Կենտրոն ՍՊԸ, &laquo;Մաքսեդենտ&raquo; ՍՊԸ, &laquo;ԻՆՏԵՐԴԵՆՏ&raquo; ՍՊԸ, &laquo;Լ. ԱՎ ԴԵՆՏ&raquo; ՍՊԸ, Ա/Ձ Դավիթ Եփրեմյան, Ա/Ձ Նորայր Հայրունի, &laquo;Իսատիս&raquo; ՍՊԸ:</p>\r\n</body>\r\n</html>', '2019-06-20', '2019-06-24 08:45:11', '2019-06-24 08:45:11', 1),
 (7, 'Էլեկտրոնային ամբուլատոր քարտի և էլեկտրոնային պատմագրի ամբողջականության ապահովում', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Էլեկտրոնային ամբուլատոր քարտի և էլեկտրոնային պատմագրի ամբողջականության ապահովման համար կարևոր է բժիշկների ներգրավումը էլեկտրոնային առողջապահության համակարգի տվյալների մուտքագրման գործընթացում:</p>\r\n<p>Արդեն իսկ սկսել ենք բժիշկներին դյուրակիր համակարգիչների բաշխման և բազային համակարգչային գիտելիքների ու էլեկտրոնային առողջապահության համակարգից օգտվելու ուսուցման դասընթացները` ՀՀ ԱՆ &laquo;Ակադեմիկոս Ս.Ավդալբեկյանի անվան առողջապահության ազգային ինստիտուտում&raquo;:</p>\r\n<p>Այսպիսով` առողջապահության նախարարությունը &laquo;Միացյալ Հայ Կամավորների Լիգա&raquo; ՀԿ-ի հետ համատեղ հրավիրում է ուսանողների, որոնք պատրաստ են նույն դասընթացներին ներկա լինելուց հետո առաջին շրջանում իրենց համակարգիչների հետ միայնակ մնացած բժիշկներին օգնելու արագ հմտանալ և կիրառել ստացած գիտելիքներն աշխատանքում:</p>\r\n</body>\r\n</html>', '2019-06-18', '2019-06-24 08:52:13', '2019-06-24 08:52:13', 1),
-(8, '«Պացիենտի իրավունքներ և խտրականության բացառումը բուժօգնություն տրամադրելիս»', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>ՀՀ ԱՆ &laquo;Ակադեմիկոս Ս․ Ավդալբեկյանի անվան առողջապահության ազգային ինստիտուտ&raquo; ՓԲԸ-ի կողմից ստեղծվել է &laquo;Պացիենտի իրավունքներ և խտրականության բացառումը բուժօգնություն տրամադրելիս&raquo; թեմայով էլեկտրոնային դասընթաց, որը հասանելի է &nbsp;<a href=\"http://discrimination.online-edu.am/\">http://discrimination.online-edu.am</a>&nbsp; &nbsp;հղումով։</p>\r\n<p>Էլեկտրոնային դասընթացի&nbsp;<a href=\"http://www.moh.am/uploads/1563havelvac%201.pdf\">ծրագի&shy;&shy;րը</a>&nbsp;հաստատվել է ՀՀ առողջապահության նախարարի հրամանով, մասնակիցներին կշնորհվի ՇՄԶ 2 ինքնակրթության կրեդիտ, կտրվեն վկայականներ։</p>\r\n<p>Միջոցառման կոնտակտային հեռախոսահամար՝ 010-23-71-34։</p>\r\n</body>\r\n</html>', '2019-06-17', '2019-06-24 08:54:01', '2019-06-24 08:54:01', 1);
+(8, '«Պացիենտի իրավունքներ և խտրականության բացառումը բուժօգնություն տրամադրելիս»', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>ՀՀ ԱՆ &laquo;Ակադեմիկոս Ս․ Ավդալբեկյանի անվան առողջապահության ազգային ինստիտուտ&raquo; ՓԲԸ-ի կողմից ստեղծվել է &laquo;Պացիենտի իրավունքներ և խտրականության բացառումը բուժօգնություն տրամադրելիս&raquo; թեմայով էլեկտրոնային դասընթաց, որը հասանելի է &nbsp;<a href=\"http://discrimination.online-edu.am/\">http://discrimination.online-edu.am</a>&nbsp; &nbsp;հղումով։</p>\r\n<p>Էլեկտրոնային դասընթացի&nbsp;<a href=\"http://www.moh.am/uploads/1563havelvac%201.pdf\">ծրագի&shy;&shy;րը</a>&nbsp;հաստատվել է ՀՀ առողջապահության նախարարի հրամանով, մասնակիցներին կշնորհվի ՇՄԶ 2 ինքնակրթության կրեդիտ, կտրվեն վկայականներ։</p>\r\n<p>Միջոցառման կոնտակտային հեռախոսահամար՝ 010-23-71-34։</p>\r\n</body>\r\n</html>', '2019-06-17', '2019-06-24 08:54:01', '2019-06-24 08:54:01', 1),
+(9, 'Հայտարարություն', '<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p>Հարգելի լրատվամիջոցներ,</p>\n<p style=\"text-align: justify;\">Սեպտեմբերի 3-ին, ժամը 11:00-ին առողջապահության նախարար Արսեն Թորոսյանը հանդես կգա ամփոփիչ մամուլի ասուլիսով և կխոսի առաջիկա ծրագրերի մասին: Այս անգամ ասուլիսը կանցկացվի նախարարության ենթակայությամբ գործող Պրոֆեսոր Ռ. Յոլյանի անվան արյունաբանական կենտրոնում (Հասցե` Ներսիսյան 7):</p>\n<p>&nbsp;</p>\n<p align=\"right\">Սիրով հրավիրում ենք լուսաբանելու</p>\n</body>\n</html>', '2019-08-30', '2019-08-31 22:19:06', '2019-08-31 22:19:06', 1);
 
 -- --------------------------------------------------------
 
@@ -109,9 +110,9 @@ INSERT INTO `announcements` (`id`, `title`, `description`, `date`, `created_at`,
 
 CREATE TABLE `anti_corruption_events` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -139,9 +140,9 @@ INSERT INTO `anti_corruption_events` (`id`, `file_name`, `file_upload`, `file_ur
 
 CREATE TABLE `budgets` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `category_id` int(10) UNSIGNED NOT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -183,28 +184,6 @@ INSERT INTO `budget_categories` (`id`, `year`, `order`, `created_at`, `updated_a
 (1, '2017', 1, '2019-07-09 09:11:48', '2019-07-09 09:11:48'),
 (2, '2018', 1, '2019-07-09 09:11:53', '2019-07-09 09:11:53'),
 (3, '2019', 1, '2019-07-09 09:11:59', '2019-07-09 09:11:59');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cars`
---
-
-CREATE TABLE `cars` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `cars`
---
-
-INSERT INTO `cars` (`id`, `name`, `description`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'BMW', 'Awesome Car !!!', 'cars/June2019/wNnnYQXJ2PTfgsxEwoYa.png', '2019-06-05 10:42:09', '2019-06-05 10:42:09');
 
 -- --------------------------------------------------------
 
@@ -397,7 +376,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (93, 12, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (94, 12, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 2),
 (95, 12, 'description', 'rich_text_box', 'Description', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 3),
-(96, 12, 'images', 'multiple_images', 'Images', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 4),
+(96, 12, 'images', 'multiple_images', 'Images', 1, 1, 1, 1, 1, 1, 'null', 4),
 (97, 12, 'video', 'text', 'Video', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"nullable\"}}', 5),
 (98, 12, 'date', 'date', 'Date', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 6),
 (100, 12, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
@@ -1042,7 +1021,7 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2019-06-04 08:24:51', '2019-06-14 04:15:22'),
 (7, 'cars', 'cars', 'Car', 'Cars', NULL, 'App\\Car', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2019-06-05 10:41:25', '2019-06-13 08:59:41'),
 (9, 'homepage_sliders', 'homepage-sliders', 'Homepage Slider', 'Homepage Sliders', NULL, 'App\\HomepageSlider', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"title\",\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2019-06-06 04:32:45', '2019-06-24 06:02:04'),
-(12, 'news', 'news', 'News', 'News', NULL, 'App\\News', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"title\",\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2019-06-07 04:47:54', '2019-08-29 07:55:09'),
+(12, 'news', 'news', 'News', 'News', NULL, 'App\\News', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"title\",\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2019-06-07 04:47:54', '2019-08-30 11:07:48'),
 (20, 'announcements', 'announcements', 'Announcement', 'Announcements', NULL, 'App\\Announcements', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"title\",\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2019-06-07 06:49:37', '2019-06-27 07:04:42'),
 (22, 'videos', 'videos', 'Video', 'Videos', NULL, 'App\\Videos', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"title\",\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2019-06-07 08:13:21', '2019-06-27 07:04:23'),
 (25, 'minister_staffs', 'minister-staff', 'Minister Staff', 'Minister Staffs', NULL, 'App\\MinisterStaff', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"name\",\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2019-06-10 05:57:01', '2019-07-04 03:09:56'),
@@ -1168,9 +1147,9 @@ INSERT INTO `dynamic_pages` (`id`, `name`, `slug`, `order`, `display`, `dynamic_
 
 CREATE TABLE `dynamic_page_files` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `file` longtext COLLATE utf8mb4_unicode_ci,
-  `file_url` int(11) DEFAULT NULL,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `date` timestamp NULL DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` bigint(20) NOT NULL DEFAULT '1',
@@ -1349,10 +1328,10 @@ INSERT INTO `homepage_sliders` (`id`, `title`, `text`, `image`, `url`, `created_
 
 CREATE TABLE `informatives` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
+  `file_date` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1'
@@ -1363,9 +1342,9 @@ CREATE TABLE `informatives` (
 --
 
 INSERT INTO `informatives` (`id`, `file_name`, `file_upload`, `file_url`, `file_date`, `created_at`, `updated_at`, `order`) VALUES
-(1, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումinfo', '[{\"download_link\":\"informatives\\/June2019\\/G5MJUnFyoI6rbx4XG86j.\",\"original_name\":\"test\"}]', NULL, '2019-06-20 00:00:00', '2019-06-20 08:08:24', '2019-06-20 08:08:24', 1),
-(2, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումinfo', '[]', 'https://stackoverflow.com/questions/43217872/laravel-htmlspecialchars-expects-parameter-1-to-be-string-object-given', '2019-06-20 00:00:00', '2019-06-20 08:08:55', '2019-06-20 08:08:55', 1),
-(3, 'pdf test', '[{\"download_link\":\"informatives\\/June2019\\/m1xdq8nS8uhiu1vBGIFk.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27 00:00:00', '2019-06-27 08:37:34', '2019-06-27 08:37:34', 1);
+(1, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումinfo', '[{\"download_link\":\"informatives\\/June2019\\/G5MJUnFyoI6rbx4XG86j.\",\"original_name\":\"test\"}]', NULL, '2019-06-20', '2019-06-20 08:08:24', '2019-06-20 08:08:24', 1),
+(2, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումinfo', '[]', 'https://stackoverflow.com/questions/43217872/laravel-htmlspecialchars-expects-parameter-1-to-be-string-object-given', '2019-06-20', '2019-06-20 08:08:55', '2019-06-20 08:08:55', 1),
+(3, 'pdf test', '[{\"download_link\":\"informatives\\/June2019\\/m1xdq8nS8uhiu1vBGIFk.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27', '2019-06-27 08:37:34', '2019-06-27 08:37:34', 1);
 
 -- --------------------------------------------------------
 
@@ -1375,9 +1354,9 @@ INSERT INTO `informatives` (`id`, `file_name`, `file_upload`, `file_url`, `file_
 
 CREATE TABLE `internationals` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -1421,10 +1400,10 @@ CREATE TABLE `jobs` (
 
 CREATE TABLE `legal_acts` (
   `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `date` date NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `type_id` int(10) UNSIGNED NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -1488,8 +1467,8 @@ INSERT INTO `legal_acts_types` (`id`, `name`, `slug`, `order`, `created_at`, `up
 CREATE TABLE `license_org_files` (
   `id` int(10) UNSIGNED NOT NULL,
   `file_name` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -1541,9 +1520,9 @@ INSERT INTO `license_org_infos` (`id`, `organisation_name`, `head_position`, `he
 
 CREATE TABLE `licens_documents_applications` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -2225,9 +2204,9 @@ INSERT INTO `moh_consultants` (`id`, `position`, `name`, `phone_number`, `email`
 
 CREATE TABLE `nationals` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -2283,7 +2262,7 @@ INSERT INTO `news` (`id`, `title`, `description`, `images`, `video`, `date`, `cr
 (33, 'Արսեն Թորոսյանը հանդիպել է առաջին ՄՌՏ սարքի հեղինակին', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p style=\"text-align: justify;\">Առողջապահության նախարար Արսեն Թորոսյանը հանդիպել է հայազգի աշխարհահռչակ գիտնական և մագնիսական ռեզոնանսային ախտորոշման (ՄՌՏ) առաջին սարքի հեղինակ Ռեյմոնդ Դամադյանին:</p>\r\n<p style=\"text-align: justify;\">Ամերիկաբնակ հայազգի գիտնականը ներկայացրել է ուղղահայաց ՄՌՏ սարքավորման ներդրմամբ պայմանավորված մի շարք նոր հնարավորությունները բժշկության մեջ: Նա նշել է, որ նյարդադեգեներատիվ հիվանդությունները տեսանելի և ախտորոշելի են դարձել իր այդ գյուտի շնորհիվ:</p>\r\n<p style=\"text-align: justify;\">Պրոֆեսոր Դամադյանը օրինակներ է բերել, թե այդ սարքի շնորհիվ ինչպես են Պարկինսոնի հիվանդություն ունեցողներն ու ցրված սկլերոզով հիվանդները ստացել առավել ճշգրիտ ախտորոշում, որի շնորհիվ կազմակերպվել է ավելի արդյունավետ բուժում` կարճ ժամկետներում:</p>\r\n<p style=\"text-align: justify;\">&laquo;Նյարդադեգեներատիվ հիվանդությունների բուժումը հեղափոխականացնելու ուժն ուղղահայաց ՄՌՏ սարքի ձեռքում է գտնվում&raquo;, - շեշտել է Ռայմոնդ Դամադյանը:</p>\r\n<p style=\"text-align: justify;\">Նախարար Արսեն Թորոսյանը շնորհակալություն է հայտնել հայազգի գիտնականին նման գյուտի և բժշկական նշանակալի ձեռքբերման համար, ինչպես նաև կարևորել է ուղղահայաց ՄՌՏ սարքի ներդրումը բժշկության մեջ և նշել, որ ուրախ կլինի, եթե այդ սարքը օգտագործվի նաև Հայաստանում:</p>\r\n</body>\r\n</html>', '[\"news\\/July2019\\/gxDRHn3j8GPVzhQpItFi.jpg\",\"news\\/July2019\\/b2y2aUF4Yrhf91RO0hkd.jpg\"]', NULL, '2019-06-17', '2019-07-02 12:40:46', '2019-07-02 12:40:46', 1),
 (34, 'Հայկական պատվիրակությունը մասնակցել է «iPHEX» 7-րդ միջազգային ցուցահանդեսին', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p style=\"text-align: justify;\">Առողջապահության նախարարի տեղակալ Անահիտ Ավանեսյանի գլխավորած պատվիրակությունը, այդ թվում հայաստանյան դեղ արտադրող և ներմուծող ընկերությունների ներկայացուցիչներ, Հնդկաստանում մասնակցել է դեղագործությանն ու առողջապահությանը նվիրված &laquo;iPHEX&raquo; 7-րդ միջազգային ցուցահանդեսին:</p>\r\n<p style=\"text-align: justify;\">Հնդկաստանի դեղարտադրության և առողջապահության ոլորտի շուրջ 500 ընկերություն ցուցահանդեսին ներկայացրել է իր արտադրանքը:</p>\r\n<p style=\"text-align: justify;\">Ամենամյա այս ցուցահանդեսը միջազգային հեղինակավոր հարթակ է, որը թույլ է տալիս խորացնելու հայ-հնդկական հարաբերություններն առողջապահության բնագավառում, օգտագործել գործնական նոր փոխշահավետ կապեր հաստատելու հնարավորությունը:</p>\r\n<p style=\"text-align: justify;\">Ցուցահանդեսի շրջանակներում Անահիտ Ավանեսյանը հանդիպել է Գուջարաթ նահանգի Սննդի և դեղերի վերահսկման վարչության (Food and drug administration (FDA)) տնօրենի հետ: &nbsp;Հանդիպման ընթացքում ներկայացվել են դեղերի գրանցման առանձնահատկությունները, դեղարտադրող ընկերություններին ներկայացվող պահանջները: Պայմանավորվածություն է ձեռք բերվել հետագայում համագործակցություն ծավալել ՀՀ ԱՆ &laquo;Ակադեմիկոս Էմիլ Գաբրիելյանի անվան դեղերի և բժշկական տեխնոլոգիաների փորձագիտական կենտրոնի&raquo; հետ:</p>\r\n<p style=\"text-align: justify;\">&nbsp;Միջազգային ցուցահանդեսի շրջանակներում կազմակերպվել է նաև դեղերի շուկայում առկա կարգավորումներին նվիրված խորհրդաժողով, որին մասնակցել է ՀՀ ԱՆ &laquo;Ակադեմիկոս Էմիլ Գաբրիելյանի անվան դեղերի և բժշկական տեխնոլոգիաների փորձագիտական կենտրոնի&raquo; տնօրենը: Նիստին քննարկվել են դեղերի շուկան կարգավորող իրավական կողմերը, ներկայացվել են Հնդկաստանում այս ոլորտի փոփոխությունները, դեղերի շրջանառության բնագավառում ներկայիս մարտահրավերները, խնդիրները, ինչպես նաև դրանց լուծման ուղղությամբ գործադրվող ջանքերը:</p>\r\n<p style=\"text-align: justify;\">Առողջապահության նախարարության պատվիրակության անդամները և հայաստանյան դեղագործական ընկերությունների ներկայացուցիչները բազմաթիվ հանդիպումներ են ունեցել հնդկական դեղարտադրող ընկերությունների, ինչպես նաև Հնդկաստան ժամանած այլ երկրների առողջապահության նախարարությունների և դեղագործական ընկերությունների ներկայացուցիչների հետ: Քննարկվել են հնդկական արտադրության դեղերի համապատասխանության հարցերը, նաև ձեռք են բերվել մի շարք պայմանավորվածություններ` հետաքրքրություն ներկայացնող դեղագործական ընկերությունների հետ փոխշահավետ համագործակցություն ծավալելու ուղղությամբ:&nbsp;</p>\r\n</body>\r\n</html>', '[\"news\\/July2019\\/eYD1oPvbPEF6mVcGkxwD.jpg\",\"news\\/July2019\\/Bg1OJKps5ffd253T2ZCy.jpg\"]', NULL, '2019-06-17', '2019-07-02 12:42:31', '2019-07-02 12:42:31', 1),
 (35, 'Հայտնի են լաբորատոր հետազոտությունների արդյունքները', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p style=\"text-align: justify;\">Վերջերս հանրային սննդի կազմակերպություններից մեկում` խնջույքի մասնակիցների մոտ առաջացել էին աղիքային վարակներին բնորոշ գանգատներ, որոնցից մի քանիսն էլ դիմել էին բժշկական օգնության։ Արձանագրված դեպքի պատճառահետևանքային կապերը բացահայտելու ուղղությամբ ձեռնարկվել էին միջոցառումներ, որոնք զուգորդվել էին նաև լաբորատոր հետազոտություններով։</p>\r\n<p style=\"text-align: justify;\">Լաբորատոր հետազոտության արդյունքների համաձայն` նույն կազմակերպությունից վերցված սննդամթերքից մեկի նմուշում, ինչպես նաև խոհանցի աշխատակցի մոտ հայտնաբերվել է սալմոնելլայի մանրէ։ Լաբորատոր հետազոտությունների արդյունքում շեղումներ են հայտնաբերվել նաև շրջակա միջավայրի մակերեսներից վերցված լվացուկներից:</p>\r\n<p style=\"text-align: justify;\">Հարկ է փաստել, որ հիվանդների կենսանմուշների լաբորատոր հետազոտություններում ևս հաստատվել է սալմոնելլա հիվանդությունը:&nbsp;</p>\r\n</body>\r\n</html>', '[\"news\\/July2019\\/c8mvDm8Oy1PU3yeoMhrK.jpg\"]', NULL, '2019-06-18', '2019-07-02 12:43:36', '2019-07-02 12:43:36', 1),
-(36, 'Ֆանարջյանի անվան ուռուցքաբանության ազգային և Ճառագայթային բժշկության և այրվածքների գիտական կենտրոնները վերադարձվեցին առողջապահության նախարարությանը', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p style=\"text-align: justify;\"><strong>Ազգային ժողովն այսօր 115 կողմ, 0 դեմ, 0 ձեռնպահ</strong> ձայնով ընդունել է Պետական գույքի մասնավորեցման 2017-2020 թվականների ծրագրի մասին&raquo; Հայաստանի Հանրապետության օրենքում փոփոխություններ կատարելու մասին&raquo; օրենքի նախագիծը, ըստ որի 2 կազմակերպություն` Ֆանարջյանի անվան ուռուցքաբանության ազգային և Ճառագայթային բժշկության և այրվածքների գիտական կենտրոնները մասնավորեցման ցանկից կհանվեն:</p>\r\n<p style=\"text-align: justify;\">Ֆանարջյանի անվան ուռուցքաբանության ազգային կենտրոնն իրականացնում է չարորակ և բարորակ նորագոյացությունների հիվանդանոցային և արտահիվանդանոցային բժշկական օգնություն և սպասարկում, ուռուցքաբանական հիվանդների դիսպանսեր հսկողություն, ինչպես նաև հանրապետության ողջ տարածքից ուռուցքաբանական հիվանդների վերաբերյալ վիճակագրական տեղեկատվության հավաքագրում: Հանրապետական նշանակության 500 մահճակալանոց պետական հիվանդանոցն ունի թե ախտորոշիչ և թե բուժական հնարավորություններ։</p>\r\n<p style=\"text-align: justify;\">Ճառագայթային բժշկության և այրվածքների գիտական կենտրոնն իրականացնում է հանրապետական նշանակության գործառույթներ, մասնավորապես. այրվածքային և ճառագայթային հիվանդություններ ունեցող անձանց բժշկական օգնություն և սպասարկում տրամադրող միակ մասնագիտական ուղղվածության հիմնարկն է, որտեղ տարեկան բուժվում են շուրջ 550-600 քաղաքացի: Կենտրոնն իրականացնում է մասնագիտական խորհրդատվություններ Երևան քաղաքի և մարզերի բժշկական կենտրոններում, ինչպես նաև ապահովում է ճառագայթային հիվանդությամբ տառապող անձանց շարունակական հսկողությունը և բուժումը:</p>\r\n<p style=\"text-align: justify;\">&laquo;Ուսումնասիրությունները ցույց են տալիս, որ նշված ընկերությունների գործունեությունը պետական փակ բաժնետիրական ընկերությունների կարգավիճակով ավելի արդյունավետ է, ինչը, միանշանակ, չի բացառում մասնավոր ներդրողների ներգրավման հնարավորությունը&raquo;,- նշել է նախարարը, հավելելով, որ համապատասխան ներդրողների ի հայտ գալու պարագայում, նշված կազմակերպությունների զարգացման հեռանկարներից ելնելով, նախատեսվում է կիրառել &laquo;պետություն-մասնավոր ներդրող&raquo; համագործակցության ձևաչափը:</p>\r\n</body>\r\n</html>', '[\"news\\/July2019\\/0YUplrjHqiblTEknr0hT.jpg\"]', NULL, '2019-06-19', '2019-07-02 12:45:00', '2019-07-03 06:17:46', 1),
+(36, 'Ֆանարջյանի անվան ուռուցքաբանության ազգային և Ճառագայթային բժշկության և այրվածքների գիտական կենտրոնները վերադարձվեցին առողջապահության նախարարությանը', '<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p style=\"text-align: justify;\"><strong>Ազգային ժողովն այսօր 115 կողմ, 0 դեմ, 0 ձեռնպահ</strong> ձայնով ընդունել է Պետական գույքի մասնավորեցման 2017-2020 թվականների ծրագրի մասին&raquo; Հայաստանի Հանրապետության օրենքում փոփոխություններ կատարելու մասին&raquo; օրենքի նախագիծը, ըստ որի 2 կազմակերպություն` Ֆանարջյանի անվան ուռուցքաբանության ազգային և Ճառագայթային բժշկության և այրվածքների գիտական կենտրոնները մասնավորեցման ցանկից կհանվեն:</p>\n<p style=\"text-align: justify;\">Ֆանարջյանի անվան ուռուցքաբանության ազգային կենտրոնն իրականացնում է չարորակ և բարորակ նորագոյացությունների հիվանդանոցային և արտահիվանդանոցային բժշկական օգնություն և սպասարկում, ուռուցքաբանական հիվանդների դիսպանսեր հսկողություն, ինչպես նաև հանրապետության ողջ տարածքից ուռուցքաբանական հիվանդների վերաբերյալ վիճակագրական տեղեկատվության հավաքագրում: Հանրապետական նշանակության 500 մահճակալանոց պետական հիվանդանոցն ունի թե ախտորոշիչ և թե բուժական հնարավորություններ։</p>\n<p style=\"text-align: justify;\">Ճառագայթային բժշկության և այրվածքների գիտական կենտրոնն իրականացնում է հանրապետական նշանակության գործառույթներ, մասնավորապես. այրվածքային և ճառագայթային հիվանդություններ ունեցող անձանց բժշկական օգնություն և սպասարկում տրամադրող միակ մասնագիտական ուղղվածության հիմնարկն է, որտեղ տարեկան բուժվում են շուրջ 550-600 քաղաքացի: Կենտրոնն իրականացնում է մասնագիտական խորհրդատվություններ Երևան քաղաքի և մարզերի բժշկական կենտրոններում, ինչպես նաև ապահովում է ճառագայթային հիվանդությամբ տառապող անձանց շարունակական հսկողությունը և բուժումը:</p>\n<p style=\"text-align: justify;\">&laquo;Ուսումնասիրությունները ցույց են տալիս, որ նշված ընկերությունների գործունեությունը պետական փակ բաժնետիրական ընկերությունների կարգավիճակով ավելի արդյունավետ է, ինչը, միանշանակ, չի բացառում մասնավոր ներդրողների ներգրավման հնարավորությունը&raquo;,- նշել է նախարարը, հավելելով, որ համապատասխան ներդրողների ի հայտ գալու պարագայում, նշված կազմակերպությունների զարգացման հեռանկարներից ելնելով, նախատեսվում է կիրառել &laquo;պետություն-մասնավոր ներդրող&raquo; համագործակցության ձևաչափը:</p>\n</body>\n</html>', '[\"news\\/July2019\\/0YUplrjHqiblTEknr0hT.jpg\"]', NULL, '2019-06-19', '2019-07-02 12:45:00', '2019-08-30 11:08:33', 1),
 (37, '«Մայրական մահացության յուրաքանչյուր դեպք մեր ուշադրության կենտրոնում է». Արսեն Թորոսյան', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p style=\"text-align: justify;\">Կայացել է առողջապահության նախարարին կից մանկաբարձության և գինեկոլոգիայի խորհրդի անդրանիկ նիստը` &nbsp;Արսեն Թորոսյանի գլխավորությամբ:</p>\r\n<p style=\"text-align: justify;\">Ողջունելով ներկաներին` առողջապահության նախարարն ընդգծել է, որ մանկաբարձության և գինեկոլոգիայի խորհուրդը կոչված է ոչ թե պատժիչ միջոցառումներ կիրառելու, այլ մայրական և մանկական մահացության կամ կրիտիկական դեպքերը քննարկելու միջոցով նմանատիպ իրավիճակները կանխելուն:</p>\r\n<p style=\"text-align: justify;\">&laquo;Մայրական մահացության յուրաքանչյուր դեպք պետք է լինի մեր ուշադրության կենտրոնում&raquo;.- նշել է Արսեն Թորոսյանը:</p>\r\n<p style=\"text-align: justify;\">Մանկաբարձություն և գինեկոլոգիայի գծով ԱՆ խորհրդատու Վահե Գյուլխասյանը ներկայացրել է Հայաստանի նախորդ 20 տարվա և միջազգային վիճակագրական տվյալները, նաև վերջին 2 տարվա մայրական մահացության 10 դեպքի պատճառագիտական կազմը, յուրաքանչյուրի նախապատմությունը, մասնագիտական վերլուծությունը և եզրակացությունը:</p>\r\n<p style=\"text-align: justify;\">Խորհրդի անդամներն անդրադարձել են նախահղիության շրջանում պետության դերին ու քայլերին՝ թերությունները շտկելու և ոլորտը բարելավելու նկատառումով:</p>\r\n<p style=\"text-align: justify;\">Ինչը վերաբերում է մանկական մահացության դեպքերին, ըստ վիճակագրության պետական կոմիտեի, մանկական մահացության դեպքերի նվազում է դիտվել: Ըստ 1000 կենդանածնի ցուցանիշների` 0-1 տարեկան երեխաների մահվան 370 դեպք է գրանցվել 2015-ին, 2016-ին` 356, 2017-ին` 307, իսկ 2018-ի նախնական տվյալներով` 260:</p>\r\n<p style=\"text-align: justify;\">Ոլորտի պատասխանատուները նշել են, որ մշակվել է մեխանիզմ սոցիալապես խոցելի խմբերում ընդգրկված հղի կանանց վաղ հայտնաբերելու համար: 1% դեպքում հղիներն ինչ-ինչ պատճառներով չեն դիմում բժշկական կազմակերպություն և դուրս են մնում նախածննդյան հսկողությունից` ռիսկի ենթարկելով թե՛ իրենց, թե՛ երեխայի կյանքը:&nbsp;</p>\r\n<p style=\"text-align: justify;\">Արսեն Թորոսյանը հույս է հայտնել, որ նմանատիպ քայլերի շնորհիվ` մայրական մահացության դեպքերը կկանխվեն և ցուցանիշը կտրուկ կնվազի, ինչպես` մանկական մահացությանը:</p>\r\n<p style=\"text-align: justify;\">Օրակարգում ներառված հարցերին զուգահեռ քննարկվել են նաև նախա և հետծննդյան խնամքը, ծննդօգնության ծառայությունների պատշաճ մատուցումը:</p>\r\n</body>\r\n</html>', '[\"news\\/July2019\\/BLKuVtinaiQ4GNM2K35n.jpg\"]', NULL, '2019-06-19', '2019-07-02 12:48:19', '2019-07-02 12:48:19', 1),
 (38, 'Զորակոչի ընթացքում պետք է բացառել կոռուպցիոն դրսևորումները. Արսեն Թորոսյան', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p style=\"text-align: justify;\">Առողջապահության նախարար Արսեն Թորոսյանն այսօր ընդունել է պաշտպանության նախարարության և զորակոչ իրականացնող բուժհաստատությունների զորակոչային հանձնաժողովների ներկայացուցիչներին:</p>\r\n<p style=\"text-align: justify;\">Նախարարը նախ շնորհակալություն է հայտնել հրավերին արձագանքելու համար, այնուհետև նշել, որ ամեն տարի այս օրերին սկսվում է զորակոչի կազմակերպչական աշխատանքները, որպեսզի այն անցնի հնարավորինս հարթ, արագ և օբյեկտիվ:</p>\r\n<p style=\"text-align: justify;\">&laquo;Ուզում եմ հատուկ ուշադրություն դարձնել այն հանգամանքի վրա, որ զորակոչը Ձեր կատարած ամենակարևոր գործառույթներից մեկն է, քանի որ դրա արդյունքում հայկական բանակ են զորակոչվում մեր քաղաքացիները, որոնք պետք է համապատասխանեն չափանիշների` սահմանված կառավարության որոշումներով&raquo;,- նշել է նախարարը:</p>\r\n<p style=\"text-align: justify;\">Արսեն Թորոսյանը հատուկ շեշտել է, որ զորակոչային հանձնաժողովների աշխատանքը կարևոր է անել որակյալ և ճիշտ ժամանակին:</p>\r\n<p style=\"text-align: justify;\">&laquo;Այսինքն, դա պարզապես չլինի ինչ-որ թղթերի գեներացիա, որոնք տրվում են մեր երիտասարդ տղամարդկանց ինչ-որ ամիսների, տարվա ընթացքում, այլ լինի նեղ մասնագիտական լուրջ փաստաթղթեր, եզրակացություններ, որոնք կլինեն պատշաճ ձևով ձևակերպված&raquo;,- ընգծել է նա:</p>\r\n<p style=\"text-align: justify;\">Թորոսյանը հույս է հայտնել, որ գործընկերների կողմից հավելյալ ռեսուրսներ կներգրավվեն թե ադմինիստրատիվ և թե բուժական հարցերով:</p>\r\n<p style=\"text-align: justify;\">&laquo;Այս պրոցեսում պետք է բացառվի կոռուպցիան իր բոլոր դրսևորումներով` լինի դա գործընկեր, երեխա, ծառայություն, փող կամ ապագայում ինչ-որ ակնկալիք։ Մենք իրավապահ մարմին չենք և իրավական գնահատական տալ չենք կարող, բայց մի բան հստակ է` ոչ մի բան չենք թաքցնելու, եթե իմանանք&raquo;,- եզրափակել է նա:</p>\r\n<p style=\"text-align: justify;\">Այնուհետև տեղի է ունեցել քննարկում 2019 թվականի ամառային զորակոչի ընթացքում զինապարտների պետության կողմից երաշխավորված անվճար բժշկական օգնության և սպասարկման շրջանակներում հետազոտման և փորձաքննության ընթացքի, գործընթացի ընթացքում ծագած խնդիրների և մի շարք այլ կարևոր հարցերի շուրջ:</p>\r\n</body>\r\n</html>', '[\"news\\/July2019\\/8m38HEGXImkPnLmuECbF.jpg\",\"news\\/July2019\\/r3mc0VbPU0ULF0kwLi0X.jpg\",\"news\\/July2019\\/Zlm2UmMrNRs3dTGbZXuW.jpg\"]', NULL, '2019-06-20', '2019-07-02 12:51:00', '2019-07-02 12:52:42', 1),
 (39, 'Առողջապահության նախարար Արսեն Թորոսյանի ուղերձը` Բուժաշխատողի օրվա կապակցությամբ', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p style=\"text-align: justify;\">Հարգելի բուժաշխատողներ,</p>\r\n<p style=\"text-align: justify;\">Շնորհավորում եմ ձեզ մասնագիտական տոնի՝ Բուժաշխատողի օրվա կապակցությամբ: Բժիշկ լինելը առաջին հերթին առաքելություն է, ինչը հսկայական աշխատանք և նվիրում, բարձր պատասխանատվություն, հոգատարություն և հզոր ուժ է պահանջում:</p>\r\n<p style=\"text-align: justify;\">Կյանքեր փրկելը հնարավոր է դառնում միայն քրտնաջան և անձնվեր աշխատանքի շնորհիվ, ինչի համար հաճախ լուռ, բայց գրեթե միշտ շնորհակալ են լինում:</p>\r\n<p style=\"text-align: justify;\">Առողջությունը մարդու ամենամեծ հարստությունն է, և ձեր շնորհիվ է, որ կարողանում ենք պահպանել այն:</p>\r\n<p style=\"text-align: justify;\">Ձեզ մաղթում եմ երկար, առողջ և բարեկեցիկ կյանք:</p>\r\n<p style=\"text-align: justify;\">Շարունակե՛ք փրկել կյանքեր:</p>\r\n<p style=\"text-align: justify;\">&nbsp;</p>\r\n<p style=\"text-align: justify;\">Առողջապահության նախարար&nbsp;&nbsp;&nbsp;</p>\r\n<p style=\"text-align: justify;\">Արսեն Թորոսյան</p>\r\n</body>\r\n</html>', '[\"news\\/July2019\\/Mu7HFnwVfXSDWzkGtBYw.jpg\"]', NULL, '2019-06-21', '2019-07-02 12:53:55', '2019-07-02 12:53:55', 1);
@@ -2307,7 +2286,8 @@ INSERT INTO `news` (`id`, `title`, `description`, `images`, `video`, `date`, `cr
 INSERT INTO `news` (`id`, `title`, `description`, `images`, `video`, `date`, `created_at`, `updated_at`, `order`) VALUES
 (58, 'Գեղհովիտ համայնքում կանխարգելման աշխատանքները շարունակվում են', '<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p style=\"text-align: justify;\">Գեղարքունիքի մարզի Գեղհովիտ համայնքում oգոստոսի 20-ին նմուշառված կասկածելի հիվանդներից 3-ի մոտ ևս հաստատվել է սիբիրյան խոց: Ընդհանուր առմամբ համայնքում արձանագրվել է լաբորատոր (ՊՇՌ) հաստատված 8 դեպք։</p>\n<p style=\"text-align: justify;\">Հիվանդները ստանում են համապատասխան բուժում և ունեն լավացման դրական տեղաշարժ: Հիվանդության կանխարգելման աշխատանքները շարունակվում են։</p>\n<p style=\"text-align: justify;\">Ներկա պահին Գեղհովիտ համայնքում նոր հիվանդներ չկան:</p>\n</body>\n</html>', '[\"news\\/August2019\\/TUOOGiZEAt9WsYAnagJL.jpg\"]', NULL, '2019-08-22', '2019-08-30 08:42:39', '2019-08-30 08:42:39', 1),
 (59, 'Արգելվում է բժշկական թափոնները խառնել կենցաղային թափոնների հետ', '<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p style=\"text-align: justify;\">Բժշկական օգնություն և սպասարկում իրականացնող կազմակերպություններում հետազոտության, բուժման, բուժկանխարգելիչ աշխատանքների, ինչպես նաև գիտական հետազոտությունների արդյունքում առաջանում են յուրատեսակ թափոններ՝ բժշկական թափոններ: Այդ թափոնները դասվում են վտանգավոր թափոնների շարքին:</p>\n<p style=\"text-align: justify;\">Դրանց անվտանգ գործածությունը սահմանված է առողջապահության նախարարի 2008 թվականի մարտի 4-ի թիվ 03-Ն &laquo;Բժշկական թափոնների գործածությանը ներկայացվող հիգիենիկ և հակահամաճարակային պահանջներ&raquo; սանիտարական կանոններով և նորմերով:</p>\n<p style=\"text-align: justify;\">Բժշկական թափոնների սխալ գործածությունը կարող է ուղղակի կամ անուղղակի բացասական ազդեցություն ունենալ հիվանդների, առողջապահության համակարգի աշխատողների և շրջակա միջավայրի վրա:&nbsp;Այդ պատճառով արգելվում է բժշկական թափոնները խառնել կենցաղային թափոնների հետ:</p>\n<p style=\"text-align: justify;\">Թափոնների ցանկացած տարողություն կամ բեռնարկղ, որը պարունակում է կենցաղային թափոնների և վտանգավոր բժշկական թափոնների թեկուզ աննշան քանակության խառնուրդ` դիտվում է որպես վտանգավոր բժշկական թափոն:</p>\n<p style=\"text-align: justify;\">Վարակիչ բժշկական թափոնները դրանց գոյացման վայրում անմիջապես պետք է առանձնացվեն այլ&nbsp; թափոններից, այդ թվում՝ կենցաղային թափոններից, տեղադրվեն դրանց հավաքման համար հատուկ նախատեսված և մակնշված տարողությունների մեջ, հեռացվեն և վնասազերծվեն միայն օրենսդրությամբ սահմանված կարգով լիցենզավորված կազմակերպությունների կողմից:</p>\n<p style=\"text-align: justify;\">Առողջապահության նախարարությունը հորդորում է՝ խստորեն պահպանել նշված սանիտարական կանոնների պահանջները և հիշեցնում, որ&nbsp; սանիտարական կանոնների խախտման համար ՀՀ օրենսդրությամբ սահմանված է վարչական տույժ:&nbsp;</p>\n</body>\n</html>', '[\"news\\/August2019\\/K73O3XpkmVi70ZdG97sM.jpg\"]', NULL, '2019-08-21', '2019-08-30 08:48:17', '2019-08-30 08:48:17', 1),
-(60, 'Արսեն Թորոսյանը ծանոթացել է  շտապօգնության մատուցած ծառայությունների որակին', '<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p style=\"text-align: justify;\">Առողջապահության նախարար Արսեն Թորոսյանն այսօր կատարել է առաջին այցը &laquo;Շտապբուժօգնության&raquo; ՓԲԸ կայան և ծանոթացել Երևանի շտապօգնության մատուցած ծառայությունների որակին:</p>\n<p style=\"text-align: justify;\">Նախարարը շրջայց է կատարել տարածքում` նախ ծանոթացել է մեքենաների հագեցվածությանը, ապա այցելել է զանգերի կենտրոն, որտեղ անձամբ հետևել է ընթացքին, թե ինչպես են աշխատակիցները պատասխանում քաղաքացիների զանգերին:</p>\n<p style=\"text-align: justify;\">Արսեն Թորոսյանն անձամբ շտապօգնության տնօրենին ներկայացրել է այն բողոքներն ու ահազանգերը, որոնք ստանում է առողջապահության նախարարությունը, բացի այդ խոսել է շտապօգնության արդիականացմանն ուղղված քայլերի մասին:</p>\n<p style=\"text-align: justify;\">&laquo;Ինչպես գիտեք, կառավարության որոշմամբ հավելյալ բյուջետային միջոցներ տրամադրվեցին առողջապահության նախարարությանը: Դրա 500 միլիոն դրամը ուղղված է շտապօգնության բժշկական ծառայությանը` 15 բրիգադի ավելացմանը Երևանում և 14 բրիգադի ավելացմանը մարզերում: Այդ ամենը բերելու է արագ կանչերին, թե հասանելիության, թե որակի բարձրացման առումով: Շտապօգնության բժշկական ծառայությունը համարվում է և համարվելու է բոլորի համար անվճար` այստեղ որևէ բան փոխելու մտադրություն չկա և չի լինելու&raquo;,- ասել է Թորոսյանը:</p>\n<p style=\"text-align: justify;\">Նախարարը խոսել է նաև ամբողջ երկրի համար միասնական &laquo;Շտապ օգնության&raquo; զանգերի կենտրոնի ստեղծման մասին, որն իրենից ենթադրում է զանգերն ու կանչերը վերահասցեագրելու մարզային հիվանդանոցներ: Հատուկ շեշտվել է, որ գաղափարի ուղղությամբ արդեն իսկ աշխատանքներ են տարվում և դրա իրականացման համար ֆինանսական մեծ ներդրումներ չեն պահանջվի:&nbsp;</p>\n<p style=\"text-align: justify;\">&nbsp;</p>\n</body>\n</html>', '[\"news\\/August2019\\/e6F1KlVkmVdrWdHyz9rj.png\",\"news\\/August2019\\/L7mERFYDTFxFuLI2uDEY.png\"]', NULL, '2019-08-20', '2019-08-30 08:49:55', '2019-08-30 08:49:55', 1);
+(60, 'Արսեն Թորոսյանը ծանոթացել է  շտապօգնության մատուցած ծառայությունների որակին', '<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p style=\"text-align: justify;\">Առողջապահության նախարար Արսեն Թորոսյանն այսօր կատարել է առաջին այցը &laquo;Շտապբուժօգնության&raquo; ՓԲԸ կայան և ծանոթացել Երևանի շտապօգնության մատուցած ծառայությունների որակին:</p>\n<p style=\"text-align: justify;\">Նախարարը շրջայց է կատարել տարածքում` նախ ծանոթացել է մեքենաների հագեցվածությանը, ապա այցելել է զանգերի կենտրոն, որտեղ անձամբ հետևել է ընթացքին, թե ինչպես են աշխատակիցները պատասխանում քաղաքացիների զանգերին:</p>\n<p style=\"text-align: justify;\">Արսեն Թորոսյանն անձամբ շտապօգնության տնօրենին ներկայացրել է այն բողոքներն ու ահազանգերը, որոնք ստանում է առողջապահության նախարարությունը, բացի այդ խոսել է շտապօգնության արդիականացմանն ուղղված քայլերի մասին:</p>\n<p style=\"text-align: justify;\">&laquo;Ինչպես գիտեք, կառավարության որոշմամբ հավելյալ բյուջետային միջոցներ տրամադրվեցին առողջապահության նախարարությանը: Դրա 500 միլիոն դրամը ուղղված է շտապօգնության բժշկական ծառայությանը` 15 բրիգադի ավելացմանը Երևանում և 14 բրիգադի ավելացմանը մարզերում: Այդ ամենը բերելու է արագ կանչերին, թե հասանելիության, թե որակի բարձրացման առումով: Շտապօգնության բժշկական ծառայությունը համարվում է և համարվելու է բոլորի համար անվճար` այստեղ որևէ բան փոխելու մտադրություն չկա և չի լինելու&raquo;,- ասել է Թորոսյանը:</p>\n<p style=\"text-align: justify;\">Նախարարը խոսել է նաև ամբողջ երկրի համար միասնական &laquo;Շտապ օգնության&raquo; զանգերի կենտրոնի ստեղծման մասին, որն իրենից ենթադրում է զանգերն ու կանչերը վերահասցեագրելու մարզային հիվանդանոցներ: Հատուկ շեշտվել է, որ գաղափարի ուղղությամբ արդեն իսկ աշխատանքներ են տարվում և դրա իրականացման համար ֆինանսական մեծ ներդրումներ չեն պահանջվի:&nbsp;</p>\n<p style=\"text-align: justify;\">&nbsp;</p>\n</body>\n</html>', '[\"news\\/August2019\\/e6F1KlVkmVdrWdHyz9rj.png\",\"news\\/August2019\\/L7mERFYDTFxFuLI2uDEY.png\"]', NULL, '2019-08-20', '2019-08-30 08:49:55', '2019-08-30 08:49:55', 1),
+(64, 'Գետաշեն համայնքի բնակիչների մոտ արձանագրվել է սիբիրյան խոց', '<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p style=\"text-align: justify;\">Առողջապահության նախարարություն տեղեկատվություն է ստացվել, որ &laquo;Նորք&raquo; ինֆեկցիոն հիվանդանոց է տեղափոխվել Արմավիրի մարզի Գետաշեն համայնքի 2 բնակիչ՝ ձեռքի մատների և դաստակի շրջանում խոցոտված վերքերով (սիբիրյան խոցի մաշկային ձև): Հիվանդները նշել են, որ մի քանի օր առաջ մասնակցել են համագյուղացու անկած կովի մսեղիքի կտրատման և մշակման աշխատանքներին:</p>\n<p style=\"text-align: justify;\">Դեպքերի պատճառահետևանքային կապը բացահայտելու նպատակով Արմավիրի մարզի Գետաշեն համայնք են մեկնել առողջապահության նախարարության Հիվանդությունների վերահսկման և կանխարգելման ազգային կենտրոնի մասնագետները: Ձեռնարկված աշխատանքների և տեղի առողջապահական կազմակերպության բուժաշխատողների հետ համատեղ կազմակերպված շրջայցի արդյունքում հայտնաբերվել է ևս 6 հոգի, որոնց մոտ եղել են սիբիրյան խոց հիվանդության մաշկային ձևին բնորոշ գանգատներ: Բոլորն ուղեգրվել են &laquo;Նորք&raquo; ինֆեկցիոն հիվանդանոց՝ կլինիկական վիճակի գնահատման&nbsp; նպատակով:</p>\n<p style=\"text-align: justify;\">Առողջապահության նախարարության Հիվանդությունների վերահսկման և կանխարգելման ազգային կենտրոնի կողմից իրականացված լաբորատոր հետազոտությունների արդյունքում` պոլիմերազային շղթայական ռեակցիայի մեթոդաբանությամբ 5 հիվանդի մոտ հայտնաբերվել է սիբիրյան խոցի հարուցչի ԴՆԹ: &nbsp;Համայնքում սահմանվել է բժշկական հսկողություն:&nbsp;</p>\n</body>\n</html>', '[\"news\\/September2019\\/vuA1O7Mqs8pMxsQ40FJG.jpg\"]', NULL, '2019-08-30', '2019-08-31 22:16:25', '2019-08-31 22:16:25', 1);
 
 -- --------------------------------------------------------
 
@@ -2421,9 +2401,9 @@ CREATE TABLE `password_resets` (
 CREATE TABLE `pc_appeals` (
   `id` int(10) UNSIGNED NOT NULL,
   `year` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -2435,7 +2415,7 @@ CREATE TABLE `pc_appeals` (
 --
 
 INSERT INTO `pc_appeals` (`id`, `year`, `file_name`, `file_upload`, `file_url`, `file_date`, `order`, `created_at`, `updated_at`) VALUES
-(1, '2017 - 2018', 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում', '[{\"download_link\":\"pc-appeals\\/July2019\\/hTzYzLpvqOjb8Q8NxATn.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-01-01', 1, '2019-07-09 09:18:32', '2019-07-09 09:18:32'),
+(1, '2019', 'Հայաստանի Հանրապետության առողջապահության նախարարին կից հասարակական խորհրդի կազմ', '[{\"download_link\":\"pc-appeals\\/September2019\\/cT9Wq0et5Tx2NKmvxEO3.pdf\",\"original_name\":\"1527-2.pdf\"}]', NULL, '2019-06-10', 1, '2019-07-09 09:18:32', '2019-09-02 08:05:59'),
 (2, '2018 - 2019', 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում', '[{\"download_link\":\"pc-appeals\\/July2019\\/5mJVvbuUCQYTugnnp9We.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-01-01', 1, '2019-07-09 09:19:31', '2019-07-09 09:19:31');
 
 -- --------------------------------------------------------
@@ -2447,9 +2427,9 @@ INSERT INTO `pc_appeals` (`id`, `year`, `file_name`, `file_upload`, `file_url`, 
 CREATE TABLE `pc_results` (
   `id` int(10) UNSIGNED NOT NULL,
   `year` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -2473,9 +2453,9 @@ INSERT INTO `pc_results` (`id`, `year`, `file_name`, `file_upload`, `file_url`, 
 CREATE TABLE `pc_sessions` (
   `id` int(10) UNSIGNED NOT NULL,
   `year` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -2498,9 +2478,9 @@ INSERT INTO `pc_sessions` (`id`, `year`, `file_name`, `file_upload`, `file_url`,
 
 CREATE TABLE `pc_staffs` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -3641,9 +3621,9 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 
 CREATE TABLE `politics` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -3705,10 +3685,10 @@ INSERT INTO `posts` (`id`, `author_id`, `category_id`, `title`, `seo_title`, `ex
 
 CREATE TABLE `press_releases` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
+  `file_date` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1'
@@ -3719,9 +3699,9 @@ CREATE TABLE `press_releases` (
 --
 
 INSERT INTO `press_releases` (`id`, `file_name`, `file_upload`, `file_url`, `file_date`, `created_at`, `updated_at`, `order`) VALUES
-(1, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում asd', '[]', 'https://stackoverflow.com/questions/43217872/laravel-htmlspecialchars-expects-parameter-1-to-be-string-object-given', '2019-06-20 00:00:00', '2019-06-20 05:36:00', '2019-06-20 08:17:07', 1),
-(2, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումpress', '[{\"download_link\":\"press-releases\\/June2019\\/a1dVlGaC9MI5zoFLMbuF.\",\"original_name\":\"test\"}]', NULL, '2019-06-20 00:00:00', '2019-06-20 08:16:56', '2019-06-20 08:16:56', 1),
-(3, 'pdf test', '[{\"download_link\":\"press-releases\\/June2019\\/vmZEO1eLkXgBOMVrSQvK.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27 00:00:00', '2019-06-27 08:34:22', '2019-06-27 08:34:22', 1);
+(1, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում asd', '[]', 'https://stackoverflow.com/questions/43217872/laravel-htmlspecialchars-expects-parameter-1-to-be-string-object-given', '2019-06-20', '2019-06-20 05:36:00', '2019-06-20 08:17:07', 1),
+(2, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումpress', '[{\"download_link\":\"press-releases\\/June2019\\/a1dVlGaC9MI5zoFLMbuF.\",\"original_name\":\"test\"}]', NULL, '2019-06-20', '2019-06-20 08:16:56', '2019-06-20 08:16:56', 1),
+(3, 'pdf test', '[{\"download_link\":\"press-releases\\/June2019\\/vmZEO1eLkXgBOMVrSQvK.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27', '2019-06-27 08:34:22', '2019-06-27 08:34:22', 1);
 
 -- --------------------------------------------------------
 
@@ -3731,10 +3711,10 @@ INSERT INTO `press_releases` (`id`, `file_name`, `file_upload`, `file_url`, `fil
 
 CREATE TABLE `reports` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
+  `file_date` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1'
@@ -3747,7 +3727,7 @@ CREATE TABLE `reports` (
 INSERT INTO `reports` (`id`, `file_name`, `file_upload`, `file_url`, `file_date`, `created_at`, `updated_at`, `order`) VALUES
 (1, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում asd', '[{\"download_link\":\"reports\\/June2019\\/Qwu86VDG0bU5B0HPyerl.\",\"original_name\":\"test\"}]', NULL, '2019-06-19', '2019-06-19 09:17:52', '2019-06-19 09:17:52', 1),
 (2, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում asdfff', '[]', 'https://stackoverflow.com/questions/43217872/laravel-htmlspecialchars-expects-parameter-1-to-be-string-object-given', '2019-06-19', '2019-06-19 09:18:00', '2019-06-19 09:20:46', 1),
-(3, 'pdf test', '[{\"download_link\":\"reports\\/June2019\\/sVvlFSQ9qpUHjigmha1W.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27 00:00:00', '2019-06-27 08:33:01', '2019-06-27 08:33:01', 1);
+(3, 'pdf test', '[{\"download_link\":\"reports\\/June2019\\/sVvlFSQ9qpUHjigmha1W.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27', '2019-06-27 08:33:01', '2019-06-27 08:33:01', 1);
 
 -- --------------------------------------------------------
 
@@ -3757,10 +3737,10 @@ INSERT INTO `reports` (`id`, `file_name`, `file_upload`, `file_url`, `file_date`
 
 CREATE TABLE `researches` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
+  `file_date` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1'
@@ -3771,9 +3751,9 @@ CREATE TABLE `researches` (
 --
 
 INSERT INTO `researches` (`id`, `file_name`, `file_upload`, `file_url`, `file_date`, `created_at`, `updated_at`, `order`) VALUES
-(1, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումres', '[{\"download_link\":\"researches\\/June2019\\/TyyS0wp60ohGguALdr3x.\",\"original_name\":\"test\"}]', NULL, '2019-06-19 00:00:00', '2019-06-20 07:27:13', '2019-06-20 07:27:13', 1),
-(2, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումres', '[]', 'https://stackoverflow.com/questions/43217872/laravel-htmlspecialchars-expects-parameter-1-to-be-string-object-given', '2019-06-01 00:00:00', '2019-06-20 07:27:55', '2019-06-20 07:27:55', 1),
-(3, 'pdf test', '[{\"download_link\":\"researches\\/June2019\\/CFewMBUo4n2XtzKycx3h.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27 00:00:00', '2019-06-27 08:35:58', '2019-06-27 08:35:58', 1);
+(1, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումres', '[{\"download_link\":\"researches\\/June2019\\/TyyS0wp60ohGguALdr3x.\",\"original_name\":\"test\"}]', NULL, '2019-06-19', '2019-06-20 07:27:13', '2019-06-20 07:27:13', 1),
+(2, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումres', '[]', 'https://stackoverflow.com/questions/43217872/laravel-htmlspecialchars-expects-parameter-1-to-be-string-object-given', '2019-06-01', '2019-06-20 07:27:55', '2019-06-20 07:27:55', 1),
+(3, 'pdf test', '[{\"download_link\":\"researches\\/June2019\\/CFewMBUo4n2XtzKycx3h.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27', '2019-06-27 08:35:58', '2019-06-27 08:35:58', 1);
 
 -- --------------------------------------------------------
 
@@ -3805,9 +3785,9 @@ INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) V
 
 CREATE TABLE `screenings` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -3856,7 +3836,7 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
 (9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
 (10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
-(11, 'admin.last_update', 'Last update', '30/08/2019 12:49:55', NULL, 'text', 6, 'Admin');
+(11, 'admin.last_update', 'Last update', '02/09/2019 12:05:59', NULL, 'text', 6, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -3893,10 +3873,10 @@ INSERT INTO `socials` (`id`, `url`, `slug`, `order`, `created_at`, `updated_at`)
 
 CREATE TABLE `speech_and_interviews` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
+  `file_date` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1'
@@ -3907,9 +3887,9 @@ CREATE TABLE `speech_and_interviews` (
 --
 
 INSERT INTO `speech_and_interviews` (`id`, `file_name`, `file_upload`, `file_url`, `file_date`, `created_at`, `updated_at`, `order`) VALUES
-(4, 'pdf test', '[{\"download_link\":\"speech-and-interviews\\/June2019\\/W0m3OCzFAgl25Vb0LG3g.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27 00:00:00', '2019-06-27 07:42:19', '2019-06-27 07:42:19', 1),
-(5, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում', '[{\"download_link\":\"speech-and-interviews\\/June2019\\/G40DxZZSkFjSJrtaFU7W.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27 00:00:00', '2019-06-27 07:49:56', '2019-06-27 07:49:56', 1),
-(6, 'file test', '[{\"download_link\":\"speech-and-interviews\\/June2019\\/qA7CK0GWyHLugegLe8f6.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27 00:00:00', '2019-06-27 08:26:57', '2019-06-27 08:26:57', 1);
+(4, 'pdf test', '[{\"download_link\":\"speech-and-interviews\\/June2019\\/W0m3OCzFAgl25Vb0LG3g.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27', '2019-06-27 07:42:19', '2019-06-27 07:42:19', 1),
+(5, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում', '[{\"download_link\":\"speech-and-interviews\\/June2019\\/G40DxZZSkFjSJrtaFU7W.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27', '2019-06-27 07:49:56', '2019-06-27 07:49:56', 1),
+(6, 'file test', '[{\"download_link\":\"speech-and-interviews\\/June2019\\/qA7CK0GWyHLugegLe8f6.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27', '2019-06-27 08:26:57', '2019-06-27 08:26:57', 1);
 
 -- --------------------------------------------------------
 
@@ -3920,8 +3900,8 @@ INSERT INTO `speech_and_interviews` (`id`, `file_name`, `file_upload`, `file_url
 CREATE TABLE `ss_drug_medical_expert_files` (
   `id` int(10) UNSIGNED NOT NULL,
   `file_name` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -3974,8 +3954,8 @@ INSERT INTO `ss_drug_medical_expert_infos` (`id`, `organisation_name`, `head_pos
 CREATE TABLE `ss_health_institute_files` (
   `id` int(10) UNSIGNED NOT NULL,
   `file_name` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -4007,8 +3987,8 @@ CREATE TABLE `ss_health_institute_infos` (
   `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `website_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `website_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
   `file_date` date DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -4031,8 +4011,8 @@ INSERT INTO `ss_health_institute_infos` (`id`, `organisation_name`, `head_positi
 CREATE TABLE `ss_medical_library_files` (
   `id` int(10) UNSIGNED NOT NULL,
   `file_name` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -4091,8 +4071,8 @@ CREATE TABLE `ss_other_orgs` (
   `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `website_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `website_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
   `file_date` date DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -4124,8 +4104,8 @@ CREATE TABLE `ss_stationery_orgs` (
   `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `website_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `website_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
   `file_date` date DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -4149,9 +4129,9 @@ INSERT INTO `ss_stationery_orgs` (`id`, `organisation_name`, `head_position`, `h
 
 CREATE TABLE `staffing_job_acceptances` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -4175,9 +4155,9 @@ INSERT INTO `staffing_job_acceptances` (`id`, `file_name`, `file_upload`, `file_
 
 CREATE TABLE `staffing_staff_lists` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -4201,9 +4181,9 @@ INSERT INTO `staffing_staff_lists` (`id`, `file_name`, `file_upload`, `file_url`
 
 CREATE TABLE `staffing_tender_results` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -4227,9 +4207,9 @@ INSERT INTO `staffing_tender_results` (`id`, `file_name`, `file_upload`, `file_u
 
 CREATE TABLE `staffing_vacancies` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -4253,9 +4233,9 @@ INSERT INTO `staffing_vacancies` (`id`, `file_name`, `file_upload`, `file_url`, 
 
 CREATE TABLE `state_orders` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -4279,10 +4259,10 @@ INSERT INTO `state_orders` (`id`, `file_name`, `file_upload`, `file_url`, `file_
 
 CREATE TABLE `statistics` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
+  `file_date` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1'
@@ -4293,9 +4273,9 @@ CREATE TABLE `statistics` (
 --
 
 INSERT INTO `statistics` (`id`, `file_name`, `file_upload`, `file_url`, `file_date`, `created_at`, `updated_at`, `order`) VALUES
-(1, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում stat', '[{\"download_link\":\"statistics\\/June2019\\/lNZ3aRzZnyhND4PJy6My.\",\"original_name\":\"test\"}]', NULL, '2019-06-20 00:00:00', '2019-06-20 07:46:20', '2019-06-20 07:46:20', 1),
-(2, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումstat', '[]', 'https://stackoverflow.com/questions/43217872/laravel-htmlspecialchars-expects-parameter-1-to-be-string-object-given', '2019-06-20 00:00:00', '2019-06-20 07:46:48', '2019-06-20 07:46:48', 1),
-(3, 'pdf test', '[{\"download_link\":\"statistics\\/June2019\\/K71z0UEl8fQsJaakvcK4.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27 00:00:00', '2019-06-27 08:36:55', '2019-06-27 08:36:55', 1);
+(1, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում stat', '[{\"download_link\":\"statistics\\/June2019\\/lNZ3aRzZnyhND4PJy6My.\",\"original_name\":\"test\"}]', NULL, '2019-06-20', '2019-06-20 07:46:20', '2019-06-20 07:46:20', 1),
+(2, 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետումstat', '[]', 'https://stackoverflow.com/questions/43217872/laravel-htmlspecialchars-expects-parameter-1-to-be-string-object-given', '2019-06-20', '2019-06-20 07:46:48', '2019-06-20 07:46:48', 1),
+(3, 'pdf test', '[{\"download_link\":\"statistics\\/June2019\\/K71z0UEl8fQsJaakvcK4.pdf\",\"original_name\":\"pdf-test.pdf\"}]', NULL, '2019-06-27', '2019-06-27 08:36:55', '2019-06-27 08:36:55', 1);
 
 -- --------------------------------------------------------
 
@@ -4316,7 +4296,9 @@ CREATE TABLE `subscribes` (
 --
 
 INSERT INTO `subscribes` (`id`, `name`, `email`, `created_at`, `updated_at`) VALUES
-(1, 'eseffse', 'ehd@ggg.ee', '2019-08-27 07:43:43', '2019-08-27 07:43:43');
+(1, 'eseffse', 'ehd@ggg.ee', '2019-08-27 07:43:43', '2019-08-27 07:43:43'),
+(2, 'adfsf', 'adfsa@kjlk.com', '2019-09-03 09:21:13', '2019-09-03 09:21:13'),
+(3, 'dfsddfd', 'dfd@kjld.ru', '2019-09-03 09:24:37', '2019-09-03 09:24:37');
 
 -- --------------------------------------------------------
 
@@ -4326,9 +4308,9 @@ INSERT INTO `subscribes` (`id`, `name`, `email`, `created_at`, `updated_at`) VAL
 
 CREATE TABLE `superiors` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -5141,7 +5123,10 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (790, 'web_site_translations', 'text', 125, 'en', '<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p>Message</p>\n</body>\n</html>', '2019-08-09 12:34:51', '2019-08-09 12:34:51'),
 (791, 'web_site_translations', 'text', 125, 'ru', '<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p>Сообщение</p>\n</body>\n</html>', '2019-08-09 12:34:51', '2019-08-09 12:34:51'),
 (792, 'data_types', 'display_name_singular', 12, 'en', 'News', '2019-08-29 07:55:09', '2019-08-29 07:55:09'),
-(793, 'data_types', 'display_name_plural', 12, 'en', 'News', '2019-08-29 07:55:09', '2019-08-29 07:55:09');
+(793, 'data_types', 'display_name_plural', 12, 'en', 'News', '2019-08-29 07:55:09', '2019-08-29 07:55:09'),
+(798, 'news', 'title', 36, 'en', 'Ֆանարջյանի անվան ուռուցքաբանության ազգային և Ճառագայթային բժշկության և այրվածքների գիտական կենտրոնները վերադարձվեցին առողջապահության նախարարությանը', '2019-08-30 11:08:33', '2019-08-30 11:08:33'),
+(799, 'news', 'description', 36, 'en', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p> </p>\r\n<p> </p>\r\n<p style=\"text-align: justify;\"><strong>Ազգային ժողովն այսօր 115 կողմ, 0 դեմ, 0 ձեռնպահ</strong> ձայնով ընդունել է Պետական գույքի մասնավորեցման 2017-2020 թվականների ծրագրի մասին» Հայաստանի Հանրապետության օրենքում փոփոխություններ կատարելու մասին» օրենքի նախագիծը, ըստ որի 2 կազմակերպություն` Ֆանարջյանի անվան ուռուցքաբանության ազգային և Ճառագայթային բժշկության և այրվածքների գիտական կենտրոնները մասնավորեցման ցանկից կհանվեն:</p>\r\n<p style=\"text-align: justify;\">Ֆանարջյանի անվան ուռուցքաբանության ազգային կենտրոնն իրականացնում է չարորակ և բարորակ նորագոյացությունների հիվանդանոցային և արտահիվանդանոցային բժշկական օգնություն և սպասարկում, ուռուցքաբանական հիվանդների դիսպանսեր հսկողություն, ինչպես նաև հանրապետության ողջ տարածքից ուռուցքաբանական հիվանդների վերաբերյալ վիճակագրական տեղեկատվության հավաքագրում: Հանրապետական նշանակության 500 մահճակալանոց պետական հիվանդանոցն ունի թե ախտորոշիչ և թե բուժական հնարավորություններ։</p>\r\n<p style=\"text-align: justify;\">Ճառագայթային բժշկության և այրվածքների գիտական կենտրոնն իրականացնում է հանրապետական նշանակության գործառույթներ, մասնավորապես. այրվածքային և ճառագայթային հիվանդություններ ունեցող անձանց բժշկական օգնություն և սպասարկում տրամադրող միակ մասնագիտական ուղղվածության հիմնարկն է, որտեղ տարեկան բուժվում են շուրջ 550-600 քաղաքացի: Կենտրոնն իրականացնում է մասնագիտական խորհրդատվություններ Երևան քաղաքի և մարզերի բժշկական կենտրոններում, ինչպես նաև ապահովում է ճառագայթային հիվանդությամբ տառապող անձանց շարունակական հսկողությունը և բուժումը:</p>\r\n<p style=\"text-align: justify;\">«Ուսումնասիրությունները ցույց են տալիս, որ նշված ընկերությունների գործունեությունը պետական փակ բաժնետիրական ընկերությունների կարգավիճակով ավելի արդյունավետ է, ինչը, միանշանակ, չի բացառում մասնավոր ներդրողների ներգրավման հնարավորությունը»,- նշել է նախարարը, հավելելով, որ համապատասխան ներդրողների ի հայտ գալու պարագայում, նշված կազմակերպությունների զարգացման հեռանկարներից ելնելով, նախատեսվում է կիրառել «պետություն-մասնավոր ներդրող» համագործակցության ձևաչափը:</p>\r\n</body>\r\n</html>', '2019-08-30 11:08:33', '2019-08-30 11:08:33'),
+(800, 'pc_appeals', 'file_name', 1, 'en', 'սովորել է Երևանի Մխիթար Հերացու անվան պետական բժշկական համալսարանի բուժական ֆակուլտետում', '2019-09-02 08:05:59', '2019-09-02 08:05:59');
 
 -- --------------------------------------------------------
 
@@ -5368,9 +5353,9 @@ INSERT INTO `web_site_translations` (`id`, `page_name`, `page_slug`, `text`, `te
 
 CREATE TABLE `your_rights_files` (
   `id` int(10) UNSIGNED NOT NULL,
-  `file_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_upload` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `file_url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_upload` text COLLATE utf8mb4_unicode_ci,
+  `file_url` text COLLATE utf8mb4_unicode_ci,
   `file_date` date NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT '1',
@@ -5451,12 +5436,6 @@ ALTER TABLE `budgets`
 -- Indexes for table `budget_categories`
 --
 ALTER TABLE `budget_categories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `cars`
---
-ALTER TABLE `cars`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -5995,7 +5974,7 @@ ALTER TABLE `advertising_permissions`
 -- AUTO_INCREMENT for table `announcements`
 --
 ALTER TABLE `announcements`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `anti_corruption_events`
@@ -6014,12 +5993,6 @@ ALTER TABLE `budgets`
 --
 ALTER TABLE `budget_categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `cars`
---
-ALTER TABLE `cars`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -6247,7 +6220,7 @@ ALTER TABLE `nationals`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -6445,7 +6418,7 @@ ALTER TABLE `statistics`
 -- AUTO_INCREMENT for table `subscribes`
 --
 ALTER TABLE `subscribes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `superiors`
@@ -6457,7 +6430,7 @@ ALTER TABLE `superiors`
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=794;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=801;
 
 --
 -- AUTO_INCREMENT for table `users`
