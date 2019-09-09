@@ -20,7 +20,7 @@
             <div class="single__announcement--date">
                 <p>{{ $announcementIndividual->date->formatLocalized('%B %d, %Y') }}</p>
             </div>
-            <div class="single__announcement--body">
+            <div class="single__announcement--body text-justify editor-content">
                 <p class="text-justify editor-content">{!! getDescription($announcementIndividual->getTranslatedAttribute('description')) !!}</p>
             </div>
         </section>

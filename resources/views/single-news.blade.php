@@ -29,7 +29,7 @@
                 <div class="single__news--info--date">
                     <h2>{{ $newsIndividual->date->formatLocalized('%B %d, %Y') }}</h2>
                 </div>
-                <div class="single__news--info--text">
+                <div class="single__news--info--text text-justify editor-content">
                     {!! getDescription($newsIndividual->getTranslatedAttribute('description')) !!}
                 </div>
             </div>
