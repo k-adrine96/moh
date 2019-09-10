@@ -5,6 +5,12 @@
     .all__announcement {
       padding: 10px;
       &--header {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        color: #febc35;
+        font-size: 40px;
         a {
           text-decoration: none;
           font-size: $secondary-header;
@@ -31,10 +37,13 @@
         }
       }
       &--body {
+        font-size: $main-fz;
+        max-height: 200px;
+        overflow: hidden;
         p {
-          font-size: $main-fz;
-          height: 124px;
-          overflow: hidden;
+          //font-size: $main-fz;
+          //height: 124px;
+          //overflow: hidden;
         }
       }
     }

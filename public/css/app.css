@@ -3306,6 +3306,15 @@ svg {
   padding: 10px;
 }
 
+.all__announcement-container .all__announcement--row .all__announcement--header {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  color: #febc35;
+  font-size: 40px;
+}
+
 .all__announcement-container .all__announcement--row .all__announcement--header a {
   text-decoration: none;
   font-size: 3.8rem;
@@ -3332,9 +3341,9 @@ svg {
   }
 }
 
-.all__announcement-container .all__announcement--row .all__announcement--body p {
+.all__announcement-container .all__announcement--row .all__announcement--body {
   font-size: 1.8rem;
-  height: 124px;
+  max-height: 200px;
   overflow: hidden;
 }
 
